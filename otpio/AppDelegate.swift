@@ -7,21 +7,50 @@
 //
 
 import UIKit
+import FontBlaster
+
+// Global Font Awesome declarations
+let FALIGHT_UIFONT  : UIFont = UIFont(name: "FontAwesome5ProLight", size: 20)!
+let FAREGULAR_UIFONT: UIFont = UIFont(name: "FontAwesome5ProRegular", size: 20)!
+let FASOLID_UIFONT  : UIFont = UIFont(name: "FontAwesome5ProSolid", size: 20)!
+let FABRANDS_UIFONT : UIFont = UIFont(name: "FontAwesome5BrandsRegular", size: 20)!
+
+let FALIGHT_ATTR     = [NSAttributedString.Key.font: FALIGHT_UIFONT]
+let FAREGULAR_ATTR   = [NSAttributedString.Key.font: FAREGULAR_UIFONT]
+let FASOLID_ATTR     = [NSAttributedString.Key.font: FASOLID_UIFONT]
+let FABRANDS_ATTR    = [NSAttributedString.Key.font: FABRANDS_UIFONT]
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var root: DisplayViewController
+    
+    override init() {
+        FontBlaster.blast()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        root = DisplayViewController()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let shortcut = UIApplicationShortcutItem(type: "ScanCode", localizedTitle: "Scan Barcode", localizedSubtitle: "Scan a code for adding", icon: UIApplicationShortcutIcon(type: .add), userInfo: nil)
+        
+        UIApplication.shared.shortcutItems = [shortcut]
+        
+        window?.rootViewController = root
+        window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        root.shouldScan = true
+        completionHandler(true)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        System.sharedInstance.stopAllTimers()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -30,17 +59,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        System.sharedInstance.setup()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        System.sharedInstance.setup()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

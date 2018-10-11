@@ -7,21 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66343FE6216F2F3C001AAA1C /* Intents.framework */; };
+		66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C430216DE859005DC2F3 /* UIKit.swift */; };
+		66C2C436216E68C9005DC2F3 /* FASolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C432216E68C9005DC2F3 /* FASolid.ttf */; };
+		66C2C437216E68C9005DC2F3 /* FABrands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C433216E68C9005DC2F3 /* FABrands.ttf */; };
+		66C2C438216E68C9005DC2F3 /* FALight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C434216E68C9005DC2F3 /* FALight.ttf */; };
+		66C2C439216E68C9005DC2F3 /* FARegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C435216E68C9005DC2F3 /* FARegular.ttf */; };
 		66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA232216B1F5A0015AC5A /* AppDelegate.swift */; };
-		66CAA235216B1F5A0015AC5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA234216B1F5A0015AC5A /* ViewController.swift */; };
-		66CAA238216B1F5A0015AC5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA236216B1F5A0015AC5A /* Main.storyboard */; };
 		66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA239216B1F5B0015AC5A /* Assets.xcassets */; };
 		66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */; };
+		66CAA247216B29FF0015AC5A /* SystemCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA246216B29FF0015AC5A /* SystemCommunicator.swift */; };
+		66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA248216B2AB30015AC5A /* Extensions.swift */; };
+		66CAA24B216B2E240015AC5A /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA24A216B2E240015AC5A /* DisplayViewController.swift */; };
+		73C23340E1406D32AF6B822E /* Pods_otpio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965F031F59C5173FF33DEBBA /* Pods_otpio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66343FE5216F2F24001AAA1C /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
+		66343FE6216F2F3C001AAA1C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		66C2C430216DE859005DC2F3 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
+		66C2C432216E68C9005DC2F3 /* FASolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FASolid.ttf; sourceTree = "<group>"; };
+		66C2C433216E68C9005DC2F3 /* FABrands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FABrands.ttf; sourceTree = "<group>"; };
+		66C2C434216E68C9005DC2F3 /* FALight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FALight.ttf; sourceTree = "<group>"; };
+		66C2C435216E68C9005DC2F3 /* FARegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FARegular.ttf; sourceTree = "<group>"; };
 		66CAA22F216B1F5A0015AC5A /* otpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CAA232216B1F5A0015AC5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66CAA234216B1F5A0015AC5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		66CAA237216B1F5A0015AC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66CAA239216B1F5B0015AC5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66CAA23C216B1F5B0015AC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66CAA23E216B1F5B0015AC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66CAA246216B29FF0015AC5A /* SystemCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCommunicator.swift; sourceTree = "<group>"; };
+		66CAA248216B2AB30015AC5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		66CAA24A216B2E240015AC5A /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		965F031F59C5173FF33DEBBA /* Pods_otpio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.release.xcconfig"; sourceTree = "<group>"; };
+		C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +48,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */,
+				73C23340E1406D32AF6B822E /* Pods_otpio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56B29F815CFF4BD05E41464E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66343FE6216F2F3C001AAA1C /* Intents.framework */,
+				965F031F59C5173FF33DEBBA /* Pods_otpio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66343FE2216F1083001AAA1C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				66CAA239216B1F5B0015AC5A /* Assets.xcassets */,
+				66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */,
+				66CAA23E216B1F5B0015AC5A /* Info.plist */,
+				66C2C433216E68C9005DC2F3 /* FABrands.ttf */,
+				66C2C434216E68C9005DC2F3 /* FALight.ttf */,
+				66C2C435216E68C9005DC2F3 /* FARegular.ttf */,
+				66C2C432216E68C9005DC2F3 /* FASolid.ttf */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		66343FE3216F1098001AAA1C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66CAA248216B2AB30015AC5A /* Extensions.swift */,
+				66C2C430216DE859005DC2F3 /* UIKit.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		66343FE4216F10A2001AAA1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66CAA24A216B2E240015AC5A /* DisplayViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		66CAA226216B1F5A0015AC5A = {
 			isa = PBXGroup;
 			children = (
 				66CAA231216B1F5A0015AC5A /* otpio */,
 				66CAA230216B1F5A0015AC5A /* Products */,
+				DAB0B122B37A3F1D50E855EA /* Pods */,
+				56B29F815CFF4BD05E41464E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +117,23 @@
 		66CAA231216B1F5A0015AC5A /* otpio */ = {
 			isa = PBXGroup;
 			children = (
+				66343FE5216F2F24001AAA1C /* otpio.entitlements */,
 				66CAA232216B1F5A0015AC5A /* AppDelegate.swift */,
-				66CAA234216B1F5A0015AC5A /* ViewController.swift */,
-				66CAA236216B1F5A0015AC5A /* Main.storyboard */,
-				66CAA239216B1F5B0015AC5A /* Assets.xcassets */,
-				66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */,
-				66CAA23E216B1F5B0015AC5A /* Info.plist */,
+				66CAA246216B29FF0015AC5A /* SystemCommunicator.swift */,
+				66343FE4216F10A2001AAA1C /* Views */,
+				66343FE3216F1098001AAA1C /* Extensions */,
+				66343FE2216F1083001AAA1C /* Assets */,
 			);
 			path = otpio;
+			sourceTree = "<group>";
+		};
+		DAB0B122B37A3F1D50E855EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */,
+				A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66CAA241216B1F5B0015AC5A /* Build configuration list for PBXNativeTarget "otpio" */;
 			buildPhases = (
+				63336AA762374E713CDB591F /* [CP] Check Pods Manifest.lock */,
 				66CAA22B216B1F5A0015AC5A /* Sources */,
 				66CAA22C216B1F5A0015AC5A /* Frameworks */,
 				66CAA22D216B1F5A0015AC5A /* Resources */,
+				16FF2A4F31DF7BE890BE365C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +170,11 @@
 				TargetAttributes = {
 					66CAA22E216B1F5A0015AC5A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,35 +201,94 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C2C439216E68C9005DC2F3 /* FARegular.ttf in Resources */,
 				66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */,
+				66C2C437216E68C9005DC2F3 /* FABrands.ttf in Resources */,
+				66C2C438216E68C9005DC2F3 /* FALight.ttf in Resources */,
 				66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */,
-				66CAA238216B1F5A0015AC5A /* Main.storyboard in Resources */,
+				66C2C436216E68C9005DC2F3 /* FASolid.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16FF2A4F31DF7BE890BE365C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Base32/Base32.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework",
+				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
+				"${BUILT_PRODUCTS_DIR}/OneTimePassword/OneTimePassword.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+				"${BUILT_PRODUCTS_DIR}/RetroProgress/RetroProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base32.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontBlaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneTimePassword.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RetroProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63336AA762374E713CDB591F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otpio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66CAA22B216B1F5A0015AC5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66CAA235216B1F5A0015AC5A /* ViewController.swift in Sources */,
+				66CAA24B216B2E240015AC5A /* DisplayViewController.swift in Sources */,
+				66CAA247216B29FF0015AC5A /* SystemCommunicator.swift in Sources */,
 				66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */,
+				66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */,
+				66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		66CAA236216B1F5A0015AC5A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				66CAA237216B1F5A0015AC5A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,8 +418,10 @@
 		};
 		66CAA242216B1F5B0015AC5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = otpio/Info.plist;
@@ -292,14 +432,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.matrixstudios.otpio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		66CAA243216B1F5B0015AC5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = otpio/Info.plist;
@@ -310,7 +452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.matrixstudios.otpio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

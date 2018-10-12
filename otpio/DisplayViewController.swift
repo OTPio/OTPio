@@ -54,6 +54,7 @@ class DisplayViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .flatBlackDark
+        System.sharedInstance.fetchFromCloud()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let shortcut = UIApplicationShortcutItem(type: "ScanCode", localizedTitle: "Scan Barcode", localizedSubtitle: "Scan a code for adding", icon: UIApplicationShortcutIcon(type: .add), userInfo: nil)
         
         UIApplication.shared.shortcutItems = [shortcut]
+        System.sharedInstance.fetchFromCloud()
         
         window?.rootViewController = UINavigationController(rootViewController: root)
         
@@ -58,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillResignActive(_ application: UIApplication) {
         System.sharedInstance.stopAllTimers()
+        System.sharedInstance.uploadToCloud()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

@@ -13,6 +13,7 @@ PODS:
   - QRCodeReader.swift (9.0.1)
   - RetroProgress (1.0.1)
   - SwiftyUserDefaults (4.0.0-alpha.1)
+  - SwipeCellKit (2.5.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`, branch `wip/swift4`)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - QRCodeReader.swift
   - RetroProgress
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
+  - SwipeCellKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -35,6 +37,7 @@ SPEC REPOS:
     - QRCodeReader.swift
     - RetroProgress
     - SwiftyUserDefaults
+    - SwipeCellKit
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -57,7 +60,8 @@ SPEC CHECKSUMS:
   QRCodeReader.swift: 96292a5612fbc2fd9a0b26f93fa5164c8d02f59d
   RetroProgress: a5b2514485c0ce75838ad321c77d5746150901cd
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
+  SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
-PODFILE CHECKSUM: 8fd31ebbaca41bc0a6bf45d3e7851967d11eca35
+PODFILE CHECKSUM: fcfa2edc73c3801cdb44d85340dae3c5d86c5850
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

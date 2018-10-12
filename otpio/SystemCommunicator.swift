@@ -17,17 +17,20 @@ class System {
     private let keychain: Keychain
     
     private var currentTokens: [Token]
+    private var persistantTokens: Set<PersistentToken>
     public var tokenTimer: Timer?
     
     init() {
         keychain = Keychain.sharedInstance
         currentTokens = []
+        persistantTokens = []
         setup()
     }
     
     public func setup() {
         do {
             let p = try keychain.allPersistentTokens()
+            persistantTokens = p
             currentTokens = p.map({ (t) -> Token in
                 return t.token
             })
@@ -66,6 +69,25 @@ class System {
         })
         
         listener?.tokensUpdated(tokens: currentTokens)
+    }
+    
+    public func remove(token t: Token) {
+        do {
+            let persist = persistantTokens.filter { (p) -> Bool in
+                return p.token == t
+            }
+            
+            if persist.count != 1 {
+                throw Keychain.Error.incorrectReturnType
+            }
+            
+            let p = persist.first!
+            _ = try keychain.delete(p)
+        } catch let e {
+            print("Keychain Error: \(e)")
+        }
+        
+        self.setup()
     }
     
     public func fetchAll() -> [Token] {

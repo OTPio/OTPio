@@ -42,11 +42,8 @@ class DisplayViewController: UIViewController {
         
         view.addSubview(codes)
         
-        navigationController?.navigationBar.barTintColor = .flatBlack
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
-        
         navigationItem.title = "My Codes"
-        navigationItem.leftBarButtonItem = add
+        navigationItem.rightBarButtonItem = add
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -14,6 +14,7 @@ target 'otpio' do
   pod 'RetroProgress'
   pod 'FontBlaster'
   pod 'GradientProgressBar'
+  pod 'SwipeCellKit'
 
   post_install do |installer|
 

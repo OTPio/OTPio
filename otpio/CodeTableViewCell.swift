@@ -9,8 +9,9 @@
 import UIKit
 import OneTimePassword
 import GradientProgressBar
+import SwipeCellKit
 
-class CodeTableViewCell: UITableViewCell {
+class CodeTableViewCell: SwipeTableViewCell {
 
     let mainView: SystemView  = SystemView()
     

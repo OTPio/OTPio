@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		661F2CCC2170A2740059756F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 661F2CCB2170A2740059756F /* README.md */; };
 		66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66343FE6216F2F3C001AAA1C /* Intents.framework */; };
+		66343FE921703BFD001AAA1C /* CodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FE821703BFD001AAA1C /* CodesView.swift */; };
+		66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */; };
+		66343FED2170421C001AAA1C /* SourceCodeVariable-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */; };
+		66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
 		66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C430216DE859005DC2F3 /* UIKit.swift */; };
 		66C2C436216E68C9005DC2F3 /* FASolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C432216E68C9005DC2F3 /* FASolid.ttf */; };
 		66C2C437216E68C9005DC2F3 /* FABrands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C433216E68C9005DC2F3 /* FABrands.ttf */; };
@@ -27,6 +31,10 @@
 		661F2CCB2170A2740059756F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		66343FE5216F2F24001AAA1C /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
 		66343FE6216F2F3C001AAA1C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		66343FE821703BFD001AAA1C /* CodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesView.swift; sourceTree = "<group>"; };
+		66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
+		66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodeVariable-Roman.ttf"; sourceTree = "<group>"; };
+		66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-ExtraLight.ttf"; sourceTree = "<group>"; };
 		66C2C430216DE859005DC2F3 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
 		66C2C432216E68C9005DC2F3 /* FASolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FASolid.ttf; sourceTree = "<group>"; };
 		66C2C433216E68C9005DC2F3 /* FABrands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FABrands.ttf; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 				66CAA239216B1F5B0015AC5A /* Assets.xcassets */,
 				66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */,
 				66CAA23E216B1F5B0015AC5A /* Info.plist */,
+				66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */,
+				66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */,
 				66C2C433216E68C9005DC2F3 /* FABrands.ttf */,
 				66C2C434216E68C9005DC2F3 /* FALight.ttf */,
 				66C2C435216E68C9005DC2F3 /* FARegular.ttf */,
@@ -94,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				66CAA24A216B2E240015AC5A /* DisplayViewController.swift */,
+				66343FE821703BFD001AAA1C /* CodesView.swift */,
+				66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -174,8 +186,17 @@
 					66CAA22E216B1F5A0015AC5A = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.Siri = {
 								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
 							};
 						};
 					};
@@ -210,6 +231,8 @@
 				661F2CCC2170A2740059756F /* README.md in Resources */,
 				66C2C438216E68C9005DC2F3 /* FALight.ttf in Resources */,
 				66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */,
+				66343FED2170421C001AAA1C /* SourceCodeVariable-Roman.ttf in Resources */,
+				66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */,
 				66C2C436216E68C9005DC2F3 /* FASolid.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,15 +248,20 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Base32/Base32.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientProgressBar/GradientProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
+				"${BUILT_PRODUCTS_DIR}/Observable/Observable.framework",
 				"${BUILT_PRODUCTS_DIR}/OneTimePassword/OneTimePassword.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/RetroProgress/RetroProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -242,15 +270,20 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base32.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontBlaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Observable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneTimePassword.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RetroProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		63336AA762374E713CDB591F /* [CP] Check Pods Manifest.lock */ = {
@@ -287,6 +320,8 @@
 				66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */,
 				66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */,
 				66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */,
+				66343FE921703BFD001AAA1C /* CodesView.swift in Sources */,
+				66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

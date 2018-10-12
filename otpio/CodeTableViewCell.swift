@@ -23,6 +23,9 @@ class CodeTableViewCell: UITableViewCell {
     var tokenTimer: Timer!
     var token: Token?
     
+    var shouldShowCopied: Bool = false
+    var copiedCount: Int = 5
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
@@ -47,8 +50,8 @@ class CodeTableViewCell: UITableViewCell {
         fatalError()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func wasSelected() {
+        shouldShowCopied = true
     }
     
     override func layoutSubviews() {
@@ -84,7 +87,7 @@ class CodeTableViewCell: UITableViewCell {
         }
         
         c.insert(" ", at: c.index(c.startIndex, offsetBy: 3))
-        code.text = c
+        code.updateText(with: c, duration: 0.5)
     }
     
     private func timeRemaining() -> Float {
@@ -109,7 +112,17 @@ class CodeTableViewCell: UITableViewCell {
             let p = Float(r/30)
             self.progress.setProgress(p, animated: true)
             
-            self.updateCode()
+            if self.shouldShowCopied {
+                if self.copiedCount > 1 {
+                    self.copiedCount -= 1
+                    self.code.updateText(with: "Copied", duration: 0.3)
+                } else {
+                    self.shouldShowCopied = false
+                    self.copiedCount = 5
+                }
+            } else {
+                self.updateCode()
+            }
         }
         
         tokenTimer = t

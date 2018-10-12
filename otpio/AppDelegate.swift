@@ -29,9 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var root: DisplayViewController
     
     override init() {
-        FontBlaster.blast { (fonts) in
-            print(fonts)
-        }
+        FontBlaster.blast()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         root = DisplayViewController()
@@ -42,7 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.shortcutItems = [shortcut]
         
-        window?.rootViewController = root
+        window?.rootViewController = UINavigationController(rootViewController: root)
+        
+        UINavigationBar.appearance().barTintColor = .flatBlack
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
+        
         window?.makeKeyAndVisible()
         
         return true
@@ -50,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         root.shouldScan = true
+        root.viewDidAppear(false)
         completionHandler(true)
     }
 

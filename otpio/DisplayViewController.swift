@@ -18,11 +18,14 @@ class DisplayViewController: UIViewController {
     
     var shouldScan: Bool = false
     
-    let topBar: SystemView
-    let topLabel: SystemLabel
-    let add: SystemButton
-    
     let codes: CodesView
+    var add: UIBarButtonItem {
+        let b = UIBarButtonItem(title: "\u{f067}", style: .plain, target: self, action: #selector(DisplayViewController.scanCode))
+        b.setTitleTextAttributes(FAREGULAR_ATTR, for: .normal)
+        b.tintColor = .flatWhite
+        
+        return b
+    }
     
     lazy var readerVC: QRCodeReaderViewController = {
         let b = QRCodeReaderViewControllerBuilder {
@@ -33,24 +36,17 @@ class DisplayViewController: UIViewController {
     }()
     
     init() {
-        topBar = SystemView()
-        topBar.backgroundColor = .flatBlack
-        
-        topLabel = SystemLabel(.center, size: 20)
-        topLabel.text = "My Codes"
-        topBar.addSubview(topLabel)
-        
-        add = SystemButton(faType: .normal, backgroundColor: .clear, text: "\u{f067}")
-        topBar.addSubview(add)
-        
         codes = CodesView()
         
         super.init(nibName: nil, bundle: nil)
         
-        view.addSubview(topBar)
         view.addSubview(codes)
         
-        add.addTarget(self, action: #selector(DisplayViewController.scanCode), for: .touchUpInside)
+        navigationController?.navigationBar.barTintColor = .flatBlack
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
+        
+        navigationItem.title = "My Codes"
+        navigationItem.leftBarButtonItem = add
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -69,10 +65,6 @@ class DisplayViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        topBar.anchorAndFillEdge(.top, xPad: 0, yPad: 0, otherSize: 90)
-        topLabel.anchorToEdge(.bottom, padding: 15, width: 100, height: 22)
-        add.anchorInCorner(.bottomLeft, xPad: 5, yPad: 15, width: 30, height: 30)
         
         codes.anchorToEdge(.bottom, padding: 40, width: view.width * 0.85, height: view.height * 0.75)
     }

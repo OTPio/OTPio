@@ -60,7 +60,12 @@ extension CodesView: TokenOperationsListener {
 
 extension CodesView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? CodeTableViewCell else { return }
+        guard let code = cell.token?.currentPassword else { return }
         
+        UIPasteboard.general.string = code
+        
+        cell.shouldShowCopied = true
     }
 }
 
@@ -75,6 +80,8 @@ extension CodesView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CodeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "code", for: indexPath) as! CodeTableViewCell
+        
+        cell.selectionStyle = .none
         
         let t = currentTokens[indexPath.row]
         cell.configure(with: t)

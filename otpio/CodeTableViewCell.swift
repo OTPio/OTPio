@@ -31,7 +31,7 @@ class CodeTableViewCell: UITableViewCell {
         code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 22)
         code.textAlignment = .right
         progress.backgroundColor = .clear
-        progress.progressTintColor = UIColor.flatBlue
+        progress.progressTintColor = UIColor.flatSkyBlue
         
         addSubview(mainView)
 
@@ -39,6 +39,8 @@ class CodeTableViewCell: UITableViewCell {
         mainView.addSubview(provider)
         mainView.addSubview(user)
         mainView.addSubview(code)
+        
+        mainView.bringSubviewToFront(progress)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -53,9 +55,12 @@ class CodeTableViewCell: UITableViewCell {
         mainView.backgroundColor = UIColor.flatBlack.lighten(byPercentage: 0.05)
         
         mainView.anchorInCenter(width: width * 0.95, height: 60)
-        mainView.roundCorners()
+        mainView.layer.cornerRadius = 15
+        mainView.clipsToBounds = true
+        mainView.layer.borderWidth = 1.2
+        mainView.layer.borderColor = UIColor.flatBlueDark.cgColor
         
-        progress.anchorToEdge(.top, padding: 0, width: mainView.width * 0.92, height: 2)
+        progress.anchorToEdge(.top, padding: 0, width: mainView.width * 0.9, height: 2)
         
         provider.anchorInCorner(.topLeft, xPad: 10, yPad: 8, width: width * 0.6, height: 20)
         user.anchorInCorner(.bottomLeft, xPad: 10, yPad: 8, width: width * 0.6, height: 16)

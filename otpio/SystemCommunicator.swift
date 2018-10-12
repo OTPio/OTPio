@@ -66,24 +66,19 @@ class System {
     }
 
     @objc func startTokenUpdater() {
-        DispatchQueue.global(qos: .background).async {
-            
-            var newTokens: [Token] = []
-            for i in 0..<self.currentTokens.count {
-                let t = self.currentTokens[i]
-                let nt = t.updatedToken()
-                newTokens.append(nt)
-            }
-            
-            self.currentTokens = newTokens
-            
-            DispatchQueue.main.async {
-                let count = self.generateOffset()
-                let p = Float(count/30)
-                self.currentTokens = newTokens
-                self.listener?.tokensUpdated(tokens: self.currentTokens, time: p)
-            }
+        var newTokens: [Token] = []
+        for i in 0..<self.currentTokens.count {
+            let t = self.currentTokens[i]
+            let nt = t.updatedToken()
+            newTokens.append(nt)
         }
+        
+        self.currentTokens = newTokens
+        
+        let count = self.generateOffset()
+        let p = Float(count/30)
+        self.currentTokens = newTokens
+        self.listener?.tokensUpdated(tokens: self.currentTokens, time: p)
     }
     
     func stopAllTimers() {
@@ -96,7 +91,7 @@ class System {
         case .timer(let time):
             let epoch = Date().timeIntervalSince1970
             let d = Int(time - epoch.truncatingRemainder(dividingBy: time))
-            return Float(d)
+            return Float(30 - d)
         default: return 0.0
         }
     }

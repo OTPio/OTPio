@@ -15,6 +15,8 @@ let FAREGULAR_UIFONT: UIFont = UIFont(name: "FontAwesome5ProRegular", size: 20)!
 let FASOLID_UIFONT  : UIFont = UIFont(name: "FontAwesome5ProSolid", size: 20)!
 let FABRANDS_UIFONT : UIFont = UIFont(name: "FontAwesome5BrandsRegular", size: 20)!
 
+let SOURCECODE      : UIFont = UIFont(name: "SourceCodeVariable-Roman", size: 20)!
+
 let FALIGHT_ATTR     = [NSAttributedString.Key.font: FALIGHT_UIFONT]
 let FAREGULAR_ATTR   = [NSAttributedString.Key.font: FAREGULAR_UIFONT]
 let FASOLID_ATTR     = [NSAttributedString.Key.font: FASOLID_UIFONT]
@@ -27,7 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var root: DisplayViewController
     
     override init() {
-        FontBlaster.blast()
+        FontBlaster.blast { (fonts) in
+            print(fonts)
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         root = DisplayViewController()

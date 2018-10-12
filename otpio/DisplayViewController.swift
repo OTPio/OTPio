@@ -88,7 +88,7 @@ class DisplayViewController: UIViewController {
         
         topBar.anchorAndFillEdge(.top, xPad: 0, yPad: 0, otherSize: 90)
         topLabel.anchorToEdge(.bottom, padding: 15, width: 100, height: 22)
-        add.anchorInCorner(.bottomRight, xPad: 5, yPad: 15, width: 30, height: 30)
+        add.anchorInCorner(.bottomLeft, xPad: 5, yPad: 15, width: 30, height: 30)
         
         codes.anchorToEdge(.bottom, padding: 40, width: view.width * 0.85, height: view.height * 0.75)
         codes.roundCorners()
@@ -176,6 +176,8 @@ class CodeView: SystemView {
         
         code = SystemLabel(.right, size: 20)
         code.text = "000 000"
+        
+        code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
         
         super.init()
         

@@ -18,6 +18,7 @@ target 'otpio' do
   pod 'KeychainSwift'
   pod 'SCLAlertView'
 
+
   post_install do |installer|
 
     installer.pods_project.targets.each do |t|
@@ -38,4 +39,20 @@ target 'otpio' do
 
     end
   end
+end
+
+target 'otpio-today' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod 'OneTimePassword'
+  pod 'FontBlaster'
+  pod 'Neon'
+end
+
+target 'otpioUITests' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod 'OneTimePassword'
 end

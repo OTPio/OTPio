@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C9275B77863D1AD52F208B2 /* Pods_otpioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F31553880A68561610E070C /* Pods_otpioUITests.framework */; };
 		661F2CCC2170A2740059756F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 661F2CCB2170A2740059756F /* README.md */; };
+		661F2CD32170B7FD0059756F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661F2CD22170B7FD0059756F /* NotificationCenter.framework */; };
+		661F2CD62170B7FD0059756F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CD52170B7FD0059756F /* TodayViewController.swift */; };
+		661F2CDD2170B7FD0059756F /* otpio-today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 661F2CD12170B7FD0059756F /* otpio-today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
+		661F2CE32170BE7D0059756F /* FABrands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C433216E68C9005DC2F3 /* FABrands.ttf */; };
+		661F2CE42170BE7D0059756F /* FALight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C434216E68C9005DC2F3 /* FALight.ttf */; };
+		661F2CE52170BE7D0059756F /* FARegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C435216E68C9005DC2F3 /* FARegular.ttf */; };
+		661F2CE62170BE7D0059756F /* FASolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C432216E68C9005DC2F3 /* FASolid.ttf */; };
+		661F2CE82170C2300059756F /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CE72170C2300059756F /* CodeTableViewCell.swift */; };
+		661F2CF121711B320059756F /* otpioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CF021711B320059756F /* otpioUITests.swift */; };
 		66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66343FE6216F2F3C001AAA1C /* Intents.framework */; };
 		66343FE921703BFD001AAA1C /* CodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FE821703BFD001AAA1C /* CodesView.swift */; };
 		66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */; };
@@ -25,10 +36,55 @@
 		66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA248216B2AB30015AC5A /* Extensions.swift */; };
 		66CAA24B216B2E240015AC5A /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA24A216B2E240015AC5A /* DisplayViewController.swift */; };
 		73C23340E1406D32AF6B822E /* Pods_otpio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965F031F59C5173FF33DEBBA /* Pods_otpio.framework */; };
+		EBB00B17D7E450F5817D3115 /* Pods_otpio_today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		661F2CDB2170B7FD0059756F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CAA227216B1F5A0015AC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 661F2CD02170B7FD0059756F;
+			remoteInfo = "otpio-today";
+		};
+		661F2CF321711B320059756F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CAA227216B1F5A0015AC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66CAA22E216B1F5A0015AC5A;
+			remoteInfo = otpio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		661F2CE12170B7FD0059756F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				661F2CDD2170B7FD0059756F /* otpio-today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		335BC601CC33BBFDC0A4BE66 /* Pods-otpio-otpio-today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-otpio-today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-otpio-today/Pods-otpio-otpio-today.debug.xcconfig"; sourceTree = "<group>"; };
+		3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpioUITests/Pods-otpioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-today.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-today/Pods-otpio-today.release.xcconfig"; sourceTree = "<group>"; };
+		59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		661F2CCB2170A2740059756F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		661F2CD12170B7FD0059756F /* otpio-today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "otpio-today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		661F2CD22170B7FD0059756F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		661F2CD52170B7FD0059756F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		661F2CDA2170B7FD0059756F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661F2CE72170C2300059756F /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
+		661F2CE92170C71F0059756F /* otpio-today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "otpio-today.entitlements"; sourceTree = "<group>"; };
+		661F2CEE21711B310059756F /* otpioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otpioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		661F2CF021711B320059756F /* otpioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpioUITests.swift; sourceTree = "<group>"; };
+		661F2CF221711B320059756F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66343FE5216F2F24001AAA1C /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
 		66343FE6216F2F3C001AAA1C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		66343FE821703BFD001AAA1C /* CodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesView.swift; sourceTree = "<group>"; };
@@ -48,12 +104,34 @@
 		66CAA246216B29FF0015AC5A /* SystemCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCommunicator.swift; sourceTree = "<group>"; };
 		66CAA248216B2AB30015AC5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		66CAA24A216B2E240015AC5A /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		6971635977A88E850D98EDCD /* Pods-otpio-today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-today/Pods-otpio-today.debug.xcconfig"; sourceTree = "<group>"; };
+		70744DEB705251260B5DB421 /* Pods_otpio_otpio_today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_otpio_today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		965F031F59C5173FF33DEBBA /* Pods_otpio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F31553880A68561610E070C /* Pods_otpioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.release.xcconfig"; sourceTree = "<group>"; };
+		BA208E3661A9A8AA263B2D4E /* Pods-otpio-otpio-today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-otpio-today.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-otpio-today/Pods-otpio-otpio-today.release.xcconfig"; sourceTree = "<group>"; };
 		C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
+		E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpioUITests/Pods-otpioUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		661F2CCE2170B7FD0059756F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661F2CD32170B7FD0059756F /* NotificationCenter.framework in Frameworks */,
+				EBB00B17D7E450F5817D3115 /* Pods_otpio_today.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		661F2CEB21711B310059756F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C9275B77863D1AD52F208B2 /* Pods_otpioUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CAA22C216B1F5A0015AC5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,8 +149,32 @@
 			children = (
 				66343FE6216F2F3C001AAA1C /* Intents.framework */,
 				965F031F59C5173FF33DEBBA /* Pods_otpio.framework */,
+				661F2CD22170B7FD0059756F /* NotificationCenter.framework */,
+				59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */,
+				70744DEB705251260B5DB421 /* Pods_otpio_otpio_today.framework */,
+				9F31553880A68561610E070C /* Pods_otpioUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		661F2CD42170B7FD0059756F /* otpio-today */ = {
+			isa = PBXGroup;
+			children = (
+				661F2CE92170C71F0059756F /* otpio-today.entitlements */,
+				661F2CD52170B7FD0059756F /* TodayViewController.swift */,
+				661F2CE72170C2300059756F /* CodeTableViewCell.swift */,
+				661F2CDA2170B7FD0059756F /* Info.plist */,
+			);
+			path = "otpio-today";
+			sourceTree = "<group>";
+		};
+		661F2CEF21711B320059756F /* otpioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				661F2CF021711B320059756F /* otpioUITests.swift */,
+				661F2CF221711B320059756F /* Info.plist */,
+			);
+			path = otpioUITests;
 			sourceTree = "<group>";
 		};
 		66343FE2216F1083001AAA1C /* Assets */ = {
@@ -115,6 +217,8 @@
 			children = (
 				661F2CCB2170A2740059756F /* README.md */,
 				66CAA231216B1F5A0015AC5A /* otpio */,
+				661F2CD42170B7FD0059756F /* otpio-today */,
+				661F2CEF21711B320059756F /* otpioUITests */,
 				66CAA230216B1F5A0015AC5A /* Products */,
 				DAB0B122B37A3F1D50E855EA /* Pods */,
 				56B29F815CFF4BD05E41464E /* Frameworks */,
@@ -125,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				66CAA22F216B1F5A0015AC5A /* otpio.app */,
+				661F2CD12170B7FD0059756F /* otpio-today.appex */,
+				661F2CEE21711B310059756F /* otpioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +253,12 @@
 			children = (
 				C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */,
 				A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */,
+				6971635977A88E850D98EDCD /* Pods-otpio-today.debug.xcconfig */,
+				3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */,
+				335BC601CC33BBFDC0A4BE66 /* Pods-otpio-otpio-today.debug.xcconfig */,
+				BA208E3661A9A8AA263B2D4E /* Pods-otpio-otpio-today.release.xcconfig */,
+				3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */,
+				E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -154,6 +266,44 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		661F2CD02170B7FD0059756F /* otpio-today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661F2CE02170B7FD0059756F /* Build configuration list for PBXNativeTarget "otpio-today" */;
+			buildPhases = (
+				A0BF2D886520FC5935D22C38 /* [CP] Check Pods Manifest.lock */,
+				661F2CCD2170B7FD0059756F /* Sources */,
+				661F2CCE2170B7FD0059756F /* Frameworks */,
+				661F2CCF2170B7FD0059756F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "otpio-today";
+			productName = "otpio-today";
+			productReference = 661F2CD12170B7FD0059756F /* otpio-today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		661F2CED21711B310059756F /* otpioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661F2CF521711B320059756F /* Build configuration list for PBXNativeTarget "otpioUITests" */;
+			buildPhases = (
+				A367FDA78AB0A8686A7CF72A /* [CP] Check Pods Manifest.lock */,
+				661F2CEA21711B310059756F /* Sources */,
+				661F2CEB21711B310059756F /* Frameworks */,
+				661F2CEC21711B310059756F /* Resources */,
+				6738435CC3AFF282B1509844 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				661F2CF421711B320059756F /* PBXTargetDependency */,
+			);
+			name = otpioUITests;
+			productName = otpioUITests;
+			productReference = 661F2CEE21711B310059756F /* otpioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		66CAA22E216B1F5A0015AC5A /* otpio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66CAA241216B1F5B0015AC5A /* Build configuration list for PBXNativeTarget "otpio" */;
@@ -163,10 +313,12 @@
 				66CAA22C216B1F5A0015AC5A /* Frameworks */,
 				66CAA22D216B1F5A0015AC5A /* Resources */,
 				16FF2A4F31DF7BE890BE365C /* [CP] Embed Pods Frameworks */,
+				661F2CE12170B7FD0059756F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				661F2CDC2170B7FD0059756F /* PBXTargetDependency */,
 			);
 			name = otpio;
 			productName = otpio;
@@ -183,6 +335,18 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Matrix Studios";
 				TargetAttributes = {
+					661F2CD02170B7FD0059756F = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					661F2CED21711B310059756F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 66CAA22E216B1F5A0015AC5A;
+					};
 					66CAA22E216B1F5A0015AC5A = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -216,11 +380,32 @@
 			projectRoot = "";
 			targets = (
 				66CAA22E216B1F5A0015AC5A /* otpio */,
+				661F2CD02170B7FD0059756F /* otpio-today */,
+				661F2CED21711B310059756F /* otpioUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		661F2CCF2170B7FD0059756F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */,
+				661F2CE32170BE7D0059756F /* FABrands.ttf in Resources */,
+				661F2CE42170BE7D0059756F /* FALight.ttf in Resources */,
+				661F2CE52170BE7D0059756F /* FARegular.ttf in Resources */,
+				661F2CE62170BE7D0059756F /* FASolid.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		661F2CEC21711B310059756F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CAA22D216B1F5A0015AC5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,9 +493,94 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6738435CC3AFF282B1509844 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otpioUITests/Pods-otpioUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Base32/Base32.framework",
+				"${BUILT_PRODUCTS_DIR}/OneTimePassword/OneTimePassword.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base32.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneTimePassword.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otpioUITests/Pods-otpioUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0BF2D886520FC5935D22C38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otpio-today-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A367FDA78AB0A8686A7CF72A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otpioUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		661F2CCD2170B7FD0059756F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661F2CE82170C2300059756F /* CodeTableViewCell.swift in Sources */,
+				661F2CD62170B7FD0059756F /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		661F2CEA21711B310059756F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661F2CF121711B320059756F /* otpioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CAA22B216B1F5A0015AC5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +597,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		661F2CDC2170B7FD0059756F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 661F2CD02170B7FD0059756F /* otpio-today */;
+			targetProxy = 661F2CDB2170B7FD0059756F /* PBXContainerItemProxy */;
+		};
+		661F2CF421711B320059756F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66CAA22E216B1F5A0015AC5A /* otpio */;
+			targetProxy = 661F2CF321711B320059756F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -339,6 +622,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		661F2CDE2170B7FD0059756F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6971635977A88E850D98EDCD /* Pods-otpio-today.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "otpio-today/otpio-today.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S4L29QT59;
+				INFOPLIST_FILE = "otpio-today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.matrixstudios.otpio.otpio-today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		661F2CDF2170B7FD0059756F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "otpio-today/otpio-today.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S4L29QT59;
+				INFOPLIST_FILE = "otpio-today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.matrixstudios.otpio.otpio-today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		661F2CF621711B320059756F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S4L29QT59;
+				INFOPLIST_FILE = otpioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.matrixstudios.otpioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = otpio;
+			};
+			name = Debug;
+		};
+		661F2CF721711B320059756F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S4L29QT59;
+				INFOPLIST_FILE = otpioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.matrixstudios.otpioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = otpio;
+			};
+			name = Release;
+		};
 		66CAA23F216B1F5B0015AC5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -459,6 +824,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +845,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -498,6 +865,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		661F2CE02170B7FD0059756F /* Build configuration list for PBXNativeTarget "otpio-today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				661F2CDE2170B7FD0059756F /* Debug */,
+				661F2CDF2170B7FD0059756F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		661F2CF521711B320059756F /* Build configuration list for PBXNativeTarget "otpioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				661F2CF621711B320059756F /* Debug */,
+				661F2CF721711B320059756F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66CAA22A216B1F5A0015AC5A /* Build configuration list for PBXProject "otpio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

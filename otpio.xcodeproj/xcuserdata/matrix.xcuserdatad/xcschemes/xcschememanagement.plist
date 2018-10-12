@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>otpio-today.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
 		<key>otpio.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>16</integer>
 		</dict>
 	</dict>
 </dict>

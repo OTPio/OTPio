@@ -15,6 +15,8 @@ let FAREGULAR_UIFONT: UIFont = UIFont(name: "FontAwesome5ProRegular", size: 20)!
 let FASOLID_UIFONT  : UIFont = UIFont(name: "FontAwesome5ProSolid", size: 20)!
 let FABRANDS_UIFONT : UIFont = UIFont(name: "FontAwesome5BrandsRegular", size: 20)!
 
+let SOURCECODE      : UIFont = UIFont(name: "SourceCodeVariable-Roman", size: 20)!
+
 let FALIGHT_ATTR     = [NSAttributedString.Key.font: FALIGHT_UIFONT]
 let FAREGULAR_ATTR   = [NSAttributedString.Key.font: FAREGULAR_UIFONT]
 let FASOLID_ATTR     = [NSAttributedString.Key.font: FASOLID_UIFONT]
@@ -38,7 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.shortcutItems = [shortcut]
         
-        window?.rootViewController = root
+        window?.rootViewController = UINavigationController(rootViewController: root)
+        
+        UINavigationBar.appearance().barTintColor = .flatBlack
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
+        
         window?.makeKeyAndVisible()
         
         return true
@@ -46,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         root.shouldScan = true
+        root.viewDidAppear(false)
         completionHandler(true)
     }
 
@@ -59,11 +66,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        System.sharedInstance.setup()
+        System.sharedInstance.restartTimers()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        System.sharedInstance.setup()
+        System.sharedInstance.restartTimers()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

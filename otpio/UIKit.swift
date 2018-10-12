@@ -48,6 +48,12 @@ class SystemLabel: UILabel {
         self.init(position, size: nil)
     }
     
+    public func updateText(with s: String, duration: Double?) {
+        if s == self.text { return } // Nothing to change
+        self.fadeTransition(duration ?? 0.4)
+        self.text = s
+    }
+    
     public func multiline() {
         numberOfLines = 0
         lineBreakMode = .byWordWrapping

@@ -17,28 +17,32 @@ class System {
     private let keychain: Keychain
     
     private var currentTokens: [Token]
+    private var persistantTokens: Set<PersistentToken>
     public var tokenTimer: Timer?
     
     init() {
         keychain = Keychain.sharedInstance
         currentTokens = []
+        persistantTokens = []
         setup()
     }
     
     public func setup() {
         do {
             let p = try keychain.allPersistentTokens()
+            persistantTokens = p
             currentTokens = p.map({ (t) -> Token in
                 return t.token
+            })
+            currentTokens = currentTokens.sorted(by: { (left, right) -> Bool in
+                return left.issuer < right.issuer
             })
         } catch {
             print("Keychain error: could not retrieve all tokens")
             currentTokens = []
         }
-
-        tokenTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
-            self.startTokenUpdater()
-        })
+        
+        listener?.tokensUpdated(tokens: currentTokens)
     }
     
     public func qrCallback(result: QRCodeReaderResult?) {
@@ -59,49 +63,48 @@ class System {
         } catch let e {
             print("Keychain error: \(e)")
         }
+        
+        currentTokens = currentTokens.sorted(by: { (left, right) -> Bool in
+            return left.issuer < right.issuer
+        })
+        
+        listener?.tokensUpdated(tokens: currentTokens)
+    }
+    
+    public func remove(token t: Token) {
+        do {
+            let persist = persistantTokens.filter { (p) -> Bool in
+                return p.token == t
+            }
+            
+            if persist.count != 1 {
+                throw Keychain.Error.incorrectReturnType
+            }
+            
+            let p = persist.first!
+            _ = try keychain.delete(p)
+        } catch let e {
+            print("Keychain Error: \(e)")
+        }
+        
+        self.setup()
     }
     
     public func fetchAll() -> [Token] {
         return currentTokens
     }
-
-    @objc func startTokenUpdater() {
-        DispatchQueue.global(qos: .background).async {
-            
-            var newTokens: [Token] = []
-            for i in 0..<self.currentTokens.count {
-                let t = self.currentTokens[i]
-                let nt = t.updatedToken()
-                newTokens.append(nt)
-            }
-            
-            self.currentTokens = newTokens
-            
-            DispatchQueue.main.async {
-                let count = self.generateOffset()
-                let p = Float(count/30)
-                self.currentTokens = newTokens
-                self.listener?.tokensUpdated(tokens: self.currentTokens, time: p)
-            }
-        }
+    
+    public func stopAllTimers() {
+        listener?.stopTimers()
     }
     
-    func stopAllTimers() {
-        tokenTimer?.invalidate()
-    }
-    
-    func generateOffset() -> Float {
-        guard let t = self.currentTokens.first else { return 0.0 }
-        switch t.generator.factor {
-        case .timer(let time):
-            let epoch = Date().timeIntervalSince1970
-            let d = Int(time - epoch.truncatingRemainder(dividingBy: time))
-            return Float(d)
-        default: return 0.0
-        }
+    public func restartTimers() {
+        listener?.restartTimers()
     }
 }
 
 protocol TokenOperationsListener {
-    func tokensUpdated(tokens t: Array<Token>, time: Float)
+    func tokensUpdated(tokens t: Array<Token>)
+    func stopTimers()
+    func restartTimers()
 }

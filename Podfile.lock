@@ -4,31 +4,40 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - FontBlaster (4.1.0)
+  - GradientProgressBar (1.2.4):
+    - Observable
   - Neon (0.4.0)
+  - Observable (1.3.3)
   - OneTimePassword (3.1.4):
     - Base32 (~> 1.1.2)
   - QRCodeReader.swift (9.0.1)
   - RetroProgress (1.0.1)
   - SwiftyUserDefaults (4.0.0-alpha.1)
+  - SwipeCellKit (2.5.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`, branch `wip/swift4`)
   - FontBlaster
+  - GradientProgressBar
   - Neon
   - OneTimePassword
   - QRCodeReader.swift
   - RetroProgress
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
+  - SwipeCellKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Base32
     - FontBlaster
+    - GradientProgressBar
     - Neon
+    - Observable
     - OneTimePassword
     - QRCodeReader.swift
     - RetroProgress
     - SwiftyUserDefaults
+    - SwipeCellKit
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -44,12 +53,15 @@ SPEC CHECKSUMS:
   Base32: 163c298644d184e89ca4e00a996bad6bf5166390
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
+  GradientProgressBar: 89bc1067cbc3a132d867b81778a32797b90a7fe2
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
+  Observable: 360b0132cef970a50bc69611df7fcbda46e91c34
   OneTimePassword: 2fcf5d0e393a8e630a6bfeed1b250fb008aad487
   QRCodeReader.swift: 96292a5612fbc2fd9a0b26f93fa5164c8d02f59d
   RetroProgress: a5b2514485c0ce75838ad321c77d5746150901cd
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
+  SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
-PODFILE CHECKSUM: 98ef7fb12950a3ea7ec36c405201df910683f82c
+PODFILE CHECKSUM: fcfa2edc73c3801cdb44d85340dae3c5d86c5850
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

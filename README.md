@@ -15,9 +15,9 @@ Most 2FA apps look ugly, or they haven't been updated for modern iOS devices. I 
 And maybe a few extra features on the side.
 
 ## What are the features?
-- [ x ] Generate authentication codes from a QR code or OTP URL
-- [   ] Today Extension
-- [   ] Apple Watch App
-- [   ] watchOS Complication
-- [   ] Siri Extension
-- [   ] Auto-fill Credentials Provider
+- [x] Generate authentication codes from a QR code or OTP URL
+- [ ] Today Extension
+- [ ] Apple Watch App
+- [ ] watchOS Complication
+- [ ] Siri Extension
+- [ ] Auto-fill Credentials Provider

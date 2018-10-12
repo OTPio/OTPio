@@ -16,6 +16,7 @@ target 'otpio' do
   pod 'GradientProgressBar'
   pod 'SwipeCellKit'
   pod 'KeychainSwift'
+  pod 'SCLAlertView'
 
   post_install do |installer|
 

@@ -13,6 +13,7 @@ import QRCodeReader
 import AVFoundation
 import OneTimePassword
 import RetroProgress
+import SCLAlertView
 
 class DisplayViewController: UIViewController {
     
@@ -68,6 +69,23 @@ class DisplayViewController: UIViewController {
     }
     
     @objc func scanCode() {
+        let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: true, showCircularIcon: true
+        )
+        let alert = SCLAlertView(appearance: appearance)
+        let text = alert.addTextField("OTP URL")
+        alert.addButton("Use OTP URL") {
+            print(text.text!)
+        }
+        alert.addButton("Scan QR Code") {
+            self.showScanView()
+        }
+        
+        let icon = UIImage.fontAwesomeIcon("\u{f029}", textColor: .flatWhite, size: CGSize(width: 100, height: 100))
+        alert.showInfo("Add a Code", subTitle: "Enter a OTP URL, or scan a QR Code", circleIconImage: icon)
+    }
+    
+    private func showScanView() {
         readerVC.delegate = self
         readerVC.completionBlock = { (result: QRCodeReaderResult?) in
             System.sharedInstance.qrCallback(result: result)

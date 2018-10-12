@@ -92,7 +92,7 @@ public extension UIImage {
         let strokeWidth: CGFloat = fontSize == 0 ? 0 : (-100 * borderWidth / fontSize)
         
         let attributedString = NSAttributedString(string: fa, attributes: [
-            NSAttributedString.Key.font: FAREGULAR_UIFONT,
+            NSAttributedString.Key.font: UIFont(name: "FontAwesome5ProRegular", size: fontSize)!,
             NSAttributedString.Key.foregroundColor: textColor,
             NSAttributedString.Key.backgroundColor: backgroundColor,
             NSAttributedString.Key.paragraphStyle: paragraph,

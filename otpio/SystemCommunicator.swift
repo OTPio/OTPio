@@ -9,12 +9,14 @@
 import UIKit
 import OneTimePassword
 import QRCodeReader
+import KeychainSwift
 
 class System {
     public static let sharedInstance: System = System()
     public var listener: TokenOperationsListener?
         
     private let keychain: Keychain
+    private let cloud: KeychainSwift
     
     private var currentTokens: [Token]
     private var persistantTokens: Set<PersistentToken>
@@ -24,6 +26,9 @@ class System {
         keychain = Keychain.sharedInstance
         currentTokens = []
         persistantTokens = []
+        
+        cloud = KeychainSwift()
+        cloud.synchronizable = true
         setup()
     }
     
@@ -42,7 +47,50 @@ class System {
             currentTokens = []
         }
         
+        if currentTokens.count > 0 { self.uploadToCloud() }
         listener?.tokensUpdated(tokens: currentTokens)
+    }
+    
+    public func fetchFromCloud() {
+        do {
+            guard let tokenStrings: String = cloud.get("token_urls") else { throw TokenSync.noTokens }
+            
+            let tokenArray = tokenStrings.split(separator: "|")
+            
+            for t in tokenArray {
+                guard let url = URL(string: String(t)) else { throw TokenSync.urlStringNotConvertible }
+                self.generate(using: url)
+            }
+        } catch let e {
+            if let e = e as? TokenSync {
+                switch e {
+                case .noTokens:
+                    print("No tokens could be found")
+                case .urlStringNotConvertible:
+                    print("Could not convert to URL")
+                }
+            } else {
+                print(e)
+            }
+        }
+    }
+    
+    public func uploadToCloud() {
+        do {
+            let keys = try keychain.allPersistentTokens()
+            var strings: Array<String> = []
+            
+            for k in keys {
+                let u = try k.token.toURL()
+                let s = u.absoluteString
+                strings.append(s)
+            }
+            
+            let cstring = strings.joined(separator: "|")
+            cloud.set(cstring, forKey: "token_urls")
+        } catch let e {
+            print("Keychain error while uploading: \(e)")
+        }
     }
     
     public func qrCallback(result: QRCodeReaderResult?) {
@@ -56,6 +104,10 @@ class System {
     public func generate(using u: URL) {
         guard let t: Token = Token(url: u) else { return }
         print("Current PIN: \(t.currentPassword!)")
+        
+        for tt in currentTokens {
+            if tt == t { print("Token already exists, canceling"); return }
+        }
         
         currentTokens.append(t)
         do {
@@ -107,4 +159,8 @@ protocol TokenOperationsListener {
     func tokensUpdated(tokens t: Array<Token>)
     func stopTimers()
     func restartTimers()
+}
+
+enum TokenSync: Error {
+    case noTokens, urlStringNotConvertible
 }

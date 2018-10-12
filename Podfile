@@ -15,6 +15,7 @@ target 'otpio' do
   pod 'FontBlaster'
   pod 'GradientProgressBar'
   pod 'SwipeCellKit'
+  pod 'KeychainSwift'
 
   post_install do |installer|
 

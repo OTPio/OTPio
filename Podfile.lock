@@ -6,6 +6,7 @@ PODS:
   - FontBlaster (4.1.0)
   - GradientProgressBar (1.2.4):
     - Observable
+  - KeychainSwift (12.0.0)
   - Neon (0.4.0)
   - Observable (1.3.3)
   - OneTimePassword (3.1.4):
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`, branch `wip/swift4`)
   - FontBlaster
   - GradientProgressBar
+  - KeychainSwift
   - Neon
   - OneTimePassword
   - QRCodeReader.swift
@@ -31,6 +33,7 @@ SPEC REPOS:
     - Base32
     - FontBlaster
     - GradientProgressBar
+    - KeychainSwift
     - Neon
     - Observable
     - OneTimePassword
@@ -54,6 +57,7 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
   GradientProgressBar: 89bc1067cbc3a132d867b81778a32797b90a7fe2
+  KeychainSwift: d5e776578587ee5958ce36601df22f168f65138a
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
   Observable: 360b0132cef970a50bc69611df7fcbda46e91c34
   OneTimePassword: 2fcf5d0e393a8e630a6bfeed1b250fb008aad487
@@ -62,6 +66,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
-PODFILE CHECKSUM: fcfa2edc73c3801cdb44d85340dae3c5d86c5850
+PODFILE CHECKSUM: b6f670607f833256d52eb687cf757dc226750c9f
 
 COCOAPODS: 1.6.0.beta.1

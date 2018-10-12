@@ -13,6 +13,7 @@ target 'otpio' do
   pod 'QRCodeReader.swift'
   pod 'RetroProgress'
   pod 'FontBlaster'
+  pod 'GradientProgressBar'
 
   post_install do |installer|
 

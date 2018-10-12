@@ -31,14 +31,15 @@ class System {
             currentTokens = p.map({ (t) -> Token in
                 return t.token
             })
+            currentTokens = currentTokens.sorted(by: { (left, right) -> Bool in
+                return left.issuer < right.issuer
+            })
         } catch {
             print("Keychain error: could not retrieve all tokens")
             currentTokens = []
         }
-
-        tokenTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
-            self.startTokenUpdater()
-        })
+        
+        listener?.tokensUpdated(tokens: currentTokens)
     }
     
     public func qrCallback(result: QRCodeReaderResult?) {
@@ -59,44 +60,29 @@ class System {
         } catch let e {
             print("Keychain error: \(e)")
         }
+        
+        currentTokens = currentTokens.sorted(by: { (left, right) -> Bool in
+            return left.issuer < right.issuer
+        })
+        
+        listener?.tokensUpdated(tokens: currentTokens)
     }
     
     public func fetchAll() -> [Token] {
         return currentTokens
     }
-
-    @objc func startTokenUpdater() {
-        var newTokens: [Token] = []
-        for i in 0..<self.currentTokens.count {
-            let t = self.currentTokens[i]
-            let nt = t.updatedToken()
-            newTokens.append(nt)
-        }
-        
-        self.currentTokens = newTokens
-        
-        let count = self.generateOffset()
-        let p = Float(count/30)
-        self.currentTokens = newTokens
-        self.listener?.tokensUpdated(tokens: self.currentTokens, time: p)
+    
+    public func stopAllTimers() {
+        listener?.stopTimers()
     }
     
-    func stopAllTimers() {
-        tokenTimer?.invalidate()
-    }
-    
-    func generateOffset() -> Float {
-        guard let t = self.currentTokens.first else { return 0.0 }
-        switch t.generator.factor {
-        case .timer(let time):
-            let epoch = Date().timeIntervalSince1970
-            let d = Int(time - epoch.truncatingRemainder(dividingBy: time))
-            return Float(30 - d)
-        default: return 0.0
-        }
+    public func restartTimers() {
+        listener?.restartTimers()
     }
 }
 
 protocol TokenOperationsListener {
-    func tokensUpdated(tokens t: Array<Token>, time: Float)
+    func tokensUpdated(tokens t: Array<Token>)
+    func stopTimers()
+    func restartTimers()
 }

@@ -13,13 +13,18 @@ class CodesView: UITableView {
     
     private var currentTokens: Array<Token>
 
-    override init(frame: CGRect, style: UITableView.Style) {
-        currentTokens = []
+    init() {
+        currentTokens = System.sharedInstance.fetchAll()
         
-        super.init(frame: frame, style: style)
+        super.init(frame: CGRect(), style: UITableView.Style.plain)
         
         System.sharedInstance.listener = self
         register(CodeTableViewCell.self, forCellReuseIdentifier: "code")
+        
+        dataSource = self
+        delegate = self
+        
+        separatorStyle = .none
         
         backgroundColor = .flatBlack
     }
@@ -29,7 +34,27 @@ class CodesView: UITableView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         layer.cornerRadius = 15
+    }
+}
+
+extension CodesView: TokenOperationsListener {
+    func tokensUpdated(tokens t: Array<Token>) {
+        self.currentTokens = t
+        reloadData()
+    }
+    
+    func stopTimers() {
+        for cell in visibleCells as! [CodeTableViewCell] {
+            cell.stopTimer()
+        }
+    }
+    
+    func restartTimers() {
+        for cell in visibleCells as! [CodeTableViewCell] {
+            cell.startTimer()
+        }
     }
 }
 
@@ -39,14 +64,11 @@ extension CodesView: UITableViewDelegate {
     }
 }
 
-extension CodesView: TokenOperationsListener {
-    func tokensUpdated(tokens t: Array<Token>, time: Float) {
-        self.currentTokens = t
-        reloadData()
-    }
-}
-
 extension CodesView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentTokens.count
     }

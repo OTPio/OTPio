@@ -63,11 +63,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        System.sharedInstance.setup()
+        System.sharedInstance.restartTimers()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        System.sharedInstance.setup()
+        System.sharedInstance.restartTimers()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

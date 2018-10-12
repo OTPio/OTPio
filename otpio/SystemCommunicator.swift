@@ -93,6 +93,12 @@ class System {
         }
     }
     
+    public func textCallback(result: String) {
+        guard let url: URL = URL(string: result) else { return }
+        
+        self.generate(using: url)
+    }
+    
     public func qrCallback(result: QRCodeReaderResult?) {
         guard let value: String = result?.value else { return }
         guard let url: URL = URL(string: value) else { return }

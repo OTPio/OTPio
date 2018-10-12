@@ -21,7 +21,7 @@ class DisplayViewController: UIViewController {
     
     let codes: CodesView
     var add: UIBarButtonItem {
-        let b = UIBarButtonItem(title: "\u{f067}", style: .plain, target: self, action: #selector(DisplayViewController.scanCode))
+        let b = UIBarButtonItem(title: "\u{f029}", style: .plain, target: self, action: #selector(DisplayViewController.scanCode))
         b.setTitleTextAttributes(FAREGULAR_ATTR, for: .normal)
         b.tintColor = .flatWhite
         
@@ -65,7 +65,7 @@ class DisplayViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        codes.anchorToEdge(.bottom, padding: 40, width: view.width * 0.85, height: view.height * 0.75)
+        codes.anchorToEdge(.bottom, padding: 40, width: view.width * 0.85, height: view.height * 0.8)
     }
     
     @objc func scanCode() {
@@ -75,7 +75,8 @@ class DisplayViewController: UIViewController {
         let alert = SCLAlertView(appearance: appearance)
         let text = alert.addTextField("OTP URL")
         alert.addButton("Use OTP URL") {
-            print(text.text!)
+            guard let r = text.text else { return }
+            System.sharedInstance.textCallback(result: r)
         }
         alert.addButton("Scan QR Code") {
             self.showScanView()

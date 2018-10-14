@@ -45,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         System.sharedInstance.fetchFromCloud()
         
         let nav = UINavigationController(rootViewController: root)
-//        nav.navigationBar.prefersLargeTitles = true
         window?.rootViewController = nav
         
         window?.makeKeyAndVisible()

@@ -33,10 +33,10 @@ class SystemLabel: UILabel {
         self.init(t, size: s)
         
         switch f {
-        case .light : font = FALIGHT_UIFONT
-        case .normal: font = FAREGULAR_UIFONT
-        case .solid : font = FASOLID_UIFONT
-        case .logo  : font = FABRANDS_UIFONT
+        case .light  : font = FALIGHT_UIFONT
+        case .regular: font = FAREGULAR_UIFONT
+        case .solid  : font = FASOLID_UIFONT
+        case .logo   : font = FABRANDS_UIFONT
         }
     }
 
@@ -86,10 +86,10 @@ class SystemButton: UIButton {
         
         let font: UIFont
         switch f {
-        case .light : font = FALIGHT_UIFONT
-        case .normal: font = FAREGULAR_UIFONT
-        case .solid : font = FASOLID_UIFONT
-        case .logo  : font = FABRANDS_UIFONT
+        case .light  : font = FALIGHT_UIFONT
+        case .regular: font = FAREGULAR_UIFONT
+        case .solid  : font = FASOLID_UIFONT
+        case .logo   : font = FABRANDS_UIFONT
         }
         
         titleLabel?.font = font
@@ -139,6 +139,9 @@ class SystemView: UIView {
     }
 }
 
-enum FAType {
-    case light, normal, solid, logo
+public enum FAType: String {
+    case light = "FontAwesome5ProLight"
+    case regular = "FontAwesome5ProRegular"
+    case solid = "FontAwesome5ProSolid"
+    case logo = "FontAwesome5BrandsRegular"
 }

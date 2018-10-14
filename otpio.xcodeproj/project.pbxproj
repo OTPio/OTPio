@@ -25,6 +25,17 @@
 		66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */; };
 		66343FED2170421C001AAA1C /* SourceCodeVariable-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */; };
 		66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
+		6673FC6021730FCD00D7F4A4 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC5F21730FCD00D7F4A4 /* Enum.swift */; };
+		6673FC6221730FD600D7F4A4 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC6121730FD600D7F4A4 /* FontAwesome.swift */; };
+		6673FC6C2173101700D7F4A4 /* FontAwesomeTextRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC632173101700D7F4A4 /* FontAwesomeTextRepresentable.swift */; };
+		6673FC6D2173101700D7F4A4 /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC642173101700D7F4A4 /* FontAwesomeView.swift */; };
+		6673FC6E2173101700D7F4A4 /* FontAwesomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC652173101700D7F4A4 /* FontAwesomeImageView.swift */; };
+		6673FC6F2173101700D7F4A4 /* FontAwesomeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC662173101700D7F4A4 /* FontAwesomeBarButtonItem.swift */; };
+		6673FC702173101700D7F4A4 /* FontAwesomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC672173101700D7F4A4 /* FontAwesomeExtension.swift */; };
+		6673FC712173101700D7F4A4 /* FontAwesomeStateRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC682173101700D7F4A4 /* FontAwesomeStateRequirement.swift */; };
+		6673FC722173101700D7F4A4 /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC692173101700D7F4A4 /* FontAwesomeSegmentedControl.swift */; };
+		6673FC732173101700D7F4A4 /* FontAwesomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC6A2173101700D7F4A4 /* FontAwesomeTabBarItem.swift */; };
+		6673FC742173101700D7F4A4 /* FontAwesomeImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673FC6B2173101700D7F4A4 /* FontAwesomeImageRepresentable.swift */; };
 		66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C430216DE859005DC2F3 /* UIKit.swift */; };
 		66C2C436216E68C9005DC2F3 /* FASolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C432216E68C9005DC2F3 /* FASolid.ttf */; };
 		66C2C437216E68C9005DC2F3 /* FABrands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C433216E68C9005DC2F3 /* FABrands.ttf */; };
@@ -93,6 +104,17 @@
 		66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
 		66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodeVariable-Roman.ttf"; sourceTree = "<group>"; };
 		66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		6673FC5F21730FCD00D7F4A4 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		6673FC6121730FD600D7F4A4 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
+		6673FC632173101700D7F4A4 /* FontAwesomeTextRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTextRepresentable.swift; sourceTree = "<group>"; };
+		6673FC642173101700D7F4A4 /* FontAwesomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeView.swift; sourceTree = "<group>"; };
+		6673FC652173101700D7F4A4 /* FontAwesomeImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageView.swift; sourceTree = "<group>"; };
+		6673FC662173101700D7F4A4 /* FontAwesomeBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeBarButtonItem.swift; sourceTree = "<group>"; };
+		6673FC672173101700D7F4A4 /* FontAwesomeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeExtension.swift; sourceTree = "<group>"; };
+		6673FC682173101700D7F4A4 /* FontAwesomeStateRequirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeStateRequirement.swift; sourceTree = "<group>"; };
+		6673FC692173101700D7F4A4 /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
+		6673FC6A2173101700D7F4A4 /* FontAwesomeTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTabBarItem.swift; sourceTree = "<group>"; };
+		6673FC6B2173101700D7F4A4 /* FontAwesomeImageRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageRepresentable.swift; sourceTree = "<group>"; };
 		66C2C430216DE859005DC2F3 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
 		66C2C432216E68C9005DC2F3 /* FASolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FASolid.ttf; sourceTree = "<group>"; };
 		66C2C433216E68C9005DC2F3 /* FABrands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FABrands.ttf; sourceTree = "<group>"; };
@@ -198,6 +220,7 @@
 		66343FE3216F1098001AAA1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6673FC5E21730FA700D7F4A4 /* FA_Swift */,
 				66CAA248216B2AB30015AC5A /* Extensions.swift */,
 				66C2C430216DE859005DC2F3 /* UIKit.swift */,
 			);
@@ -213,6 +236,24 @@
 				66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		6673FC5E21730FA700D7F4A4 /* FA_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				6673FC6121730FD600D7F4A4 /* FontAwesome.swift */,
+				6673FC5F21730FCD00D7F4A4 /* Enum.swift */,
+				6673FC662173101700D7F4A4 /* FontAwesomeBarButtonItem.swift */,
+				6673FC672173101700D7F4A4 /* FontAwesomeExtension.swift */,
+				6673FC6B2173101700D7F4A4 /* FontAwesomeImageRepresentable.swift */,
+				6673FC652173101700D7F4A4 /* FontAwesomeImageView.swift */,
+				6673FC692173101700D7F4A4 /* FontAwesomeSegmentedControl.swift */,
+				6673FC682173101700D7F4A4 /* FontAwesomeStateRequirement.swift */,
+				6673FC6A2173101700D7F4A4 /* FontAwesomeTabBarItem.swift */,
+				6673FC632173101700D7F4A4 /* FontAwesomeTextRepresentable.swift */,
+				6673FC642173101700D7F4A4 /* FontAwesomeView.swift */,
+			);
+			path = FA_Swift;
 			sourceTree = "<group>";
 		};
 		66CAA226216B1F5A0015AC5A = {
@@ -588,14 +629,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6673FC6221730FD600D7F4A4 /* FontAwesome.swift in Sources */,
 				66CAA24B216B2E240015AC5A /* DisplayViewController.swift in Sources */,
+				6673FC722173101700D7F4A4 /* FontAwesomeSegmentedControl.swift in Sources */,
+				6673FC732173101700D7F4A4 /* FontAwesomeTabBarItem.swift in Sources */,
+				6673FC712173101700D7F4A4 /* FontAwesomeStateRequirement.swift in Sources */,
 				66CAA247216B29FF0015AC5A /* SystemCommunicator.swift in Sources */,
+				6673FC702173101700D7F4A4 /* FontAwesomeExtension.swift in Sources */,
 				66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */,
 				66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */,
+				6673FC742173101700D7F4A4 /* FontAwesomeImageRepresentable.swift in Sources */,
+				6673FC6F2173101700D7F4A4 /* FontAwesomeBarButtonItem.swift in Sources */,
 				66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */,
+				6673FC6E2173101700D7F4A4 /* FontAwesomeImageView.swift in Sources */,
+				6673FC6021730FCD00D7F4A4 /* Enum.swift in Sources */,
 				66343FE921703BFD001AAA1C /* CodesView.swift in Sources */,
 				662BA9F52171B6B100196DB9 /* CodeDetailViewController.swift in Sources */,
 				66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */,
+				6673FC6C2173101700D7F4A4 /* FontAwesomeTextRepresentable.swift in Sources */,
+				6673FC6D2173101700D7F4A4 /* FontAwesomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

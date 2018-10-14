@@ -85,7 +85,7 @@ class DisplayViewController: UIViewController {
             self.showScanView()
         }
         
-        let icon = UIImage.fontAwesomeIcon("\u{f029}", textColor: .flatWhite, size: CGSize(width: 100, height: 100))
+        let icon = UIImage.fontAwesomeIcon(name: .qrcode, style: .regular, textColor: .flatWhite, size: CGSize(width: 100, height: 100))
         alert.showInfo("Add a Code", subTitle: "Enter a OTP URL, or scan a QR Code", circleIconImage: icon)
     }
     

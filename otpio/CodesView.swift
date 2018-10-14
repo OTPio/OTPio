@@ -53,7 +53,7 @@ extension CodesView: SwipeTableViewCellDelegate {
             System.sharedInstance.remove(token: token)
         }
         
-        delete.image = UIImage.fontAwesomeIcon("\u{f2ed}", textColor: .flatWhite, size: CGSize(width: 30, height: 30))
+        delete.image = UIImage.fontAwesomeIcon(name: .trash, style: .regular, textColor: .white, size: CGSize(width: 30, height: 30))
         
         return orientation == .right ? [delete] : nil
     }    

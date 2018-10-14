@@ -8,6 +8,7 @@
 
 import UIKit
 import FontBlaster
+import ChameleonFramework
 
 // Global Font Awesome declarations
 let FALIGHT_UIFONT  : UIFont = UIFont(name: "FontAwesome5ProLight", size: 20)!
@@ -38,13 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let shortcut = UIApplicationShortcutItem(type: "ScanCode", localizedTitle: "Scan Barcode", localizedSubtitle: "Scan a code for adding", icon: UIApplicationShortcutIcon(type: .add), userInfo: nil)
         
+        Chameleon.setGlobalThemeUsingPrimaryColor(.flatBlack, withSecondaryColor: .flatBlackDark, andContentStyle: .light)
+        
         UIApplication.shared.shortcutItems = [shortcut]
         System.sharedInstance.fetchFromCloud()
         
-        window?.rootViewController = UINavigationController(rootViewController: root)
-        
-        UINavigationBar.appearance().barTintColor = .flatBlack
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
+        let nav = UINavigationController(rootViewController: root)
+//        nav.navigationBar.prefersLargeTitles = true
+        window?.rootViewController = nav
         
         window?.makeKeyAndVisible()
         

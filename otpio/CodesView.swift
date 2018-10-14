@@ -14,6 +14,10 @@ class CodesView: UITableView {
     
     private var currentTokens: Array<Token>
     let selection = UISelectionFeedbackGenerator()
+    
+    lazy var detailVC: CodeDetailViewController = {
+        return CodeDetailViewController()
+    }()
 
     init() {
         currentTokens = System.sharedInstance.fetchAll()
@@ -27,7 +31,6 @@ class CodesView: UITableView {
         delegate = self
         
         separatorStyle = .none
-        
         backgroundColor = .flatBlack
     }
 

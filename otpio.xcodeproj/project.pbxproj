@@ -19,6 +19,7 @@
 		661F2CE62170BE7D0059756F /* FASolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C432216E68C9005DC2F3 /* FASolid.ttf */; };
 		661F2CE82170C2300059756F /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CE72170C2300059756F /* CodeTableViewCell.swift */; };
 		661F2CF121711B320059756F /* otpioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CF021711B320059756F /* otpioUITests.swift */; };
+		662BA9F52171B6B100196DB9 /* CodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662BA9F42171B6B100196DB9 /* CodeDetailViewController.swift */; };
 		66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66343FE6216F2F3C001AAA1C /* Intents.framework */; };
 		66343FE921703BFD001AAA1C /* CodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FE821703BFD001AAA1C /* CodesView.swift */; };
 		66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */; };
@@ -85,6 +86,7 @@
 		661F2CEE21711B310059756F /* otpioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otpioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		661F2CF021711B320059756F /* otpioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpioUITests.swift; sourceTree = "<group>"; };
 		661F2CF221711B320059756F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662BA9F42171B6B100196DB9 /* CodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailViewController.swift; sourceTree = "<group>"; };
 		66343FE5216F2F24001AAA1C /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
 		66343FE6216F2F3C001AAA1C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		66343FE821703BFD001AAA1C /* CodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				66CAA24A216B2E240015AC5A /* DisplayViewController.swift */,
+				662BA9F42171B6B100196DB9 /* CodeDetailViewController.swift */,
 				66343FE821703BFD001AAA1C /* CodesView.swift */,
 				66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */,
 			);
@@ -591,6 +594,7 @@
 				66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */,
 				66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */,
 				66343FE921703BFD001AAA1C /* CodesView.swift in Sources */,
+				662BA9F52171B6B100196DB9 /* CodeDetailViewController.swift in Sources */,
 				66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

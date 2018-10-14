@@ -74,36 +74,46 @@ extension UIView {
     }
 }
 
-public extension UIImage {
+extension Token {
+    func iconForToken() -> UIImage? {
+        var search = self.issuer
+        
+        search = search.replacingOccurrences(of: " ", with: "-")
+        for (k, _) in FontAwesomeIcons {
+            guard k.range(of: search.lowercased()) != nil else { continue }
+            
+            let i = UIImage.fontAwesomeIcon(code: k, style: .brands, textColor: .flatWhite, size: CGSize(width: 30, height: 30))
+            return i
+        }
+        
+        for (k, _) in FontAwesomeIcons {
+            let s = search.lowercased()
+            let ss = String(k.dropFirst(3))
+            guard s.range(of: ss) != nil else { continue }
+            
+            let i = UIImage.fontAwesomeIcon(code: k, style: .brands, textColor: .flatWhite, size: CGSize(width: 30, height: 30))
+            return i
+        }
+        
+        search = search.snakeCased()!
+        for (k, _) in FontAwesomeIcons {
+            guard k.range(of: search) != nil else { continue }
+            
+            let i = UIImage.fontAwesomeIcon(code: k, style: .brands, textColor: .flatWhite, size: CGSize(width: 30, height: 30))
+            return i
+        }
+        
+        return nil
+    }
+}
+
+extension String {
     
-    public static func fontAwesomeIcon(_ fa: String, textColor: UIColor, size: CGSize, backgroundColor: UIColor = UIColor.clear, borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.clear) -> UIImage {
+    func snakeCased() -> String? {
+        let pattern = "([a-z0-9])([A-Z])"
         
-        // Prevent application crash when passing size where width or height is set equal to or less than zero, by clipping width and height to a minimum of 1 pixel.
-        var size = size
-        if size.width <= 0 { size.width = 1 }
-        if size.height <= 0 { size.height = 1 }
-        
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = NSTextAlignment.center
-        
-        let fontSize = min(size.width / 1.28571429, size.height)
-        
-        // stroke width expects a whole number percentage of the font size
-        let strokeWidth: CGFloat = fontSize == 0 ? 0 : (-100 * borderWidth / fontSize)
-        
-        let attributedString = NSAttributedString(string: fa, attributes: [
-            NSAttributedString.Key.font: UIFont(name: "FontAwesome5ProRegular", size: fontSize)!,
-            NSAttributedString.Key.foregroundColor: textColor,
-            NSAttributedString.Key.backgroundColor: backgroundColor,
-            NSAttributedString.Key.paragraphStyle: paragraph,
-            NSAttributedString.Key.strokeWidth: strokeWidth,
-            NSAttributedString.Key.strokeColor: borderColor
-            ])
-        
-        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        attributedString.draw(in: CGRect(x: 0, y: (size.height - fontSize) / 2, width: size.width, height: fontSize))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image!
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+        let range = NSRange(location: 0, length: self.count)
+        return regex?.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "$1-$2").lowercased()
     }
 }

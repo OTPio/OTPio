@@ -75,6 +75,8 @@ extension UIView {
 }
 
 extension Token {
+    
+    
     func iconForToken() -> UIImage? {
         var search = self.issuer
         

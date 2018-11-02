@@ -80,9 +80,20 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6624660321758EAE00051DF0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		267D862E3254D2B48ACB0C28 /* Pods-otpio-watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-watch Extension/Pods-otpio-watch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		335BC601CC33BBFDC0A4BE66 /* Pods-otpio-otpio-today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-otpio-today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-otpio-today/Pods-otpio-otpio-today.debug.xcconfig"; sourceTree = "<group>"; };
 		3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpioUITests/Pods-otpioUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-today.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-today/Pods-otpio-today.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +146,8 @@
 		A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.release.xcconfig"; sourceTree = "<group>"; };
 		BA208E3661A9A8AA263B2D4E /* Pods-otpio-otpio-today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-otpio-today.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-otpio-today/Pods-otpio-otpio-today.release.xcconfig"; sourceTree = "<group>"; };
 		C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
+		CA0C3DD5EE5B914A303384DE /* Pods_otpio_watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E369C3BEE0FE6517548F34D0 /* Pods-otpio-watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-watch Extension/Pods-otpio-watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpioUITests/Pods-otpioUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +190,7 @@
 				59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */,
 				70744DEB705251260B5DB421 /* Pods_otpio_otpio_today.framework */,
 				9F31553880A68561610E070C /* Pods_otpioUITests.framework */,
+				CA0C3DD5EE5B914A303384DE /* Pods_otpio_watch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -303,6 +317,8 @@
 				BA208E3661A9A8AA263B2D4E /* Pods-otpio-otpio-today.release.xcconfig */,
 				3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */,
 				E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */,
+				E369C3BEE0FE6517548F34D0 /* Pods-otpio-watch Extension.debug.xcconfig */,
+				267D862E3254D2B48ACB0C28 /* Pods-otpio-watch Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -358,6 +374,7 @@
 				66CAA22D216B1F5A0015AC5A /* Resources */,
 				16FF2A4F31DF7BE890BE365C /* [CP] Embed Pods Frameworks */,
 				661F2CE12170B7FD0059756F /* Embed App Extensions */,
+				6624660321758EAE00051DF0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);

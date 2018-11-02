@@ -50,6 +50,13 @@ target 'otpio-today' do
   pod 'Neon'
 end
 
+target 'otpio-watch Extension' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod 'OneTimePassword'
+end
+
 target 'otpioUITests' do
   use_frameworks!
   inhibit_all_warnings!

@@ -17,7 +17,8 @@ target 'otpio' do
   pod 'SwipeCellKit'
   pod 'KeychainSwift'
   pod 'SCLAlertView'
-
+  pod 'CryptoSwift'
+  pod 'RetroProgress'
 
   post_install do |installer|
 
@@ -48,13 +49,6 @@ target 'otpio-today' do
   pod 'OneTimePassword'
   pod 'FontBlaster'
   pod 'Neon'
-end
-
-target 'otpio-watch Extension' do
-  use_frameworks!
-  inhibit_all_warnings!
-
-  pod 'OneTimePassword'
 end
 
 target 'otpioUITests' do

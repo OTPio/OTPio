@@ -75,37 +75,13 @@ extension UIView {
 }
 
 extension Token {
-    
-    
     func iconForToken() -> UIImage? {
-        var search = self.issuer
-        
-        search = search.replacingOccurrences(of: " ", with: "-")
-        for (k, _) in FontAwesomeIcons {
-            guard k.range(of: search.lowercased()) != nil else { continue }
-            
-            let i = UIImage.fontAwesomeIcon(code: k, style: .brands, textColor: .flatWhite, size: CGSize(width: 30, height: 30))
-            return i
-        }
-        
-        for (k, _) in FontAwesomeIcons {
-            let s = search.lowercased()
-            let ss = String(k.dropFirst(3))
-            guard s.range(of: ss) != nil else { continue }
-            
-            let i = UIImage.fontAwesomeIcon(code: k, style: .brands, textColor: .flatWhite, size: CGSize(width: 30, height: 30))
-            return i
-        }
-        
-        search = search.snakeCased()!
-        for (k, _) in FontAwesomeIcons {
-            guard k.range(of: search) != nil else { continue }
-            
-            let i = UIImage.fontAwesomeIcon(code: k, style: .brands, textColor: .flatWhite, size: CGSize(width: 30, height: 30))
-            return i
-        }
-        
-        return nil
+        let icon = issuer.closestFontAwesome()
+        return UIImage.fontAwesomeIcon(name: icon, style: .brands, textColor: .flatWhite, size: CGSize(width: 30, height: 30))
+    }
+    
+    func iconNameForToken() -> FontAwesome? {
+        return issuer.closestFontAwesome()
     }
 }
 
@@ -117,5 +93,49 @@ extension String {
         let regex = try? NSRegularExpression(pattern: pattern, options: [])
         let range = NSRange(location: 0, length: self.count)
         return regex?.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "$1-$2").lowercased()
+    }
+    
+    subscript(index: Int) -> Character {
+        return self[self.index(self.startIndex, offsetBy: index)]
+    }
+
+    public func levenshtein(_ other: String) -> Int {
+        let sCount = self.count
+        let oCount = other.count
+        
+        guard sCount != 0 else {
+            return oCount
+        }
+        
+        guard oCount != 0 else {
+            return sCount
+        }
+        
+        let line : [Int]  = Array(repeating: 0, count: oCount + 1)
+        var mat : [[Int]] = Array(repeating: line, count: sCount + 1)
+        
+        for i in 0...sCount {
+            mat[i][0] = i
+        }
+        
+        for j in 0...oCount {
+            mat[0][j] = j
+        }
+        
+        for j in 1...oCount {
+            for i in 1...sCount {
+                if self[i - 1] == other[j - 1] {
+                    mat[i][j] = mat[i - 1][j - 1]       // no operation
+                }
+                else {
+                    let del = mat[i - 1][j] + 1         // deletion
+                    let ins = mat[i][j - 1] + 1         // insertion
+                    let sub = mat[i - 1][j - 1] + 1     // substitution
+                    mat[i][j] = min(min(del, ins), sub)
+                }
+            }
+        }
+        
+        return mat[sCount][oCount]
     }
 }

@@ -80,14 +80,14 @@ extension CodesView: TokenOperationsListener {
 
 extension CodesView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? CodeTableViewCell else { return }
-        guard let code = cell.token?.currentPassword else { return }
-        
-        UIPasteboard.general.string = code
-        
-        cell.shouldShowCopied = true
-        
-        selection.selectionChanged()
+//        guard let cell = tableView.cellForRow(at: indexPath) as? CodeTableViewCell else { return }
+//        guard let code = cell.token?.currentPassword else { return }
+//        
+//        UIPasteboard.general.string = code
+//        
+//        cell.shouldShowCopied = true
+//        
+//        selection.selectionChanged()
     }
 }
 

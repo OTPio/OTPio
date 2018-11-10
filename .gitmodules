@@ -1,0 +1,6 @@
+[submodule "FontAwesome.swift"]
+	path = FontAwesome.swift
+	url = git@github.com:thii/FontAwesome.swift
+[submodule "OneTimePassword"]
+	path = OneTimePassword
+	url = https://github.com/mattrubin/OneTimePassword.git

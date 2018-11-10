@@ -10,6 +10,7 @@ import UIKit
 import OneTimePassword
 import GradientProgressBar
 import SwipeCellKit
+import RetroProgress
 
 class CodeTableViewCell: SwipeTableViewCell {
 
@@ -18,8 +19,9 @@ class CodeTableViewCell: SwipeTableViewCell {
     let provider: SystemLabel = SystemLabel()
     let user    : SystemLabel = SystemLabel()
     let code    : SystemLabel = SystemLabel()
+    let time    : SystemLabel = SystemLabel()
     
-    let progress: UIProgressView = UIProgressView(progressViewStyle: .bar)
+    let progress: ProgressView = ProgressView(frame: CGRect(x: 0, y: 0, width: 303, height: 60))
     
     var tokenTimer: Timer!
     var token: Token?
@@ -32,10 +34,17 @@ class CodeTableViewCell: SwipeTableViewCell {
         backgroundColor = .clear
         
         user.font = .systemFont(ofSize: 14)
-        code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 22)
+        
+        time.font = UIFont(name: "SourceCodePro-ExtraLight", size: 14)
+        time.textAlignment = .right
+
+        code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
         code.textAlignment = .right
-        progress.backgroundColor = .clear
-        progress.progressTintColor = UIColor.flatSkyBlue
+        
+        progress.trackColor = .clear
+        progress.separatorColor = .clear
+        progress.progressColor = UIColor.flatSkyBlue.withAlphaComponent(0.4)
+        progress.isUserInteractionEnabled = false
         
         addSubview(mainView)
 
@@ -43,16 +52,25 @@ class CodeTableViewCell: SwipeTableViewCell {
         mainView.addSubview(provider)
         mainView.addSubview(user)
         mainView.addSubview(code)
+        mainView.addSubview(time)
         
-        mainView.bringSubviewToFront(progress)
+        let copyGesture = UITapGestureRecognizer(target: self, action: #selector(CodeTableViewCell.prepareForCopy))
+        code.addGestureRecognizer(copyGesture)
+        code.isUserInteractionEnabled = true
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
 
-    func wasSelected() {
+    @objc func prepareForCopy() {
+        let code = token?.currentPassword
+        UIPasteboard.general.string = code
+
         shouldShowCopied = true
+        
+        let s = UISelectionFeedbackGenerator()
+        s.selectionChanged()
     }
     
     override func layoutSubviews() {
@@ -60,16 +78,16 @@ class CodeTableViewCell: SwipeTableViewCell {
         
         mainView.anchorInCenter(width: width * 0.95, height: 60)
         mainView.layer.cornerRadius = 15
-        mainView.clipsToBounds = true
-        mainView.layer.borderWidth = 1.2
-        mainView.layer.borderColor = UIColor.flatBlueDark.cgColor
         
-        progress.anchorToEdge(.top, padding: 0, width: mainView.width * 0.9, height: 2)
+        progress.layer.cornerRadius = 15
+        progress.layer.borderColor = UIColor.flatBlueDark.cgColor
+        progress.layer.borderWidth = 1.5
         
-        provider.anchorInCorner(.topLeft, xPad: 10, yPad: 8, width: width * 0.6, height: 20)
-        user.anchorInCorner(.bottomLeft, xPad: 10, yPad: 8, width: width * 0.6, height: 16)
+        provider.anchorInCorner(.topLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 20)
+        user.anchorInCorner(.bottomLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 16)
         
-        code.anchorToEdge(.right, padding: 15, width: width * 0.48, height: 22)
+        code.anchorInCorner(.topRight, xPad: 10, yPad: 10, width: width * 0.48, height: 20)
+        time.anchorInCorner(.bottomRight, xPad: 10, yPad: 10, width: width * 0.48, height: 16)
     }
 
     func configure(with t: Token) {
@@ -111,7 +129,11 @@ class CodeTableViewCell: SwipeTableViewCell {
         let t = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (_) in
             let r = self.timeRemaining()
             let p = Float(r/30)
-            self.progress.setProgress(p, animated: true)
+            self.progress.animateProgress(to: p)
+            
+            let t: Int = 30 - Int(r)
+            
+            self.time.updateText(with: "\(t)s", duration: 0.3)
             
             if self.shouldShowCopied {
                 if self.copiedCount > 1 {

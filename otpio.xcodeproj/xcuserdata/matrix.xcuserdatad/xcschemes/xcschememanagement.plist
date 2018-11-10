@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>otpio-siri.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>otpio-today.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -38,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>661F2CED21711B310059756F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6688BC402192CA1900A2267D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,9 +1,0 @@
-language: objective-c
-osx_image: xcode10
-
-xcode_workspace: otpio.xcworkspace
-xcode_scheme: otpioUITests
-xcode_destination: platform:iOS Simulator,OS=12.1,name=iPhone X
-
-before_install:
-  - pod update

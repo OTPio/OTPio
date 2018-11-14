@@ -20,6 +20,7 @@ target 'otpio' do
   pod 'RetroProgress'
   pod 'arek'
   pod 'Eureka'
+  pod 'KeychainAccess'
 
   pod 'libfa', :path => '../libfa'
   pod 'libtoken', :path => '../libtoken'

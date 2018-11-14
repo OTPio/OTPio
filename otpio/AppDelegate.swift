@@ -37,9 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Chameleon.setGlobalThemeUsingPrimaryColor(.flatBlack, withSecondaryColor: .flatBlackDark, andContentStyle: .light)
+//        Chameleon.setGlobalThemeUsingPrimaryColor(.flatBlack, withSecondaryColor: .flatBlackDark, andContentStyle: .light)
+        
+        UINavigationBar.appearance().backgroundColor = .flatBlack
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
+        UIBarButtonItem.appearance().tintColor = UIColor.flatWhite
         
         let nav = UINavigationController(rootViewController: root)
+        nav.navigationBar.barTintColor = .flatBlack
         window?.rootViewController = nav
         
         window?.makeKeyAndVisible()
@@ -52,16 +57,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        
+        SystemCommunicator.sharedInstance.stopTimer()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        
+        SystemCommunicator.sharedInstance.restartTimer()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

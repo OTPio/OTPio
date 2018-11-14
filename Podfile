@@ -8,9 +8,8 @@ target 'otpio' do
 
   pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
 
-  pod 'OneTimePassword'
   pod 'Neon'
-  pod 'QRCodeReader.swift'
+  pod 'Observable', :git => "https://github.com/roberthein/Observable", :tag => "1.3.3"
   pod 'RetroProgress'
   pod 'FontBlaster'
   pod 'GradientProgressBar'
@@ -19,6 +18,11 @@ target 'otpio' do
   pod 'SCLAlertView'
   pod 'CryptoSwift'
   pod 'RetroProgress'
+  pod 'arek'
+  pod 'Eureka'
+
+  pod 'libfa', :path => '../libfa'
+  pod 'libtoken', :path => '../libtoken'
 
   post_install do |installer|
 
@@ -46,14 +50,6 @@ target 'otpio-today' do
   use_frameworks!
   inhibit_all_warnings!
 
-  pod 'OneTimePassword'
   pod 'FontBlaster'
   pod 'Neon'
-end
-
-target 'otpioUITests' do
-  use_frameworks!
-  inhibit_all_warnings!
-
-  pod 'OneTimePassword'
 end

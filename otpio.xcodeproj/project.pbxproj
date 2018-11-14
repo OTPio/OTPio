@@ -7,50 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C9275B77863D1AD52F208B2 /* Pods_otpioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F31553880A68561610E070C /* Pods_otpioUITests.framework */; };
 		661F2CCC2170A2740059756F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 661F2CCB2170A2740059756F /* README.md */; };
 		661F2CD32170B7FD0059756F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661F2CD22170B7FD0059756F /* NotificationCenter.framework */; };
 		661F2CD62170B7FD0059756F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CD52170B7FD0059756F /* TodayViewController.swift */; };
 		661F2CDD2170B7FD0059756F /* otpio-today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 661F2CD12170B7FD0059756F /* otpio-today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
-		661F2CE32170BE7D0059756F /* FABrands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C433216E68C9005DC2F3 /* FABrands.ttf */; };
-		661F2CE42170BE7D0059756F /* FALight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C434216E68C9005DC2F3 /* FALight.ttf */; };
-		661F2CE52170BE7D0059756F /* FARegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C435216E68C9005DC2F3 /* FARegular.ttf */; };
-		661F2CE62170BE7D0059756F /* FASolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C432216E68C9005DC2F3 /* FASolid.ttf */; };
 		661F2CE82170C2300059756F /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CE72170C2300059756F /* CodeTableViewCell.swift */; };
-		661F2CF121711B320059756F /* otpioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CF021711B320059756F /* otpioUITests.swift */; };
-		662BA9F52171B6B100196DB9 /* CodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662BA9F42171B6B100196DB9 /* CodeDetailViewController.swift */; };
 		66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66343FE6216F2F3C001AAA1C /* Intents.framework */; };
-		66343FE921703BFD001AAA1C /* CodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FE821703BFD001AAA1C /* CodesView.swift */; };
-		66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */; };
 		66343FED2170421C001AAA1C /* SourceCodeVariable-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */; };
 		66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
-		668E7FD1218C0AA500FED03D /* FontAwesomeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FC1218C0AA500FED03D /* FontAwesomeBarButtonItem.swift */; };
-		668E7FD2218C0AA500FED03D /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FC2218C0AA500FED03D /* FontAwesomeSegmentedControl.swift */; };
-		668E7FD3218C0AA500FED03D /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FC3218C0AA500FED03D /* FontAwesomeView.swift */; };
-		668E7FD4218C0AA500FED03D /* FontAwesomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FC4218C0AA500FED03D /* FontAwesomeExtension.swift */; };
-		668E7FD5218C0AA500FED03D /* FontAwesomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FC5218C0AA500FED03D /* FontAwesomeTabBarItem.swift */; };
-		668E7FD6218C0AA500FED03D /* FontAwesomeImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FC7218C0AA500FED03D /* FontAwesomeImageRepresentable.swift */; };
-		668E7FD7218C0AA500FED03D /* FontAwesomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FC8218C0AA500FED03D /* FontAwesomeImageView.swift */; };
-		668E7FDA218C0AA500FED03D /* FontAwesomeTextRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FCB218C0AA500FED03D /* FontAwesomeTextRepresentable.swift */; };
-		668E7FDC218C0AA500FED03D /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FCD218C0AA500FED03D /* FontAwesome.swift */; };
-		668E7FDD218C0AA500FED03D /* FontAwesomeStateRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FCE218C0AA500FED03D /* FontAwesomeStateRequirement.swift */; };
-		668E7FDE218C0AA500FED03D /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E7FCF218C0AA500FED03D /* Enum.swift */; };
-		668E7FE4218C0ACE00FED03D /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 668E7FE0218C0ACD00FED03D /* Font Awesome 5 Pro-Regular-400.otf */; };
-		668E7FE5218C0ACE00FED03D /* Font Awesome 5 Pro-Light-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 668E7FE1218C0ACD00FED03D /* Font Awesome 5 Pro-Light-300.otf */; };
-		668E7FE6218C0ACE00FED03D /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 668E7FE2218C0ACD00FED03D /* Font Awesome 5 Pro-Solid-900.otf */; };
-		668E7FE7218C0ACE00FED03D /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 668E7FE3218C0ACD00FED03D /* Font Awesome 5 Brands-Regular-400.otf */; };
+		66698C16219A7DCB0012CAF8 /* DisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66698C15219A7DCB0012CAF8 /* DisplayVC.swift */; };
+		66698C17219A7F9A0012CAF8 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		66698C18219A7F9A0012CAF8 /* Font Awesome 5 Pro-Light-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */; };
+		66698C19219A7F9A0012CAF8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */; };
+		66698C1A219A7F9A0012CAF8 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */; };
+		66698C1C219A9AA20012CAF8 /* AddQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */; };
+		6697BD15219B7464004F1536 /* AddQRCodePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD14219B7464004F1536 /* AddQRCodePageController.swift */; };
+		6697BD18219B7885004F1536 /* QRCodeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD17219B7885004F1536 /* QRCodeDetailsVC.swift */; };
+		6697BD1A219B7969004F1536 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6697BD19219B7969004F1536 /* Localizable.strings */; };
+		6697BD1C219B8416004F1536 /* ConfirmQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */; };
 		66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C430216DE859005DC2F3 /* UIKit.swift */; };
-		66C2C436216E68C9005DC2F3 /* FASolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C432216E68C9005DC2F3 /* FASolid.ttf */; };
-		66C2C437216E68C9005DC2F3 /* FABrands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C433216E68C9005DC2F3 /* FABrands.ttf */; };
-		66C2C438216E68C9005DC2F3 /* FALight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C434216E68C9005DC2F3 /* FALight.ttf */; };
-		66C2C439216E68C9005DC2F3 /* FARegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66C2C435216E68C9005DC2F3 /* FARegular.ttf */; };
 		66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA232216B1F5A0015AC5A /* AppDelegate.swift */; };
 		66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA239216B1F5B0015AC5A /* Assets.xcassets */; };
 		66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */; };
-		66CAA247216B29FF0015AC5A /* SystemCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA246216B29FF0015AC5A /* SystemCommunicator.swift */; };
 		66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA248216B2AB30015AC5A /* Extensions.swift */; };
-		66CAA24B216B2E240015AC5A /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA24A216B2E240015AC5A /* DisplayViewController.swift */; };
 		73C23340E1406D32AF6B822E /* Pods_otpio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965F031F59C5173FF33DEBBA /* Pods_otpio.framework */; };
 		EBB00B17D7E450F5817D3115 /* Pods_otpio_today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */; };
 /* End PBXBuildFile section */
@@ -99,7 +79,6 @@
 /* Begin PBXFileReference section */
 		267D862E3254D2B48ACB0C28 /* Pods-otpio-watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-watch Extension/Pods-otpio-watch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		335BC601CC33BBFDC0A4BE66 /* Pods-otpio-otpio-today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-otpio-today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-otpio-today/Pods-otpio-otpio-today.debug.xcconfig"; sourceTree = "<group>"; };
-		3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpioUITests/Pods-otpioUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-today.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-today/Pods-otpio-today.release.xcconfig"; sourceTree = "<group>"; };
 		59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		661F2CCB2170A2740059756F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -110,44 +89,27 @@
 		661F2CE72170C2300059756F /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
 		661F2CE92170C71F0059756F /* otpio-today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "otpio-today.entitlements"; sourceTree = "<group>"; };
 		661F2CEE21711B310059756F /* otpioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otpioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		661F2CF021711B320059756F /* otpioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpioUITests.swift; sourceTree = "<group>"; };
-		661F2CF221711B320059756F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		662BA9F42171B6B100196DB9 /* CodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailViewController.swift; sourceTree = "<group>"; };
 		66343FE5216F2F24001AAA1C /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
 		66343FE6216F2F3C001AAA1C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		66343FE821703BFD001AAA1C /* CodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesView.swift; sourceTree = "<group>"; };
-		66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
 		66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodeVariable-Roman.ttf"; sourceTree = "<group>"; };
 		66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-ExtraLight.ttf"; sourceTree = "<group>"; };
-		668E7FC1218C0AA500FED03D /* FontAwesomeBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeBarButtonItem.swift; sourceTree = "<group>"; };
-		668E7FC2218C0AA500FED03D /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
-		668E7FC3218C0AA500FED03D /* FontAwesomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeView.swift; sourceTree = "<group>"; };
-		668E7FC4218C0AA500FED03D /* FontAwesomeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeExtension.swift; sourceTree = "<group>"; };
-		668E7FC5218C0AA500FED03D /* FontAwesomeTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTabBarItem.swift; sourceTree = "<group>"; };
-		668E7FC6218C0AA500FED03D /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
-		668E7FC7218C0AA500FED03D /* FontAwesomeImageRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageRepresentable.swift; sourceTree = "<group>"; };
-		668E7FC8218C0AA500FED03D /* FontAwesomeImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageView.swift; sourceTree = "<group>"; };
-		668E7FCB218C0AA500FED03D /* FontAwesomeTextRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTextRepresentable.swift; sourceTree = "<group>"; };
-		668E7FCD218C0AA500FED03D /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
-		668E7FCE218C0AA500FED03D /* FontAwesomeStateRequirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeStateRequirement.swift; sourceTree = "<group>"; };
-		668E7FCF218C0AA500FED03D /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
-		668E7FE0218C0ACD00FED03D /* Font Awesome 5 Pro-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Font Awesome 5 Pro-Regular-400.otf"; path = "FontAwesome.swift/FortAwesome/Font-Awesome/use-on-desktop/Font Awesome 5 Pro-Regular-400.otf"; sourceTree = SOURCE_ROOT; };
-		668E7FE1218C0ACD00FED03D /* Font Awesome 5 Pro-Light-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Font Awesome 5 Pro-Light-300.otf"; path = "FontAwesome.swift/FortAwesome/Font-Awesome/use-on-desktop/Font Awesome 5 Pro-Light-300.otf"; sourceTree = SOURCE_ROOT; };
-		668E7FE2218C0ACD00FED03D /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Font Awesome 5 Pro-Solid-900.otf"; path = "FontAwesome.swift/FortAwesome/Font-Awesome/use-on-desktop/Font Awesome 5 Pro-Solid-900.otf"; sourceTree = SOURCE_ROOT; };
-		668E7FE3218C0ACD00FED03D /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Font Awesome 5 Brands-Regular-400.otf"; path = "FontAwesome.swift/FortAwesome/Font-Awesome/use-on-desktop/Font Awesome 5 Brands-Regular-400.otf"; sourceTree = SOURCE_ROOT; };
+		66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Solid-900.otf"; sourceTree = "<group>"; };
+		66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Regular-400.otf"; sourceTree = "<group>"; };
+		66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Light-300.otf"; sourceTree = "<group>"; };
+		66698C15219A7DCB0012CAF8 /* DisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVC.swift; sourceTree = "<group>"; };
+		66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQRCodeVC.swift; sourceTree = "<group>"; };
+		6697BD14219B7464004F1536 /* AddQRCodePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQRCodePageController.swift; sourceTree = "<group>"; };
+		6697BD17219B7885004F1536 /* QRCodeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDetailsVC.swift; sourceTree = "<group>"; };
+		6697BD19219B7969004F1536 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmQRCodeVC.swift; sourceTree = "<group>"; };
 		66C2C430216DE859005DC2F3 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
-		66C2C432216E68C9005DC2F3 /* FASolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FASolid.ttf; sourceTree = "<group>"; };
-		66C2C433216E68C9005DC2F3 /* FABrands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FABrands.ttf; sourceTree = "<group>"; };
-		66C2C434216E68C9005DC2F3 /* FALight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FALight.ttf; sourceTree = "<group>"; };
-		66C2C435216E68C9005DC2F3 /* FARegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FARegular.ttf; sourceTree = "<group>"; };
 		66CAA22F216B1F5A0015AC5A /* otpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CAA232216B1F5A0015AC5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66CAA239216B1F5B0015AC5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66CAA23C216B1F5B0015AC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66CAA23E216B1F5B0015AC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66CAA246216B29FF0015AC5A /* SystemCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCommunicator.swift; sourceTree = "<group>"; };
 		66CAA248216B2AB30015AC5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		66CAA24A216B2E240015AC5A /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		6971635977A88E850D98EDCD /* Pods-otpio-today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-today/Pods-otpio-today.debug.xcconfig"; sourceTree = "<group>"; };
 		70744DEB705251260B5DB421 /* Pods_otpio_otpio_today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_otpio_today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		965F031F59C5173FF33DEBBA /* Pods_otpio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +119,6 @@
 		C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
 		CA0C3DD5EE5B914A303384DE /* Pods_otpio_watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E369C3BEE0FE6517548F34D0 /* Pods-otpio-watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-watch Extension/Pods-otpio-watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpioUITests/Pods-otpioUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C9275B77863D1AD52F208B2 /* Pods_otpioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,27 +175,19 @@
 			path = "otpio-today";
 			sourceTree = "<group>";
 		};
-		661F2CEF21711B320059756F /* otpioUITests */ = {
-			isa = PBXGroup;
-			children = (
-				661F2CF021711B320059756F /* otpioUITests.swift */,
-				661F2CF221711B320059756F /* Info.plist */,
-			);
-			path = otpioUITests;
-			sourceTree = "<group>";
-		};
 		66343FE2216F1083001AAA1C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */,
+				66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */,
+				66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */,
+				66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */,
 				66CAA239216B1F5B0015AC5A /* Assets.xcassets */,
 				66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */,
 				66CAA23E216B1F5B0015AC5A /* Info.plist */,
 				66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */,
 				66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */,
-				66C2C433216E68C9005DC2F3 /* FABrands.ttf */,
-				66C2C434216E68C9005DC2F3 /* FALight.ttf */,
-				66C2C435216E68C9005DC2F3 /* FARegular.ttf */,
-				66C2C432216E68C9005DC2F3 /* FASolid.ttf */,
+				6697BD19219B7969004F1536 /* Localizable.strings */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -243,7 +195,6 @@
 		66343FE3216F1098001AAA1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				668E7FC0218C0AA500FED03D /* FontAwesome */,
 				66CAA248216B2AB30015AC5A /* Extensions.swift */,
 				66C2C430216DE859005DC2F3 /* UIKit.swift */,
 			);
@@ -253,37 +204,22 @@
 		66343FE4216F10A2001AAA1C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				66CAA24A216B2E240015AC5A /* DisplayViewController.swift */,
-				662BA9F42171B6B100196DB9 /* CodeDetailViewController.swift */,
-				66343FE821703BFD001AAA1C /* CodesView.swift */,
-				66343FEA21703C07001AAA1C /* CodeTableViewCell.swift */,
+				66698C15219A7DCB0012CAF8 /* DisplayVC.swift */,
+				6697BD1D219B842A004F1536 /* QRCodeAddition */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		668E7FC0218C0AA500FED03D /* FontAwesome */ = {
+		6697BD1D219B842A004F1536 /* QRCodeAddition */ = {
 			isa = PBXGroup;
 			children = (
-				668E7FE3218C0ACD00FED03D /* Font Awesome 5 Brands-Regular-400.otf */,
-				668E7FE1218C0ACD00FED03D /* Font Awesome 5 Pro-Light-300.otf */,
-				668E7FE0218C0ACD00FED03D /* Font Awesome 5 Pro-Regular-400.otf */,
-				668E7FE2218C0ACD00FED03D /* Font Awesome 5 Pro-Solid-900.otf */,
-				668E7FC1218C0AA500FED03D /* FontAwesomeBarButtonItem.swift */,
-				668E7FC2218C0AA500FED03D /* FontAwesomeSegmentedControl.swift */,
-				668E7FC3218C0AA500FED03D /* FontAwesomeView.swift */,
-				668E7FC4218C0AA500FED03D /* FontAwesomeExtension.swift */,
-				668E7FC5218C0AA500FED03D /* FontAwesomeTabBarItem.swift */,
-				668E7FC6218C0AA500FED03D /* FontAwesome.h */,
-				668E7FC7218C0AA500FED03D /* FontAwesomeImageRepresentable.swift */,
-				668E7FC8218C0AA500FED03D /* FontAwesomeImageView.swift */,
-				668E7FCB218C0AA500FED03D /* FontAwesomeTextRepresentable.swift */,
-				668E7FCD218C0AA500FED03D /* FontAwesome.swift */,
-				668E7FCE218C0AA500FED03D /* FontAwesomeStateRequirement.swift */,
-				668E7FCF218C0AA500FED03D /* Enum.swift */,
+				6697BD14219B7464004F1536 /* AddQRCodePageController.swift */,
+				66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */,
+				6697BD17219B7885004F1536 /* QRCodeDetailsVC.swift */,
+				6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */,
 			);
-			name = FontAwesome;
-			path = FontAwesome.swift/FontAwesome;
-			sourceTree = SOURCE_ROOT;
+			name = QRCodeAddition;
+			sourceTree = "<group>";
 		};
 		66CAA226216B1F5A0015AC5A = {
 			isa = PBXGroup;
@@ -291,7 +227,6 @@
 				661F2CCB2170A2740059756F /* README.md */,
 				66CAA231216B1F5A0015AC5A /* otpio */,
 				661F2CD42170B7FD0059756F /* otpio-today */,
-				661F2CEF21711B320059756F /* otpioUITests */,
 				66CAA230216B1F5A0015AC5A /* Products */,
 				DAB0B122B37A3F1D50E855EA /* Pods */,
 				56B29F815CFF4BD05E41464E /* Frameworks */,
@@ -313,7 +248,6 @@
 			children = (
 				66343FE5216F2F24001AAA1C /* otpio.entitlements */,
 				66CAA232216B1F5A0015AC5A /* AppDelegate.swift */,
-				66CAA246216B29FF0015AC5A /* SystemCommunicator.swift */,
 				66343FE4216F10A2001AAA1C /* Views */,
 				66343FE3216F1098001AAA1C /* Extensions */,
 				66343FE2216F1083001AAA1C /* Assets */,
@@ -330,8 +264,6 @@
 				3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */,
 				335BC601CC33BBFDC0A4BE66 /* Pods-otpio-otpio-today.debug.xcconfig */,
 				BA208E3661A9A8AA263B2D4E /* Pods-otpio-otpio-today.release.xcconfig */,
-				3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */,
-				E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */,
 				E369C3BEE0FE6517548F34D0 /* Pods-otpio-watch Extension.debug.xcconfig */,
 				267D862E3254D2B48ACB0C28 /* Pods-otpio-watch Extension.release.xcconfig */,
 			);
@@ -363,11 +295,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 661F2CF521711B320059756F /* Build configuration list for PBXNativeTarget "otpioUITests" */;
 			buildPhases = (
-				A367FDA78AB0A8686A7CF72A /* [CP] Check Pods Manifest.lock */,
 				661F2CEA21711B310059756F /* Sources */,
 				661F2CEB21711B310059756F /* Frameworks */,
 				661F2CEC21711B310059756F /* Resources */,
-				6738435CC3AFF282B1509844 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -468,10 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */,
-				661F2CE32170BE7D0059756F /* FABrands.ttf in Resources */,
-				661F2CE42170BE7D0059756F /* FALight.ttf in Resources */,
-				661F2CE52170BE7D0059756F /* FARegular.ttf in Resources */,
-				661F2CE62170BE7D0059756F /* FASolid.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,19 +412,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66C2C439216E68C9005DC2F3 /* FARegular.ttf in Resources */,
+				66698C17219A7F9A0012CAF8 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				66698C18219A7F9A0012CAF8 /* Font Awesome 5 Pro-Light-300.otf in Resources */,
+				66698C19219A7F9A0012CAF8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
+				66698C1A219A7F9A0012CAF8 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
+				6697BD1A219B7969004F1536 /* Localizable.strings in Resources */,
 				66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */,
-				66C2C437216E68C9005DC2F3 /* FABrands.ttf in Resources */,
 				661F2CCC2170A2740059756F /* README.md in Resources */,
-				668E7FE5218C0ACE00FED03D /* Font Awesome 5 Pro-Light-300.otf in Resources */,
-				668E7FE7218C0ACE00FED03D /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
-				66C2C438216E68C9005DC2F3 /* FALight.ttf in Resources */,
 				66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */,
-				668E7FE4218C0ACE00FED03D /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
 				66343FED2170421C001AAA1C /* SourceCodeVariable-Roman.ttf in Resources */,
-				668E7FE6218C0ACE00FED03D /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
 				66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */,
-				66C2C436216E68C9005DC2F3 /* FASolid.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,17 +440,20 @@
 				"${BUILT_PRODUCTS_DIR}/Base32/Base32.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework",
 				"${BUILT_PRODUCTS_DIR}/GradientProgressBar/GradientProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
 				"${BUILT_PRODUCTS_DIR}/Observable/Observable.framework",
-				"${BUILT_PRODUCTS_DIR}/OneTimePassword/OneTimePassword.framework",
-				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/RetroProgress/RetroProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+				"${BUILT_PRODUCTS_DIR}/arek/arek.framework",
+				"${BUILT_PRODUCTS_DIR}/libfa/libfa.framework",
+				"${BUILT_PRODUCTS_DIR}/libtoken/libtoken.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -536,17 +462,20 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base32.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontBlaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Observable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneTimePassword.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RetroProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/arek.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libfa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libtoken.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -575,30 +504,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6738435CC3AFF282B1509844 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-otpioUITests/Pods-otpioUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Base32/Base32.framework",
-				"${BUILT_PRODUCTS_DIR}/OneTimePassword/OneTimePassword.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base32.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneTimePassword.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otpioUITests/Pods-otpioUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A0BF2D886520FC5935D22C38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -621,28 +526,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A367FDA78AB0A8686A7CF72A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-otpioUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -659,7 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661F2CF121711B320059756F /* otpioUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,25 +549,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66CAA24B216B2E240015AC5A /* DisplayViewController.swift in Sources */,
-				668E7FD6218C0AA500FED03D /* FontAwesomeImageRepresentable.swift in Sources */,
-				66CAA247216B29FF0015AC5A /* SystemCommunicator.swift in Sources */,
 				66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */,
-				668E7FD4218C0AA500FED03D /* FontAwesomeExtension.swift in Sources */,
+				66698C16219A7DCB0012CAF8 /* DisplayVC.swift in Sources */,
 				66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */,
+				66698C1C219A9AA20012CAF8 /* AddQRCodeVC.swift in Sources */,
+				6697BD15219B7464004F1536 /* AddQRCodePageController.swift in Sources */,
+				6697BD1C219B8416004F1536 /* ConfirmQRCodeVC.swift in Sources */,
+				6697BD18219B7885004F1536 /* QRCodeDetailsVC.swift in Sources */,
 				66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */,
-				668E7FD5218C0AA500FED03D /* FontAwesomeTabBarItem.swift in Sources */,
-				668E7FDD218C0AA500FED03D /* FontAwesomeStateRequirement.swift in Sources */,
-				66343FE921703BFD001AAA1C /* CodesView.swift in Sources */,
-				668E7FD1218C0AA500FED03D /* FontAwesomeBarButtonItem.swift in Sources */,
-				668E7FD7218C0AA500FED03D /* FontAwesomeImageView.swift in Sources */,
-				668E7FD2218C0AA500FED03D /* FontAwesomeSegmentedControl.swift in Sources */,
-				668E7FDA218C0AA500FED03D /* FontAwesomeTextRepresentable.swift in Sources */,
-				662BA9F52171B6B100196DB9 /* CodeDetailViewController.swift in Sources */,
-				66343FEB21703C07001AAA1C /* CodeTableViewCell.swift in Sources */,
-				668E7FDC218C0AA500FED03D /* FontAwesome.swift in Sources */,
-				668E7FDE218C0AA500FED03D /* Enum.swift in Sources */,
-				668E7FD3218C0AA500FED03D /* FontAwesomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +631,6 @@
 		};
 		661F2CF621711B320059756F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3AFE7DEABC3065BBFCF946E1 /* Pods-otpioUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
@@ -780,7 +650,6 @@
 		};
 		661F2CF721711B320059756F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E87F1A15628C143CD6B3C2D8 /* Pods-otpioUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;

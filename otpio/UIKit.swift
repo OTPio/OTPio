@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import libfa
 
 class SystemLabel: UILabel {
     
@@ -29,14 +30,14 @@ class SystemLabel: UILabel {
         font = .systemFont(ofSize: size ?? UIFont.systemFontSize)
     }
     
-    convenience init(withFA f: FAType, textPosition t: NSTextAlignment?, size s: CGFloat?) {
+    convenience init(withFA f: FontAwesomeStyle, textPosition t: NSTextAlignment?, size s: CGFloat?) {
         self.init(t, size: s)
         
         switch f {
         case .light  : font = FALIGHT_UIFONT
         case .regular: font = FAREGULAR_UIFONT
         case .solid  : font = FASOLID_UIFONT
-        case .logo   : font = FABRANDS_UIFONT
+        case .brands : font = FABRANDS_UIFONT
         }
     }
 
@@ -81,7 +82,7 @@ class SystemButton: UIButton {
         backgroundColor = bg ?? .clear
     }
     
-    convenience init(faType f: FAType, backgroundColor bg: UIColor?, text t: String) {
+    convenience init(faType f: FontAwesomeStyle, backgroundColor bg: UIColor?, text t: String) {
         self.init(backgroundColor: bg, text: t)
         
         let font: UIFont
@@ -89,7 +90,7 @@ class SystemButton: UIButton {
         case .light  : font = FALIGHT_UIFONT
         case .regular: font = FAREGULAR_UIFONT
         case .solid  : font = FASOLID_UIFONT
-        case .logo   : font = FABRANDS_UIFONT
+        case .brands : font = FABRANDS_UIFONT
         }
         
         titleLabel?.font = font
@@ -100,7 +101,7 @@ class SystemButton: UIButton {
     }
     
     func roundCorners() {
-        layer.cornerRadius = height * 0.33
+        layer.cornerRadius = 15
     }
     
     func fa(icon i: String) {
@@ -129,6 +130,10 @@ class SystemView: UIView {
         super.init(frame: CGRect())
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError()
@@ -139,9 +144,39 @@ class SystemView: UIView {
     }
 }
 
-public enum FAType: String {
-    case light = "FontAwesome5ProLight"
-    case regular = "FontAwesome5ProRegular"
-    case solid = "FontAwesome5ProSolid"
-    case logo = "FontAwesome5BrandsRegular"
+// MARK: - Extensions
+
+extension CALayer {
+    
+    func addBorder(edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
+        
+        let border = CALayer()
+        
+        switch edge {
+        case .top:
+            border.frame = CGRect(x: 0, y: 0, width: frame.width, height: thickness)
+        case .bottom:
+            border.frame = CGRect(x: 0, y: frame.height - thickness, width: frame.width, height: thickness)
+        case .left:
+            border.frame = CGRect(x: 0, y: 0, width: thickness, height: frame.height)
+        case .right:
+            border.frame = CGRect(x: frame.width - thickness, y: 0, width: thickness, height: frame.height)
+        default:
+            break
+        }
+        
+        border.backgroundColor = color.cgColor;
+        
+        addSublayer(border)
+    }
+}
+
+extension UIView {
+    func fadeTransition(_ duration:CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
+    }
 }

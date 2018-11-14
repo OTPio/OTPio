@@ -27,24 +27,17 @@ let FABRANDS_ATTR    = [NSAttributedString.Key.font: FABRANDS_UIFONT]
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var root: DisplayViewController
+    var root: DisplayVC
     
     override init() {
         FontBlaster.blast()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        root = DisplayViewController()
-        
-//        _ = _Token(from: URL(string: "otpauth://totp/otpio?secret=aaa&issuer=Google")!)
+        root = DisplayVC()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let shortcut = UIApplicationShortcutItem(type: "ScanCode", localizedTitle: "Scan Barcode", localizedSubtitle: "Scan a code for adding", icon: UIApplicationShortcutIcon(type: .add), userInfo: nil)
-        
         Chameleon.setGlobalThemeUsingPrimaryColor(.flatBlack, withSecondaryColor: .flatBlackDark, andContentStyle: .light)
-        
-        UIApplication.shared.shortcutItems = [shortcut]
-        System.sharedInstance.fetchFromCloud()
         
         let nav = UINavigationController(rootViewController: root)
         window?.rootViewController = nav
@@ -55,14 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        root.shouldScan = true
-        root.viewDidAppear(false)
-        completionHandler(true)
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        System.sharedInstance.stopAllTimers()
-        System.sharedInstance.uploadToCloud()
+        
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -71,11 +61,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        System.sharedInstance.restartTimers()
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        System.sharedInstance.restartTimers()
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

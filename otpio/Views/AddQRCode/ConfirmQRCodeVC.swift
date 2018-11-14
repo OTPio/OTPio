@@ -60,11 +60,11 @@ class ConfirmQRCodeVC: SystemViewController {
 
         self.t = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (t) in
             let p = self.token.password(format: true)
-            let r = self.token.timeRemaining()
+            let r = self.token.timeRemaining(true)
             
             DispatchQueue.main.async {
                 self.tokenDisplay.text = p
-                self.timeDisplay.text  = "\(r)s"
+                self.timeDisplay.text  = "Valid for \(Int(r))s"
             }
         }
     }

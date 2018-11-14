@@ -178,39 +178,34 @@
 		66343FE2216F1083001AAA1C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */,
-				66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */,
-				66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */,
-				66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */,
+				6697BD25219BBAAD004F1536 /* Fonts */,
+				66343FE5216F2F24001AAA1C /* otpio.entitlements */,
 				66CAA239216B1F5B0015AC5A /* Assets.xcassets */,
 				66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */,
 				66CAA23E216B1F5B0015AC5A /* Info.plist */,
-				66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */,
-				66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */,
 				6697BD19219B7969004F1536 /* Localizable.strings */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		66343FE3216F1098001AAA1C /* Extensions */ = {
+		6697BD1E219BBA36004F1536 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				66CAA248216B2AB30015AC5A /* Extensions.swift */,
-				66C2C430216DE859005DC2F3 /* UIKit.swift */,
+				6697BD21219BBA57004F1536 /* AddQRCode */,
+				6697BD1F219BBA43004F1536 /* Display */,
 			);
-			name = Extensions;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		66343FE4216F10A2001AAA1C /* Views */ = {
+		6697BD1F219BBA43004F1536 /* Display */ = {
 			isa = PBXGroup;
 			children = (
 				66698C15219A7DCB0012CAF8 /* DisplayVC.swift */,
-				6697BD1D219B842A004F1536 /* QRCodeAddition */,
 			);
-			name = Views;
+			path = Display;
 			sourceTree = "<group>";
 		};
-		6697BD1D219B842A004F1536 /* QRCodeAddition */ = {
+		6697BD21219BBA57004F1536 /* AddQRCode */ = {
 			isa = PBXGroup;
 			children = (
 				6697BD14219B7464004F1536 /* AddQRCodePageController.swift */,
@@ -218,7 +213,29 @@
 				6697BD17219B7885004F1536 /* QRCodeDetailsVC.swift */,
 				6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */,
 			);
-			name = QRCodeAddition;
+			path = AddQRCode;
+			sourceTree = "<group>";
+		};
+		6697BD23219BBA83004F1536 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66CAA248216B2AB30015AC5A /* Extensions.swift */,
+				66C2C430216DE859005DC2F3 /* UIKit.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6697BD25219BBAAD004F1536 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */,
+				66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */,
+				66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */,
+				66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */,
+				66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */,
+				66343FEC2170421C001AAA1C /* SourceCodeVariable-Roman.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		66CAA226216B1F5A0015AC5A = {
@@ -246,10 +263,9 @@
 		66CAA231216B1F5A0015AC5A /* otpio */ = {
 			isa = PBXGroup;
 			children = (
-				66343FE5216F2F24001AAA1C /* otpio.entitlements */,
 				66CAA232216B1F5A0015AC5A /* AppDelegate.swift */,
-				66343FE4216F10A2001AAA1C /* Views */,
-				66343FE3216F1098001AAA1C /* Extensions */,
+				6697BD1E219BBA36004F1536 /* Views */,
+				6697BD23219BBA83004F1536 /* Extensions */,
 				66343FE2216F1083001AAA1C /* Assets */,
 			);
 			path = otpio;

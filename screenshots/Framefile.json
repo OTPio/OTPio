@@ -26,6 +26,7 @@
         "text" : "Precise"
       },
       "title" : {
+        "color": "#222222",
         "text" : "See everything, have full control"
       }
     }

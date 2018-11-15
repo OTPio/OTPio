@@ -17,7 +17,7 @@ And maybe a few extra features on the side.
 ## What are the features?
 - [x] Generate authentication codes from a QR code or OTP URL
 - [x] Save codes in the cloud
-- [ ] Today Extension
+- [x] Today Extension
 - [ ] Apple Watch App
 - [ ] watchOS Complication
 - [ ] Siri Extension

@@ -9,6 +9,8 @@
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)com.otpio.fullkeychain</string>
+		<string>$(AppIdentifierPrefix)com.otpio.todaykeychain</string>
+		<string>$(AppIdentifierPrefix)com.otpio.cloudkeychain</string>
 	</array>
 </dict>
 </plist>

@@ -17,39 +17,118 @@ class SystemCommunicator {
     public var listener: TokenOperationsListener?
     
     private let fullKeychain: Keychain
-    private var fullToken: Array<Token>
+    private var fullToken   : Array<Token>
+    
+    private let todayKeychain: Keychain
+    private var todayToken: Array<Token>
+    
+    private let cloudKeychain: Keychain
+    private var cloudToken   : Array<Token>
     
     init() {
         fullKeychain = Keychain(service: "com.otpio.token", accessGroup: "6S4L29QT59.com.otpio.fullkeychain")
         .synchronizable(false)
         .accessibility(.afterFirstUnlock)
         
-        fullToken = []
-    }
-    
-    public func add(token t: Token) {
-        let url = t.serialize()
+        fullToken   = []
         
-        do {
-            try fullKeychain.set(url, key: "\(t.secret.hashValue)")
+        todayKeychain = Keychain(service: "com.otpio.token", accessGroup: "6S4L29QT59.com.otpio.todaykeychain")
+        .synchronizable(false)
+        .accessibility(.afterFirstUnlockThisDeviceOnly)
+        
+        todayToken = []
+        
+        cloudKeychain = Keychain(service: "com.otpio.token", accessGroup: "6S4L29QT59.com.otpio.cloudkeychain")
+        .synchronizable(true)
+        .accessibility(.afterFirstUnlock)
+        
+        cloudToken = []
+    }
+
+    public func teardown() {
+        DispatchQueue.global(qos: .background).async {
+            try? self.fullKeychain.removeAll()
+            try? self.todayKeychain.removeAll()
+            try? self.cloudKeychain.removeAll()
             
-            fullToken.append(t)
-        } catch let e {
-            print(e.localizedDescription)
+            for t in self.fullToken {
+                self.fullKeychain[String(t.secret.hashValue)] = t.serialize()
+            }
+            
+            for t in self.todayToken {
+                self.todayKeychain["today-\(t.secret.hashValue)"] = t.serialize()
+            }
+            
+            for t in self.cloudToken {
+                self.cloudKeychain["cloud=\(t.secret.hashValue)"] = t.serialize()
+            }
         }
     }
     
-    public func allTokens() {
-        let raw = fullKeychain.allItems()
-        
-        self.fullToken = raw.compactMap({ (input) -> Token? in
-            guard let tUrl: String = input["value"] as? String else { return nil }
-            guard let url: URL = URL(string: tUrl) else { return nil }
-            
-            return Token(from: url)
-        })
+    public func add(token t: Token) {
+        fullToken.append(t)
         
         listener?.returned(tokens: self.fullToken)
+    }
+    
+    public func update() {        
+        listener?.returned(tokens: self.fullToken)
+    }
+    
+    public func sendToToday(token t: Token) {
+        todayToken.append(t)
+    }
+    public func removeFromToday(token t: Token) {
+        guard let offset = todayToken.firstIndex(of: t) else { return } // Index not present
+        todayToken.remove(at: offset)
+    }
+    public func isInToday(token t: Token) -> Bool {
+        guard todayToken.firstIndex(of: t) != nil else { return false}
+        return true
+    }
+    
+    public func sendToCloud(token t: Token) {
+        cloudToken.append(t)
+    }
+    public func removeFromCloud(token t: Token) {
+        guard let offset = cloudToken.firstIndex(of: t) else { return }
+        cloudToken.remove(at: offset)
+    }
+    public func isInCloud(token t: Token) -> Bool {
+        guard cloudToken.firstIndex(of: t) != nil else { return false }
+        return true
+    }
+    
+    public func allTokens() {
+        DispatchQueue.global(qos: .utility).async {
+            let raw = self.fullKeychain.allItems()
+            self.fullToken = raw.compactMap({ (input) -> Token? in
+                guard let tUrl: String = input["value"] as? String else { return nil }
+                guard let url: URL = URL(string: tUrl) else { return nil }
+                
+                return Token(from: url)
+            })
+            
+            let rawToday = self.todayKeychain.allItems()
+            self.todayToken = rawToday.compactMap({ (input) -> Token? in
+                guard let tUrl: String = input["value"] as? String else { return nil }
+                guard let url: URL = URL(string: tUrl) else { return nil }
+                
+                return Token(from: url)
+            })
+            
+            let rawCloud = self.cloudKeychain.allItems()
+            self.cloudToken = rawCloud.compactMap({ (input) -> Token? in
+                guard let tUrl: String = input["value"] as? String else { return nil }
+                guard let url: URL = URL(string: tUrl) else { return nil }
+                
+                return Token(from: url)
+            })
+
+            DispatchQueue.main.async {
+                self.listener?.returned(tokens: self.fullToken)
+            }
+        }
     }
     
     public func stopTimer() {

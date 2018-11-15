@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillResignActive(_ application: UIApplication) {
         SystemCommunicator.sharedInstance.stopTimer()
+        SystemCommunicator.sharedInstance.teardown()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

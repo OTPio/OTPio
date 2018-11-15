@@ -26,6 +26,7 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
         table = CodesTable()
         super.init()
         
+        table.viewsuper = self
         SystemCommunicator.sharedInstance.listener = self
         
         registerForPreviewing(with: self, sourceView: table)
@@ -58,7 +59,8 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
     }
     
     func returned(tokens t: Array<Token>) {
-        table.currentTokens = t
+        let sorted = t.sorted { $0.label < $1.label }
+        table.currentTokens = sorted
         table.reloadData()
     }
     

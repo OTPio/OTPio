@@ -16,6 +16,8 @@ class CodesTable: UITableView {
     public  var currentTokens: Array<Token> = []
     private let selection    : UISelectionFeedbackGenerator = UISelectionFeedbackGenerator()
     
+    public var viewsuper: DisplayVC?
+    
     public let detail: CodeDetailVC = CodeDetailVC()
     
     private var background: SystemView {
@@ -87,5 +89,12 @@ extension CodesTable: UITableViewDataSource {
 }
 
 extension CodesTable: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CodeTableViewCell
+        let token = cell.token
+        
+        detail.token = token
+        detail.configure()
+        viewsuper?.show(detail, sender: self)
+    }
 }

@@ -17,7 +17,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
     
     let table: UITableView
 //    var currentTokens: Array<Token>
-    let testItems: Array<String> = ["Hello", "There"]
     
     init() {
         table = UITableView(frame: CGRect())

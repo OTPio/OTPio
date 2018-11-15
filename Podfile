@@ -14,7 +14,6 @@ target 'otpio' do
   pod 'FontBlaster'
   pod 'GradientProgressBar'
   pod 'SwipeCellKit'
-  pod 'KeychainSwift'
   pod 'SCLAlertView'
   pod 'CryptoSwift'
   pod 'RetroProgress'
@@ -53,4 +52,7 @@ target 'otpio-today' do
 
   pod 'FontBlaster'
   pod 'Neon'
+  pod 'KeychainAccess'
+
+  pod 'libtoken', :path => '../libtoken'
 end

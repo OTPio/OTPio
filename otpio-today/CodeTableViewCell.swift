@@ -8,10 +8,11 @@
 
 import UIKit
 import Neon
+import libtoken
 
 class CodeTableViewCell: UITableViewCell {
 
-//    var token: Token?
+    var token: Token?
     
     let provider: UILabel
     let user    : UILabel
@@ -48,20 +49,34 @@ class CodeTableViewCell: UITableViewCell {
         addSubview(user)
         addSubview(code)
         addSubview(left)
+        
+        let copyGesture = UITapGestureRecognizer(target: self, action: #selector(CodeTableViewCell.prepareForCopy))
+        code.addGestureRecognizer(copyGesture)
+        code.isUserInteractionEnabled = true
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
     
-//    func setup(with t: Token) {
-//        token = t
-//
-//        provider.text = t.issuer
-//        user.text = t.name
-//        updateCode()
-//        startTimer()
-//    }
+    @objc func prepareForCopy() {
+        let code = token?.password()
+        UIPasteboard.general.string = code
+        
+        shouldShowCopied = true
+        
+        let s = UISelectionFeedbackGenerator()
+        s.selectionChanged()
+    }
+    
+    func setup(with t: Token) {
+        token = t
+
+        provider.text = t.issuer
+        user.text = t.label
+        updateCode()
+        startTimer()
+    }
     
     override func layoutSubviews() {
         provider.anchorInCorner(.topLeft, xPad: 15, yPad: 5, width: width * 0.5, height: 18)
@@ -71,53 +86,39 @@ class CodeTableViewCell: UITableViewCell {
         code.alignAndFillHeight(align: .toTheLeftCentered, relativeTo: left, padding: 5, width: width * 0.48)
     }
     
-//    func updateCode() {
-//        guard var c = token?.currentPassword else {
-//            code.text = "Error"; return
-//        }
-//
-//        c.insert(" ", at: c.index(c.startIndex, offsetBy: 3))
-//        code.updateText(with: c, duration: 0.5)
-//    }
-    
-//    private func timeRemaining() -> Float {
-//        guard let t = token else { return 0.0 }
-//        switch t.generator.factor {
-//        case .timer(let time):
-//            let epoch = Date().timeIntervalSince1970
-//            let d = Int(time - epoch.truncatingRemainder(dividingBy: time))
-//            return Float(d)
-//        default: return 0.0
-//        }
-//    }
-    
+    func updateCode() {
+        let c = token!.password(format: true)
+        code.updateText(with: c, duration: 0.5)
+    }
+        
     func stopTimer() {
         guard tokenTimer != nil else { return }
         tokenTimer.invalidate()
     }
     
     func startTimer() {
-//        let t = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (_) in
-//            let r = Int(self.timeRemaining())
-//
-//            self.left.text = "\(r)s"
-//
-//            if self.shouldShowCopied {
-//                if self.copiedCount > 1 {
-//                    self.copiedCount -= 1
-//                    self.code.updateText(with: "Copied", duration: 0.3)
-//                } else {
-//                    self.shouldShowCopied = false
-//                    self.copiedCount = 5
-//                }
-//            } else {
-//                self.updateCode()
-//            }
-//        }
-//
-//        tokenTimer = t
+        let t = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (_) in
+            let r = self.token!.timeRemaining()
+            
+            let t: Int = 30 - Int(r)
+            
+            self.left.updateText(with: "\(t)s", duration: 0.3)
+            
+            if self.shouldShowCopied {
+                if self.copiedCount > 1 {
+                    self.copiedCount -= 1
+                    self.code.updateText(with: "Copied", duration: 0.3)
+                } else {
+                    self.shouldShowCopied = false
+                    self.copiedCount = 5
+                }
+            } else {
+                self.updateCode()
+            }
+        }
+        
+        tokenTimer = t
     }
-
 }
 
 extension UILabel {

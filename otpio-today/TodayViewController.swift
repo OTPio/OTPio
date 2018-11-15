@@ -10,17 +10,23 @@ import UIKit
 import NotificationCenter
 import FontBlaster
 import Neon
+import libtoken
+import KeychainAccess
 
 @objc(TodayViewController)
 
 class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDelegate, UITableViewDataSource {
     
+    let keychain: Keychain
+    
     let table: UITableView
-//    var currentTokens: Array<Token>
+    var currentTokens: Array<Token>
     
     init() {
         table = UITableView(frame: CGRect())
-//        currentTokens = []
+        currentTokens = []
+        
+        keychain = Keychain(service: "com.otpio.token", accessGroup: "6S4L29QT59.com.otpio.todaykeychain")
         
         super.init(nibName: nil, bundle: nil)
         
@@ -30,25 +36,17 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         table.register(CodeTableViewCell.self, forCellReuseIdentifier: "code")
         table.dataSource = self
         table.delegate = self
-        
-        view.addSubview(table)
-    }
-    
-    override func loadView() {
-        view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 320.0, height: 200.0))
-        viewDidLayoutSubviews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(table)
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        
         preferredContentSize = CGSize(width: 0, height: 200)
         
-        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        table.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,26 +54,40 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         
         table.fillSuperview()
     }
+    
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        if activeDisplayMode == .expanded {
+            preferredContentSize = CGSize(width: 0, height: table.contentSize.height + 10)
+        } else {
+            preferredContentSize = CGSize(width: 0, height: 200)
+        }
         
+//        let rect: CGRect = CGRect(x: 0, y: 0, width: maxSize.width, height: table.contentSize.height)
+//        view.frame = rect
+//        table.frame = rect
+        table.reloadData()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-//        do {
-//            let pt = try Keychain.sharedInstance.allPersistentTokens()
-//            guard pt.count > 0 else { throw Keychain.Error.incorrectReturnType }
-//            for p in pt {
-//                self.currentTokens.append(p.token)
-//            }
-//
-//            self.currentTokens = self.currentTokens.sorted(by: { (left, right) -> Bool in
-//                return left.issuer < right.issuer
-//            })
-//
-//        } catch let e {
-//            print(e)
-//            completionHandler(NCUpdateResult.failed)
-//        }
-//        table.reloadData()
-//
-//        completionHandler(NCUpdateResult.newData)
+        let all = keychain.allItems()
+        currentTokens = all.compactMap({ (input) -> Token? in
+            guard let tUrl: String = input["value"] as? String else { return nil }
+            guard let url: URL = URL(string: tUrl) else { return nil }
+            
+            return Token(from: url)
+        })
+        
+        currentTokens = currentTokens.sorted { $0.issuer < $1.issuer }
+        
+        extensionContext?.widgetLargestAvailableDisplayMode = (currentTokens.count > 2) ? .expanded : .compact
+        
+        table.reloadData()
+        
+        completionHandler(NCUpdateResult.newData)
     }
     
     
@@ -84,14 +96,13 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return min(2, currentTokens.count)
-        return 0
+        return currentTokens.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "code", for: indexPath) as! CodeTableViewCell
         
-//        cell.setup(with: currentTokens[indexPath.row])
+        cell.setup(with: currentTokens[indexPath.row])
         
         return cell
     }    

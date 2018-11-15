@@ -16,6 +16,9 @@ class CodeDetailVC: FormViewController {
 
     var token: Token?
     
+    var isInToday: Bool?
+    var isInCloud: Bool?
+    
     var faMapped: Array<String> = {
         var pre = FontAwesomeBrands.compactMap { return FontAwesome(rawValue: $0.value)! }
         pre.sort { $0.iconName()! < $1.iconName()! }
@@ -233,12 +236,14 @@ class CodeDetailVC: FormViewController {
         if let todRow = form.rowBy(tag: CellTags.today.rawValue) as? SwitchRow {
             let v = SystemCommunicator.sharedInstance.isInToday(token: t)
             todRow.value = v
+            isInToday = v
             todRow.updateCell()
         }
         
         if let cloRow = form.rowBy(tag: CellTags.cloud.rawValue) as? SwitchRow {
             let v = SystemCommunicator.sharedInstance.isInCloud(token: t)
             cloRow.value = v
+            isInCloud = v
             cloRow.updateCell()
         }
         
@@ -265,7 +270,7 @@ class CodeDetailVC: FormViewController {
     }
     
     func update(row: CellTags, value: Double) {
-        guard let t = token else { return }
+        guard let _ = token else { return }
     }
     
     func update(row: CellTags, value: Bool) {
@@ -273,9 +278,13 @@ class CodeDetailVC: FormViewController {
         
         switch row {
         case .today:
+            guard let v = isInToday else { return }
+            if value == v { return }
             if value { SystemCommunicator.sharedInstance.sendToToday(token: t) }
             else { SystemCommunicator.sharedInstance.removeFromToday(token: t) }
         case .cloud:
+            guard let v = isInCloud else { return }
+            if value == v { return }
             if value { SystemCommunicator.sharedInstance.sendToCloud(token: t) }
             else { SystemCommunicator.sharedInstance.removeFromCloud(token: t) }
         default: return

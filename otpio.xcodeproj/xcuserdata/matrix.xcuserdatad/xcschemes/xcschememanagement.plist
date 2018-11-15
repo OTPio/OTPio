@@ -34,6 +34,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>otpioUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>661F2CED21711B310059756F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>662CFF84219D7A9D0092A087</key>
 		<dict>
 			<key>primary</key>
 			<true/>

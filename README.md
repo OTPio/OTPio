@@ -6,6 +6,8 @@
 
 # OTP.io
 A TOTP code generator for the modern age
+![](./assets/01CodeView.png)
+![](./assets/02CodeDetail.png)
 
 ## What is this?
 OTP.io is a [2FA](https://authy.com/what-is-2fa/) code generator. Scan a QR Code or enter an OTP url (`otpauth://`) to add a code.

@@ -26,6 +26,10 @@ class AddQRCodePageController: UIPageViewController {
         
         var views: Array<UIViewController> = []
         
+        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            return [detailView, confirmView]
+        }
+        
         let permission = ArekCamera()
         permission.manage(completion: { (status) in
             switch status {

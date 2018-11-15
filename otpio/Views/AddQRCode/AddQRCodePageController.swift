@@ -82,4 +82,8 @@ class AddQRCodePageController: UIPageViewController {
         SystemCommunicator.sharedInstance.add(token: self.token)
         navigationController?.popToRootViewController(animated: true)
     }
+    
+    func set(token t: Token) {
+        self.token = t
+    }
 }

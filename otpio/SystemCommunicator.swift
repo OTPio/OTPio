@@ -70,8 +70,17 @@ class SystemCommunicator {
         
         listener?.returned(tokens: self.fullToken)
     }
-    
     public func update() {        
+        listener?.returned(tokens: self.fullToken)
+    }
+    public func remove(token t: Token) {
+        guard let offset = fullToken.firstIndex(of: t) else { return }
+        fullToken.remove(at: offset)
+        
+        // If a token is removed from the full chain, it should also be removed from the other chains
+        removeFromToday(token: t)
+        removeFromCloud(token: t)
+        
         listener?.returned(tokens: self.fullToken)
     }
     
@@ -100,6 +109,7 @@ class SystemCommunicator {
     }
     
     public func allTokens() {
+        listener?.beganLoading()
         DispatchQueue.global(qos: .utility).async {
             let raw = self.fullKeychain.allItems()
             self.fullToken = raw.compactMap({ (input) -> Token? in
@@ -146,6 +156,7 @@ extension DefaultsKeys {
 }
 
 protocol TokenOperationsListener {
+    func beganLoading()
     func returned(tokens t: Array<Token>)
     func startTimers()
     func stopTimers()

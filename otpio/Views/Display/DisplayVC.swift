@@ -58,10 +58,13 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    func beganLoading() {
+        table.beganLoading()
+    }
+    
     func returned(tokens t: Array<Token>) {
-        let sorted = t.sorted { $0.label < $1.label }
-        table.currentTokens = sorted
-        table.reloadData()
+        let sorted = t.sorted { $0.issuer < $1.issuer }
+        table.doneLoading(with: sorted)
     }
     
     func startTimers() {

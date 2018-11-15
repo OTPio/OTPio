@@ -11,6 +11,7 @@ import Eureka
 import libtoken
 import libfa
 import Base32
+import SCLAlertView
 
 class CodeDetailVC: FormViewController {
 
@@ -27,16 +28,26 @@ class CodeDetailVC: FormViewController {
     }()
     
     override var previewActionItems: [UIPreviewActionItem] {
-        let delete = UIPreviewAction(title: "Remove", style: .destructive) { (action, controller) in
-            
+        let delete = UIPreviewAction(title: "Delete Token", style: .destructive) { (action, controller) in
+            SystemCommunicator.sharedInstance.remove(token: self.token!)
         }
         
-        let today = UIPreviewAction(title: "Add to Today Widget", style: .default) { (action, controller) in
-            
+        guard let t = token else { return [delete] }
+        
+        let td = SystemCommunicator.sharedInstance.isInToday(token: t)
+        let cd = SystemCommunicator.sharedInstance.isInCloud(token: t)
+        
+        let tt = (td) ? "Remove from":"Add to"
+        let ct = (cd) ? "Remove from":"Add to"
+        
+        let today = UIPreviewAction(title: "\(tt) Today Widget", style: .default) { (action, controller) in
+            if td { SystemCommunicator.sharedInstance.removeFromToday(token: t) }
+            else { SystemCommunicator.sharedInstance.sendToToday(token: t) }
         }
         
-        let cloud = UIPreviewAction(title: "Add to iCloud (Sync)", style: .default) { (action, controller) in
-            
+        let cloud = UIPreviewAction(title: "\(ct) iCloud (Sync)", style: .default) { (action, controller) in
+            if cd { SystemCommunicator.sharedInstance.removeFromCloud(token: t) }
+            else { SystemCommunicator.sharedInstance.sendToCloud(token: t) }
         }
         
         return [today, cloud, delete]
@@ -131,7 +142,13 @@ class CodeDetailVC: FormViewController {
                 row.title = "Delete Token"
                 
                 }.onCellSelection({ (_, _) in
-                    print("Delete")
+                    let alert = SCLAlertView()
+                    alert.addButton("I'm Sure!", action: {
+                        SystemCommunicator.sharedInstance.remove(token: self.token!)
+                        self.navigationController?.popToRootViewController(animated: true)
+                    })
+                    
+                    alert.showError("Delete \(self.token!.issuer)", subTitle: fetchString(forKey: "delete-token"), closeButtonTitle: "Keep It!")
                 })
 
         

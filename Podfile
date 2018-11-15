@@ -20,6 +20,7 @@ target 'otpio' do
   pod 'arek'
   pod 'Eureka'
   pod 'KeychainAccess'
+  pod 'NVActivityIndicatorView'
 
   pod 'libfa', :path => '../libfa'
   pod 'libtoken', :path => '../libtoken'

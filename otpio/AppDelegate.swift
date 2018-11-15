@@ -43,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
         UIBarButtonItem.appearance().tintColor = UIColor.flatWhite
         
+        application.shortcutItems = []
+        
         let nav = UINavigationController(rootViewController: root)
         nav.navigationBar.barTintColor = .flatBlack
         window?.rootViewController = nav

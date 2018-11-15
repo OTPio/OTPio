@@ -75,6 +75,9 @@ PODS:
     - Base32
     - libfa (~> 1.1.0)
   - Neon (0.4.0)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
   - Observable (1.3.3)
   - PMAlertController (3.5.0)
   - RetroProgress (1.0.1)
@@ -93,6 +96,7 @@ DEPENDENCIES:
   - libfa (from `../libfa`)
   - libtoken (from `../libtoken`)
   - Neon
+  - NVActivityIndicatorView
   - Observable (from `https://github.com/roberthein/Observable`, tag `1.3.3`)
   - RetroProgress
   - SCLAlertView
@@ -109,6 +113,7 @@ SPEC REPOS:
     - GradientProgressBar
     - KeychainAccess
     - Neon
+    - NVActivityIndicatorView
     - PMAlertController
     - RetroProgress
     - SCLAlertView
@@ -147,6 +152,7 @@ SPEC CHECKSUMS:
   libfa: 2997eff0a70f26dafc5c5e21d42b6e12fea6e45c
   libtoken: d52d9cc6eed2591395ebf1099527288e0e8d92f8
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   Observable: 360b0132cef970a50bc69611df7fcbda46e91c34
   PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
   RetroProgress: a5b2514485c0ce75838ad321c77d5746150901cd
@@ -154,6 +160,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
-PODFILE CHECKSUM: eb1db9fc1a7a28d589cb07a2f83ec061da48f9a8
+PODFILE CHECKSUM: cf4de47eaad198d939f28faf344b19c802acb617
 
 COCOAPODS: 1.6.0.beta.2

@@ -20,7 +20,7 @@ class CodeTableViewCell: SwipeTableViewCell {
     let code    : SystemLabel = SystemLabel()
     let time    : SystemLabel = SystemLabel()
     
-    let progress: ProgressView = ProgressView(frame: CGRect(x: 0, y: 0, width: 303, height: 60))
+    var progress: ProgressView
     
     var tokenTimer: Timer!
     var token: Token?
@@ -29,6 +29,16 @@ class CodeTableViewCell: SwipeTableViewCell {
     var copiedCount: Int = 5
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        progress = ProgressView(frame: CGRect(x: 0, y: 0, width: 320, height: 60))
+        progress.trackColor = .clear
+        progress.separatorColor = .clear
+        progress.progressColor = UIColor.flatSkyBlue.withAlphaComponent(0.4)
+        progress.isUserInteractionEnabled = false
+        
+        progress.layer.cornerRadius = 15
+        progress.layer.borderColor = UIColor.flatBlueDark.cgColor
+        progress.layer.borderWidth = 1.5
+        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         
@@ -40,10 +50,6 @@ class CodeTableViewCell: SwipeTableViewCell {
         code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
         code.textAlignment = .right
         
-        progress.trackColor = .clear
-        progress.separatorColor = .clear
-        progress.progressColor = UIColor.flatSkyBlue.withAlphaComponent(0.4)
-        progress.isUserInteractionEnabled = false
         
         addSubview(mainView)
         
@@ -77,10 +83,6 @@ class CodeTableViewCell: SwipeTableViewCell {
         
         mainView.anchorInCenter(width: width * 0.95, height: 60)
         mainView.layer.cornerRadius = 15
-        
-        progress.layer.cornerRadius = 15
-        progress.layer.borderColor = UIColor.flatBlueDark.cgColor
-        progress.layer.borderWidth = 1.5
         
         provider.anchorInCorner(.topLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 20)
         user.anchorInCorner(.bottomLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 16)

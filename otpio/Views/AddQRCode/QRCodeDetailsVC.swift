@@ -30,11 +30,11 @@ class QRCodeDetailsVC: FormViewController {
                 row.title = "Secret"
             }
             <<< TextRow(CellTags.user.rawValue) { row in
-                row.title = "Label"
-        }
+                row.title = "User"
+            }
             <<< TextRow(CellTags.issuer.rawValue) { row in
                 row.title = "Issuer"
-        }
+            }
             +++ Section(header: "Advanced Details", footer: fetchString(forKey: "advanced-token"))
             <<< SwitchRow(CellTags.advanced.rawValue) { row in
                 row.title = "Show Advanced Options"

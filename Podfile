@@ -17,7 +17,7 @@ target 'otpio' do
   pod 'SCLAlertView'
   pod 'CryptoSwift'
   pod 'RetroProgress'
-  pod 'arek'
+  pod 'arek/Camera'
   pod 'Eureka'
   pod 'KeychainAccess'
   pod 'NVActivityIndicatorView'

@@ -1,64 +1,8 @@
 PODS:
-  - arek (4.0.2):
-    - arek/Bluetooth (= 4.0.2)
-    - arek/Camera (= 4.0.2)
-    - arek/CloudKit (= 4.0.2)
-    - arek/Contacts (= 4.0.2)
-    - arek/Core (= 4.0.2)
-    - arek/Events (= 4.0.2)
-    - arek/Health (= 4.0.2)
-    - arek/Location (= 4.0.2)
-    - arek/MediaLibrary (= 4.0.2)
-    - arek/Microphone (= 4.0.2)
-    - arek/Motion (= 4.0.2)
-    - arek/Notifications (= 4.0.2)
-    - arek/Photos (= 4.0.2)
-    - arek/Reminders (= 4.0.2)
-    - arek/SpeechRecognizer (= 4.0.2)
-    - PMAlertController (= 3.5.0)
-  - arek/Bluetooth (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
   - arek/Camera (4.0.2):
     - arek/Core
     - PMAlertController (= 3.5.0)
-  - arek/CloudKit (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Contacts (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
   - arek/Core (4.0.2):
-    - PMAlertController (= 3.5.0)
-  - arek/Events (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Health (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Location (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/MediaLibrary (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Microphone (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Motion (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Notifications (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Photos (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Reminders (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/SpeechRecognizer (4.0.2):
-    - arek/Core
     - PMAlertController (= 3.5.0)
   - Base32 (1.1.2)
   - ChameleonFramework/Default (2.1.0)
@@ -86,7 +30,7 @@ PODS:
   - SwipeCellKit (2.5.0)
 
 DEPENDENCIES:
-  - arek
+  - arek/Camera
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`, branch `wip/swift4`)
   - CryptoSwift
   - Eureka
@@ -160,6 +104,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
-PODFILE CHECKSUM: cf4de47eaad198d939f28faf344b19c802acb617
+PODFILE CHECKSUM: 1f92167c87d633cd2d71402cf3fdfdee09a66a7a
 
 COCOAPODS: 1.6.0.beta.2

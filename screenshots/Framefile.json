@@ -29,6 +29,17 @@
         "color": "#222222",
         "text" : "See everything, have full control"
       }
+    },
+    {
+      "filter": "Today",
+      "keyword": {
+        "color": "#31bb48",
+        "text" : "Access"
+      },
+      "title": {
+        "color": "#aa4dbc",
+        "text" : "Codes when you need them"
+      }
     }
   ]
 }

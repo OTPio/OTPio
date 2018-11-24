@@ -1,6 +1,6 @@
-platform :ios, '12.0'
-
 target 'otpio' do
+  platform :ios, '12.0'
+
   use_frameworks!
   inhibit_all_warnings!
 
@@ -21,33 +21,20 @@ target 'otpio' do
   pod 'Eureka'
   pod 'KeychainAccess'
   pod 'NVActivityIndicatorView'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   pod 'libfa', :path => '../libfa'
   pod 'libtoken', :path => '../libtoken'
 
   post_install do |installer|
-
-    installer.pods_project.targets.each do |t|
-
-      # Swift 4 support
-      if[].include? t.name
-        t.build_configurations.each do |config|
-          config.build_settings['SWIFT_VERSION'] = '4.0'
-        end
-      end
-
-      # Swift 3 support
-      if[].include? t.name
-        t.build_configurations.each do |config|
-          config.build_settings['SWIFT_VERSION'] = '3.0'
-        end
-      end
-
-    end
+    system("license-plist --output-path ./otpio/Settings.bundle --suppress-opening-directory --add-version-numbers")
   end
 end
 
 target 'otpio-today' do
+  platform :ios, '12.0'
+
   use_frameworks!
   inhibit_all_warnings!
 
@@ -56,4 +43,11 @@ target 'otpio-today' do
   pod 'KeychainAccess'
 
   pod 'libtoken', :path => '../libtoken'
+end
+
+target 'watch Extension' do
+  platform :watchos, '5.0'
+
+  pod 'KeychainAccess'
+  pod 'SwiftBase32'
 end

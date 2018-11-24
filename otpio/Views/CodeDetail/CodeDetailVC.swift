@@ -20,6 +20,12 @@ class CodeDetailVC: FormViewController {
     var isInToday: Bool?
     var isInCloud: Bool?
     
+    var outlet: AddQRCodePageController?
+    
+    var rightButton: UIBarButtonItem {
+        return UIBarButtonItem(title: "Continue", style: .plain, target: self, action: #selector(CodeDetailVC.pushNewToken))
+    }
+    
     var faMapped: Array<String> = {
         var pre = FontAwesomeBrands.compactMap { return FontAwesome(rawValue: $0.value)! }
         pre.sort { $0.iconName()! < $1.iconName()! }
@@ -174,8 +180,6 @@ class CodeDetailVC: FormViewController {
                 sr.displayValueFor = {
                     return $0.map { "\(Int($0))" }
                 }
-                
-                
             }
             
             if let tr = r as? TextRow {
@@ -191,6 +195,18 @@ class CodeDetailVC: FormViewController {
                     cell.switchControl.onTintColor = .flatGreen
                     cell.switchControl.tintColor = .flatRed
                 }
+                
+                if outlet != nil {
+                    if sr.tag == CellTags.today.rawValue || sr.tag == CellTags.cloud.rawValue {
+                        sr.hidden = true
+                    } else {
+                        sr.hidden = false
+                    }
+                } else {
+                    sr.hidden = false
+                }
+                
+                sr.updateCell()
             }
             
             if let pr = r as? PushRow<String> {
@@ -227,6 +243,13 @@ class CodeDetailVC: FormViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        guard outlet != nil else { return }
+        self.token = outlet?.token
+        
+        navigationItem.rightBarButtonItem = rightButton
+        
+        configure()
     }
     
     func configure() {
@@ -248,6 +271,16 @@ class CodeDetailVC: FormViewController {
         if let icoRow = form.rowBy(tag: CellTags.icon.rawValue) as? PushRow<String> {
             icoRow.value = t.faIcon.rawValue
             icoRow.updateCell()
+        }
+        
+        if let digRow = form.rowBy(tag: CellTags.digits.rawValue) as? StepperRow {
+            digRow.value = Double(t.digits)
+            digRow.updateCell()
+        }
+        
+        if let intRow = form.rowBy(tag: CellTags.interval.rawValue) as? StepperRow {
+            intRow.value = t.interval
+            intRow.updateCell()
         }
         
         if let todRow = form.rowBy(tag: CellTags.today.rawValue) as? SwitchRow {
@@ -283,11 +316,25 @@ class CodeDetailVC: FormViewController {
         default: return
         }
         
+        guard outlet == nil else { return }
         SystemCommunicator.sharedInstance.update()
     }
     
     func update(row: CellTags, value: Double) {
-        guard let _ = token else { return }
+        guard let t = token else { return }
+        
+        switch row {
+        case .digits:
+            if Double(t.digits) == value { return }
+            t.digits = Int(value)
+        case .interval:
+            if t.interval == value { return }
+            t.interval = TimeInterval(value)
+        default: return
+        }
+        
+        guard outlet == nil else { return }
+        SystemCommunicator.sharedInstance.update()
     }
     
     func update(row: CellTags, value: Bool) {
@@ -306,6 +353,16 @@ class CodeDetailVC: FormViewController {
             else { SystemCommunicator.sharedInstance.removeFromCloud(token: t) }
         default: return
         }
+    }
+    
+    @objc func pushNewToken() {
+        guard outlet != nil else {
+            SystemCommunicator.sharedInstance.update()
+            return
+        }
+        
+        outlet?.token = token
+        outlet?.confirmCode()
     }
 }
 

@@ -18,7 +18,7 @@ class AddQRCodePageController: UIPageViewController {
         let cameraView = AddQRCodeVC()
         cameraView.outlet = self
         
-        let detailView = QRCodeDetailsVC()
+        let detailView = CodeDetailVC()
         detailView.outlet = self
         
         let confirmView = ConfirmQRCodeVC()
@@ -31,7 +31,7 @@ class AddQRCodePageController: UIPageViewController {
         }
         
         let permission = ArekCamera()
-        permission.manage(completion: { (status) in
+        permission.status(completion: { (status) in
             switch status {
             case .authorized: views = [cameraView, detailView, confirmView]
             default: views = [detailView, confirmView]
@@ -55,24 +55,32 @@ class AddQRCodePageController: UIPageViewController {
         setupSubviews()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupSubviews()
+    }
+    
     func setupSubviews() {
         if let first = self.orderedControllers.first {
             self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
-        } else {
-            let t = Timer(timeInterval: 10, repeats: true) { (t) in
-                t.invalidate()
-                self.setupSubviews()
-            }
-            t.fire()
         }
     }
     
     @objc func doneScanning(with u: String) {
-        let c = orderedControllers[1]
-        let url = URL(string: u)!
-        let token = Token(from: url)
+        let scan = orderedControllers.first! as! AddQRCodeVC
+        let detail = orderedControllers[1]
+        
+        guard
+            let url = URL(string: u),
+            let token = Token(from: url)
+            else {
+                scan.tokenScannedWasInvalid()
+                return
+        }
+        
         self.token = token
-        setViewControllers([c], direction: .forward, animated: true, completion: nil)
+        setViewControllers([detail], direction: .forward, animated: true, completion: nil)
     }
     
     @objc func confirmCode() {

@@ -10,6 +10,7 @@ import UIKit
 import libtoken
 import Eureka
 import Base32
+import libfa
 
 class QRCodeDetailsVC: FormViewController {
     var outlet: AddQRCodePageController?
@@ -19,6 +20,13 @@ class QRCodeDetailsVC: FormViewController {
         let b = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(QRCodeDetailsVC.saveData))
         return b
     }
+    
+    var faMapped: Array<String> = {
+        var pre = FontAwesomeBrands.compactMap { return FontAwesome(rawValue: $0.value)! }
+        pre.sort { $0.iconName()! < $1.iconName()! }
+        let post = pre.map { return $0.rawValue }
+        return post
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,11 @@ class QRCodeDetailsVC: FormViewController {
             <<< TextRow(CellTags.issuer.rawValue) { row in
                 row.title = "Issuer"
             }
+            <<< PushRow<String>(CellTags.icon.rawValue) { row in
+                row.title = "Icon"
+                row.selectorTitle = "Select an icon"
+                row.options = faMapped
+                }
             +++ Section(header: "Advanced Details", footer: fetchString(forKey: "advanced-token"))
             <<< SwitchRow(CellTags.advanced.rawValue) { row in
                 row.title = "Show Advanced Options"
@@ -110,6 +123,27 @@ class QRCodeDetailsVC: FormViewController {
                     cell.switchControl.tintColor = .flatRed
                 }
             }
+            
+            if let pr = r as? PushRow<String> {
+                pr.cellUpdate { (cell, row) in
+                    cell.textLabel?.textColor = .flatWhite
+                    cell.detailTextLabel?.font = FABRANDS_UIFONT
+                    cell.detailTextLabel?.textColor = .flatWhite
+                }
+                pr.onPresent { (form, to) in
+                    to.selectableRowCellUpdate = { cell, row in
+                        cell.textLabel?.text = row.selectableValue!
+                        cell.textLabel?.font = FABRANDS_UIFONT
+                        
+                        guard let r = row.selectableValue,
+                            let fa = FontAwesome(rawValue: r),
+                            let code = fa.iconName()
+                            else { return }
+                        
+                        cell.detailTextLabel?.text = code
+                    }
+                }
+            }
         }
     }
     
@@ -133,6 +167,18 @@ class QRCodeDetailsVC: FormViewController {
         if let secretRow = form.rowBy(tag: CellTags.secret.rawValue) as? TextRow {
             secretRow.value = MF_Base32Codec.base32String(from: t.secret)
             secretRow.updateCell()
+        }
+        if let algoRow = form.rowBy(tag: CellTags.hash.rawValue) as? TextRow {
+            algoRow.value = t.algorithm.algorithmName()
+            algoRow.updateCell()
+        }
+        if let digitsRow = form.rowBy(tag: CellTags.digits.rawValue) as? StepperRow {
+            digitsRow.value = Double(t.digits)
+            digitsRow.updateCell()
+        }
+        if let intervalRow = form.rowBy(tag: CellTags.interval.rawValue) as? StepperRow {
+            intervalRow.value = t.interval
+            intervalRow.updateCell()
         }
     }
     

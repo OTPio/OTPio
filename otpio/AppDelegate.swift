@@ -9,6 +9,8 @@
 import UIKit
 import FontBlaster
 import ChameleonFramework
+import Fabric
+import Crashlytics
 
 // Global Font Awesome declarations
 let FALIGHT_UIFONT  : UIFont = UIFont(name: "FontAwesome5ProLight", size: 20)!
@@ -37,11 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        Chameleon.setGlobalThemeUsingPrimaryColor(.flatBlack, withSecondaryColor: .flatBlackDark, andContentStyle: .light)
-        
-        UINavigationBar.appearance().backgroundColor = .flatBlack
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
-        UIBarButtonItem.appearance().tintColor = UIColor.flatWhite
+        ThemingEngine.sharedInstance.change(to: .nightLightBright)
         
         application.shortcutItems = []
         
@@ -50,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nav
         
         window?.makeKeyAndVisible()
+        
+        Fabric.with([Crashlytics.self])
         
         return true
     }

@@ -29,15 +29,7 @@ class CodeTableViewCell: SwipeTableViewCell {
     var copiedCount: Int = 5
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        progress = ProgressView(frame: CGRect(x: 0, y: 0, width: 320, height: 60))
-        progress.trackColor = .clear
-        progress.separatorColor = .clear
-        progress.progressColor = UIColor.flatSkyBlue.withAlphaComponent(0.4)
-        progress.isUserInteractionEnabled = false
-        
-        progress.layer.cornerRadius = 15
-        progress.layer.borderColor = UIColor.flatBlueDark.cgColor
-        progress.layer.borderWidth = 1.5
+        progress = ProgressView(frame: CGRect())
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
@@ -79,10 +71,16 @@ class CodeTableViewCell: SwipeTableViewCell {
     }
     
     override func layoutSubviews() {
-        mainView.backgroundColor = UIColor.flatBlack.lighten(byPercentage: 0.05)
-        
         mainView.anchorInCenter(width: width * 0.95, height: 60)
         mainView.layer.cornerRadius = 15
+        
+        progress.fillSuperview()
+        progress.trackColor = .clear
+        progress.separatorColor = .clear
+        progress.isUserInteractionEnabled = false
+        
+        progress.layer.cornerRadius = 15
+        progress.layer.borderWidth = 1.5
         
         provider.anchorInCorner(.topLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 20)
         user.anchorInCorner(.bottomLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 16)
@@ -99,6 +97,21 @@ class CodeTableViewCell: SwipeTableViewCell {
         
         updateCode()
         startTimer()
+        theme()
+    }
+    
+    func theme() {
+        let theme = ThemingEngine.sharedInstance
+        
+        backgroundColor = theme.bgHighlight
+        
+        provider.textColor = theme.normalText
+        user.textColor = theme.secondaryText
+        code.textColor = theme.emphasizedText
+        time.textColor = theme.secondaryText
+        
+        progress.layer.borderColor = theme.border.cgColor
+        progress.progressColor = theme.progressTrack
     }
     
     func updateCode() {

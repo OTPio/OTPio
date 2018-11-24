@@ -29,7 +29,7 @@ class CodesTable: UITableView {
     init() {
         loadingView = SystemView()
         let color = UIColor.flatWhite.withAlphaComponent(0.6)
-        noTokenIcon  = UIImageView(image: UIImage.fontAwesomeIcon(name: .lightbulbExclamation, style: .regular, textColor: UIColor.flatWhite.withAlphaComponent(0.6), size: CGSize(width: 30, height: 30)))
+        noTokenIcon  = UIImageView(image: UIImage.fontAwesomeIcon(name: .lightbulbExclamation, style: .regular, textColor: color, size: CGSize(width: 30, height: 30)))
         loadingLabel = SystemLabel(.center)
         loadingLabel.multiline()
         loadingLabel.textColor = color
@@ -44,7 +44,14 @@ class CodesTable: UITableView {
         register(CodeTableViewCell.self, forCellReuseIdentifier: "codeCell")
         
         separatorStyle = .none
-        backgroundColor = .flatBlack
+    }
+    
+    func theme() {
+        backgroundColor = ThemingEngine.sharedInstance.bgHighlight
+        
+        for cell in visibleCells {
+            (cell as! CodeTableViewCell).theme()
+        }
     }
     
     func beganLoading() {
@@ -117,6 +124,7 @@ extension CodesTable: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! CodeTableViewCell
         let token = cell.token
         
+        detail.outlet = nil
         detail.token = token
         detail.configure()
         viewsuper?.show(detail, sender: self)

@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SCLAlertView
 
 class AddQRCodeVC: SystemViewController {
 
@@ -73,6 +74,15 @@ class AddQRCodeVC: SystemViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         captureSession.stopRunning()
+    }
+    
+    func tokenScannedWasInvalid() {
+        let alert = SCLAlertView()
+        alert.addButton("Retry") {
+            self.captureSession.startRunning()
+        }
+        
+        alert.showNotice("Invalid QR Code", subTitle: "Looks like the code you scanned in had some bad information. Retry?")
     }
 }
 

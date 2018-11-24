@@ -28,7 +28,7 @@ class SystemCommunicator {
     init() {
         fullKeychain = Keychain(service: "com.otpio.token", accessGroup: "6S4L29QT59.com.otpio.fullkeychain")
         .synchronizable(false)
-        .accessibility(.afterFirstUnlock)
+        .accessibility(.always)
         
         fullToken   = []
         

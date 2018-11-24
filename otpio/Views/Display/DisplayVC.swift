@@ -9,18 +9,15 @@
 import UIKit
 import libfa
 import libtoken
+import arek
 
 class DisplayVC: SystemViewController, TokenOperationsListener {
 
     let table: CodesTable
     
-    var rightBar: UIBarButtonItem {
-        let b = UIBarButtonItem(title: String.fontAwesomeIcon(name: .qrcode), style: .plain, target: self, action: #selector(DisplayVC.showQR(sender:)))
-        b.setTitleTextAttributes(FAREGULAR_ATTR, for: .normal)
-        b.setTitleTextAttributes(FAREGULAR_ATTR, for: .highlighted)
-
-        return b
-    }
+    lazy var addqr = AddQRCodePageController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    
+    let theme = ThemingEngine.sharedInstance
     
     override init() {
         table = CodesTable()
@@ -37,14 +34,28 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .flatBlackDark
-        
         SystemCommunicator.sharedInstance.allTokens()
         
-        navigationController?.navigationBar.barTintColor = .flatBlack
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.flatWhite]
         navigationItem.title = "My Codes"
-        navigationItem.rightBarButtonItem = rightBar
+
+        let config = ArekConfiguration(frequency: .JustOnce, presentInitialPopup: true, presentReEnablePopup: false)
+        let permissions = ArekCamera(configuration: config, initialPopupData: nil, reEnablePopupData: nil)
+        permissions.askForPermission { (_) in
+            
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        view.backgroundColor = theme.background
+        navigationController?.navigationBar.barTintColor = theme.bgHighlight
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: theme.emphasizedText]
+        
+        let b = UIBarButtonItem(title: String.fontAwesomeIcon(name: .qrcode), style: .plain, target: self, action: #selector(DisplayVC.showQR(sender:)))
+        b.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: theme.secondaryText, NSAttributedString.Key.font: UIFont(name: "FontAwesome5ProRegular", size: 20)!], for: .normal)
+        b.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: theme.emphasizedText, NSAttributedString.Key.font: UIFont(name: "FontAwesome5ProRegular", size: 20)!], for: .highlighted)
+        navigationItem.rightBarButtonItem = b
+        
+        table.theme()
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,8 +65,7 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
     }
     
     @objc func showQR(sender: UIBarButtonItem) {
-        let controller = AddQRCodePageController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(addqr, animated: true)
     }
     
     func beganLoading() {

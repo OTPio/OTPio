@@ -18,7 +18,7 @@ class AddQRCodePageController: UIPageViewController {
         let cameraView = AddQRCodeVC()
         cameraView.outlet = self
         
-        let detailView = CodeDetailVC()
+        let detailView = QRCodeDetailsVC()
         detailView.outlet = self
         
         let confirmView = ConfirmQRCodeVC()

@@ -141,10 +141,6 @@ enum ThemePart {
     case border, progressTrack
 }
 
-extension DefaultsKeys {
-    static let currentTheme = DefaultsKey<Theme>("theme", defaultValue: Theme(rawValue: "solarizedDark"))
-}
-
 class ThemingEngine {
     static let sharedInstance: ThemingEngine = ThemingEngine()
     

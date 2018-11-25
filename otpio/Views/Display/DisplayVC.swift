@@ -15,7 +15,12 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
 
     let table: CodesTable
     
-    lazy var addqr = AddQRCodePageController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    var addqr = AddQRCodePageController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    var settings: UINavigationController {
+        let s = SettingsVC()
+        s.outlet = self
+        return UINavigationController(rootViewController: s)
+    }
     
     let theme = ThemingEngine.sharedInstance
     
@@ -51,9 +56,14 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: theme.emphasizedText]
         
         let b = UIBarButtonItem(title: String.fontAwesomeIcon(name: .qrcode), style: .plain, target: self, action: #selector(DisplayVC.showQR(sender:)))
-        b.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: theme.secondaryText, NSAttributedString.Key.font: UIFont(name: "FontAwesome5ProRegular", size: 20)!], for: .normal)
-        b.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: theme.emphasizedText, NSAttributedString.Key.font: UIFont(name: "FontAwesome5ProRegular", size: 20)!], for: .highlighted)
-        navigationItem.rightBarButtonItem = b
+        b.setTitleTextAttributes([.foregroundColor: theme.secondaryText, .font: FAREGULAR_UIFONT], for: .normal)
+        b.setTitleTextAttributes([.foregroundColor: theme.emphasizedText, .font: FAREGULAR_UIFONT], for: .highlighted)
+        navigationItem.leftBarButtonItem = b
+        
+        let s = UIBarButtonItem(title: String.fontAwesomeIcon(name: .userCog), style: .plain, target: self, action: #selector(DisplayVC.showSettings))
+        s.setTitleTextAttributes([.foregroundColor: theme.secondaryText, .font: FAREGULAR_UIFONT], for: .normal)
+        s.setTitleTextAttributes([.foregroundColor: theme.emphasizedText, .font: FAREGULAR_UIFONT], for: .highlighted)
+        navigationItem.rightBarButtonItem = s
         
         table.theme()
     }
@@ -66,6 +76,15 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
     
     @objc func showQR(sender: UIBarButtonItem) {
         navigationController?.pushViewController(addqr, animated: true)
+    }
+    
+    @objc func showSettings() {
+        self.present(settings, animated: true, completion: nil)
+    }
+    func settingsDone() {
+        dismiss(animated: true) {
+            self.viewDidAppear(true)
+        }
     }
     
     func beganLoading() {

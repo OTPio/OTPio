@@ -124,7 +124,6 @@ extension CodesTable: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! CodeTableViewCell
         let token = cell.token
         
-        detail.outlet = nil
         detail.token = token
         detail.configure()
         viewsuper?.show(detail, sender: self)

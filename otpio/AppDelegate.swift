@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillResignActive(_ application: UIApplication) {
         SystemCommunicator.sharedInstance.stopTimer()
-        SystemCommunicator.sharedInstance.teardown()
+        SystemCommunicator.sharedInstance.updateKeychain()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        SystemCommunicator.sharedInstance.teardown()
+        SystemCommunicator.sharedInstance.updateKeychain()
     }
 }
 

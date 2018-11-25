@@ -20,12 +20,6 @@ class CodeDetailVC: FormViewController {
     var isInToday: Bool?
     var isInCloud: Bool?
     
-    var outlet: AddQRCodePageController?
-    
-    var rightButton: UIBarButtonItem {
-        return UIBarButtonItem(title: "Continue", style: .plain, target: self, action: #selector(CodeDetailVC.pushNewToken))
-    }
-    
     var faMapped: Array<String> = {
         var pre = FontAwesomeBrands.compactMap { return FontAwesome(rawValue: $0.value)! }
         pre.sort { $0.iconName()! < $1.iconName()! }
@@ -110,7 +104,6 @@ class CodeDetailVC: FormViewController {
                 row.cell.stepper.stepValue = 1.0
                 row.cell.stepper.maximumValue = 8.0
                 row.cell.stepper.minimumValue = 6.0
-                row.disabled = true
                 
                 row.hidden = Condition.function([CellTags.advanced.rawValue], { (form) -> Bool in
                     return !((form.rowBy(tag: CellTags.advanced.rawValue) as? SwitchRow)?.value ?? false)
@@ -122,7 +115,6 @@ class CodeDetailVC: FormViewController {
                 row.title = "Interval"
                 row.value = 30.0
                 row.cell.stepper.stepValue = 1.0
-                row.disabled = true
                 
                 row.hidden = Condition.function([CellTags.advanced.rawValue], { (form) -> Bool in
                     return !((form.rowBy(tag: CellTags.advanced.rawValue) as? SwitchRow)?.value ?? false)
@@ -196,16 +188,6 @@ class CodeDetailVC: FormViewController {
                     cell.switchControl.tintColor = .flatRed
                 }
                 
-                if outlet != nil {
-                    if sr.tag == CellTags.today.rawValue || sr.tag == CellTags.cloud.rawValue {
-                        sr.hidden = true
-                    } else {
-                        sr.hidden = false
-                    }
-                } else {
-                    sr.hidden = false
-                }
-                
                 sr.updateCell()
             }
             
@@ -243,11 +225,6 @@ class CodeDetailVC: FormViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        guard outlet != nil else { return }
-        self.token = outlet?.token
-        
-        navigationItem.rightBarButtonItem = rightButton
         
         configure()
     }
@@ -316,7 +293,6 @@ class CodeDetailVC: FormViewController {
         default: return
         }
         
-        guard outlet == nil else { return }
         SystemCommunicator.sharedInstance.update()
     }
     
@@ -333,7 +309,6 @@ class CodeDetailVC: FormViewController {
         default: return
         }
         
-        guard outlet == nil else { return }
         SystemCommunicator.sharedInstance.update()
     }
     
@@ -353,16 +328,6 @@ class CodeDetailVC: FormViewController {
             else { SystemCommunicator.sharedInstance.removeFromCloud(token: t) }
         default: return
         }
-    }
-    
-    @objc func pushNewToken() {
-        guard outlet != nil else {
-            SystemCommunicator.sharedInstance.update()
-            return
-        }
-        
-        outlet?.token = token
-        outlet?.confirmCode()
     }
 }
 

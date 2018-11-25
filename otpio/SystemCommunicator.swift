@@ -45,7 +45,7 @@ class SystemCommunicator {
         cloudToken = []
     }
 
-    public func teardown() {
+    public func updateKeychain() {
         DispatchQueue.global(qos: .background).async {
             try? self.fullKeychain.removeAll()
             try? self.todayKeychain.removeAll()
@@ -69,6 +69,8 @@ class SystemCommunicator {
         fullToken.append(t)
         
         listener?.returned(tokens: self.fullToken)
+        
+        updateKeychain()
     }
     public func update() {        
         listener?.returned(tokens: self.fullToken)
@@ -82,14 +84,18 @@ class SystemCommunicator {
         removeFromCloud(token: t)
         
         listener?.returned(tokens: self.fullToken)
+        
+        updateKeychain()
     }
     
     public func sendToToday(token t: Token) {
         todayToken.append(t)
+        updateKeychain()
     }
     public func removeFromToday(token t: Token) {
         guard let offset = todayToken.firstIndex(of: t) else { return } // Index not present
         todayToken.remove(at: offset)
+        updateKeychain()
     }
     public func isInToday(token t: Token) -> Bool {
         guard todayToken.firstIndex(of: t) != nil else { return false}
@@ -98,10 +104,12 @@ class SystemCommunicator {
     
     public func sendToCloud(token t: Token) {
         cloudToken.append(t)
+        updateKeychain()
     }
     public func removeFromCloud(token t: Token) {
         guard let offset = cloudToken.firstIndex(of: t) else { return }
         cloudToken.remove(at: offset)
+        updateKeychain()
     }
     public func isInCloud(token t: Token) -> Bool {
         guard cloudToken.firstIndex(of: t) != nil else { return false }

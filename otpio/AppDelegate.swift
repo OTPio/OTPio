@@ -11,6 +11,7 @@ import FontBlaster
 import ChameleonFramework
 import Fabric
 import Crashlytics
+import libtoken
 
 // Global Font Awesome declarations
 let FALIGHT_UIFONT  : UIFont = UIFont(name: "FontAwesome5ProLight", size: 20)!
@@ -39,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ThemingEngine.sharedInstance.change(to: .nightLightDark)
+//        ThemingEngine.sharedInstance.change(to: .nightLightDark)
         let nav = UINavigationController(rootViewController: root)
         nav.navigationBar.barTintColor = .flatBlack
         window?.rootViewController = nav
@@ -47,6 +48,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         Fabric.with([Crashlytics.self])
+        
+        if CommandLine.arguments.count > 0 {
+            print(CommandLine.arguments)
+            guard
+                let token = CommandLine.arguments.last,
+                let url   = URL(string: token),
+                let t     = Token(from: url)
+            else { return true }
+            
+            SystemCommunicator.sharedInstance.addTemp(token: t)
+        }
         
         return true
     }

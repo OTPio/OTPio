@@ -56,29 +56,39 @@ class TokenForm {
         }
 
         +++ Section(header: "Advanced Details", footer: fetchString(forKey: "advanced-token"))
-        <<< SwitchRow(TokenCellTags.advanced.rawValue) { row in
-            row.title = "Show Advanced Details"
-        }
+//        <<< SwitchRow(TokenCellTags.advanced.rawValue) { row in
+//            row.title = "Show Advanced Details"
+//            row.value = false
+//        }
         <<< ActionSheetRow<String>(TokenCellTags.hash.rawValue) { row in
             row.title = "Hash"
             row.options = algorithmsMapped
+            row.hidden = Condition.function([TokenCellTags.advanced.rawValue], { (form) -> Bool in
+                return !((form.rowBy(tag: TokenCellTags.advanced.rawValue) as? SwitchRow)?.value ?? true)
+            })
         }
         <<< StepperRow(TokenCellTags.digits.rawValue) { row in
             row.title = "Digits"
             row.cell.stepper.maximumValue = 8.0
             row.cell.stepper.minimumValue = 6.0
+            row.hidden = Condition.function([TokenCellTags.advanced.rawValue], { (form) -> Bool in
+                return !((form.rowBy(tag: TokenCellTags.advanced.rawValue) as? SwitchRow)?.value ?? true)
+            })
         }
         <<< StepperRow(TokenCellTags.interval.rawValue) { row in
             row.title = "Interval"
             row.cell.stepper.minimumValue = 10.0
             row.cell.stepper.maximumValue = 60.0
+            row.hidden = Condition.function([TokenCellTags.advanced.rawValue], { (form) -> Bool in
+                return !((form.rowBy(tag: TokenCellTags.advanced.rawValue) as? SwitchRow)?.value ?? true)
+            })
         }
 
         
         +++ Section(header: "Token Availability", footer: fetchString(forKey: "available-token"))
     }
     
-    private func themeForm() {
+    func themeForm() {
         let theme  = ThemingEngine.sharedInstance
         
         let incrementEnabled : UIImage = UIImage.fontAwesomeIcon(name: .plus, style: .solid, textColor: theme.emphasizedText, size: CGSize(width: 20, height: 20))
@@ -151,10 +161,6 @@ class TokenForm {
                 row.cellUpdate { (cell, _) in
                     cell.textLabel?.textColor = theme.emphasizedText
                     cell.detailTextLabel?.textColor = theme.normalText
-                    
-                    row.hidden = Condition.function([TokenCellTags.advanced.rawValue], { (form) -> Bool in
-                        return !((form.rowBy(tag: TokenCellTags.advanced.rawValue) as? SwitchRow)?.value ?? false)
-                    })
                 }
                 row.onChange { (row) in
                     guard
@@ -178,11 +184,15 @@ class TokenForm {
                     cell.stepper.stepValue = 1.0
                     
                     row.displayValueFor = { return $0.map { "\(Int($0))" } }
-                    row.hidden = Condition.function([TokenCellTags.advanced.rawValue], { (form) -> Bool in
-                        return !((form.rowBy(tag: TokenCellTags.advanced.rawValue) as? SwitchRow)?.value ?? false)
-                    })
                 }
-                
+                row.onChange { (row) in
+                    guard
+                        let value = row.value,
+                        let tag   = row.tag,
+                        let cell  = TokenCellTags(rawValue: tag)
+                    else { return }
+                    self.update(cell: cell, value: value)
+                }
             }
             
             row.updateCell()
@@ -250,8 +260,28 @@ class TokenForm {
                 self.token.faIcon != icon
             else { return }
             self.token.faIcon = icon
+        case .hash:
+            let hash = TokenAlgorithm(rawValue: v)
+            guard self.token.algorithm != hash else { return }
+            self.token.algorithm = hash
         default: return
         }
+    }
+    
+    func update(cell t: TokenCellTags, value v: Double) {
+        switch t {
+        case .digits:
+            guard self.token.digits != Int(v) else { return }
+            self.token.digits = Int(v)
+        case .interval:
+            guard self.token.interval != v else { return }
+            self.token.interval = v
+        default: return
+        }
+    }
+    
+    func getToken() -> Token {
+        return self.token
     }
 }
 
@@ -268,77 +298,3 @@ class TokenForm {
 //            let val = row.value!
 //            self.update(row: .today, value: val)
 //        })
-//    <<< ButtonRow(CellTags.delete.rawValue) { row in
-//        row.title = "Delete Token"
-//        
-//        }.onCellSelection({ (_, _) in
-//            let alert = SCLAlertView()
-//            alert.addButton("I'm Sure!", action: {
-//                SystemCommunicator.sharedInstance.remove(token: self.token!)
-//                self.navigationController?.popToRootViewController(animated: true)
-//            })
-//            
-//            alert.showError("Delete \(self.token!.issuer)", subTitle: fetchString(forKey: "delete-token"), closeButtonTitle: "Keep It!")
-//        })
-//
-//for r in form.allRows {
-//    r.baseCell.backgroundColor = .flatBlack
-//    
-//    if let sr = r as? StepperRow {
-//        sr.cellUpdate { (cell, _) in
-//        }
-//        
-//        sr.displayValueFor = {
-//            return $0.map { "\(Int($0))" }
-//        }
-//    }
-//    
-//    if let tr = r as? TextRow {
-//        tr.cellUpdate { (cell, _) in
-//            cell.titleLabel?.textColor = .flatWhite
-//            cell.textField.textColor = .flatWhite
-//        }
-//    }
-//    
-//
-//    if let pr = r as? PushRow<String> {
-//    }
-//    
-//    if let br = r as? ButtonRow {
-//        br.cellUpdate { (cell, row) in
-//            cell.textLabel?.textColor = .flatRed
-//        }
-//    }
-//}
-
-//
-//if let hasRow = form.rowBy(tag: CellTags.hash.rawValue) as? ActionSheetRow<String> {
-//    hasRow.value = t.algorithm.algorithmName(dash: true)
-//    hasRow.updateCell()
-//}
-//
-//if let digRow = form.rowBy(tag: CellTags.digits.rawValue) as? StepperRow {
-//    digRow.value = Double(t.digits)
-//    digRow.updateCell()
-//}
-//
-//if let intRow = form.rowBy(tag: CellTags.interval.rawValue) as? StepperRow {
-//    intRow.value = t.interval
-//    intRow.updateCell()
-//}
-//
-//if let todRow = form.rowBy(tag: CellTags.today.rawValue) as? SwitchRow {
-//    let v = SystemCommunicator.sharedInstance.isInToday(token: t)
-//    todRow.value = v
-//    isInToday = v
-//    todRow.updateCell()
-//}
-//
-//if let cloRow = form.rowBy(tag: CellTags.cloud.rawValue) as? SwitchRow {
-//    let v = SystemCommunicator.sharedInstance.isInCloud(token: t)
-//    cloRow.value = v
-//    isInCloud = v
-//    cloRow.updateCell()
-//}
-//
-//navigationItem.title = t.issuer

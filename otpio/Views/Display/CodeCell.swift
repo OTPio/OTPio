@@ -96,6 +96,7 @@ class CodeTableViewCell: SwipeTableViewCell {
         token = t
         
         updateCode()
+        stopTimer()
         startTimer()
         theme()
     }

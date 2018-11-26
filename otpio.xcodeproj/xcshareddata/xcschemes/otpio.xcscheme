@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A039C4877B1F506433C4F427C7E07BCF"
+               BlueprintIdentifier = "89E473B79682D7270EBAF1F5520DAFF0"
                BuildableName = "Pods_otpio.framework"
                BlueprintName = "Pods-otpio"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -168,7 +168,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "29F5F13668E0F91A57A7C1D286D5CA85"
+               BlueprintIdentifier = "DCE8865441C4F17536E3046788C10167"
                BuildableName = "RetroProgress.framework"
                BlueprintName = "RetroProgress"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -182,7 +182,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "42089C5B4D43E3FD6DB813AE95A128D1"
+               BlueprintIdentifier = "81F71103B7B2AD19CA4F50DEA8C66532"
                BuildableName = "SCLAlertView.framework"
                BlueprintName = "SCLAlertView"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -196,7 +196,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CA4C26FE011F9E0C32AA789B2454A05"
+               BlueprintIdentifier = "9EA846E5594902609AA7BBEB163F5ACC"
                BuildableName = "SwiftyUserDefaults.framework"
                BlueprintName = "SwiftyUserDefaults"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -210,7 +210,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08A257F8AAD900C8412004D47836C5E4"
+               BlueprintIdentifier = "AA9481377BC2F54E0244986C69662C84"
                BuildableName = "SwipeCellKit.framework"
                BlueprintName = "SwipeCellKit"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -228,7 +228,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "661F2CED21711B310059756F"
+               BlueprintIdentifier = "662CFF84219D7A9D0092A087"
                BuildableName = "otpioUITests.xctest"
                BlueprintName = "otpioUITests"
                ReferencedContainer = "container:otpio.xcodeproj">
@@ -267,6 +267,12 @@
             ReferencedContainer = "container:otpio.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&amp;issuer=Matrix%20Studios&amp;algorithm=SHA256&amp;digits=6&amp;period=30"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

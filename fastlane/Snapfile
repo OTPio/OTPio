@@ -1,10 +1,12 @@
 devices([
-  "iPhone X",
+  "iPhone XS",
+  "iPhone 8",
+  "iPhone 8 Plus"
 ])
 
 languages([
   "en-US",
 ])
 output_directory("./screenshots")
-
+launch_arguments(["-token 'otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&issuer=Matrix%20Studios&algorithm=SHA256&digits=6&period=30&fa=empire'"])
 clear_previous_screenshots(true)

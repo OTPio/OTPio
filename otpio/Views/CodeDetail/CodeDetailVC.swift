@@ -55,8 +55,14 @@ class CodeDetailVC: FormViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        let theme = ThemingEngine.sharedInstance
         super.viewDidAppear(animated)
-        tableView.backgroundColor = ThemingEngine.sharedInstance.background
+        tableView.backgroundColor = theme.background
+        
+        let b = UIBarButtonItem(title: String.fontAwesomeIcon(name: .trashAlt), style: .plain, target: self, action: #selector(CodeDetailVC.deleteToken))
+        b.setTitleTextAttributes([.foregroundColor: theme.secondaryText, .font: FAREGULAR_UIFONT], for: .normal)
+        b.setTitleTextAttributes([.foregroundColor: theme.emphasizedText, .font: FAREGULAR_UIFONT], for: .highlighted)
+        navigationItem.rightBarButtonItem = b
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -70,6 +76,16 @@ class CodeDetailVC: FormViewController {
         provider.configure(with: t)
         
         navigationItem.title = t.issuer
+    }
+    
+    @objc func deleteToken() {
+        let alert = SCLAlertView()
+        alert.addButton("I'm Sure!", action: {
+            SystemCommunicator.sharedInstance.remove(token: self.token!)
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+        
+        alert.showError("Delete \(self.token!.issuer)", subTitle: fetchString(forKey: "delete-token"), closeButtonTitle: "Keep It!")
     }
 }
 

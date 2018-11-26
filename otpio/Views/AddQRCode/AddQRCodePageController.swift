@@ -57,13 +57,15 @@ class AddQRCodePageController: UIPageViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        setupSubviews()
     }
     
     func setupSubviews() {
         if let first = self.orderedControllers.first {
             self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
+            
+            if let first = first as? AddQRCodeVC {
+                first.captureSession.startRunning()
+            }
         }
     }
     

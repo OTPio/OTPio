@@ -64,10 +64,14 @@ class CodesTable: UITableView {
     
     func doneLoading(with a: Array<Token>) {
         if a.count == 0 {
+            self.currentTokens = []
+            
             loadingLabel.text = "No tokens added. Tap the QR Code to add one!"
             loadingIcon!.stopAnimating()
             loadingIcon!.isHidden = true
             noTokenIcon.isHidden = false
+            
+            self.reloadData()
         } else {
             self.currentTokens = a
             DispatchQueue.main.async {

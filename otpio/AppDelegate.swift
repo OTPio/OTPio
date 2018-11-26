@@ -40,9 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ThemingEngine.sharedInstance.change(to: .nightLightDark)
-        
-        application.shortcutItems = []
-        
         let nav = UINavigationController(rootViewController: root)
         nav.navigationBar.barTintColor = .flatBlack
         window?.rootViewController = nav

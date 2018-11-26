@@ -70,7 +70,9 @@ class CodesTable: UITableView {
             noTokenIcon.isHidden = false
         } else {
             self.currentTokens = a
-            reloadData()
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
         }
     }
     
@@ -124,8 +126,7 @@ extension CodesTable: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! CodeTableViewCell
         let token = cell.token
         
-        detail.token = token
-        detail.configure()
+        detail.configure(with: token!)
         viewsuper?.show(detail, sender: self)
     }
 }

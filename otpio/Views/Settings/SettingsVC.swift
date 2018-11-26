@@ -26,7 +26,7 @@ class SettingsVC: FormViewController {
         navigationItem.rightBarButtonItem = rb
         
         form +++ Section("Theme Settings")
-            <<< ActionSheetRow<String>(SettingTags.theme.rawValue) { row in
+            <<< ActionSheetRow<String>(SettingCellTags.theme.rawValue) { row in
                 row.title = "Theme"
                 row.options = [
                     Theme.solarizedDark.humanReadableName(),
@@ -47,10 +47,9 @@ class SettingsVC: FormViewController {
         self.cellSize = Defaults[.cellSize]
         self.theme = ThemingEngine.sharedInstance.currentTheme
         
-        if let theRow = form.rowBy(tag: SettingTags.theme.rawValue) as? ActionSheetRow<String> {
-            theRow.cellUpdate { (cell, row) in
-                row.value = self.theme.humanReadableName()
-            }
+        if let theRow = form.rowBy(tag: SettingCellTags.theme.rawValue) as? ActionSheetRow<String> {
+            theRow.value = self.theme.humanReadableName()
+            theRow.updateCell()
         }
     }
     
@@ -64,11 +63,6 @@ class SettingsVC: FormViewController {
         
         outlet?.settingsDone()
     }
-}
-
-enum SettingTags: String {
-    case theme    = "themeRow"
-    case cellType = "cellTypeRow"
 }
 
 extension DefaultsKeys {

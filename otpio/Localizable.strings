@@ -15,4 +15,5 @@
 "token-confirmation" = "Most One-Time Password sites require you to enter a generated value to ensure everyone's on the same page. Do so now, then press Done";
 "details-token"      = "The details of your token. Your secret cannot be modified. If you need to change it, delete this token and scan a new one";
 "advanced-token"     = "You should not change these details unless you are directed to by your provider. They have been automatically set, and changing them could result in invalid codes.";
+"available-token"    = "Configure where your token is available.";
 "delete-token"       = "You will have to manually re-add this token if you want to use it in the future. Are you sure?";

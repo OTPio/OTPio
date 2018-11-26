@@ -71,10 +71,14 @@ enum Theme: String, DefaultsSerializable {
     
     init(rawValue v: String) {
         switch v {
-        case "solarizedLight"  : self = .solarizedLight
-        case "solarizedDark"   : self = .solarizedDark
-        case "nightLightDark"  : self = .nightLightDark
-        case "nightLightBright": self = .nightLightBright
+        case "solarizedLight",
+             "Solarized Light"   : self = .solarizedLight
+        case "solarizedDark",
+             "Solarized Dark"    : self = .solarizedDark
+        case "nightLightDark",
+             "Night/Light Dark"  : self = .nightLightDark
+        case "nightLightBright",
+             "Night/Light Bright": self = .nightLightBright
         default: self = .solarizedDark
         }
     }
@@ -176,5 +180,9 @@ class ThemingEngine {
         emphasizedText = colors[.emphasizedText]
         progressTrack = colors[.progressTrack]
         border = colors[.border]
+        
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: colors[.emphasizedText] as Any]
+        UINavigationBar.appearance().barTintColor = colors[.bgHighlight]
+        UINavigationBar.appearance().tintColor = colors[.secondaryText]
     }
 }

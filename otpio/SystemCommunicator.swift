@@ -62,18 +62,18 @@ class SystemCommunicator {
             for t in self.cloudToken {
                 self.cloudKeychain["cloud=\(t.secret.hashValue)"] = t.serialize()
             }
+            
+            self.listener?.returned(tokens: self.fullToken)
         }
     }
     
     public func add(token t: Token) {
         fullToken.append(t)
         
-        listener?.returned(tokens: self.fullToken)
-        
         updateKeychain()
     }
-    public func update() {        
-        listener?.returned(tokens: self.fullToken)
+    public func update() {
+        updateKeychain()
     }
     public func remove(token t: Token) {
         guard let offset = fullToken.firstIndex(of: t) else { return }
@@ -82,9 +82,7 @@ class SystemCommunicator {
         // If a token is removed from the full chain, it should also be removed from the other chains
         removeFromToday(token: t)
         removeFromCloud(token: t)
-        
-        listener?.returned(tokens: self.fullToken)
-        
+                
         updateKeychain()
     }
     

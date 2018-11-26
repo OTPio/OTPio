@@ -52,8 +52,10 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
     
     override func viewDidAppear(_ animated: Bool) {
         view.backgroundColor = theme.background
+        
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: theme.emphasizedText as Any]
         navigationController?.navigationBar.barTintColor = theme.bgHighlight
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: theme.emphasizedText]
+        navigationController?.navigationBar.tintColor = theme.secondaryText
         
         let b = UIBarButtonItem(title: String.fontAwesomeIcon(name: .qrcode), style: .plain, target: self, action: #selector(DisplayVC.showQR(sender:)))
         b.setTitleTextAttributes([.foregroundColor: theme.secondaryText, .font: FAREGULAR_UIFONT], for: .normal)

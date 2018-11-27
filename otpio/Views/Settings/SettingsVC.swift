@@ -109,16 +109,6 @@ extension DefaultsKeys {
     static let cellSize     = DefaultsKey<CellType>("cellSize", defaultValue: .compact)
 }
 
-final class ThemeSelectorRow: Row<PushSelectorCell<Theme>>, RowType {
-    required init(tag: String?) {
-        super.init(tag: tag)
-    }
-    
-    override func customDidSelect() {
-        super.customDidSelect()
-    }
-}
-
 enum CellType: String, DefaultsSerializable {
     case expanded = "Expanded"
     case compact  = "Compact"

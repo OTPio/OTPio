@@ -33,14 +33,12 @@ class CodeDetailVC: FormViewController {
         let tt = (td) ? "Remove from":"Add to"
         let ct = (cd) ? "Remove from":"Add to"
         
-        let today = UIPreviewAction(title: "\(tt) Today Widget", style: .default) { (action, controller) in
-            if td { SystemCommunicator.sharedInstance.removeFromToday(token: t) }
-            else { SystemCommunicator.sharedInstance.sendToToday(token: t) }
+        let today = UIPreviewAction(title: "\(tt) Today Widget", style: .default) { (_, _) in
+            SystemCommunicator.sharedInstance.today(token: t, available: !td)
         }
         
-        let cloud = UIPreviewAction(title: "\(ct) iCloud (Sync)", style: .default) { (action, controller) in
-            if cd { SystemCommunicator.sharedInstance.removeFromCloud(token: t) }
-            else { SystemCommunicator.sharedInstance.sendToCloud(token: t) }
+        let cloud = UIPreviewAction(title: "\(ct) iCloud (Sync)", style: .default) { (_, _) in
+            SystemCommunicator.sharedInstance.cloud(token: t, available: !cd)
         }
         
         return [today, cloud, delete]
@@ -73,7 +71,7 @@ class CodeDetailVC: FormViewController {
     
     func configure(with t: Token) {
         self.token = t
-        provider.configure(with: t)
+        provider.configure(with: t, allowSaves: true)
         
         navigationItem.title = t.issuer
     }

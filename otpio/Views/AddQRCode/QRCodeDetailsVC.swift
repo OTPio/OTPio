@@ -41,7 +41,7 @@ class QRCodeDetailsVC: FormViewController {
         
         guard let t = outlet?.token else { return }
         self.token = t
-        provider.configure(with: t)
+        provider.configure(with: t, allowSaves: false)
     }
     
     @objc func saveData() {

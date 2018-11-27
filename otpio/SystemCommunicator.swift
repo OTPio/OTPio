@@ -96,32 +96,40 @@ class SystemCommunicator {
         updateKeychain()
     }
     
-    public func sendToToday(token t: Token) {
-        todayToken.append(t)
-        updateKeychain()
-    }
-    public func removeFromToday(token t: Token) {
-        guard let offset = todayToken.firstIndex(of: t) else { return } // Index not present
-        todayToken.remove(at: offset)
-        updateKeychain()
+    public func today(token t: Token, available a: Bool) {
+        if a { sendToToday(token: t) }
+        else { removeFromToday(token: t) }
     }
     public func isInToday(token t: Token) -> Bool {
         guard todayToken.firstIndex(of: t) != nil else { return false}
         return true
     }
-    
-    public func sendToCloud(token t: Token) {
-        cloudToken.append(t)
+    private func sendToToday(token t: Token) {
+        todayToken.append(t)
         updateKeychain()
     }
-    public func removeFromCloud(token t: Token) {
-        guard let offset = cloudToken.firstIndex(of: t) else { return }
-        cloudToken.remove(at: offset)
+    private func removeFromToday(token t: Token) {
+        guard let offset = todayToken.firstIndex(of: t) else { return } // Index not present
+        todayToken.remove(at: offset)
         updateKeychain()
+    }
+    
+    public func cloud(token t: Token, available a: Bool) {
+        if a { sendToCloud(token: t) }
+        else { removeFromCloud(token: t) }
     }
     public func isInCloud(token t: Token) -> Bool {
         guard cloudToken.firstIndex(of: t) != nil else { return false }
         return true
+    }
+    private func sendToCloud(token t: Token) {
+        cloudToken.append(t)
+        updateKeychain()
+    }
+    private func removeFromCloud(token t: Token) {
+        guard let offset = cloudToken.firstIndex(of: t) else { return }
+        cloudToken.remove(at: offset)
+        updateKeychain()
     }
     
     public func allTokens() {

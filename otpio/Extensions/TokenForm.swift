@@ -84,8 +84,16 @@ class TokenForm {
             })
         }
 
-        
-        +++ Section(header: "Token Availability", footer: fetchString(forKey: "available-token"))
+        +++ Section("Token Availablility") { section in
+            section.tag = "avail"
+//            section.hidden = true
+        }
+        <<< SwitchRow(TokenCellTags.cloud.rawValue) { row in
+            row.title = "Stored in iCloud"
+        }
+        <<< SwitchRow(TokenCellTags.today.rawValue) { row in
+            row.title = "Show in Today"
+        }
     }
     
     func themeForm() {
@@ -155,6 +163,16 @@ class TokenForm {
                     cell.switchControl.onTintColor = .flatGreen
                     cell.switchControl.tintColor = .flatRed
                 }
+                guard let tag = row.tag, tag != TokenCellTags.advanced.rawValue
+                    else { continue }
+                
+                row.onChange { (row) in
+                    guard
+                        let value = row.value,
+                        let cell  = TokenCellTags(rawValue: tag)
+                    else { return }
+                    self.update(cell: cell, value: value)
+                }
             }
             
             if let row = row as? ActionSheetRow<String> {
@@ -199,7 +217,7 @@ class TokenForm {
         }
     }
     
-    func configure(with t: Token) {
+    func configure(with t: Token, allowSaves: Bool) {
         self.token = t
 
         if let row = form.rowBy(tag: TokenCellTags.secret.rawValue) as? TextRow {
@@ -235,6 +253,24 @@ class TokenForm {
         if let row = form.rowBy(tag: TokenCellTags.interval.rawValue) as? StepperRow {
             row.value = t.interval
             row.updateCell()
+        }
+        
+        if let row = form.rowBy(tag: TokenCellTags.today.rawValue) as? SwitchRow {
+            //row.hidden = Condition(booleanLiteral: allowSaves)
+            row.value = SystemCommunicator.sharedInstance.isInToday(token: t)
+            row.updateCell()
+        }
+        
+        if let row = form.rowBy(tag: TokenCellTags.cloud.rawValue) as? SwitchRow {
+            //row.hidden = Condition(booleanLiteral: allowSaves)
+            row.value = SystemCommunicator.sharedInstance.isInCloud(token: t)
+            row.updateCell()
+        }
+        
+        if let section = form.sectionBy(tag: "avail") {
+            section.hidden = Condition(booleanLiteral: !allowSaves)
+            section.evaluateHidden()
+            section.reload()
         }
         
         self.themeForm()
@@ -274,21 +310,18 @@ class TokenForm {
         }
     }
     
+    func update(cell t: TokenCellTags, value v: Bool) {
+        switch t {
+        case .cloud:
+            SystemCommunicator.sharedInstance.cloud(token: self.token, available: v)
+        case .today:
+            SystemCommunicator.sharedInstance.today(token: self.token, available: v)
+            break
+        default: return
+        }
+    }
+    
     func getToken() -> Token {
         return self.token
     }
 }
-
-//    +++ Section("Token Availibility")
-//    <<< SwitchRow(CellTags.cloud.rawValue) { row in
-//        row.title = "Stored in iCloud"
-//        }.onChange({ (row) in
-//            let val = row.value!
-//            self.update(row: .cloud, value: val)
-//        })
-//    <<< SwitchRow(CellTags.today.rawValue) { row in
-//        row.title = "Show in Today"
-//        }.onChange({ (row) in
-//            let val = row.value!
-//            self.update(row: .today, value: val)
-//        })

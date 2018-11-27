@@ -65,7 +65,7 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
         let s = UIBarButtonItem(title: String.fontAwesomeIcon(name: .userCog), style: .plain, target: self, action: #selector(DisplayVC.showSettings))
         s.setTitleTextAttributes([.foregroundColor: theme.secondaryText, .font: FAREGULAR_UIFONT], for: .normal)
         s.setTitleTextAttributes([.foregroundColor: theme.emphasizedText, .font: FAREGULAR_UIFONT], for: .highlighted)
-        navigationItem.rightBarButtonItem = s
+        //navigationItem.rightBarButtonItem = s
         
         table.theme()
     }

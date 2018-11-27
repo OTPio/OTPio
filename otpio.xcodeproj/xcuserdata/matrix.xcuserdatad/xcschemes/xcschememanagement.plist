@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>otpio-siri.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>otpio-today.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -49,11 +44,6 @@
 			<key>orderHint</key>
 			<integer>28</integer>
 		</dict>
-		<key>watch.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>30</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -73,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>6688BC402192CA1900A2267D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66A33851219E742900CF08CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

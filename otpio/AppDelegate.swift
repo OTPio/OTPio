@@ -40,7 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        ThemingEngine.sharedInstance.change(to: .nightLightDark)
         let nav = UINavigationController(rootViewController: root)
         nav.navigationBar.barTintColor = .flatBlack
         window?.rootViewController = nav
@@ -50,7 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         
         if CommandLine.arguments.count > 0 {
-            print(CommandLine.arguments)
             guard
                 let token = CommandLine.arguments.last,
                 let url   = URL(string: token),

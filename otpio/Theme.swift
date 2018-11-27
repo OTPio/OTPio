@@ -148,7 +148,8 @@ enum ThemePart {
 class ThemingEngine {
     static let sharedInstance: ThemingEngine = ThemingEngine()
     
-    var currentTheme: Theme
+    var currentTheme   : Theme
+    var currentCellType: CellType
     
     var background    : UIColor!
     var bgHighlight   : UIColor!
@@ -160,6 +161,7 @@ class ThemingEngine {
     
     init() {
         currentTheme = Defaults[.currentTheme]
+        currentCellType = Defaults[.cellSize]
         
         setup()
     }
@@ -168,6 +170,11 @@ class ThemingEngine {
         currentTheme = t
         
         setup()
+    }
+    
+    func change(to c: CellType) {
+        currentCellType = c
+        Defaults[.cellSize] = c
     }
     
     private func setup() {

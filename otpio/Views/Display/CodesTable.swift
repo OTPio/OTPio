@@ -21,6 +21,8 @@ class CodesTable: UITableView {
     
     public let detail: CodeDetailVC = CodeDetailVC()
     
+    var cellType: CellType
+    
     let loadingView : SystemView
     let loadingLabel: SystemLabel
     var loadingIcon : NVActivityIndicatorView?
@@ -36,6 +38,8 @@ class CodesTable: UITableView {
         loadingView.addSubview(noTokenIcon)
         loadingView.addSubview(loadingLabel)
         
+        cellType = ThemingEngine.sharedInstance.currentCellType
+        
         super.init(frame: CGRect(), style: .plain)
         
         dataSource = self
@@ -48,6 +52,9 @@ class CodesTable: UITableView {
     
     func theme() {
         backgroundColor = ThemingEngine.sharedInstance.bgHighlight
+        cellType = ThemingEngine.sharedInstance.currentCellType
+        
+        reloadData()
         
         for cell in visibleCells {
             (cell as! CodeTableViewCell).theme()
@@ -107,7 +114,7 @@ extension CodesTable: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75.0
+        return ((cellType == .compact) ? 75.0 : 135.0)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -120,6 +127,7 @@ extension CodesTable: UITableViewDataSource {
         let t = currentTokens[indexPath.row]
         cell.configure(with: t)
         cell.selectionStyle = .none
+        cell.cellType = self.cellType
         
         return cell
     }

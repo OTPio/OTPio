@@ -1,0 +1,2 @@
+A suggested secret to add manually is PFXXKYLCNF2GG2DE
+A suggested location to generate 2FA codes is https://stefansundin.github.io/2fa-qr/

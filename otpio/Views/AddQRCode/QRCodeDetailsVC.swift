@@ -26,7 +26,7 @@ class QRCodeDetailsVC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.backgroundColor = .flatBlack
+        tableView.backgroundColor = ThemingEngine.sharedInstance.background
         
         self.form = provider.form
     }

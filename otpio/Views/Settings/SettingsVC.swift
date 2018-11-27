@@ -12,7 +12,7 @@ import SwiftyUserDefaults
 
 class SettingsVC: FormViewController {
     
-    var cellSize: String = ""
+    var cellSize: CellType = ThemingEngine.sharedInstance.currentCellType
     var theme   : Theme = ThemingEngine.sharedInstance.currentTheme
     var outlet  : DisplayVC?
     
@@ -26,19 +26,33 @@ class SettingsVC: FormViewController {
         navigationItem.rightBarButtonItem = rb
         
         form +++ Section("Theme Settings")
-            <<< ActionSheetRow<String>(SettingCellTags.theme.rawValue) { row in
-                row.title = "Theme"
-                row.options = [
-                    Theme.solarizedDark.humanReadableName(),
-                    Theme.solarizedLight.humanReadableName(),
-                    Theme.nightLightDark.humanReadableName(),
-                    Theme.nightLightBright.humanReadableName()
-                ]
-                }.onChange({ (row) in
-                    let v = row.value!
-                    let t = Theme(rawValue: v)
-                    self.theme = t
-                })
+        <<< ActionSheetRow<String>(SettingCellTags.theme.rawValue) { row in
+            row.title = "Theme"
+            row.options = [
+                Theme.solarizedDark.humanReadableName(),
+                Theme.solarizedLight.humanReadableName(),
+                Theme.nightLightDark.humanReadableName(),
+                Theme.nightLightBright.humanReadableName()
+            ]
+        }.onChange({ (row) in
+            let v = row.value!
+            let t = Theme(rawValue: v)
+            self.theme = t
+            
+            ThemingEngine.sharedInstance.change(to: t)
+            self.changeTheme()
+        })
+        <<< ActionSheetRow<String>(SettingCellTags.cellType.rawValue) { row in
+            row.title = "Table Style"
+            row.options = ["Expanded", "Compact"]
+            }.onChange({ (row) in
+                let v = row.value!
+                let c = CellType(rawValue: v)!
+                
+                self.cellSize = c
+                
+                ThemingEngine.sharedInstance.change(to: c)
+            })
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,11 +65,36 @@ class SettingsVC: FormViewController {
             theRow.value = self.theme.humanReadableName()
             theRow.updateCell()
         }
+        
+        if let celRow = form.rowBy(tag: SettingCellTags.cellType.rawValue) as? ActionSheetRow<String> {
+            celRow.value = self.cellSize.rawValue
+            celRow.updateCell()
+        }
+        
+        changeTheme()
+    }
+    
+    func changeTheme() {
+        let theme = ThemingEngine.sharedInstance
+        tableView.backgroundColor = theme.background
+        
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: theme.emphasizedText as Any]
+        navigationController?.navigationBar.barTintColor = theme.bgHighlight
+        navigationController?.navigationBar.tintColor = theme.secondaryText
+        
+        for row in form.allRows {
+            row.baseCell.backgroundColor = theme.bgHighlight
+            
+            if let row = row as? ActionSheetRow<String> {
+                row.cellUpdate { (cell, _) in
+                    cell.textLabel?.textColor = theme.emphasizedText
+                    cell.detailTextLabel?.textColor = theme.normalText
+                }
+            }
+        }
     }
     
     @objc func saveSettings() {
-        ThemingEngine.sharedInstance.change(to: self.theme)
-
         DispatchQueue.global(qos: .background).async {
             Defaults[.currentTheme] = self.theme
             Defaults[.cellSize] = self.cellSize
@@ -66,8 +105,8 @@ class SettingsVC: FormViewController {
 }
 
 extension DefaultsKeys {
-    static let currentTheme = DefaultsKey<Theme>("theme", defaultValue: Theme(rawValue: "solarizedDark"))
-    static let cellSize     = DefaultsKey<String>("cellSize", defaultValue: "compact")
+    static let currentTheme = DefaultsKey<Theme>("theme", defaultValue: .nightLightDark)
+    static let cellSize     = DefaultsKey<CellType>("cellSize", defaultValue: .compact)
 }
 
 final class ThemeSelectorRow: Row<PushSelectorCell<Theme>>, RowType {
@@ -77,7 +116,10 @@ final class ThemeSelectorRow: Row<PushSelectorCell<Theme>>, RowType {
     
     override func customDidSelect() {
         super.customDidSelect()
-        
-        
     }
+}
+
+enum CellType: String, DefaultsSerializable {
+    case expanded = "Expanded"
+    case compact  = "Compact"
 }

@@ -56,10 +56,10 @@ class TokenForm {
         }
 
         +++ Section(header: "Advanced Details", footer: fetchString(forKey: "advanced-token"))
-//        <<< SwitchRow(TokenCellTags.advanced.rawValue) { row in
-//            row.title = "Show Advanced Details"
-//            row.value = false
-//        }
+        <<< SwitchRow(TokenCellTags.advanced.rawValue) { row in
+            row.title = "Show Advanced Details"
+            row.value = false
+        }
         <<< ActionSheetRow<String>(TokenCellTags.hash.rawValue) { row in
             row.title = "Hash"
             row.options = algorithmsMapped
@@ -96,7 +96,7 @@ class TokenForm {
         let decrementEnabled : UIImage = UIImage.fontAwesomeIcon(name: .minus, style: .solid, textColor: theme.emphasizedText, size: CGSize(width: 20, height: 20))
         let decrementDisabled: UIImage = UIImage.fontAwesomeIcon(name: .minus, style: .solid, textColor: theme.secondaryText.withAlphaComponent(0.4), size: CGSize(width: 20, height: 20))
 
-        for row in form.rows {
+        for row in form.allRows {
             row.baseCell.backgroundColor = theme.bgHighlight
             
             if let row = row as? TextRow {
@@ -221,13 +221,7 @@ class TokenForm {
             row.value = t.faIcon.rawValue
             row.updateCell()
         }
-        
-        if let row = form.rowBy(tag: TokenCellTags.advanced.rawValue) as? SwitchRow {
-            let val: Bool = !(t.algorithm == .sha1 && t.digits == 6 && t.interval == 30.0)
-            row.value = val
-            row.updateCell()
-        }
-        
+                
         if let row = form.rowBy(tag: TokenCellTags.hash.rawValue) as? ActionSheetRow<String> {
             row.value = t.algorithm.algorithmName(dash: true)
             row.updateCell()

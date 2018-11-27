@@ -8,6 +8,7 @@
 
 import UIKit
 import libtoken
+import libfa
 import SwipeCellKit
 import RetroProgress
 
@@ -15,6 +16,7 @@ class CodeTableViewCell: SwipeTableViewCell {
     
     let mainView: SystemView  = SystemView()
     
+    let icon    : SystemLabel = SystemLabel(withFA: FontAwesomeStyle.brands, textPosition: .center, size: 15)
     let provider: SystemLabel = SystemLabel()
     let user    : SystemLabel = SystemLabel()
     let code    : SystemLabel = SystemLabel()
@@ -25,6 +27,8 @@ class CodeTableViewCell: SwipeTableViewCell {
     var tokenTimer: Timer!
     var token: Token?
     
+    var cellType: CellType = .expanded
+    
     var shouldShowCopied: Bool = false
     var copiedCount: Int = 5
     
@@ -34,17 +38,9 @@ class CodeTableViewCell: SwipeTableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         
-        user.font = .systemFont(ofSize: 14)
-        
-        time.font = UIFont(name: "SourceCodePro-ExtraLight", size: 14)
-        time.textAlignment = .right
-        
-        code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
-        code.textAlignment = .right
-        
-        
         addSubview(mainView)
         
+        mainView.addSubview(icon)
         mainView.addSubview(progress)
         mainView.addSubview(provider)
         mainView.addSubview(user)
@@ -71,27 +67,52 @@ class CodeTableViewCell: SwipeTableViewCell {
     }
     
     override func layoutSubviews() {
-        mainView.anchorInCenter(width: width * 0.95, height: 60)
-        mainView.layer.cornerRadius = 15
+        if cellType == .compact {
+            mainView.anchorInCenter(width: width * 0.95, height: 60)
+
+            progress.fillSuperview()
+            
+            icon.anchorInCorner(.topLeft, xPad: 12, yPad: 12, width: 20, height: 20)
+            user.anchorInCorner(.bottomLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 16)
+            
+            code.anchorInCorner(.topRight, xPad: 10, yPad: 10, width: width * 0.35, height: 20)
+            time.anchorInCorner(.bottomRight, xPad: 10, yPad: 10, width: width * 0.48, height: 16)
+            
+            provider.alignBetweenHorizontal(align: .toTheRightCentered, primaryView: icon, secondaryView: code, padding: 5, height: 20)
+            
+        } else {
+            mainView.anchorInCenter(width: width * 0.95, height: 120)
+            
+            icon.anchorInCorner(.topLeft, xPad: 5, yPad: 5, width: 22, height: 22)
+            provider.alignAndFillWidth(align: .toTheRightCentered, relativeTo: icon, padding: 10, height: 22, offset: 0)
+            
+            progress.anchorAndFillEdge(.bottom, xPad: 0, yPad: 0, otherSize: 30)
+            
+            time.rightInset = 5
+            time.align(.aboveMatchingRight, relativeTo: progress, padding: 0, width: width * 0.4, height: 24)
+            
+            code.alignAndFillWidth(align: .toTheLeftCentered, relativeTo: time, padding: 15, height: 24, offset: 0)
+            
+            user.alignBetweenVertical(align: .underCentered, primaryView: provider, secondaryView: code, padding: 5, width: width * 0.9)
+        }
         
-        progress.fillSuperview()
+        mainView.layer.cornerRadius = 15
+        mainView.layer.borderColor  = ThemingEngine.sharedInstance.border.cgColor
+        mainView.layer.borderWidth  = 1.5
+        
         progress.trackColor = .clear
         progress.separatorColor = .clear
         progress.isUserInteractionEnabled = false
         
         progress.layer.cornerRadius = 15
         progress.layer.borderWidth = 1.5
-        
-        provider.anchorInCorner(.topLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 20)
-        user.anchorInCorner(.bottomLeft, xPad: 12, yPad: 10, width: width * 0.6, height: 16)
-        
-        code.anchorInCorner(.topRight, xPad: 10, yPad: 10, width: width * 0.48, height: 20)
-        time.anchorInCorner(.bottomRight, xPad: 10, yPad: 10, width: width * 0.48, height: 16)
     }
     
     func configure(with t: Token) {
         provider.text = t.issuer
         user.text = t.label
+        
+        icon.text = String.fontAwesomeIcon(name: t.faIcon)
         
         token = t
         
@@ -106,13 +127,35 @@ class CodeTableViewCell: SwipeTableViewCell {
         
         backgroundColor = theme.bgHighlight
         
+        icon.textColor = theme.normalText
         provider.textColor = theme.normalText
         user.textColor = theme.secondaryText
         code.textColor = theme.emphasizedText
         time.textColor = theme.secondaryText
         
-        progress.layer.borderColor = theme.border.cgColor
         progress.progressColor = theme.progressTrack
+        
+        switch cellType {
+        case .compact:
+            user.font = .systemFont(ofSize: 14)
+            
+            time.font = UIFont(name: "SourceCodePro-ExtraLight", size: 14)
+            time.textAlignment = .right
+            
+            code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
+            code.textAlignment = .right
+            
+            progress.layer.borderColor = theme.border.cgColor
+        case .expanded:
+            provider.font = .systemFont(ofSize: 20)
+            
+            time.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
+            time.textAlignment = .right
+            code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
+            code.textAlignment = .left
+            
+            progress.layer.borderColor = theme.border.withAlphaComponent(0.5).cgColor
+        }
     }
     
     func updateCode() {
@@ -129,6 +172,7 @@ class CodeTableViewCell: SwipeTableViewCell {
     }
     
     func startTimer() {
+        if tokenTimer != nil { tokenTimer.invalidate() }
         let t = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (_) in
             let r = self.token!.timeRemaining()
             let p = Float(r/30)

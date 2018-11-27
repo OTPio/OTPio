@@ -53,7 +53,7 @@ class otpioUITests: XCTestCase {
         saveButton.tap()
         snapshot("THEME04-SolarizedDark")
         tablesQuery.children(matching: .cell).element(boundBy: 0).staticTexts["Matrix Studios"].tap()
-        snapshot("VIEW01-CodeDetails")
+        snapshot("VIEW01-CodeDetails")        
     }
 
 }

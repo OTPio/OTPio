@@ -1,0 +1,9 @@
+OTP.io was built because apps like Google Authenticator haven’t been updated in years. Some apps lack up-to-date features like the Today extension. Some just look plain old ugly.
+
+OTP.io is designed to solve all that.
+
+Features
+
+- Show a 2FA (two-factor authentication) code
+- Scan in a code from a provider, or allow you to add your own
+- Get all your codes at a glance, just by swiping on the Lock Screen

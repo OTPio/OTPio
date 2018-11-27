@@ -20,4 +20,9 @@ platform :ios do
   lane :screenshots do
     capture_screenshots(workspace: "otpio.xcworkspace", scheme: "otpioUITests")
   end
+
+  desc "Upload new build for testing"
+  lane :beta do
+    
+  end
 end

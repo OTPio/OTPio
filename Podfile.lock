@@ -8,11 +8,11 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Crashlytics (3.11.1):
-    - Fabric (~> 1.8.1)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
   - CryptoSwift (0.13.0)
   - Eureka (4.3.0)
-  - Fabric (1.8.2)
+  - Fabric (1.9.0)
   - FontBlaster (4.1.0)
   - GradientProgressBar (1.2.4):
     - Observable
@@ -98,10 +98,10 @@ SPEC CHECKSUMS:
   arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
   Base32: 163c298644d184e89ca4e00a996bad6bf5166390
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   CryptoSwift: 16e78bebf567bad1c87b2d58f6547f25b74c31aa
   Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
-  Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
   GradientProgressBar: 89bc1067cbc3a132d867b81778a32797b90a7fe2
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b

@@ -269,7 +269,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&amp;issuer=Matrix%20Studios&amp;algorithm=SHA256&amp;digits=6&amp;period=30"
+            argument = "otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&amp;issuer=Matrix%20Studios&amp;algorithm=SHA256&amp;digits=8&amp;period=30&amp;fa=empire"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

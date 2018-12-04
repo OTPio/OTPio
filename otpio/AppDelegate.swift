@@ -40,15 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ThemingEngine.sharedInstance.change(to: .compact)
-        ThemingEngine.sharedInstance.change(to: .nightLightDark)
+//        ThemingEngine.sharedInstance.change(to: .compact)
+//        ThemingEngine.sharedInstance.change(to: .nightLightDark)
         let nav = UINavigationController(rootViewController: root)
         nav.navigationBar.barTintColor = .flatBlack
         window?.rootViewController = nav
         
         window?.makeKeyAndVisible()
         
-        Fabric.with([Crashlytics.self])
+//        Fabric.with([Crashlytics.self])
         
         if CommandLine.arguments.count > 0 {
             guard

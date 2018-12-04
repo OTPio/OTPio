@@ -31,8 +31,8 @@ class QRCodeDetailsVC: FormViewController {
         self.form = provider.form
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         outlet?.navigationItem.title = "Token Details"
         outlet?.navigationItem.rightBarButtonItem = rightBar

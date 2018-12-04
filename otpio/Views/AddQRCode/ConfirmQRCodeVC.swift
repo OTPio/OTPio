@@ -39,6 +39,8 @@ class ConfirmQRCodeVC: SystemViewController {
         
         super.init()
         
+        tokenDisplay.text = "Loading..."
+        
         view.addSubview(tokenDisplay)
         view.addSubview(timeDisplay)
         view.addSubview(descriptionLabel)
@@ -46,10 +48,19 @@ class ConfirmQRCodeVC: SystemViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .flatBlack
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let theme = ThemingEngine.sharedInstance
+        
+        view.backgroundColor = theme.background
+        tokenDisplay.textColor = theme.emphasizedText
+        timeDisplay.textColor = theme.secondaryText
+        descriptionLabel.textColor = theme.normalText
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

@@ -29,8 +29,6 @@ class AddQRCodeVC: SystemViewController {
         view.backgroundColor = .flatBlack
         
         captureSession.startRunning()
-        outlet?.navigationItem.title = "Scan 2FA Token"
-        outlet?.navigationItem.rightBarButtonItem = nil
         
         let deviceDiscovery = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .back)
         
@@ -69,6 +67,11 @@ class AddQRCodeVC: SystemViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        outlet?.navigationItem.title = "Scan 2FA Token"
+        outlet?.navigationItem.rightBarButtonItem = nil
+
+        qrFrame?.frame = .zero
     }
     
     override func viewDidDisappear(_ animated: Bool) {

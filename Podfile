@@ -23,6 +23,8 @@ target 'otpio' do
   pod 'NVActivityIndicatorView'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'FuzzyMatchingSwift'
+  pod 'FSPagerView'
 
   pod 'libfa', :path => '../libfa'
   pod 'libtoken', :path => '../libtoken'
@@ -43,11 +45,4 @@ target 'otpio-today' do
   pod 'KeychainAccess'
 
   pod 'libtoken', :path => '../libtoken'
-end
-
-target 'watch Extension' do
-  platform :watchos, '5.0'
-
-  pod 'KeychainAccess'
-  pod 'SwiftBase32'
 end

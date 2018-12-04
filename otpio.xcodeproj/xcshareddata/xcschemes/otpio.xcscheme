@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "89E473B79682D7270EBAF1F5520DAFF0"
+               BlueprintIdentifier = "CDFF5631882817EAEC13565299F7BA5A"
                BuildableName = "Pods_otpio.framework"
                BlueprintName = "Pods-otpio"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -168,7 +168,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DCE8865441C4F17536E3046788C10167"
+               BlueprintIdentifier = "40B5BD2113E278EAE983C35B09104BA6"
                BuildableName = "RetroProgress.framework"
                BlueprintName = "RetroProgress"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -182,7 +182,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "81F71103B7B2AD19CA4F50DEA8C66532"
+               BlueprintIdentifier = "D30EA36DDA8C9699129B086441650048"
                BuildableName = "SCLAlertView.framework"
                BlueprintName = "SCLAlertView"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -196,7 +196,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9EA846E5594902609AA7BBEB163F5ACC"
+               BlueprintIdentifier = "E9A4513EEBDA65D197E2E4C92B1F0A9F"
                BuildableName = "SwiftyUserDefaults.framework"
                BlueprintName = "SwiftyUserDefaults"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -210,7 +210,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA9481377BC2F54E0244986C69662C84"
+               BlueprintIdentifier = "0087192E7E3C2C83A2F2223A58FEC910"
                BuildableName = "SwipeCellKit.framework"
                BlueprintName = "SwipeCellKit"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

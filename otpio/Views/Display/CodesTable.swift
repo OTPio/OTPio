@@ -60,7 +60,7 @@ class CodesTable: UITableView {
             (cell as! CodeTableViewCell).theme()
         }
     }
-    
+        
     func beganLoading() {
         loadingIcon = NVActivityIndicatorView(frame: CGRect(x: center.x - 50, y: center.y - 50, width: 100, height: 100), type: .pacman, color: UIColor.flatWhite.withAlphaComponent(0.6), padding: nil)
         loadingLabel.text = "Loading Tokens..."

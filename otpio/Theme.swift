@@ -83,6 +83,11 @@ enum Theme: String, DefaultsSerializable {
         }
     }
     
+    public static let allThemes: Array<Theme> = [
+        .solarizedDark , .solarizedLight,
+        .nightLightDark, .nightLightBright
+    ]
+    
     func humanReadableName() -> String {
         switch self {
         case .solarizedDark   : return "Solarized Dark"
@@ -92,7 +97,7 @@ enum Theme: String, DefaultsSerializable {
         }
     }
     
-    fileprivate func colorsForTheme() -> Dictionary<ThemePart, UIColor> {
+    internal func colorsForTheme() -> Dictionary<ThemePart, UIColor> {
         switch self {
         case .solarizedDark:
             return [

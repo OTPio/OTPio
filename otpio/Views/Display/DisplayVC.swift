@@ -50,7 +50,8 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         view.backgroundColor = theme.background
         
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: theme.emphasizedText as Any]
@@ -65,7 +66,7 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
         let s = UIBarButtonItem(title: String.fontAwesomeIcon(name: .userCog), style: .plain, target: self, action: #selector(DisplayVC.showSettings))
         s.setTitleTextAttributes([.foregroundColor: theme.secondaryText, .font: FAREGULAR_UIFONT], for: .normal)
         s.setTitleTextAttributes([.foregroundColor: theme.emphasizedText, .font: FAREGULAR_UIFONT], for: .highlighted)
-        //navigationItem.rightBarButtonItem = s
+        navigationItem.rightBarButtonItem = s
         
         table.theme()
     }
@@ -78,6 +79,7 @@ class DisplayVC: SystemViewController, TokenOperationsListener {
     
     @objc func showQR(sender: UIBarButtonItem) {
         navigationController?.pushViewController(addqr, animated: true)
+        addqr.setupSubviews()
     }
     
     @objc func showSettings() {

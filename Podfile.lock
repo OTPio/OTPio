@@ -14,6 +14,8 @@ PODS:
   - Eureka (4.3.0)
   - Fabric (1.9.0)
   - FontBlaster (4.1.0)
+  - FSPagerView (0.8.1)
+  - FuzzyMatchingSwift (0.7.0)
   - GradientProgressBar (1.2.4):
     - Observable
   - KeychainAccess (3.1.2)
@@ -29,7 +31,6 @@ PODS:
   - PMAlertController (3.5.0)
   - RetroProgress (1.0.1)
   - SCLAlertView (0.8)
-  - SwiftBase32 (0.6.0)
   - SwiftyUserDefaults (4.0.0-alpha.1)
   - SwipeCellKit (2.5.0)
 
@@ -41,6 +42,8 @@ DEPENDENCIES:
   - Eureka
   - Fabric
   - FontBlaster
+  - FSPagerView
+  - FuzzyMatchingSwift
   - GradientProgressBar
   - KeychainAccess
   - libfa (from `../libfa`)
@@ -50,7 +53,6 @@ DEPENDENCIES:
   - Observable (from `https://github.com/roberthein/Observable`, tag `1.3.3`)
   - RetroProgress
   - SCLAlertView
-  - SwiftBase32
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - SwipeCellKit
 
@@ -63,6 +65,8 @@ SPEC REPOS:
     - Eureka
     - Fabric
     - FontBlaster
+    - FSPagerView
+    - FuzzyMatchingSwift
     - GradientProgressBar
     - KeychainAccess
     - Neon
@@ -70,7 +74,6 @@ SPEC REPOS:
     - PMAlertController
     - RetroProgress
     - SCLAlertView
-    - SwiftBase32
     - SwiftyUserDefaults
     - SwipeCellKit
 
@@ -103,6 +106,8 @@ SPEC CHECKSUMS:
   Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
+  FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
+  FuzzyMatchingSwift: bcbeda92c3d16dc338b4bfa655d5848d66b884dd
   GradientProgressBar: 89bc1067cbc3a132d867b81778a32797b90a7fe2
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   libfa: 6ecfaa9c5c171979a8364203da428d9005863f5b
@@ -113,10 +118,9 @@ SPEC CHECKSUMS:
   PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
   RetroProgress: a5b2514485c0ce75838ad321c77d5746150901cd
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
-  SwiftBase32: 5bbadb7b929b3e187f0fbfa7d6f3ad4665a688e5
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
-PODFILE CHECKSUM: 29f3a36f9336f54a7811bf19e271cf5259559c5c
+PODFILE CHECKSUM: b8744ad08f2582e1e53b14253c0d4d6609e3642d
 
 COCOAPODS: 1.6.0.beta.2

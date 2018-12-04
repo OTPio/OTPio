@@ -52,9 +52,9 @@ class CodeDetailVC: FormViewController {
         form = provider.form
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         let theme = ThemingEngine.sharedInstance
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
         tableView.backgroundColor = theme.background
         
         let b = UIBarButtonItem(title: String.fontAwesomeIcon(name: .trashAlt), style: .plain, target: self, action: #selector(CodeDetailVC.deleteToken))

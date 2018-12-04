@@ -27,4 +27,7 @@ enum TokenCellTags: String {
 enum SettingCellTags: String {
     case theme    = "themeRow"
     case cellType = "cellTypeRow"
+    
+    case today    = "todayAllowedRow"
+    case cloud    = "cloudAllowedRow"
 }

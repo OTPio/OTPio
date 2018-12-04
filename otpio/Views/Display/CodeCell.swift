@@ -97,7 +97,6 @@ class CodeTableViewCell: SwipeTableViewCell {
         }
         
         mainView.layer.cornerRadius = 15
-        mainView.layer.borderColor  = ThemingEngine.sharedInstance.border.cgColor
         mainView.layer.borderWidth  = 1.5
         
         progress.trackColor = .clear
@@ -122,18 +121,20 @@ class CodeTableViewCell: SwipeTableViewCell {
         theme()
     }
     
-    func theme() {
-        let theme = ThemingEngine.sharedInstance
+    func theme(_ for: Theme? = nil) {
+        let theme = (`for` ?? ThemingEngine.sharedInstance.currentTheme).colorsForTheme()
         
-        backgroundColor = theme.bgHighlight
+        backgroundColor = theme[.bgHighlight]
         
-        icon.textColor = theme.normalText
-        provider.textColor = theme.normalText
-        user.textColor = theme.secondaryText
-        code.textColor = theme.emphasizedText
-        time.textColor = theme.secondaryText
+        icon.textColor = theme[.normalText]
+        provider.textColor = theme[.normalText]
+        user.textColor = theme[.secondaryText]
+        code.textColor = theme[.emphasizedText]
+        time.textColor = theme[.secondaryText]
         
-        progress.progressColor = theme.progressTrack
+        mainView.layer.borderColor  = theme[.border]!.cgColor
+        
+        progress.progressColor = theme[.progressTrack]
         
         switch cellType {
         case .compact:
@@ -145,7 +146,7 @@ class CodeTableViewCell: SwipeTableViewCell {
             code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
             code.textAlignment = .right
             
-            progress.layer.borderColor = theme.border.cgColor
+            progress.layer.borderColor = theme[.border]!.cgColor
         case .expanded:
             provider.font = .systemFont(ofSize: 20)
             
@@ -154,7 +155,7 @@ class CodeTableViewCell: SwipeTableViewCell {
             code.font = UIFont(name: "SourceCodePro-ExtraLight", size: 20)
             code.textAlignment = .left
             
-            progress.layer.borderColor = theme.border.withAlphaComponent(0.5).cgColor
+            progress.layer.borderColor = theme[.border]!.withAlphaComponent(0.5).cgColor
         }
     }
     

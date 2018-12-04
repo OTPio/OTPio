@@ -17,3 +17,5 @@
 "advanced-token"     = "You should not change these details unless you are directed to by your provider. They have been automatically set, and changing them could result in invalid codes.";
 "available-token"    = "Configure where your token is available.";
 "delete-token"       = "You will have to manually re-add this token if you want to use it in the future. Are you sure?";
+
+"test-token"         = "otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&issuer=Matrix%20Studios&algorithm=MD5&digits=6&period=30&fa=fa-empire";

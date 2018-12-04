@@ -13,6 +13,7 @@ import SwiftyUserDefaults
 import KeychainAccess
 
 class SystemCommunicator {
+    
     public static let sharedInstance: SystemCommunicator = SystemCommunicator()
     public var listener: TokenOperationsListener?
     
@@ -32,7 +33,7 @@ class SystemCommunicator {
         .synchronizable(false)
         .accessibility(.always)
         
-        fullToken   = []
+        fullToken  = []
         
         todayKeychain = Keychain(service: "com.otpio.token", accessGroup: "6S4L29QT59.com.otpio.todaykeychain")
         .synchronizable(false)
@@ -50,10 +51,6 @@ class SystemCommunicator {
     public func updateKeychain() {
         guard temporary == false else { return }
         DispatchQueue.global(qos: .background).async {
-            try? self.fullKeychain.removeAll()
-            try? self.todayKeychain.removeAll()
-            try? self.cloudKeychain.removeAll()
-            
             for t in self.fullToken {
                 self.fullKeychain[String(t.secret.hashValue)] = t.serialize()
             }
@@ -63,7 +60,7 @@ class SystemCommunicator {
             }
             
             for t in self.cloudToken {
-                self.cloudKeychain["cloud=\(t.secret.hashValue)"] = t.serialize()
+                self.cloudKeychain["cloud-\(t.secret.hashValue)"] = t.serialize()
             }
             
             DispatchQueue.main.async {
@@ -178,14 +175,15 @@ class SystemCommunicator {
     }
 }
 
-extension DefaultsKeys {
-    static let allowsToday = DefaultsKey<Bool>("allowToday")
-    static let allowsCloud = DefaultsKey<Bool>("allowCloud")
-}
-
 protocol TokenOperationsListener {
     func beganLoading()
     func returned(tokens t: Array<Token>)
     func startTimers()
     func stopTimers()
+}
+
+fileprivate enum keychainTokenId: String {
+    case fullchain  = "fullchain-tokenID"
+    case todaychain = "todaychain-tokenID"
+    case cloudchain = "cloudchain-tokenID"
 }

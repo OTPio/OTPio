@@ -49,10 +49,8 @@ class TokenForm {
         <<< TextRow(TokenCellTags.issuer.rawValue) { row in
             row.title = "Issuer"
         }
-        <<< PushRow<String>(TokenCellTags.icon.rawValue) { row in
-            row.title = "Icon"
-            row.selectorTitle = "Select an icon"
-            row.options = faMapped
+        <<< IconRow(TokenCellTags.icon.rawValue) { row in
+            row.title = "Selected Icon"
         }
 
         +++ Section(header: "Advanced Details", footer: fetchString(forKey: "advanced-token"))
@@ -213,6 +211,17 @@ class TokenForm {
                 }
             }
             
+            if let row = row as? IconRow {
+                row.cellUpdate { (_, row) in
+                    row.theme()
+                }
+                
+                row.onChange { (row) in
+                    guard let value = row.value else { return }
+                    self.update(cell: .icon, value: value.rawValue)
+                }
+            }
+            
             row.updateCell()
         }
     }
@@ -222,6 +231,8 @@ class TokenForm {
 
         if let row = form.rowBy(tag: TokenCellTags.secret.rawValue) as? TextRow {
             row.value = MF_Base32Codec.base32String(from: t.secret)
+//            row.disabled = Condition(booleanLiteral: allowSaves)
+//            row.evaluateDisabled()
             row.updateCell()
         }
         
@@ -235,8 +246,10 @@ class TokenForm {
             row.updateCell()
         }
         
-        if let row = form.rowBy(tag: TokenCellTags.icon.rawValue) as? PushRow<String> {
-            row.value = t.faIcon.rawValue
+        if let row = form.rowBy(tag: TokenCellTags.icon.rawValue) as? IconRow {
+            row.issuerName = t.issuer
+            row.value = t.faIcon
+            
             row.updateCell()
         }
                 
@@ -267,11 +280,11 @@ class TokenForm {
             row.updateCell()
         }
         
-        if let section = form.sectionBy(tag: "avail") {
-            section.hidden = Condition(booleanLiteral: !allowSaves)
-            section.evaluateHidden()
-            section.reload()
-        }
+//        if let section = form.sectionBy(tag: "avail") {
+//            section.hidden = Condition(booleanLiteral: !allowSaves)
+//            section.evaluateHidden()
+//            section.reload()
+//        }
         
         self.themeForm()
     }

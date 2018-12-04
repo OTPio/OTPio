@@ -60,9 +60,8 @@ class SystemLabel: UILabel {
         lineBreakMode = .byWordWrapping
     }
     
-    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
-        fatalError()
+        super.init(coder: aDecoder)
     }
     
     override func drawText(in rect: CGRect) {

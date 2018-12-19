@@ -1,1 +1,0 @@
-OTP.io is a 2FA code generator for the modern age.

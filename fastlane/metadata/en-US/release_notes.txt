@@ -1,7 +1,0 @@
-##### BUGFIXES #####
-- Some users were reporting a bug with the camera, so I moved requesting permission
-- Fixed a bug where an improper QR code would cause a crash
-
-##### NEW FEATURES #####
-- Themes are here! Pick between 4 beautiful color schemes!
-- I've added some super helpful features to help catch bugs

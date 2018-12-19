@@ -7,502 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		661F2CCC2170A2740059756F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 661F2CCB2170A2740059756F /* README.md */; };
-		661F2CD32170B7FD0059756F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661F2CD22170B7FD0059756F /* NotificationCenter.framework */; };
-		661F2CD62170B7FD0059756F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CD52170B7FD0059756F /* TodayViewController.swift */; };
-		661F2CDD2170B7FD0059756F /* otpio-today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 661F2CD12170B7FD0059756F /* otpio-today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
-		661F2CE82170C2300059756F /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CE72170C2300059756F /* CodeTableViewCell.swift */; };
-		662CFF88219D7A9D0092A087 /* otpioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF87219D7A9D0092A087 /* otpioUITests.swift */; };
-		662CFF90219D7E5C0092A087 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF8F219D7E5C0092A087 /* SnapshotHelper.swift */; };
-		66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66343FE6216F2F3C001AAA1C /* Intents.framework */; };
-		66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
-		6637E7B4219BD54B00AFDDF8 /* SystemCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637E7B3219BD54B00AFDDF8 /* SystemCommunicator.swift */; };
-		66698C16219A7DCB0012CAF8 /* DisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66698C15219A7DCB0012CAF8 /* DisplayVC.swift */; };
-		66698C17219A7F9A0012CAF8 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */; };
-		66698C18219A7F9A0012CAF8 /* Font Awesome 5 Pro-Light-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */; };
-		66698C19219A7F9A0012CAF8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */; };
-		66698C1A219A7F9A0012CAF8 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */; };
-		66698C1C219A9AA20012CAF8 /* AddQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */; };
-		6679121221B639690039E7C6 /* Fuzzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679121121B639690039E7C6 /* Fuzzy.swift */; };
-		6679121421B64D7F0039E7C6 /* SwiftyDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679121321B64D7F0039E7C6 /* SwiftyDefaultKeys.swift */; };
-		6679121621B6529B0039E7C6 /* IconDisplayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679121521B6529B0039E7C6 /* IconDisplayTVC.swift */; };
-		6679121A21B652F40039E7C6 /* ThemeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679121921B652F40039E7C6 /* ThemeRow.swift */; };
-		6679121C21B653560039E7C6 /* ThemeSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679121B21B653560039E7C6 /* ThemeSelectorVC.swift */; };
-		6680C8DA21B4C61100F6BE87 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680C8D921B4C61100F6BE87 /* IconRow.swift */; };
-		6680C8DF21B4F8CA00F6BE87 /* IconSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680C8DE21B4F8CA00F6BE87 /* IconSelectorVC.swift */; };
-		66905CFD21AB0616009B95EA /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66905CFC21AB0616009B95EA /* SettingsVC.swift */; };
-		6696C3BC21B666FB00717C1D /* ThemeDisplayFSPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6696C3BB21B666FB00717C1D /* ThemeDisplayFSPVC.swift */; };
-		6697BD15219B7464004F1536 /* AddQRCodePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD14219B7464004F1536 /* AddQRCodePageController.swift */; };
-		6697BD18219B7885004F1536 /* QRCodeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD17219B7885004F1536 /* QRCodeDetailsVC.swift */; };
-		6697BD1A219B7969004F1536 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6697BD19219B7969004F1536 /* Localizable.strings */; };
-		6697BD1C219B8416004F1536 /* ConfirmQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */; };
-		6697BD27219BBBA6004F1536 /* CodesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD26219BBBA6004F1536 /* CodesTable.swift */; };
-		66AFC6F8219BFD9B007EBCC3 /* CodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFC6F7219BFD9B007EBCC3 /* CodeCell.swift */; };
-		66AFC6FB219C010B007EBCC3 /* CodeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFC6FA219C010B007EBCC3 /* CodeDetailVC.swift */; };
-		66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C430216DE859005DC2F3 /* UIKit.swift */; };
-		66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA232216B1F5A0015AC5A /* AppDelegate.swift */; };
-		66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA239216B1F5B0015AC5A /* Assets.xcassets */; };
-		66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */; };
-		66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA248216B2AB30015AC5A /* Extensions.swift */; };
-		66E6B7C521A45A5A004563E6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66E6B7C421A45A5A004563E6 /* Settings.bundle */; };
-		66ECB7C421AB6CDF00781ADC /* TokenForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECB7C321AB6CDE00781ADC /* TokenForm.swift */; };
-		66ECB7C621AB6D0F00781ADC /* EurekaCellTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECB7C521AB6D0F00781ADC /* EurekaCellTags.swift */; };
-		66F7F4BB21A4C87D0048DD6B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7F4BA21A4C87D0048DD6B /* Theme.swift */; };
-		73C23340E1406D32AF6B822E /* Pods_otpio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965F031F59C5173FF33DEBBA /* Pods_otpio.framework */; };
-		EBB00B17D7E450F5817D3115 /* Pods_otpio_today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */; };
+		1F46B3C495C7D5C334F79AEC /* Pods_otpio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019D5787F17954E092C11C5D /* Pods_otpio.framework */; };
+		6602584821CAF29A00DCC3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602584721CAF29A00DCC3BC /* AppDelegate.swift */; };
+		6602584A21CAF29A00DCC3BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602584921CAF29A00DCC3BC /* ViewController.swift */; };
+		6602584D21CAF29A00DCC3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6602584B21CAF29A00DCC3BC /* Main.storyboard */; };
+		6602584F21CAF29B00DCC3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6602584E21CAF29B00DCC3BC /* Assets.xcassets */; };
+		6602585221CAF29B00DCC3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6602585021CAF29B00DCC3BC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		661F2CDB2170B7FD0059756F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 66CAA227216B1F5A0015AC5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 661F2CD02170B7FD0059756F;
-			remoteInfo = "otpio-today";
-		};
-		662CFF8A219D7A9D0092A087 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 66CAA227216B1F5A0015AC5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 66CAA22E216B1F5A0015AC5A;
-			remoteInfo = otpio;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		661F2CE12170B7FD0059756F /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				661F2CDD2170B7FD0059756F /* otpio-today.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6624660321758EAE00051DF0 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		0336B19F24B5B20C5FEA9F4D /* Pods-watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-watch Extension/Pods-watch Extension.release.xcconfig"; sourceTree = "<group>"; };
-		267D862E3254D2B48ACB0C28 /* Pods-otpio-watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-watch Extension/Pods-otpio-watch Extension.release.xcconfig"; sourceTree = "<group>"; };
-		2B516261C2857913AE0E7A79 /* Pods-watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watch Extension/Pods-watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		335BC601CC33BBFDC0A4BE66 /* Pods-otpio-otpio-today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-otpio-today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-otpio-today/Pods-otpio-otpio-today.debug.xcconfig"; sourceTree = "<group>"; };
-		3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-today.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-today/Pods-otpio-today.release.xcconfig"; sourceTree = "<group>"; };
-		59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		661F2CCB2170A2740059756F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		661F2CD12170B7FD0059756F /* otpio-today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "otpio-today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		661F2CD22170B7FD0059756F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		661F2CD52170B7FD0059756F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		661F2CDA2170B7FD0059756F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		661F2CE72170C2300059756F /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
-		661F2CE92170C71F0059756F /* otpio-today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "otpio-today.entitlements"; sourceTree = "<group>"; };
-		662CFF85219D7A9D0092A087 /* otpioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otpioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		662CFF87219D7A9D0092A087 /* otpioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpioUITests.swift; sourceTree = "<group>"; };
-		662CFF89219D7A9D0092A087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		662CFF8F219D7E5C0092A087 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
-		66343FE5216F2F24001AAA1C /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
-		66343FE6216F2F3C001AAA1C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-ExtraLight.ttf"; sourceTree = "<group>"; };
-		6637E7B3219BD54B00AFDDF8 /* SystemCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCommunicator.swift; sourceTree = "<group>"; };
-		66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Solid-900.otf"; sourceTree = "<group>"; };
-		66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Regular-400.otf"; sourceTree = "<group>"; };
-		66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
-		66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Light-300.otf"; sourceTree = "<group>"; };
-		66698C15219A7DCB0012CAF8 /* DisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVC.swift; sourceTree = "<group>"; };
-		66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQRCodeVC.swift; sourceTree = "<group>"; };
-		6679121121B639690039E7C6 /* Fuzzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzzy.swift; sourceTree = "<group>"; };
-		6679121321B64D7F0039E7C6 /* SwiftyDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyDefaultKeys.swift; sourceTree = "<group>"; };
-		6679121521B6529B0039E7C6 /* IconDisplayTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDisplayTVC.swift; sourceTree = "<group>"; };
-		6679121921B652F40039E7C6 /* ThemeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRow.swift; sourceTree = "<group>"; };
-		6679121B21B653560039E7C6 /* ThemeSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectorVC.swift; sourceTree = "<group>"; };
-		6680C8D921B4C61100F6BE87 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
-		6680C8DE21B4F8CA00F6BE87 /* IconSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSelectorVC.swift; sourceTree = "<group>"; };
-		66905CFC21AB0616009B95EA /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		6696C3BB21B666FB00717C1D /* ThemeDisplayFSPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDisplayFSPVC.swift; sourceTree = "<group>"; };
-		6697BD14219B7464004F1536 /* AddQRCodePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQRCodePageController.swift; sourceTree = "<group>"; };
-		6697BD17219B7885004F1536 /* QRCodeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDetailsVC.swift; sourceTree = "<group>"; };
-		6697BD19219B7969004F1536 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmQRCodeVC.swift; sourceTree = "<group>"; };
-		6697BD26219BBBA6004F1536 /* CodesTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesTable.swift; sourceTree = "<group>"; };
-		66AFC6F7219BFD9B007EBCC3 /* CodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCell.swift; sourceTree = "<group>"; };
-		66AFC6FA219C010B007EBCC3 /* CodeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailVC.swift; sourceTree = "<group>"; };
-		66C2C430216DE859005DC2F3 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
-		66CAA22F216B1F5A0015AC5A /* otpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66CAA232216B1F5A0015AC5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66CAA239216B1F5B0015AC5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		66CAA23C216B1F5B0015AC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		66CAA23E216B1F5B0015AC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66CAA248216B2AB30015AC5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		66E6B7C421A45A5A004563E6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		66ECB7C321AB6CDE00781ADC /* TokenForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenForm.swift; sourceTree = "<group>"; };
-		66ECB7C521AB6D0F00781ADC /* EurekaCellTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaCellTags.swift; sourceTree = "<group>"; };
-		66F7F4BA21A4C87D0048DD6B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		6971635977A88E850D98EDCD /* Pods-otpio-today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-today/Pods-otpio-today.debug.xcconfig"; sourceTree = "<group>"; };
-		70744DEB705251260B5DB421 /* Pods_otpio_otpio_today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_otpio_today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		965F031F59C5173FF33DEBBA /* Pods_otpio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F31553880A68561610E070C /* Pods_otpioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.release.xcconfig"; sourceTree = "<group>"; };
-		BA208E3661A9A8AA263B2D4E /* Pods-otpio-otpio-today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-otpio-today.release.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-otpio-today/Pods-otpio-otpio-today.release.xcconfig"; sourceTree = "<group>"; };
-		C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
-		CA0C3DD5EE5B914A303384DE /* Pods_otpio_watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio_watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE5C474782723A05646BDB94 /* libPods-watch Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-watch Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E369C3BEE0FE6517548F34D0 /* Pods-otpio-watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio-watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otpio-watch Extension/Pods-otpio-watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		019D5787F17954E092C11C5D /* Pods_otpio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FA6A496A4495BF0D59F6A6F /* Pods-otpio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.release.xcconfig"; path = "Target Support Files/Pods-otpio/Pods-otpio.release.xcconfig"; sourceTree = "<group>"; };
+		1D113EA5D421D7B6B70B37D1 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
+		6602584421CAF29A00DCC3BC /* otpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6602584721CAF29A00DCC3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6602584921CAF29A00DCC3BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6602584C21CAF29A00DCC3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6602584E21CAF29B00DCC3BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6602585121CAF29B00DCC3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6602585321CAF29B00DCC3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		661F2CCE2170B7FD0059756F /* Frameworks */ = {
+		6602584121CAF29A00DCC3BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661F2CD32170B7FD0059756F /* NotificationCenter.framework in Frameworks */,
-				EBB00B17D7E450F5817D3115 /* Pods_otpio_today.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		662CFF82219D7A9D0092A087 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66CAA22C216B1F5A0015AC5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */,
-				73C23340E1406D32AF6B822E /* Pods_otpio.framework in Frameworks */,
+				1F46B3C495C7D5C334F79AEC /* Pods_otpio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		56B29F815CFF4BD05E41464E /* Frameworks */ = {
+		2D3B80AB50706B2FDBF7A85D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				66343FE6216F2F3C001AAA1C /* Intents.framework */,
-				965F031F59C5173FF33DEBBA /* Pods_otpio.framework */,
-				661F2CD22170B7FD0059756F /* NotificationCenter.framework */,
-				59AC4AF48ED60398003AC739 /* Pods_otpio_today.framework */,
-				70744DEB705251260B5DB421 /* Pods_otpio_otpio_today.framework */,
-				9F31553880A68561610E070C /* Pods_otpioUITests.framework */,
-				CA0C3DD5EE5B914A303384DE /* Pods_otpio_watch_Extension.framework */,
-				DE5C474782723A05646BDB94 /* libPods-watch Extension.a */,
+				1D113EA5D421D7B6B70B37D1 /* Pods-otpio.debug.xcconfig */,
+				0FA6A496A4495BF0D59F6A6F /* Pods-otpio.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		661F2CD42170B7FD0059756F /* otpio-today */ = {
+		6602583B21CAF29A00DCC3BC = {
 			isa = PBXGroup;
 			children = (
-				661F2CE92170C71F0059756F /* otpio-today.entitlements */,
-				661F2CD52170B7FD0059756F /* TodayViewController.swift */,
-				661F2CE72170C2300059756F /* CodeTableViewCell.swift */,
-				661F2CDA2170B7FD0059756F /* Info.plist */,
-			);
-			path = "otpio-today";
-			sourceTree = "<group>";
-		};
-		662CFF86219D7A9D0092A087 /* otpioUITests */ = {
-			isa = PBXGroup;
-			children = (
-				662CFF8F219D7E5C0092A087 /* SnapshotHelper.swift */,
-				662CFF87219D7A9D0092A087 /* otpioUITests.swift */,
-				662CFF89219D7A9D0092A087 /* Info.plist */,
-			);
-			path = otpioUITests;
-			sourceTree = "<group>";
-		};
-		66343FE2216F1083001AAA1C /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				6697BD25219BBAAD004F1536 /* Fonts */,
-				66343FE5216F2F24001AAA1C /* otpio.entitlements */,
-				66CAA239216B1F5B0015AC5A /* Assets.xcassets */,
-				66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */,
-				66CAA23E216B1F5B0015AC5A /* Info.plist */,
-				6697BD19219B7969004F1536 /* Localizable.strings */,
-				66E6B7C421A45A5A004563E6 /* Settings.bundle */,
-			);
-			name = Assets;
-			sourceTree = "<group>";
-		};
-		6679121721B652CF0039E7C6 /* IconSelection */ = {
-			isa = PBXGroup;
-			children = (
-				6680C8D921B4C61100F6BE87 /* IconRow.swift */,
-				6680C8DE21B4F8CA00F6BE87 /* IconSelectorVC.swift */,
-				6679121521B6529B0039E7C6 /* IconDisplayTVC.swift */,
-			);
-			path = IconSelection;
-			sourceTree = "<group>";
-		};
-		6679121821B652DA0039E7C6 /* ThemeSelection */ = {
-			isa = PBXGroup;
-			children = (
-				6679121921B652F40039E7C6 /* ThemeRow.swift */,
-				6679121B21B653560039E7C6 /* ThemeSelectorVC.swift */,
-				6696C3BB21B666FB00717C1D /* ThemeDisplayFSPVC.swift */,
-			);
-			path = ThemeSelection;
-			sourceTree = "<group>";
-		};
-		6680C8DD21B4F8AF00F6BE87 /* Custom Eureka Cells */ = {
-			isa = PBXGroup;
-			children = (
-				6679121821B652DA0039E7C6 /* ThemeSelection */,
-				6679121721B652CF0039E7C6 /* IconSelection */,
-			);
-			path = "Custom Eureka Cells";
-			sourceTree = "<group>";
-		};
-		66905CFB21AB05FE009B95EA /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				66905CFC21AB0616009B95EA /* SettingsVC.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		6697BD1E219BBA36004F1536 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6680C8DD21B4F8AF00F6BE87 /* Custom Eureka Cells */,
-				6697BD1F219BBA43004F1536 /* Display */,
-				6697BD21219BBA57004F1536 /* AddQRCode */,
-				66AFC6F9219C00EA007EBCC3 /* CodeDetail */,
-				66905CFB21AB05FE009B95EA /* Settings */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		6697BD1F219BBA43004F1536 /* Display */ = {
-			isa = PBXGroup;
-			children = (
-				66698C15219A7DCB0012CAF8 /* DisplayVC.swift */,
-				6697BD26219BBBA6004F1536 /* CodesTable.swift */,
-				66AFC6F7219BFD9B007EBCC3 /* CodeCell.swift */,
-			);
-			path = Display;
-			sourceTree = "<group>";
-		};
-		6697BD21219BBA57004F1536 /* AddQRCode */ = {
-			isa = PBXGroup;
-			children = (
-				6697BD14219B7464004F1536 /* AddQRCodePageController.swift */,
-				66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */,
-				6697BD17219B7885004F1536 /* QRCodeDetailsVC.swift */,
-				6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */,
-			);
-			path = AddQRCode;
-			sourceTree = "<group>";
-		};
-		6697BD23219BBA83004F1536 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				66CAA248216B2AB30015AC5A /* Extensions.swift */,
-				66C2C430216DE859005DC2F3 /* UIKit.swift */,
-				66ECB7C321AB6CDE00781ADC /* TokenForm.swift */,
-				66ECB7C521AB6D0F00781ADC /* EurekaCellTags.swift */,
-				6679121121B639690039E7C6 /* Fuzzy.swift */,
-				6679121321B64D7F0039E7C6 /* SwiftyDefaultKeys.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		6697BD25219BBAAD004F1536 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */,
-				66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */,
-				66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */,
-				66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */,
-				66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */,
-			);
-			name = Fonts;
-			sourceTree = "<group>";
-		};
-		66AFC6F9219C00EA007EBCC3 /* CodeDetail */ = {
-			isa = PBXGroup;
-			children = (
-				66AFC6FA219C010B007EBCC3 /* CodeDetailVC.swift */,
-			);
-			path = CodeDetail;
-			sourceTree = "<group>";
-		};
-		66CAA226216B1F5A0015AC5A = {
-			isa = PBXGroup;
-			children = (
-				661F2CCB2170A2740059756F /* README.md */,
-				66CAA231216B1F5A0015AC5A /* otpio */,
-				661F2CD42170B7FD0059756F /* otpio-today */,
-				662CFF86219D7A9D0092A087 /* otpioUITests */,
-				66CAA230216B1F5A0015AC5A /* Products */,
-				DAB0B122B37A3F1D50E855EA /* Pods */,
-				56B29F815CFF4BD05E41464E /* Frameworks */,
+				6602584621CAF29A00DCC3BC /* otpio */,
+				6602584521CAF29A00DCC3BC /* Products */,
+				2D3B80AB50706B2FDBF7A85D /* Pods */,
+				DE360F29F2975FB6230D42B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		66CAA230216B1F5A0015AC5A /* Products */ = {
+		6602584521CAF29A00DCC3BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66CAA22F216B1F5A0015AC5A /* otpio.app */,
-				661F2CD12170B7FD0059756F /* otpio-today.appex */,
-				662CFF85219D7A9D0092A087 /* otpioUITests.xctest */,
+				6602584421CAF29A00DCC3BC /* otpio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66CAA231216B1F5A0015AC5A /* otpio */ = {
+		6602584621CAF29A00DCC3BC /* otpio */ = {
 			isa = PBXGroup;
 			children = (
-				66CAA232216B1F5A0015AC5A /* AppDelegate.swift */,
-				6637E7B3219BD54B00AFDDF8 /* SystemCommunicator.swift */,
-				66F7F4BA21A4C87D0048DD6B /* Theme.swift */,
-				6697BD1E219BBA36004F1536 /* Views */,
-				6697BD23219BBA83004F1536 /* Extensions */,
-				66343FE2216F1083001AAA1C /* Assets */,
+				6602584721CAF29A00DCC3BC /* AppDelegate.swift */,
+				6602584921CAF29A00DCC3BC /* ViewController.swift */,
+				6602584B21CAF29A00DCC3BC /* Main.storyboard */,
+				6602584E21CAF29B00DCC3BC /* Assets.xcassets */,
+				6602585021CAF29B00DCC3BC /* LaunchScreen.storyboard */,
+				6602585321CAF29B00DCC3BC /* Info.plist */,
 			);
 			path = otpio;
 			sourceTree = "<group>";
 		};
-		DAB0B122B37A3F1D50E855EA /* Pods */ = {
+		DE360F29F2975FB6230D42B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */,
-				A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */,
-				6971635977A88E850D98EDCD /* Pods-otpio-today.debug.xcconfig */,
-				3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */,
-				335BC601CC33BBFDC0A4BE66 /* Pods-otpio-otpio-today.debug.xcconfig */,
-				BA208E3661A9A8AA263B2D4E /* Pods-otpio-otpio-today.release.xcconfig */,
-				E369C3BEE0FE6517548F34D0 /* Pods-otpio-watch Extension.debug.xcconfig */,
-				267D862E3254D2B48ACB0C28 /* Pods-otpio-watch Extension.release.xcconfig */,
-				2B516261C2857913AE0E7A79 /* Pods-watch Extension.debug.xcconfig */,
-				0336B19F24B5B20C5FEA9F4D /* Pods-watch Extension.release.xcconfig */,
+				019D5787F17954E092C11C5D /* Pods_otpio.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		661F2CD02170B7FD0059756F /* otpio-today */ = {
+		6602584321CAF29A00DCC3BC /* otpio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 661F2CE02170B7FD0059756F /* Build configuration list for PBXNativeTarget "otpio-today" */;
+			buildConfigurationList = 6602585621CAF29B00DCC3BC /* Build configuration list for PBXNativeTarget "otpio" */;
 			buildPhases = (
-				A0BF2D886520FC5935D22C38 /* [CP] Check Pods Manifest.lock */,
-				661F2CCD2170B7FD0059756F /* Sources */,
-				661F2CCE2170B7FD0059756F /* Frameworks */,
-				661F2CCF2170B7FD0059756F /* Resources */,
+				998CF72ED060AF7259A9F49C /* [CP] Check Pods Manifest.lock */,
+				6602584021CAF29A00DCC3BC /* Sources */,
+				6602584121CAF29A00DCC3BC /* Frameworks */,
+				6602584221CAF29A00DCC3BC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "otpio-today";
-			productName = "otpio-today";
-			productReference = 661F2CD12170B7FD0059756F /* otpio-today.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		662CFF84219D7A9D0092A087 /* otpioUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 662CFF8C219D7A9D0092A087 /* Build configuration list for PBXNativeTarget "otpioUITests" */;
-			buildPhases = (
-				662CFF81219D7A9D0092A087 /* Sources */,
-				662CFF82219D7A9D0092A087 /* Frameworks */,
-				662CFF83219D7A9D0092A087 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				662CFF8B219D7A9D0092A087 /* PBXTargetDependency */,
-			);
-			name = otpioUITests;
-			productName = otpioUITests;
-			productReference = 662CFF85219D7A9D0092A087 /* otpioUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		66CAA22E216B1F5A0015AC5A /* otpio */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 66CAA241216B1F5B0015AC5A /* Build configuration list for PBXNativeTarget "otpio" */;
-			buildPhases = (
-				63336AA762374E713CDB591F /* [CP] Check Pods Manifest.lock */,
-				66CAA22B216B1F5A0015AC5A /* Sources */,
-				66CAA22C216B1F5A0015AC5A /* Frameworks */,
-				66CAA22D216B1F5A0015AC5A /* Resources */,
-				16FF2A4F31DF7BE890BE365C /* [CP] Embed Pods Frameworks */,
-				661F2CE12170B7FD0059756F /* Embed App Extensions */,
-				6624660321758EAE00051DF0 /* Embed Watch Content */,
-				66E6B7C321A45636004563E6 /* Integrate Fabric */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				661F2CDC2170B7FD0059756F /* PBXTargetDependency */,
 			);
 			name = otpio;
 			productName = otpio;
-			productReference = 66CAA22F216B1F5A0015AC5A /* otpio.app */;
+			productReference = 6602584421CAF29A00DCC3BC /* otpio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		66CAA227216B1F5A0015AC5A /* Project object */ = {
+		6602583C21CAF29A00DCC3BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Matrix Studios";
 				TargetAttributes = {
-					661F2CD02170B7FD0059756F = {
+					6602584321CAF29A00DCC3BC = {
 						CreatedOnToolsVersion = 10.1;
-						SystemCapabilities = {
-							com.apple.Keychain = {
-								enabled = 1;
-							};
-						};
-					};
-					662CFF84219D7A9D0092A087 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 66CAA22E216B1F5A0015AC5A;
-					};
-					66CAA22E216B1F5A0015AC5A = {
-						CreatedOnToolsVersion = 10.1;
-						SystemCapabilities = {
-							com.apple.DataProtection = {
-								enabled = 0;
-							};
-							com.apple.Keychain = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 0;
-							};
-							com.apple.Siri = {
-								enabled = 0;
-							};
-							com.apple.iCloud = {
-								enabled = 0;
-							};
-						};
 					};
 				};
 			};
-			buildConfigurationList = 66CAA22A216B1F5A0015AC5A /* Build configuration list for PBXProject "otpio" */;
+			buildConfigurationList = 6602583F21CAF29A00DCC3BC /* Build configuration list for PBXProject "otpio" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -510,115 +133,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 66CAA226216B1F5A0015AC5A;
-			productRefGroup = 66CAA230216B1F5A0015AC5A /* Products */;
+			mainGroup = 6602583B21CAF29A00DCC3BC;
+			productRefGroup = 6602584521CAF29A00DCC3BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66CAA22E216B1F5A0015AC5A /* otpio */,
-				661F2CD02170B7FD0059756F /* otpio-today */,
-				662CFF84219D7A9D0092A087 /* otpioUITests */,
+				6602584321CAF29A00DCC3BC /* otpio */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		661F2CCF2170B7FD0059756F /* Resources */ = {
+		6602584221CAF29A00DCC3BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		662CFF83219D7A9D0092A087 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66CAA22D216B1F5A0015AC5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66698C17219A7F9A0012CAF8 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
-				66698C18219A7F9A0012CAF8 /* Font Awesome 5 Pro-Light-300.otf in Resources */,
-				66698C19219A7F9A0012CAF8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
-				66698C1A219A7F9A0012CAF8 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
-				6697BD1A219B7969004F1536 /* Localizable.strings in Resources */,
-				66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */,
-				661F2CCC2170A2740059756F /* README.md in Resources */,
-				66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */,
-				66E6B7C521A45A5A004563E6 /* Settings.bundle in Resources */,
-				66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */,
+				6602585221CAF29B00DCC3BC /* LaunchScreen.storyboard in Resources */,
+				6602584F21CAF29B00DCC3BC /* Assets.xcassets in Resources */,
+				6602584D21CAF29A00DCC3BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16FF2A4F31DF7BE890BE365C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Base32/Base32.framework",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
-				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
-				"${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework",
-				"${BUILT_PRODUCTS_DIR}/FuzzyMatchingSwift/FuzzyMatchingSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/GradientProgressBar/GradientProgressBar.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
-				"${BUILT_PRODUCTS_DIR}/Observable/Observable.framework",
-				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
-				"${BUILT_PRODUCTS_DIR}/RetroProgress/RetroProgress.framework",
-				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
-				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
-				"${BUILT_PRODUCTS_DIR}/arek/arek.framework",
-				"${BUILT_PRODUCTS_DIR}/libfa/libfa.framework",
-				"${BUILT_PRODUCTS_DIR}/libtoken/libtoken.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base32.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontBlaster.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FuzzyMatchingSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientProgressBar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Observable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RetroProgress.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/arek.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libfa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libtoken.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63336AA762374E713CDB591F /* [CP] Check Pods Manifest.lock */ = {
+		998CF72ED060AF7259A9F49C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -640,118 +179,33 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66E6B7C321A45636004563E6 /* Integrate Fabric */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Integrate Fabric";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" d676a302f3cebf65ff765ebd4cb895d2292b3344 e75c192d0826298fcc2c46b11cea0d7aa9c11bb78df676201b81b7a43726f1c5\n";
-		};
-		A0BF2D886520FC5935D22C38 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-otpio-today-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		661F2CCD2170B7FD0059756F /* Sources */ = {
+		6602584021CAF29A00DCC3BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661F2CE82170C2300059756F /* CodeTableViewCell.swift in Sources */,
-				661F2CD62170B7FD0059756F /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		662CFF81219D7A9D0092A087 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				662CFF88219D7A9D0092A087 /* otpioUITests.swift in Sources */,
-				662CFF90219D7E5C0092A087 /* SnapshotHelper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66CAA22B216B1F5A0015AC5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66AFC6FB219C010B007EBCC3 /* CodeDetailVC.swift in Sources */,
-				66CAA233216B1F5A0015AC5A /* AppDelegate.swift in Sources */,
-				66698C16219A7DCB0012CAF8 /* DisplayVC.swift in Sources */,
-				66ECB7C421AB6CDF00781ADC /* TokenForm.swift in Sources */,
-				6679121C21B653560039E7C6 /* ThemeSelectorVC.swift in Sources */,
-				6679121221B639690039E7C6 /* Fuzzy.swift in Sources */,
-				6680C8DA21B4C61100F6BE87 /* IconRow.swift in Sources */,
-				66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */,
-				66F7F4BB21A4C87D0048DD6B /* Theme.swift in Sources */,
-				66698C1C219A9AA20012CAF8 /* AddQRCodeVC.swift in Sources */,
-				6679121621B6529B0039E7C6 /* IconDisplayTVC.swift in Sources */,
-				66AFC6F8219BFD9B007EBCC3 /* CodeCell.swift in Sources */,
-				6697BD15219B7464004F1536 /* AddQRCodePageController.swift in Sources */,
-				6696C3BC21B666FB00717C1D /* ThemeDisplayFSPVC.swift in Sources */,
-				6680C8DF21B4F8CA00F6BE87 /* IconSelectorVC.swift in Sources */,
-				6697BD1C219B8416004F1536 /* ConfirmQRCodeVC.swift in Sources */,
-				6697BD18219B7885004F1536 /* QRCodeDetailsVC.swift in Sources */,
-				66ECB7C621AB6D0F00781ADC /* EurekaCellTags.swift in Sources */,
-				6637E7B4219BD54B00AFDDF8 /* SystemCommunicator.swift in Sources */,
-				6697BD27219BBBA6004F1536 /* CodesTable.swift in Sources */,
-				6679121A21B652F40039E7C6 /* ThemeRow.swift in Sources */,
-				6679121421B64D7F0039E7C6 /* SwiftyDefaultKeys.swift in Sources */,
-				66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */,
-				66905CFD21AB0616009B95EA /* SettingsVC.swift in Sources */,
+				6602584A21CAF29A00DCC3BC /* ViewController.swift in Sources */,
+				6602584821CAF29A00DCC3BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		661F2CDC2170B7FD0059756F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 661F2CD02170B7FD0059756F /* otpio-today */;
-			targetProxy = 661F2CDB2170B7FD0059756F /* PBXContainerItemProxy */;
-		};
-		662CFF8B219D7A9D0092A087 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 66CAA22E216B1F5A0015AC5A /* otpio */;
-			targetProxy = 662CFF8A219D7A9D0092A087 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */ = {
+		6602584B21CAF29A00DCC3BC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				66CAA23C216B1F5B0015AC5A /* Base */,
+				6602584C21CAF29A00DCC3BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6602585021CAF29B00DCC3BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6602585121CAF29B00DCC3BC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -759,89 +213,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		661F2CDE2170B7FD0059756F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6971635977A88E850D98EDCD /* Pods-otpio-today.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "otpio-today/otpio-today.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = "otpio-today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.matrixstudios.otpio.otpio-today";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		661F2CDF2170B7FD0059756F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C666B086D6C2E6A40ACC479 /* Pods-otpio-today.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "otpio-today/otpio-today.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = "otpio-today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.matrixstudios.otpio.otpio-today";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		662CFF8D219D7A9D0092A087 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = otpioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.syqen.otpioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = otpio;
-			};
-			name = Debug;
-		};
-		662CFF8E219D7A9D0092A087 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = otpioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.syqen.otpioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = otpio;
-			};
-			name = Release;
-		};
-		66CAA23F216B1F5B0015AC5A /* Debug */ = {
+		6602585421CAF29B00DCC3BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -902,7 +274,7 @@
 			};
 			name = Debug;
 		};
-		66CAA240216B1F5B0015AC5A /* Release */ = {
+		6602585521CAF29B00DCC3BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -957,91 +329,66 @@
 			};
 			name = Release;
 		};
-		66CAA242216B1F5B0015AC5A /* Debug */ = {
+		6602585721CAF29B00DCC3BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1B6BE8669C7DF1A957D8661 /* Pods-otpio.debug.xcconfig */;
+			baseConfigurationReference = 1D113EA5D421D7B6B70B37D1 /* Pods-otpio.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = otpio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.matrixstudios.otpio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.otpio.otpio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		66CAA243216B1F5B0015AC5A /* Release */ = {
+		6602585821CAF29B00DCC3BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9285946DD8DC6F7C2CD120B /* Pods-otpio.release.xcconfig */;
+			baseConfigurationReference = 0FA6A496A4495BF0D59F6A6F /* Pods-otpio.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = otpio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.matrixstudios.otpio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.otpio.otpio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		661F2CE02170B7FD0059756F /* Build configuration list for PBXNativeTarget "otpio-today" */ = {
+		6602583F21CAF29A00DCC3BC /* Build configuration list for PBXProject "otpio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				661F2CDE2170B7FD0059756F /* Debug */,
-				661F2CDF2170B7FD0059756F /* Release */,
+				6602585421CAF29B00DCC3BC /* Debug */,
+				6602585521CAF29B00DCC3BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		662CFF8C219D7A9D0092A087 /* Build configuration list for PBXNativeTarget "otpioUITests" */ = {
+		6602585621CAF29B00DCC3BC /* Build configuration list for PBXNativeTarget "otpio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				662CFF8D219D7A9D0092A087 /* Debug */,
-				662CFF8E219D7A9D0092A087 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		66CAA22A216B1F5A0015AC5A /* Build configuration list for PBXProject "otpio" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66CAA23F216B1F5B0015AC5A /* Debug */,
-				66CAA240216B1F5B0015AC5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		66CAA241216B1F5B0015AC5A /* Build configuration list for PBXNativeTarget "otpio" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66CAA242216B1F5B0015AC5A /* Debug */,
-				66CAA243216B1F5B0015AC5A /* Release */,
+				6602585721CAF29B00DCC3BC /* Debug */,
+				6602585821CAF29B00DCC3BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 66CAA227216B1F5A0015AC5A /* Project object */;
+	rootObject = 6602583C21CAF29A00DCC3BC /* Project object */;
 }

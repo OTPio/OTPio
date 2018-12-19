@@ -1,0 +1,5 @@
+colors:
+  inputs: ./colors/colors.txt
+  outputs:
+    templateName: swift4
+    output: ./colors/Colors.swift

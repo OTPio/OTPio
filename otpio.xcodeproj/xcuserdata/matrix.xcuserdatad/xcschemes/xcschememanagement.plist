@@ -4,78 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>otpio-today.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>otpio-watch (Complication).xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>21</integer>
-		</dict>
-		<key>otpio-watch (Notification).xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>20</integer>
-		</dict>
-		<key>otpio-watch.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>19</integer>
-		</dict>
 		<key>otpio.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
-		</dict>
-		<key>otpioUITests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>watch (Notification).xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>29</integer>
-		</dict>
-		<key>watch.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>28</integer>
-		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>661F2CD02170B7FD0059756F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>661F2CED21711B310059756F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>662CFF84219D7A9D0092A087</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6688BC402192CA1900A2267D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>66A33851219E742900CF08CF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>66CAA22E216B1F5A0015AC5A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
 		</dict>
 	</dict>
 </dict>

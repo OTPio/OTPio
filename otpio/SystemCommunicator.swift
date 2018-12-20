@@ -11,6 +11,7 @@ import libtoken
 import libfa
 import SwiftyUserDefaults
 import KeychainAccess
+import StoreKit
 
 class SystemCommunicator {
     
@@ -27,6 +28,9 @@ class SystemCommunicator {
     private var cloudToken   : Array<Token>
     
     private var temporary: Bool = false
+    
+    private let helper: IAPHelper
+    private var products: [SKProduct]?
     
     init() {
         fullKeychain = Keychain(service: "com.otpio.token", accessGroup: "6S4L29QT59.com.otpio.fullkeychain")
@@ -46,6 +50,11 @@ class SystemCommunicator {
         .accessibility(.afterFirstUnlock)
         
         cloudToken = []
+        
+        helper = IAPHelper(productIds: ["com.otpio.themes"])
+        helper.requestProducts { (success, products) in
+            if success { self.products = products }
+        }
     }
 
     public func updateKeychain() {
@@ -169,9 +178,17 @@ class SystemCommunicator {
     public func stopTimer() {
         listener?.stopTimers()
     }
-    
     public func restartTimer() {
         listener?.startTimers()
+    }
+    
+    public func buyThemes() {
+        guard let themes = products?.first else { return }
+        
+        helper.buyProduct(themes)
+    }
+    public func hasBought() -> Bool {
+        return helper.isProductPurchased("com.otpio.themes")
     }
 }
 

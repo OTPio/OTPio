@@ -19,3 +19,5 @@
 "delete-token"       = "You will have to manually re-add this token if you want to use it in the future. Are you sure?";
 
 "test-token"         = "otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&issuer=Matrix%20Studios&algorithm=MD5&digits=6&period=30&fa=fa-empire";
+
+"purchase-themes"    = "It looks like you want to change the theme of the app! That's cool, but would you mind supporting me in the process?";

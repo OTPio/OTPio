@@ -10,3 +10,4 @@ languages([
 output_directory("./screenshots")
 launch_arguments(["-token 'otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&issuer=Matrix%20Studios&algorithm=SHA256&digits=6&period=30&fa=empire'"])
 clear_previous_screenshots(true)
+concurrent_simulators(true)

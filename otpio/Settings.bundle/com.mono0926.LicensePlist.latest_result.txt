@@ -1,102 +1,102 @@
 name: arek, nameSpecified: 
 body: Copyright (c) 2016 E…
-version: 4.0.2
+version: 
 
 name: ChameleonFramework, nameSpecified: 
 body: ##The MIT License (M…
-version: 2.1.0
+version: 
 
 name: Crashlytics, nameSpecified: 
 body: Fabric: Copyright 20…
-version: 3.11.1
+version: 
 
 name: CryptoSwift, nameSpecified: 
 body: Copyright (C) 2014-2…
-version: 0.13.0
+version: 
 
 name: Eureka, nameSpecified: 
 body: The MIT License (MIT…
-version: 4.3.0
+version: 
 
 name: Fabric, nameSpecified: 
 body: Fabric: Copyright 20…
-version: 1.8.2
+version: 
 
 name: FontBlaster, nameSpecified: 
 body: The MIT License (MIT…
-version: 4.1.0
+version: 
 
 name: FontBlaster, nameSpecified: 
 body: The MIT License (MIT…
-version: 4.1.0
+version: 
+
+name: FSPagerView, nameSpecified: 
+body: Copyright (c) 2017 F…
+version: 
+
+name: FuzzyMatchingSwift, nameSpecified: 
+body: Copyright 2016 - pre…
+version: 
 
 name: GradientProgressBar, nameSpecified: 
 body: Copyright (c) 2017 f…
-version: 1.2.4
+version: 
 
 name: KeychainAccess, nameSpecified: 
 body: The MIT License (MIT…
-version: 3.1.2
+version: 
 
 name: KeychainAccess, nameSpecified: 
 body: The MIT License (MIT…
-version: 3.1.2
-
-name: KeychainAccess, nameSpecified: 
-body: The MIT License (MIT…
-version: 3.1.2
+version: 
 
 name: libfa, nameSpecified: 
 body: …
-version: 1.1.1
+version: 
 
 name: libfa, nameSpecified: 
 body: …
-version: 1.1.1
+version: 
 
 name: libtoken, nameSpecified: 
 body: …
-version: 1.1.0
+version: 
 
 name: libtoken, nameSpecified: 
 body: …
-version: 1.1.0
+version: 
 
 name: Neon, nameSpecified: 
 body: Copyright (c) 2015 M…
-version: 0.4.0
+version: 
 
 name: Neon, nameSpecified: 
 body: Copyright (c) 2015 M…
-version: 0.4.0
+version: 
 
 name: NVActivityIndicatorView, nameSpecified: 
 body: The MIT License (MIT…
-version: 4.4.0
+version: 
 
 name: Observable, nameSpecified: 
 body: 
 MIT License
 
 Copyri…
-version: 1.3.3
+version: 
 
 name: PMAlertController, nameSpecified: 
 body: MIT License
 --------…
-version: 3.5.0
+version: 
 
 name: RetroProgress, nameSpecified: 
 body: Licensed under the *…
-version: 1.0.1
+version: 
 
 name: SCLAlertView, nameSpecified: 
 body: Copyright (c) 2013-2…
-version: 0.8
-
-name: SwiftBase32, nameSpecified: 
-body: The MIT License (MIT…
-version: 0.6.0
+version: 
 
 name: SwiftyUserDefaults, nameSpecified: 
 body: The MIT License (MIT…
@@ -105,7 +105,7 @@ version:
 name: SwipeCellKit, nameSpecified: 
 body: MIT License 
 Copyrig…
-version: 2.5.0
+version: 
 
 add-version-numbers: true
 

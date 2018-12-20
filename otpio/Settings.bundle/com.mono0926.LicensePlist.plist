@@ -8,7 +8,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/arek</string>
 			<key>Title</key>
-			<string>arek (4.0.2)</string>
+			<string>arek</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -16,7 +16,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/ChameleonFramework</string>
 			<key>Title</key>
-			<string>ChameleonFramework (2.1.0)</string>
+			<string>ChameleonFramework</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -24,7 +24,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Crashlytics</string>
 			<key>Title</key>
-			<string>Crashlytics (3.11.1)</string>
+			<string>Crashlytics</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -32,7 +32,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/CryptoSwift</string>
 			<key>Title</key>
-			<string>CryptoSwift (0.13.0)</string>
+			<string>CryptoSwift</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -40,7 +40,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Eureka</string>
 			<key>Title</key>
-			<string>Eureka (4.3.0)</string>
+			<string>Eureka</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -48,7 +48,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Fabric</string>
 			<key>Title</key>
-			<string>Fabric (1.8.2)</string>
+			<string>Fabric</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -56,7 +56,23 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/FontBlaster</string>
 			<key>Title</key>
-			<string>FontBlaster (4.1.0)</string>
+			<string>FontBlaster</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/FSPagerView</string>
+			<key>Title</key>
+			<string>FSPagerView</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/FuzzyMatchingSwift</string>
+			<key>Title</key>
+			<string>FuzzyMatchingSwift</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -64,7 +80,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/GradientProgressBar</string>
 			<key>Title</key>
-			<string>GradientProgressBar (1.2.4)</string>
+			<string>GradientProgressBar</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -72,7 +88,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/KeychainAccess</string>
 			<key>Title</key>
-			<string>KeychainAccess (3.1.2)</string>
+			<string>KeychainAccess</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -80,7 +96,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/libfa</string>
 			<key>Title</key>
-			<string>libfa (1.1.1)</string>
+			<string>libfa</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -88,7 +104,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/libtoken</string>
 			<key>Title</key>
-			<string>libtoken (1.1.0)</string>
+			<string>libtoken</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -96,7 +112,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Neon</string>
 			<key>Title</key>
-			<string>Neon (0.4.0)</string>
+			<string>Neon</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -104,7 +120,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/NVActivityIndicatorView</string>
 			<key>Title</key>
-			<string>NVActivityIndicatorView (4.4.0)</string>
+			<string>NVActivityIndicatorView</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -112,7 +128,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Observable</string>
 			<key>Title</key>
-			<string>Observable (1.3.3)</string>
+			<string>Observable</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -120,7 +136,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/PMAlertController</string>
 			<key>Title</key>
-			<string>PMAlertController (3.5.0)</string>
+			<string>PMAlertController</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -128,7 +144,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/RetroProgress</string>
 			<key>Title</key>
-			<string>RetroProgress (1.0.1)</string>
+			<string>RetroProgress</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -136,15 +152,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/SCLAlertView</string>
 			<key>Title</key>
-			<string>SCLAlertView (0.8)</string>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-		</dict>
-		<dict>
-			<key>File</key>
-			<string>com.mono0926.LicensePlist/SwiftBase32</string>
-			<key>Title</key>
-			<string>SwiftBase32 (0.6.0)</string>
+			<string>SCLAlertView</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -160,7 +168,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/SwipeCellKit</string>
 			<key>Title</key>
-			<string>SwipeCellKit (2.5.0)</string>
+			<string>SwipeCellKit</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>

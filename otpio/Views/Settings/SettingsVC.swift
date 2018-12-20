@@ -9,6 +9,7 @@
 import UIKit
 import Eureka
 import SwiftyUserDefaults
+import SCLAlertView
 
 class SettingsVC: FormViewController {
     

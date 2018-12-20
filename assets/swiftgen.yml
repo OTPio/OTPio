@@ -1,0 +1,13 @@
+input_dir: .
+output_dir: ../otpio/Extensions
+
+colors:
+  inputs: colors/colors.txt
+  outputs:
+    templateName: swift4
+    output: Colors.swift
+fonts:
+  inputs: fonts
+  outputs:
+    templateName: swift4
+    output: Fonts.swift

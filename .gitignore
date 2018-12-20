@@ -2,3 +2,5 @@ Pods/
 *.xcworkspace
 otpio/*.ttf
 screenshots/
+otpio.ipa
+*.zip

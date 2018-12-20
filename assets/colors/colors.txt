@@ -1,0 +1,49 @@
+# Solarized Colors
+  # SOLARIZED - BRBLACK
+   solarizedBase03 : #002b36
+  # SOLARIZED - BLACK
+   solarizedBase02 : #073642
+  # SOLARIZED - BRGREEN
+   solarizedBase01 : #586e75
+  # SOLARIZED - BRYELLOW
+   solarizedBase00 : #657b83
+  # SOLARIZED - BRBLUE
+   solarizedBase0  : #839496
+  # SOLARIZED - BRCYAN
+   solarizedBase1  : #93a1a1
+  # SOLARIZED - WHITE
+   solarizedBase2  : #eee8d5
+  # SOLARIZED - BRWHITE
+   solarizedBase3  : #fdf6e3
+  # SOLARIZED - YELLOW
+   solarizedYellow : #b58900
+  # SOLARIZED - BRRED
+   solarizedOrange : #cb4b16
+  # SOLARIZED - RED
+   solarizedRed    : #dc322f
+  # SOLARIZED - MAGENTA
+   solarizedMagenta: #d33682
+  # SOLARIZED - BRMAGENTA
+   solarizedViolet : #6c71c4
+  # SOLARIZED - BLUE
+   solarizedBlue   : #268bd2
+  # SOLARIZED - CYAN
+   solarizedCyan   : #2aa198
+  # SOLARIZED - GREEN
+   solarizedGreen  : #859900
+
+# Night/Light Colors
+  # NIGHT/LIGHT - BRBLACK
+   nightlightBlackDark: 262626
+  # NIGHT/LIGHT - BLACK
+   nightlightBlack    : 2B2B2B
+  # NIGHT/LIGHT - WHITE
+   nightlightWhite    : edf1f2
+  # NIGHT/LIGHT - BRWHITE
+   nightlightWhiteDark: bdc3c7
+  # NIGHT/LIGHT - GRAY
+   nightlightGray     : 95a5a6
+  # NIGHT/LIGHT - BRBLUE
+   nightlightBlue     : 3599db
+  # NIGHT/LIGHT - BRGRAY
+   nightlightGrayDark : 7e8b8c

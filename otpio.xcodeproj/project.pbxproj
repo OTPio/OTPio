@@ -11,18 +11,12 @@
 		661F2CD32170B7FD0059756F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661F2CD22170B7FD0059756F /* NotificationCenter.framework */; };
 		661F2CD62170B7FD0059756F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CD52170B7FD0059756F /* TodayViewController.swift */; };
 		661F2CDD2170B7FD0059756F /* otpio-today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 661F2CD12170B7FD0059756F /* otpio-today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
 		661F2CE82170C2300059756F /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F2CE72170C2300059756F /* CodeTableViewCell.swift */; };
 		662CFF88219D7A9D0092A087 /* otpioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF87219D7A9D0092A087 /* otpioUITests.swift */; };
 		662CFF90219D7E5C0092A087 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF8F219D7E5C0092A087 /* SnapshotHelper.swift */; };
 		66343FE7216F2F3C001AAA1C /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66343FE6216F2F3C001AAA1C /* Intents.framework */; };
-		66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */; };
 		6637E7B4219BD54B00AFDDF8 /* SystemCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637E7B3219BD54B00AFDDF8 /* SystemCommunicator.swift */; };
 		66698C16219A7DCB0012CAF8 /* DisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66698C15219A7DCB0012CAF8 /* DisplayVC.swift */; };
-		66698C17219A7F9A0012CAF8 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */; };
-		66698C18219A7F9A0012CAF8 /* Font Awesome 5 Pro-Light-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */; };
-		66698C19219A7F9A0012CAF8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */; };
-		66698C1A219A7F9A0012CAF8 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */; };
 		66698C1C219A9AA20012CAF8 /* AddQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */; };
 		6679121221B639690039E7C6 /* Fuzzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679121121B639690039E7C6 /* Fuzzy.swift */; };
 		6679121421B64D7F0039E7C6 /* SwiftyDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679121321B64D7F0039E7C6 /* SwiftyDefaultKeys.swift */; };
@@ -38,6 +32,14 @@
 		6697BD1A219B7969004F1536 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6697BD19219B7969004F1536 /* Localizable.strings */; };
 		6697BD1C219B8416004F1536 /* ConfirmQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */; };
 		6697BD27219BBBA6004F1536 /* CodesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697BD26219BBBA6004F1536 /* CodesTable.swift */; };
+		66AD37B921CB6824009C9507 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD37B721CB6824009C9507 /* Fonts.swift */; };
+		66AD37BA21CB6824009C9507 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD37B821CB6824009C9507 /* Colors.swift */; };
+		66AD37C021CB68EA009C9507 /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BB21CB68E9009C9507 /* fa-regular-400.ttf */; };
+		66AD37C121CB68EA009C9507 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BC21CB68E9009C9507 /* fa-solid-900.ttf */; };
+		66AD37C221CB68EA009C9507 /* fa-light-300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BD21CB68E9009C9507 /* fa-light-300.ttf */; };
+		66AD37C321CB68EA009C9507 /* fa-brands-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BE21CB68E9009C9507 /* fa-brands-400.ttf */; };
+		66AD37C421CB68EA009C9507 /* SourceCodeVariable-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BF21CB68E9009C9507 /* SourceCodeVariable-Roman.ttf */; };
+		66AD37C821CB6B11009C9507 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD37C721CB6B11009C9507 /* IAPHelper.swift */; };
 		66AFC6F8219BFD9B007EBCC3 /* CodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFC6F7219BFD9B007EBCC3 /* CodeCell.swift */; };
 		66AFC6FB219C010B007EBCC3 /* CodeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFC6FA219C010B007EBCC3 /* CodeDetailVC.swift */; };
 		66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C430216DE859005DC2F3 /* UIKit.swift */; };
@@ -114,12 +116,7 @@
 		662CFF8F219D7E5C0092A087 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		66343FE5216F2F24001AAA1C /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
 		66343FE6216F2F3C001AAA1C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-ExtraLight.ttf"; sourceTree = "<group>"; };
 		6637E7B3219BD54B00AFDDF8 /* SystemCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCommunicator.swift; sourceTree = "<group>"; };
-		66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Solid-900.otf"; sourceTree = "<group>"; };
-		66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Regular-400.otf"; sourceTree = "<group>"; };
-		66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
-		66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Light-300.otf"; sourceTree = "<group>"; };
 		66698C15219A7DCB0012CAF8 /* DisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVC.swift; sourceTree = "<group>"; };
 		66698C1B219A9AA20012CAF8 /* AddQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQRCodeVC.swift; sourceTree = "<group>"; };
 		6679121121B639690039E7C6 /* Fuzzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzzy.swift; sourceTree = "<group>"; };
@@ -136,6 +133,14 @@
 		6697BD19219B7969004F1536 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6697BD1B219B8416004F1536 /* ConfirmQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmQRCodeVC.swift; sourceTree = "<group>"; };
 		6697BD26219BBBA6004F1536 /* CodesTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesTable.swift; sourceTree = "<group>"; };
+		66AD37B721CB6824009C9507 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		66AD37B821CB6824009C9507 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		66AD37BB21CB68E9009C9507 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
+		66AD37BC21CB68E9009C9507 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
+		66AD37BD21CB68E9009C9507 /* fa-light-300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-light-300.ttf"; sourceTree = "<group>"; };
+		66AD37BE21CB68E9009C9507 /* fa-brands-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-brands-400.ttf"; sourceTree = "<group>"; };
+		66AD37BF21CB68E9009C9507 /* SourceCodeVariable-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodeVariable-Roman.ttf"; sourceTree = "<group>"; };
+		66AD37C721CB6B11009C9507 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IAPHelper.swift; path = "../../../../Downloads/RazeFaces/RazeFaces-Final/RazeFaces/IAPHelper.swift"; sourceTree = "<group>"; };
 		66AFC6F7219BFD9B007EBCC3 /* CodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCell.swift; sourceTree = "<group>"; };
 		66AFC6FA219C010B007EBCC3 /* CodeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailVC.swift; sourceTree = "<group>"; };
 		66C2C430216DE859005DC2F3 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
@@ -313,12 +318,15 @@
 		6697BD23219BBA83004F1536 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				66AD37B821CB6824009C9507 /* Colors.swift */,
+				66AD37B721CB6824009C9507 /* Fonts.swift */,
 				66CAA248216B2AB30015AC5A /* Extensions.swift */,
 				66C2C430216DE859005DC2F3 /* UIKit.swift */,
 				66ECB7C321AB6CDE00781ADC /* TokenForm.swift */,
 				66ECB7C521AB6D0F00781ADC /* EurekaCellTags.swift */,
 				6679121121B639690039E7C6 /* Fuzzy.swift */,
 				6679121321B64D7F0039E7C6 /* SwiftyDefaultKeys.swift */,
+				66AD37C721CB6B11009C9507 /* IAPHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,11 +334,11 @@
 		6697BD25219BBAAD004F1536 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				66698C13219A7C950012CAF8 /* Font Awesome 5 Brands-Regular-400.otf */,
-				66698C14219A7C960012CAF8 /* Font Awesome 5 Pro-Light-300.otf */,
-				66698C12219A7C940012CAF8 /* Font Awesome 5 Pro-Regular-400.otf */,
-				66698C11219A7C940012CAF8 /* Font Awesome 5 Pro-Solid-900.otf */,
-				66343FEE217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf */,
+				66AD37BE21CB68E9009C9507 /* fa-brands-400.ttf */,
+				66AD37BD21CB68E9009C9507 /* fa-light-300.ttf */,
+				66AD37BB21CB68E9009C9507 /* fa-regular-400.ttf */,
+				66AD37BC21CB68E9009C9507 /* fa-solid-900.ttf */,
+				66AD37BF21CB68E9009C9507 /* SourceCodeVariable-Roman.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -527,7 +535,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661F2CE22170BE7D0059756F /* SourceCodePro-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,16 +549,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66698C17219A7F9A0012CAF8 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
-				66698C18219A7F9A0012CAF8 /* Font Awesome 5 Pro-Light-300.otf in Resources */,
-				66698C19219A7F9A0012CAF8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
-				66698C1A219A7F9A0012CAF8 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
+				66AD37C021CB68EA009C9507 /* fa-regular-400.ttf in Resources */,
+				66AD37C121CB68EA009C9507 /* fa-solid-900.ttf in Resources */,
+				66AD37C221CB68EA009C9507 /* fa-light-300.ttf in Resources */,
+				66AD37C321CB68EA009C9507 /* fa-brands-400.ttf in Resources */,
+				66AD37C421CB68EA009C9507 /* SourceCodeVariable-Roman.ttf in Resources */,
 				6697BD1A219B7969004F1536 /* Localizable.strings in Resources */,
 				66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */,
 				661F2CCC2170A2740059756F /* README.md in Resources */,
 				66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */,
 				66E6B7C521A45A5A004563E6 /* Settings.bundle in Resources */,
-				66343FEF217045B1001AAA1C /* SourceCodePro-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,11 +718,13 @@
 				66ECB7C421AB6CDF00781ADC /* TokenForm.swift in Sources */,
 				6679121C21B653560039E7C6 /* ThemeSelectorVC.swift in Sources */,
 				6679121221B639690039E7C6 /* Fuzzy.swift in Sources */,
+				66AD37B921CB6824009C9507 /* Fonts.swift in Sources */,
 				6680C8DA21B4C61100F6BE87 /* IconRow.swift in Sources */,
 				66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */,
 				66F7F4BB21A4C87D0048DD6B /* Theme.swift in Sources */,
 				66698C1C219A9AA20012CAF8 /* AddQRCodeVC.swift in Sources */,
 				6679121621B6529B0039E7C6 /* IconDisplayTVC.swift in Sources */,
+				66AD37C821CB6B11009C9507 /* IAPHelper.swift in Sources */,
 				66AFC6F8219BFD9B007EBCC3 /* CodeCell.swift in Sources */,
 				6697BD15219B7464004F1536 /* AddQRCodePageController.swift in Sources */,
 				6696C3BC21B666FB00717C1D /* ThemeDisplayFSPVC.swift in Sources */,
@@ -725,6 +734,7 @@
 				66ECB7C621AB6D0F00781ADC /* EurekaCellTags.swift in Sources */,
 				6637E7B4219BD54B00AFDDF8 /* SystemCommunicator.swift in Sources */,
 				6697BD27219BBBA6004F1536 /* CodesTable.swift in Sources */,
+				66AD37BA21CB6824009C9507 /* Colors.swift in Sources */,
 				6679121A21B652F40039E7C6 /* ThemeRow.swift in Sources */,
 				6679121421B64D7F0039E7C6 /* SwiftyDefaultKeys.swift in Sources */,
 				66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */,
@@ -965,6 +975,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = otpio/Info.plist;
@@ -977,6 +988,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -988,6 +1000,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = otpio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -999,6 +1012,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

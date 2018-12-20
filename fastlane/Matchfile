@@ -1,0 +1,6 @@
+git_url("git@github.com:matrixsenpai/fastlane_data")
+
+type("appstore")
+
+app_identifier(["io.matrixstudios.otpio"])
+username("math.matrix@icloud.com") # Your Apple Developer Portal username

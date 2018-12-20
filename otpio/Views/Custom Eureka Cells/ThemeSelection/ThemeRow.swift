@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 import Eureka
 
 final class ThemeRow: OptionsRow<PushSelectorCell<Theme>>, PresenterRowType, RowType {
@@ -31,17 +32,26 @@ final class ThemeRow: OptionsRow<PushSelectorCell<Theme>>, PresenterRowType, Row
     }
     
     override func customDidSelect() {
-        super.customDidSelect()
-        
-        guard let presentationMode = presentationMode, !isDisabled else { return }
-        if let controller = presentationMode.makeController() {
-            controller.row = self
-            controller.title = "Select a Theme"            
+        if !SystemCommunicator.sharedInstance.hasBought() {
+            let alert = SCLAlertView()
+            alert.addButton("Support Me!", action: {
+                SystemCommunicator.sharedInstance.buyThemes()
+            })
             
-            onPresentCallback?(cell.formViewController()!, controller)
-            presentationMode.present(controller, row: self, presentingController: self.cell.formViewController()!)
+            alert.showInfo("Extra Stuff", subTitle: fetchString(forKey: "purchase-themes"), closeButtonTitle: "No thanks")
         } else {
-            presentationMode.present(nil, row: self, presentingController: self.cell.formViewController()!)
+            super.customDidSelect()
+            
+            guard let presentationMode = presentationMode, !isDisabled else { return }
+            if let controller = presentationMode.makeController() {
+                controller.row = self
+                controller.title = "Select a Theme"
+                
+                onPresentCallback?(cell.formViewController()!, controller)
+                presentationMode.present(controller, row: self, presentingController: self.cell.formViewController()!)
+            } else {
+                presentationMode.present(nil, row: self, presentingController: self.cell.formViewController()!)
+            }
         }
     }
     

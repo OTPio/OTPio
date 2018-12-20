@@ -21,7 +21,7 @@ class ThemeSelectorVC: UIViewController, TypedRowControllerType {
     
     var rbutton: UIBarButtonItem {
         let b = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(ThemeSelectorVC.done))
-        b.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: ColorSpace.solarizedMagenta], for: .normal)
+        b.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: ColorName.solarizedMagenta.color], for: .normal)
         return b
     }
     

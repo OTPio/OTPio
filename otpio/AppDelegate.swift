@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
 //        Fabric.with([Crashlytics.self])
-        
+                
         if CommandLine.arguments.count > 0 {
             guard
                 let token = CommandLine.arguments.last,

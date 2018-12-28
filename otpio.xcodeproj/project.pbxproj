@@ -39,7 +39,6 @@
 		66AD37C221CB68EA009C9507 /* fa-light-300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BD21CB68E9009C9507 /* fa-light-300.ttf */; };
 		66AD37C321CB68EA009C9507 /* fa-brands-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BE21CB68E9009C9507 /* fa-brands-400.ttf */; };
 		66AD37C421CB68EA009C9507 /* SourceCodeVariable-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66AD37BF21CB68E9009C9507 /* SourceCodeVariable-Roman.ttf */; };
-		66AD37C821CB6B11009C9507 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD37C721CB6B11009C9507 /* IAPHelper.swift */; };
 		66AFC6F8219BFD9B007EBCC3 /* CodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFC6F7219BFD9B007EBCC3 /* CodeCell.swift */; };
 		66AFC6FB219C010B007EBCC3 /* CodeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFC6FA219C010B007EBCC3 /* CodeDetailVC.swift */; };
 		66C2C431216DE859005DC2F3 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C430216DE859005DC2F3 /* UIKit.swift */; };
@@ -47,6 +46,7 @@
 		66CAA23A216B1F5B0015AC5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA239216B1F5B0015AC5A /* Assets.xcassets */; };
 		66CAA23D216B1F5B0015AC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CAA23B216B1F5B0015AC5A /* LaunchScreen.storyboard */; };
 		66CAA249216B2AB30015AC5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAA248216B2AB30015AC5A /* Extensions.swift */; };
+		66CD20FB21D4A3880098A928 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD20FA21D4A3880098A928 /* IAPHelper.swift */; };
 		66E6B7C521A45A5A004563E6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66E6B7C421A45A5A004563E6 /* Settings.bundle */; };
 		66ECB7C421AB6CDF00781ADC /* TokenForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECB7C321AB6CDE00781ADC /* TokenForm.swift */; };
 		66ECB7C621AB6D0F00781ADC /* EurekaCellTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECB7C521AB6D0F00781ADC /* EurekaCellTags.swift */; };
@@ -150,6 +150,7 @@
 		66CAA23C216B1F5B0015AC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66CAA23E216B1F5B0015AC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66CAA248216B2AB30015AC5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		66CD20FA21D4A3880098A928 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		66E6B7C421A45A5A004563E6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		66ECB7C321AB6CDE00781ADC /* TokenForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenForm.swift; sourceTree = "<group>"; };
 		66ECB7C521AB6D0F00781ADC /* EurekaCellTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaCellTags.swift; sourceTree = "<group>"; };
@@ -318,6 +319,7 @@
 		6697BD23219BBA83004F1536 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				66CD20FA21D4A3880098A928 /* IAPHelper.swift */,
 				66AD37B821CB6824009C9507 /* Colors.swift */,
 				66AD37B721CB6824009C9507 /* Fonts.swift */,
 				66CAA248216B2AB30015AC5A /* Extensions.swift */,
@@ -724,7 +726,7 @@
 				66F7F4BB21A4C87D0048DD6B /* Theme.swift in Sources */,
 				66698C1C219A9AA20012CAF8 /* AddQRCodeVC.swift in Sources */,
 				6679121621B6529B0039E7C6 /* IconDisplayTVC.swift in Sources */,
-				66AD37C821CB6B11009C9507 /* IAPHelper.swift in Sources */,
+				66CD20FB21D4A3880098A928 /* IAPHelper.swift in Sources */,
 				66AFC6F8219BFD9B007EBCC3 /* CodeCell.swift in Sources */,
 				6697BD15219B7464004F1536 /* AddQRCodePageController.swift in Sources */,
 				6696C3BC21B666FB00717C1D /* ThemeDisplayFSPVC.swift in Sources */,

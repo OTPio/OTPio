@@ -38,6 +38,10 @@ final class ThemeRow: OptionsRow<PushSelectorCell<Theme>>, PresenterRowType, Row
                 SystemCommunicator.sharedInstance.buyThemes()
             })
             
+            alert.addButton("Restore Purchases") {
+                SystemCommunicator.sharedInstance.restorePuchase()
+            }
+            
             alert.showInfo("Extra Stuff", subTitle: fetchString(forKey: "purchase-themes"), closeButtonTitle: "No thanks")
         } else {
             super.customDidSelect()

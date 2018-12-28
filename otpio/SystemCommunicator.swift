@@ -190,6 +190,9 @@ class SystemCommunicator {
     public func hasBought() -> Bool {
         return helper.isProductPurchased("com.otpio.themes")
     }
+    public func restorePuchase() {
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
 }
 
 protocol TokenOperationsListener {

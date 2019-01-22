@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		665EDDC221E9B81700641CF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDC121E9B81700641CF6 /* AppDelegate.swift */; };
-		665EDDC421E9B81700641CF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDC321E9B81700641CF6 /* ViewController.swift */; };
-		665EDDC721E9B81700641CF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 665EDDC521E9B81700641CF6 /* Main.storyboard */; };
 		665EDDC921E9B81700641CF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 665EDDC821E9B81700641CF6 /* Assets.xcassets */; };
 		665EDDCC21E9B81700641CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 665EDDCA21E9B81700641CF6 /* LaunchScreen.storyboard */; };
+		665EDDD921E9B95D00641CF6 /* BaseUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDD821E9B95D00641CF6 /* BaseUIController.swift */; };
+		665EDDDC21E9BAA600641CF6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDDB21E9BAA600641CF6 /* Constants.swift */; };
+		665EDDDE21E9BB0800641CF6 /* ThemeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDDD21E9BB0800641CF6 /* ThemeEngine.swift */; };
+		665EDDE121E9BB4000641CF6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDE021E9BB4000641CF6 /* Theme.swift */; };
+		66F18F8121F6EBFE00E88473 /* BaseUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18F8021F6EBFE00E88473 /* BaseUILabel.swift */; };
+		66F18F8421F6EE6700E88473 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18F8321F6EE6700E88473 /* Colors.swift */; };
+		66F18FC921F700C100E88473 /* UserTokensVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18FC821F700C100E88473 /* UserTokensVC.swift */; };
+		EAABC78A103B720284A725D4 /* Pods_otpio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F651AF26F30A46B71E73F1B /* Pods_otpio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37F31EBD498713211F1D5661 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
 		665EDDBE21E9B81700641CF6 /* otpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665EDDC121E9B81700641CF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		665EDDC321E9B81700641CF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		665EDDC621E9B81700641CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		665EDDC821E9B81700641CF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		665EDDCB21E9B81700641CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		665EDDCD21E9B81700641CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		665EDDD821E9B95D00641CF6 /* BaseUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIController.swift; sourceTree = "<group>"; };
+		665EDDDB21E9BAA600641CF6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		665EDDDD21E9BB0800641CF6 /* ThemeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEngine.swift; sourceTree = "<group>"; };
+		665EDDE021E9BB4000641CF6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		66F18F8021F6EBFE00E88473 /* BaseUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUILabel.swift; sourceTree = "<group>"; };
+		66F18F8321F6EE6700E88473 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		66F18FC821F700C100E88473 /* UserTokensVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTokensVC.swift; sourceTree = "<group>"; };
+		9F651AF26F30A46B71E73F1B /* Pods_otpio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F238C6B9F9C31030B6395C9B /* Pods-otpio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.release.xcconfig"; path = "Target Support Files/Pods-otpio/Pods-otpio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAABC78A103B720284A725D4 /* Pods_otpio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				665EDDC021E9B81700641CF6 /* otpio */,
 				665EDDBF21E9B81700641CF6 /* Products */,
+				ECBC05CE37F2528BDF5B7136 /* Pods */,
+				BBF6686E29CC683257B838F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +72,83 @@
 			isa = PBXGroup;
 			children = (
 				665EDDC121E9B81700641CF6 /* AppDelegate.swift */,
-				665EDDC321E9B81700641CF6 /* ViewController.swift */,
-				665EDDC521E9B81700641CF6 /* Main.storyboard */,
+				665EDDD421E9B91100641CF6 /* UI */,
+				665EDDD321E9B82D00641CF6 /* Resources */,
+				665EDDDA21E9BA9700641CF6 /* Misc */,
+			);
+			path = otpio;
+			sourceTree = "<group>";
+		};
+		665EDDD321E9B82D00641CF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				665EDDC821E9B81700641CF6 /* Assets.xcassets */,
 				665EDDCA21E9B81700641CF6 /* LaunchScreen.storyboard */,
 				665EDDCD21E9B81700641CF6 /* Info.plist */,
 			);
-			path = otpio;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		665EDDD421E9B91100641CF6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				665EDDDF21E9BB0E00641CF6 /* Theme */,
+				665EDDD721E9B94A00641CF6 /* Bootstrap */,
+				66F18FC721F700AE00E88473 /* Tokens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		665EDDD721E9B94A00641CF6 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				665EDDD821E9B95D00641CF6 /* BaseUIController.swift */,
+				66F18F8021F6EBFE00E88473 /* BaseUILabel.swift */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		665EDDDA21E9BA9700641CF6 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				665EDDDB21E9BAA600641CF6 /* Constants.swift */,
+				66F18F8321F6EE6700E88473 /* Colors.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		665EDDDF21E9BB0E00641CF6 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				665EDDDD21E9BB0800641CF6 /* ThemeEngine.swift */,
+				665EDDE021E9BB4000641CF6 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		66F18FC721F700AE00E88473 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				66F18FC821F700C100E88473 /* UserTokensVC.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		BBF6686E29CC683257B838F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F651AF26F30A46B71E73F1B /* Pods_otpio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECBC05CE37F2528BDF5B7136 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37F31EBD498713211F1D5661 /* Pods-otpio.debug.xcconfig */,
+				F238C6B9F9C31030B6395C9B /* Pods-otpio.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 665EDDD021E9B81700641CF6 /* Build configuration list for PBXNativeTarget "otpio" */;
 			buildPhases = (
+				4FB3DFED29EEB4D3FDBE27A2 /* [CP] Check Pods Manifest.lock */,
 				665EDDBA21E9B81700641CF6 /* Sources */,
 				665EDDBB21E9B81700641CF6 /* Frameworks */,
 				665EDDBC21E9B81700641CF6 /* Resources */,
+				A33E8059B4430AE2CAF9EB8A /* [CP] Embed Pods Frameworks */,
+				66F18FC621F6F98100E88473 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -124,33 +214,106 @@
 			files = (
 				665EDDCC21E9B81700641CF6 /* LaunchScreen.storyboard in Resources */,
 				665EDDC921E9B81700641CF6 /* Assets.xcassets in Resources */,
-				665EDDC721E9B81700641CF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FB3DFED29EEB4D3FDBE27A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otpio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66F18FC621F6F98100E88473 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Assets/colors/colors.txt",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Misc/Colors.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/Assets\nswiftgen\n";
+		};
+		A33E8059B4430AE2CAF9EB8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/LibFA/LibFA.framework",
+				"${BUILT_PRODUCTS_DIR}/LibToken/LibToken.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibFA.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibToken.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		665EDDBA21E9B81700641CF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				665EDDC421E9B81700641CF6 /* ViewController.swift in Sources */,
+				665EDDD921E9B95D00641CF6 /* BaseUIController.swift in Sources */,
+				66F18FC921F700C100E88473 /* UserTokensVC.swift in Sources */,
+				665EDDDE21E9BB0800641CF6 /* ThemeEngine.swift in Sources */,
+				665EDDE121E9BB4000641CF6 /* Theme.swift in Sources */,
+				66F18F8421F6EE6700E88473 /* Colors.swift in Sources */,
 				665EDDC221E9B81700641CF6 /* AppDelegate.swift in Sources */,
+				665EDDDC21E9BAA600641CF6 /* Constants.swift in Sources */,
+				66F18F8121F6EBFE00E88473 /* BaseUILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		665EDDC521E9B81700641CF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				665EDDC621E9B81700641CF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		665EDDCA21E9B81700641CF6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,11 +443,13 @@
 		};
 		665EDDD121E9B81700641CF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F31EBD498713211F1D5661 /* Pods-otpio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = otpio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/otpio/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,17 +457,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.otpio.otpio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		665EDDD221E9B81700641CF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F238C6B9F9C31030B6395C9B /* Pods-otpio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = otpio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/otpio/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.otpio.otpio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

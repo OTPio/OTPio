@@ -1,0 +1,60 @@
+PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - LibFA (1.1.0)
+  - LibToken (1.2.0):
+    - LibFA
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
+  - Neon (0.4.0)
+  - SwiftyUserDefaults (4.0.0-alpha.1)
+
+DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/viccalexander/Chameleon`, branch `wip/swift4`)
+  - LibFA
+  - LibToken
+  - MMDrawerController
+  - Neon
+  - SwiftyUserDefaults (= 4.0.0-alpha.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MMDrawerController
+    - Neon
+    - SwiftyUserDefaults
+  https://github.com/otpio/cocoapods.git:
+    - LibFA
+    - LibToken
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :branch: wip/swift4
+    :git: https://github.com/viccalexander/Chameleon
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: db432ca1b1a3d8f83ee1f881208c0c960a325e73
+    :git: https://github.com/viccalexander/Chameleon
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  LibFA: ec429996225f68aab4b3d8bac88b43a262d78827
+  LibToken: 5fb42750e09cc6f2fb44ab55641c4ac93cca6632
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
+  SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
+
+PODFILE CHECKSUM: f8c4dd2059b5b03d4ef03fc7448f338c1164b97d
+
+COCOAPODS: 1.6.0.beta.2

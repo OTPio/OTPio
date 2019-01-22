@@ -1,0 +1,11 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework" "${PODS_CONFIGURATION_BUILD_DIR}/LibFA" "${PODS_CONFIGURATION_BUILD_DIR}/LibToken" "${PODS_CONFIGURATION_BUILD_DIR}/MMDrawerController" "${PODS_CONFIGURATION_BUILD_DIR}/Neon" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyUserDefaults"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework/ChameleonFramework.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/LibFA/LibFA.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/LibToken/LibToken.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MMDrawerController/MMDrawerController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Neon/Neon.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -framework "ChameleonFramework" -framework "CoreGraphics" -framework "LibFA" -framework "LibToken" -framework "MMDrawerController" -framework "Neon" -framework "QuartzCore" -framework "SwiftyUserDefaults" -framework "UIKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods

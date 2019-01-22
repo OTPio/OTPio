@@ -1,0 +1,8 @@
+input_dir: .
+output_dir: ../otpio/Misc
+
+colors:
+  inputs: colors/colors.txt
+  outputs:
+    templateName: swift4
+    output: Colors.swift

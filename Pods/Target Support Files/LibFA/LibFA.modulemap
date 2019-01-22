@@ -1,0 +1,6 @@
+framework module LibFA {
+  umbrella header "LibFA-umbrella.h"
+
+  export *
+  module * { export * }
+}

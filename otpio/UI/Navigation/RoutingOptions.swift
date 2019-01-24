@@ -12,13 +12,14 @@ import LibFA
 typealias MenuItem = (n: String, f: FontAwesome)
 
 enum RouterOption: CaseIterable {
-    case tokens, settings
+    case tokens, add, settings
     
     static let `default`: RouterOption = .tokens
     
     func menuItemForOption() -> MenuItem {
         switch self {
         case .tokens  : return ("My Tokens", .qrcode)
+        case .add     : return ("Add Token", .layerPlus)
         case .settings: return ("Settings", .cogs)
         }
     }
@@ -26,6 +27,7 @@ enum RouterOption: CaseIterable {
     func controllerForOption() -> BaseUIC {
         switch self {
         case .tokens  : return UserTokensVC()
+        case .add     : return AddTokenVC()
         case .settings: return BaseUIC()
         }
     }

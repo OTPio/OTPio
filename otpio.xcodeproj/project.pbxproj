@@ -23,6 +23,11 @@
 		66D3105121F99E3B0046F495 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3104D21F99E120046F495 /* Font Awesome 5 Pro-Regular-400.otf */; };
 		66D3105221F99E3E0046F495 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3104C21F99E120046F495 /* Font Awesome 5 Pro-Solid-900.otf */; };
 		66D3105821F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3105721F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		66D3105B21F9A5F70046F495 /* AddTokenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3105A21F9A5F70046F495 /* AddTokenVC.swift */; };
+		66D3105F21F9B0510046F495 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66D3105E21F9B0510046F495 /* Settings.bundle */; };
+		66D3106821F9B4300046F495 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66D3106721F9B4300046F495 /* Localizable.strings */; };
+		66D3106A21F9B6120046F495 /* CaptureQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3106921F9B6120046F495 /* CaptureQRCodeVC.swift */; };
+		66D3106C21F9C5470046F495 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3106B21F9C5470046F495 /* Extensions.swift */; };
 		66F18F8121F6EBFE00E88473 /* BaseUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18F8021F6EBFE00E88473 /* BaseUILabel.swift */; };
 		66F18F8421F6EE6700E88473 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18F8321F6EE6700E88473 /* Colors.swift */; };
 		66F18FC921F700C100E88473 /* UserTokensVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18FC821F700C100E88473 /* UserTokensVC.swift */; };
@@ -49,6 +54,11 @@
 		66D3104C21F99E120046F495 /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Solid-900.otf"; sourceTree = "<group>"; };
 		66D3104D21F99E120046F495 /* Font Awesome 5 Pro-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Regular-400.otf"; sourceTree = "<group>"; };
 		66D3105721F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		66D3105A21F9A5F70046F495 /* AddTokenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenVC.swift; sourceTree = "<group>"; };
+		66D3105E21F9B0510046F495 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		66D3106721F9B4300046F495 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		66D3106921F9B6120046F495 /* CaptureQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureQRCodeVC.swift; sourceTree = "<group>"; };
+		66D3106B21F9C5470046F495 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		66F18F8021F6EBFE00E88473 /* BaseUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUILabel.swift; sourceTree = "<group>"; };
 		66F18F8321F6EE6700E88473 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		66F18FC821F700C100E88473 /* UserTokensVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTokensVC.swift; sourceTree = "<group>"; };
@@ -104,6 +114,8 @@
 				665EDDC821E9B81700641CF6 /* Assets.xcassets */,
 				665EDDCA21E9B81700641CF6 /* LaunchScreen.storyboard */,
 				665EDDCD21E9B81700641CF6 /* Info.plist */,
+				66D3105E21F9B0510046F495 /* Settings.bundle */,
+				66D3106721F9B4300046F495 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -115,6 +127,7 @@
 				665EDDDF21E9BB0E00641CF6 /* Theme */,
 				665EDDD721E9B94A00641CF6 /* Bootstrap */,
 				66F18FC721F700AE00E88473 /* Tokens */,
+				66D3105921F9A5DB0046F495 /* AddToken */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 				66D3103C21F98BA00046F495 /* Fonts.swift */,
 				665EDDDB21E9BAA600641CF6 /* Constants.swift */,
 				66F18F8321F6EE6700E88473 /* Colors.swift */,
+				66D3106B21F9C5470046F495 /* Extensions.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -167,6 +181,15 @@
 				66D3104C21F99E120046F495 /* Font Awesome 5 Pro-Solid-900.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		66D3105921F9A5DB0046F495 /* AddToken */ = {
+			isa = PBXGroup;
+			children = (
+				66D3105A21F9A5F70046F495 /* AddTokenVC.swift */,
+				66D3106921F9B6120046F495 /* CaptureQRCodeVC.swift */,
+			);
+			path = AddToken;
 			sourceTree = "<group>";
 		};
 		66F18FC721F700AE00E88473 /* Tokens */ = {
@@ -202,7 +225,7 @@
 			buildConfigurationList = 665EDDD021E9B81700641CF6 /* Build configuration list for PBXNativeTarget "otpio" */;
 			buildPhases = (
 				4FB3DFED29EEB4D3FDBE27A2 /* [CP] Check Pods Manifest.lock */,
-				66F18FC621F6F98100E88473 /* ShellScript */,
+				66F18FC621F6F98100E88473 /* SwiftGen */,
 				665EDDBA21E9B81700641CF6 /* Sources */,
 				665EDDBB21E9B81700641CF6 /* Frameworks */,
 				665EDDBC21E9B81700641CF6 /* Resources */,
@@ -255,10 +278,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D3105F21F9B0510046F495 /* Settings.bundle in Resources */,
 				665EDDCC21E9B81700641CF6 /* LaunchScreen.storyboard in Resources */,
 				66D3105821F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				665EDDC921E9B81700641CF6 /* Assets.xcassets in Resources */,
 				66D3105021F99E380046F495 /* Font Awesome 5 Pro-Light-300.otf in Resources */,
+				66D3106821F9B4300046F495 /* Localizable.strings in Resources */,
 				66D3105121F99E3B0046F495 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
 				66D3105221F99E3E0046F495 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
 			);
@@ -289,7 +314,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66F18FC621F6F98100E88473 /* ShellScript */ = {
+		66F18FC621F6F98100E88473 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,18 +322,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Assets/colors/colors.txt",
-				"$(SRCROOT)/Assets/fonts/",
+				"$(SRCROOT)/Misc/Colors.swift",
+				"$(SRCROOT)/Misc/Fonts.swift",
 			);
+			name = SwiftGen;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Misc/Colors.swift",
-				"$(DERIVED_FILE_DIR)/Misc/Fonts.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cd $SRCROOT/Assets\nswiftgen\n";
+			showEnvVarsInLog = 0;
 		};
 		A33E8059B4430AE2CAF9EB8A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -320,22 +345,30 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/LibFA/LibFA.framework",
 				"${BUILT_PRODUCTS_DIR}/LibToken/LibToken.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
+				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/arek/arek.framework",
+				"${BUILT_PRODUCTS_DIR}/swift_qrcodejs/swift_qrcodejs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibFA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibToken.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/arek.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swift_qrcodejs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -353,11 +386,14 @@
 				665EDDD921E9B95D00641CF6 /* BaseUIController.swift in Sources */,
 				66F18FC921F700C100E88473 /* UserTokensVC.swift in Sources */,
 				66D3104421F995030046F495 /* RoutingOptions.swift in Sources */,
+				66D3106A21F9B6120046F495 /* CaptureQRCodeVC.swift in Sources */,
 				665EDDDE21E9BB0800641CF6 /* ThemeEngine.swift in Sources */,
 				665EDDE121E9BB4000641CF6 /* Theme.swift in Sources */,
+				66D3105B21F9A5F70046F495 /* AddTokenVC.swift in Sources */,
 				66F18F8421F6EE6700E88473 /* Colors.swift in Sources */,
 				665EDDC221E9B81700641CF6 /* AppDelegate.swift in Sources */,
 				665EDDDC21E9BAA600641CF6 /* Constants.swift in Sources */,
+				66D3106C21F9C5470046F495 /* Extensions.swift in Sources */,
 				66D3103D21F98BA00046F495 /* Fonts.swift in Sources */,
 				66F18F8121F6EBFE00E88473 /* BaseUILabel.swift in Sources */,
 				66D3104621F996670046F495 /* MenuController.swift in Sources */,
@@ -383,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -444,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

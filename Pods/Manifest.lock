@@ -1,7 +1,14 @@
 PODS:
+  - arek/Camera (4.0.2):
+    - arek/Core
+    - PMAlertController (= 3.5.0)
+  - arek/Core (4.0.2):
+    - PMAlertController (= 3.5.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - EFQRCode (4.5.0):
+    - swift_qrcodejs (~> 1.0.1)
   - LibFA (1.1.0)
   - LibToken (1.2.0):
     - LibFA
@@ -18,10 +25,14 @@ PODS:
   - MMDrawerController/Subclass (0.6.0):
     - MMDrawerController/Core
   - Neon (0.4.0)
+  - PMAlertController (3.5.0)
+  - swift_qrcodejs (1.0.1)
   - SwiftyUserDefaults (4.0.0-alpha.1)
 
 DEPENDENCIES:
+  - arek/Camera
   - ChameleonFramework/Swift (from `https://github.com/viccalexander/Chameleon`, branch `wip/swift4`)
+  - EFQRCode
   - LibFA
   - LibToken
   - MMDrawerController
@@ -30,8 +41,12 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - arek
+    - EFQRCode
     - MMDrawerController
     - Neon
+    - PMAlertController
+    - swift_qrcodejs
     - SwiftyUserDefaults
   https://github.com/otpio/cocoapods.git:
     - LibFA
@@ -48,13 +63,17 @@ CHECKOUT OPTIONS:
     :git: https://github.com/viccalexander/Chameleon
 
 SPEC CHECKSUMS:
+  arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  EFQRCode: 842f431e660da841f518993af8f4cbd275601d84
   LibFA: ec429996225f68aab4b3d8bac88b43a262d78827
   LibToken: 5fb42750e09cc6f2fb44ab55641c4ac93cca6632
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
+  PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
+  swift_qrcodejs: c181fe5c849d30c699546a23762d7e3dd143ab37
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
 
-PODFILE CHECKSUM: 3124560be09e654e7dcad9a933d576caa832000f
+PODFILE CHECKSUM: 2ee763eeea2b129b2c0175db22755a4ceafbc90d
 
 COCOAPODS: 1.6.0.beta.2

@@ -1,0 +1,6 @@
+framework module arek {
+  umbrella header "arek-umbrella.h"
+
+  export *
+  module * { export * }
+}

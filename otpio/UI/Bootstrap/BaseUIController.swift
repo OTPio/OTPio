@@ -8,6 +8,7 @@
 
 import UIKit
 import MMDrawerController
+import PMAlertController
 
 class BaseUIC: UIViewController {
     
@@ -47,5 +48,14 @@ class BaseUIC: UIViewController {
             return
         }
         mm_drawerController.open(.left, animated: true, completion: nil)
+    }
+    
+    func showAlert(title t: String, message m: String) {
+        let alert = PMAlertController(title: t, description: m, image: nil, style: .alert)
+        alert.addAction(PMAlertAction(title: "Ok", style: .default, action: {
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }

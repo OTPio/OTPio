@@ -15,5 +15,7 @@ target 'otpio' do
   pod 'Neon'
   pod 'MMDrawerController'
   pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
+  pod 'EFQRCode'
+  pod 'arek/Camera'
 
 end

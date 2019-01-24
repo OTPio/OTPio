@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  otpio
+
+  Created by Mason Phillips on 1/24/19.
+  Copyright © 2019 Matrix Studios. All rights reserved.
+*/
+
+/* AREK Permissions */
+"ArekCamera_initial_title"      = "Allow QR Code Scanning";
+"ArekCamera_initial_message"    = "OTP.io needs access to the camera to scan QR Codes. You can still enter details manually";
+"ArekCamera_reenable_title"     = "Allow QR Code Scanning";
+"ArekCamera_reenable_message"   = "You can enter these details manually, but it is much easier to scan a QR Code. Please re-enable!";
+"ArekCamera_allow_button_title" = "OK";
+"ArekCamera_deny_button_title"  = "Nope";

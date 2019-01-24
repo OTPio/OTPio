@@ -5,6 +5,7 @@ source 'https://github.com/cocoapods/specs.git'
 
 target 'otpio' do
   use_frameworks!
+  inhibit_all_warnings!
 
   pod 'LibFA'
   pod 'LibToken'

@@ -96,7 +96,3 @@ enum Theme: String, DefaultsSerializable {
         }
     }
 }
-
-extension DefaultsKeys {
-    static var theme: DefaultsKey = DefaultsKey<Theme>("theme", defaultValue: .nightLightDark)
-}

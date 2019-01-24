@@ -8,95 +8,95 @@
 
 /* Begin PBXBuildFile section */
 		04108AFD9F170803BFE3724EB8AA219D /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B23CB8BC989E6640A3E029934BFDC4 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0653093E87FBDE453CCD1DCA3C8CC7F3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D02F81B24909EE20639BD2FB99589 /* Extensions.swift */; };
 		06675AC28CE8D535168324F5294A9A64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5982ED63A98D3CD76E3152269B9620AC /* QuartzCore.framework */; };
+		0704FEAB0BEB5894381109E69388B296 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E76D3CFD13A7488F37B075CA36CBD68 /* FontAwesome.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		091878F380A5E22FB9278771983DB9EA /* NeonGroupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CDC3E253A900CE1702266516BCE19 /* NeonGroupable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		101EEBDCD69ED44CB8DED92A9EA27FFB /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = D52968FD2CF1404AD27783ABD701C8EA /* MMDrawerBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10570F50E7A022E58345B2E87379FC47 /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 098606846CA0BA15347CE3DFC88E75E2 /* ChameleonFramework-dummy.m */; };
 		113E848640F4D289847E54C13D974AA6 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 58419CD32EECBE9E485546842A189D2D /* MMDrawerVisualState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11AA6B2A278C11C6B65D0EBDCCEA6915 /* LibFA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7793553A3A1F38F090257EEA263D9B /* LibFA.framework */; };
-		146B6B1F2B37BAE094C2EDFFBC446B42 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9784D2356B307D5AB05CD85425765 /* Extensions.swift */; };
-		1E3396FD5013697E0DB6D7913907ADEE /* Neon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A3F8869ED977146A94E27BE40FB26 /* Neon.swift */; };
+		120BBD2599F92BFF3DC91B80E0D1C9E0 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FD72B789FE779D78F79EFC53DD183E /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1B8ED9F566259AF0879383CCEF97618F /* LibFA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 001620137FF4613A246F03007940961E /* LibFA-dummy.m */; };
 		1ECEFE1E8AC36365B15F86E3F67268DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62036B80A2FE08C7F93C3462C8C36C7 /* Foundation.framework */; };
 		1F9C4421B58330CF33FB39C4B6D069DF /* LibFA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04544688CC7253297F9D95C70F4706F7 /* LibFA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25FB0E8A4A63BDB5F7C6181B13936240 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1162E7F515505310547EAB914E6CED /* ChameleonConstants.m */; };
-		26AFBD1E074D6BEAE5C268893ABA6352 /* NeonGroupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CDC3E253A900CE1702266516BCE19 /* NeonGroupable.swift */; };
+		23756642CD61DE5C99E871C299458506 /* libtoken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329113C4F963910C7C6D5204CA145B6 /* libtoken.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2503B9FF3786F6826D32DEB1A8C9595F /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E691DAA8B9EE79070550B2A13C6168 /* NSArray+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		27626C2C5904789B0C8E40E99ACA7A07 /* Neon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6782E71249166200679AA9E498A149F /* Neon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		276892DF04E0F27F4A2EF38BC852B246 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C8C90214649A536E88F88397B7DF42 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A0A97C72C990D2155DF03AC8AA6B8AB /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D5C9C53E4CA4196A84FD4CB190C6AE /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A58AD66ED28E496566FD26A2C491999 /* DefaultsSerializable+BuiltIns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA71546FA1987B6C4B9EE7B9D6757A6 /* DefaultsSerializable+BuiltIns.swift */; };
 		2AFDAA3340C7ABA4499F143DB6A9CF82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4F2B5C116F1D1812B9E5D681CA57E5 /* UIKit.framework */; };
+		2B8EA51CBB336BAF2559245831CB9C3A /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B666F34F6331DF5039EC5AA4550D90DC /* UIColor+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2CC02D4CD23EDD0EEF79D5B6B72AC5D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62036B80A2FE08C7F93C3462C8C36C7 /* Foundation.framework */; };
+		2F25861A4319F42DFE69F4C06A211C45 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9789957A5522860A2B8FBDA04859F /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3271C01ADFEB74E8BC01498626FA8FF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3336278E0718B2A88FFB6E711C3DF4D8 /* CoreGraphics.framework */; };
-		35DAB4A6E1DDC1D68FCE669FB307B8EC /* DefaultsSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28F850ADE4B58D872066A6379D5097 /* DefaultsSerializable.swift */; };
-		38363C1761189CC08BC80B29E214B751 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7627085ED1CB2C7DD3AE1959DF2E1A /* DefaultsKeys.swift */; };
-		3BE6B55235983422FF64662F1A6C2E3F /* LibToken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 436D85105D6AC1160E0C16E84E91F9D6 /* LibToken-dummy.m */; };
+		32EFCAEA3205EA685C50022B62F0C796 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A2D0182CB12A80B37706BF905374F /* Errors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3CC7EEAA4241BFF54BA79EE6E4958486 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F00037CBB7ECC962C63B4EAC6989633A /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CDB39E5E65D41BC943E38BF0F0F3BA0 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = C76D3886D34C67F8155A52529873C8E3 /* UIImage+ChameleonPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4363699449110B3C00BB8DEB599ECDC8 /* ChameleonFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB7FCFDF4B987BB5289C36FE9767026A /* ChameleonFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		453FB36E5FD879E21B61903632F579B9 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3786CCD84C8B50E749533E5225E7090E /* MMDrawerController-dummy.m */; };
+		437039B668697D5EAFF3B2A622F7842F /* FA+ImageRep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605FF6673444496124BD11A4363C0AC /* FA+ImageRep.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		46EA26A34F739428BC4CA19085DD75DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5982ED63A98D3CD76E3152269B9620AC /* QuartzCore.framework */; };
 		47A93ED912575A29583FF2F22030FD2B /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A52DDD4F545068F692A8EB9418F07A18 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4996EF842C742C275B4BD72DF11FD10A /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA282787998794C5D238694042CF628 /* UIView+ChameleonPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4CACCFCEC9C21080F7F0EB4A2B426F3B /* LibToken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DA87444E1F5079F8661D6471C034E /* LibToken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		510DBB5859C9F94E8ACB5B2B048F212F /* Defaults+Subscripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BAE90659D69291206F45EF48198EC /* Defaults+Subscripts.swift */; };
+		4D5A8A73A45C0D377BBA278F0D9F1B8B /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DE5E1ED8159E7B46FF58E7328A956D /* Algorithms.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		51CCFC1926373769A3B0ED7521AE68C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4F2B5C116F1D1812B9E5D681CA57E5 /* UIKit.framework */; };
-		5354A57F40250C5923036E9213767267 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 728D6A6BE28D5541D4B6998C0FAD0195 /* UILabel+Chameleon.m */; };
-		551320C65A604DC354E5E9772A486249 /* NeonAlignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D43744EDB11A520BF5A174BA2F3D77 /* NeonAlignable.swift */; };
-		556081D0C78F1DFB9465B259F4B4BE37 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A2D0182CB12A80B37706BF905374F /* Errors.swift */; };
-		5C07A8E1608D2C5193D9059911B68094 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = DA412B8CFE1E9CCE60DDD7413F40C169 /* UIAppearance+Swift.m */; };
-		5C3CB45C56AB979C6D0764051942DECC /* NeonAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32994E52F2E57164AABE6B6B2CB0E2 /* NeonAnchorable.swift */; };
-		5DE6E17FE4E3E7D68BAD9260ADEC9593 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA282787998794C5D238694042CF628 /* UIView+ChameleonPrivate.m */; };
+		533B17706AFC03F65CE17D6C9E4C5297 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16C96C194E6169DF890199CA9FD28C /* Base32.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		57F9D60494E23E3D688CAAD02EEED08E /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5CD80363D32E0A3178CE4F1D56839 /* Defaults.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5898845DC65548BDA3FA0CEBE762534C /* FA+ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34143B7856E02EC09E67D0C17BB15F8 /* FA+ImageView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5F0C64D2068371BBA4C7542A47707464 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44EBEA7CA0CCA5ACE31C5FDBC479EFB0 /* Font Awesome 5 Pro-Solid-900.otf */; };
 		6427E658AF513D7065D19415690F2DF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62036B80A2FE08C7F93C3462C8C36C7 /* Foundation.framework */; };
+		643328EF3B3F87258A1AFDA7137EB1C7 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C22DB55A69903EC9C607CF628DDF39 /* UIViewController+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		649565F0B33703A32BCF4A5D30D1981B /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 88007A8DF3FC435DF270125E9E88B4D4 /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6774BB28D674F211CD3C3254F8D4ADA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62036B80A2FE08C7F93C3462C8C36C7 /* Foundation.framework */; };
 		6894443AB041745665782693BA3AB54A /* LibFA.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A65C3A263EE3F629374242745FA6024 /* LibFA.bundle */; };
-		69DFAD76CCC827ABF37429383CADC016 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16C96C194E6169DF890199CA9FD28C /* Base32.swift */; };
-		6C66906D724CF49FF3FB4426E334D430 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FD72B789FE779D78F79EFC53DD183E /* MMDrawerController.m */; };
-		6CE2CECEF361FB4F7E077E0371021936 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5CD80363D32E0A3178CE4F1D56839 /* Defaults.swift */; };
+		6B4C9FFE398E7611A812ACCB0D42A859 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D02F81B24909EE20639BD2FB99589 /* Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6D31B46EAFC7DE3E9E03978B58F248E0 /* NeonAlignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D43744EDB11A520BF5A174BA2F3D77 /* NeonAlignable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6E4A465D989C2BEFEBC075C85D808B1B /* Neon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A3F8869ED977146A94E27BE40FB26 /* Neon.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		705C29A29B8B625C4C1244F8498B95AD /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84A7BC3F3795777A10D03F721D711A6E /* Font Awesome 5 Pro-Regular-400.otf */; };
-		729AAB9DBD8BBAC5364678DB5E327380 /* libtoken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329113C4F963910C7C6D5204CA145B6 /* libtoken.swift */; };
+		728A8B81DBA2DD41A0E24EBB7528C0DF /* FuzzyMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7264E8122A429CC1B32359E065802 /* FuzzyMatching.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7321E577BD90CFB610EE277B21D5EB44 /* Pods-otpio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC30AD4B6DCADF7E35F9C9D0C26E498 /* Pods-otpio-dummy.m */; };
-		74ED9FC65A400648D16C1FD9247FB27E /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B666F34F6331DF5039EC5AA4550D90DC /* UIColor+Chameleon.m */; };
-		7AF948E49940BFA8766641B98505E5A5 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A441615E56610BCF221B8777EB3A8B /* UIViewController+MMDrawerController.m */; };
+		74C177523FBA8C776B073CE09ADE5BEA /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 098606846CA0BA15347CE3DFC88E75E2 /* ChameleonFramework-dummy.m */; };
+		75F229C1D78FE0962CB487D3472CD288 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3786CCD84C8B50E749533E5225E7090E /* MMDrawerController-dummy.m */; };
+		7792E3F4D5B300BFFC286E699A3901E4 /* Neon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B12BA25DB87541D7420BC52C07DBC937 /* Neon-dummy.m */; };
 		832CB2FF63FEFF279FE28252400C334B /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3121D00B224EBBDF6883DEE9FA0899D /* Font Awesome 5 Brands-Regular-400.otf */; };
 		846C3650CC9EDC269D0DAFC7D85AD9DD /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E50A9FE62CA2984E024099BB7B2BEB /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BE8E49FF96D45C33ABF40360A08F83C /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7E7BB196929388DC48558C80E7B49C /* Chameleon_.m */; };
-		8F14F78B1E3FCB6E51BC78702C945F0D /* LibFA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 001620137FF4613A246F03007940961E /* LibFA-dummy.m */; };
-		9011CF137FE229A2FB81DB93D8264E22 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7D78BC94566DFC2DC4D87EAFF89D5 /* MMDrawerBarButtonItem.m */; };
+		8D1E8868296040AECE688334BC3CA8D4 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A441615E56610BCF221B8777EB3A8B /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8F52384748656C67A4C606C92916C9DE /* Defaults+Subscripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BAE90659D69291206F45EF48198EC /* Defaults+Subscripts.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8FC64E47A51DD7D6D3C9ACFD54F31469 /* NeonAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32994E52F2E57164AABE6B6B2CB0E2 /* NeonAnchorable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9070275F5C4B983608C3BD54FCB645D1 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F685E7F14AC03556ED8843D506B6D /* OptionalType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9111F78267F03EAB7D60BBE4706E4409 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = B5BED884B2189BA0959B18DD26A13EBC /* MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94344C29B389FDAE83233E42BF358175 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7627085ED1CB2C7DD3AE1959DF2E1A /* DefaultsKeys.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		94EAFC016A2709FE74D9A5ADC295DCC2 /* LibToken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 436D85105D6AC1160E0C16E84E91F9D6 /* LibToken-dummy.m */; };
 		95576D47E8F5696BD3E3D781F66B88E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62036B80A2FE08C7F93C3462C8C36C7 /* Foundation.framework */; };
-		95DE1CE06439FEE759501298C0436E4D /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D7273456D3B80693A0D44036E518691E /* UIButton+Chameleon.m */; };
 		984302BD2C4F8C225FDC3EE420BE416B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62036B80A2FE08C7F93C3462C8C36C7 /* Foundation.framework */; };
-		9E9DB644D0AAC35A33C068400E84ECBF /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = C76D3886D34C67F8155A52529873C8E3 /* UIImage+ChameleonPrivate.m */; };
-		9FBC49AF0619AE065C725783FBC8D4DE /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9789957A5522860A2B8FBDA04859F /* MMDrawerVisualState.m */; };
+		9C7743E720AEC53B21AE79DCAF701746 /* SwiftyUserDefaults-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F74F81B1F911E6FD2B426EAD7E205 /* SwiftyUserDefaults-dummy.m */; };
 		A00C64F2FAEF1AEF193A06A852F7519C /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 076E5939CA5197A6658947C192F822D1 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A286B93362FD651FC2BA650E3CFD1094 /* NeonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379CB485657B3F03023739995F167F24 /* NeonExtensions.swift */; };
+		A161FF06B36B49A0946CA944F0E779C4 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = DA412B8CFE1E9CCE60DDD7413F40C169 /* UIAppearance+Swift.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A36C06A28CDE0AED55995E7998B293D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62036B80A2FE08C7F93C3462C8C36C7 /* Foundation.framework */; };
-		AA23FF822AC1CFC7FC07F8D9C882813B /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D27D733208BEF466F4BE2C341926C85C /* UINavigationController+Chameleon.m */; };
+		A64C4819C07DFB5ECA4DF3BA2D430947 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1162E7F515505310547EAB914E6CED /* ChameleonConstants.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ABA7E91E616F446AE13FAC9050B55881 /* NeonFrameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E47FDEE1B637362E48BE1E62C73BC8 /* NeonFrameable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AC89BDBF1B01A09F8F40F4278B3D8188 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A71701F296D27C52605F8DD82F3271E /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE67852A9393729E6306673907C945B1 /* MMDrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63F393E48291DB5A027B7636983B8318 /* MMDrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B02260FB437A7E63B5BAEE54D97E35A9 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E691DAA8B9EE79070550B2A13C6168 /* NSArray+Chameleon.m */; };
-		B02695BE7D2AF06A505589C64AED9818 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DE5E1ED8159E7B46FF58E7328A956D /* Algorithms.swift */; };
 		B2259DE2D05014CA92AF2AFF146ACDA1 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D9B0119018B959F726A4224B06B4D2B /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7BFD960B8255DA214E478BC5193EB5D /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E76D3CFD13A7488F37B075CA36CBD68 /* FontAwesome.swift */; };
+		B2BFF7C95754FF19D51BB3CDF48C0200 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D27D733208BEF466F4BE2C341926C85C /* UINavigationController+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B84536EB9A282A3161E70A3B38E22601 /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C316C388C6CFAB57E75CA623F9718DB /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3BE953F673B5912BF4026271FC8564 /* FontAwesomeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C63BB4488A70D14B4FD19B2C1E5BF /* FontAwesomeIcons.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BE5C415A6E5AD3CB99BA91F9561C9DA7 /* NeonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379CB485657B3F03023739995F167F24 /* NeonExtensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BE81BF1D8A6FA485AA575DBE296A7F3F /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 32DE428F2527AF13517AF6AF4E5CB682 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6635DBAB1BBE091C30AA9C69A4E3A90 /* FontAwesomeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C63BB4488A70D14B4FD19B2C1E5BF /* FontAwesomeIcons.swift */; };
-		CF0C1E295B8DC00BCB39851171B6BD50 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FC505049B243320B863F8A5BBB7247 /* UIColor+ChameleonPrivate.m */; };
+		C147E45702CEE480754DAE097BE96C5C /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7E7BB196929388DC48558C80E7B49C /* Chameleon_.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C509C77FAEA8DE78BB20CC0B2B5BD4DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9784D2356B307D5AB05CD85425765 /* Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CD68A3C6DD01C50C394F18A86878923E /* DefaultsSerializable+BuiltIns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA71546FA1987B6C4B9EE7B9D6757A6 /* DefaultsSerializable+BuiltIns.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CDFCB8B49F6E38C2342F93FFF2FB9513 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D7273456D3B80693A0D44036E518691E /* UIButton+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D2FC19FA554EA1DF28116B8D98B11ECB /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 89CE2B3E149704F3DD9379F3CF7B4AD0 /* MMDrawerController+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4BB1BE93388CE6D1B9E30A6E6C1A79A /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC5C7F769FBD84F8CECD1445BE239AA4 /* UIViewController+MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4EBFFD4220ADF1964E17F53621EEEB1 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C22DB55A69903EC9C607CF628DDF39 /* UIViewController+Chameleon.m */; };
-		D570C340657D875F2AF4D7AB78257A86 /* FA+ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34143B7856E02EC09E67D0C17BB15F8 /* FA+ImageView.swift */; };
+		DAA6DD8FF6E8D5C8B4941C255FB5DD59 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 728D6A6BE28D5541D4B6998C0FAD0195 /* UILabel+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DBE5031E6CCA1C62A2203F57B96C545F /* Pods-otpio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 226E3993A096082B3803FFC4FBEF526B /* Pods-otpio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCC572679707108622D610F9CBC1F476 /* FuzzyMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7264E8122A429CC1B32359E065802 /* FuzzyMatching.swift */; };
 		DE1388ABE89EB9B3FD648BB25689B689 /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = F0469068B957B109BA794FAFC77F2DA3 /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4465F0C05B4A08F3913D5C9497D0572 /* ChameleonShorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A504FC27ECB76D9B99DA5E093F6F7D4 /* ChameleonShorthand.swift */; };
-		E99F447129D4A8EB143B542BFB3A4BEF /* Neon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B12BA25DB87541D7420BC52C07DBC937 /* Neon-dummy.m */; };
-		F04FB0B4B6B96C6343CAD03F1BF57E52 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F685E7F14AC03556ED8843D506B6D /* OptionalType.swift */; };
+		DE87CA98323D5EA8CD9002AD269BE1C1 /* DefaultsSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28F850ADE4B58D872066A6379D5097 /* DefaultsSerializable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E4A11734EE2B1DE834DDCF13780F15EE /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7D78BC94566DFC2DC4D87EAFF89D5 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EAACB7A08F37B764AD40584358C58004 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FC505049B243320B863F8A5BBB7247 /* UIColor+ChameleonPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F0FAC843FA8F926450E742C33A126927 /* SwiftyUserDefaults-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF04B858B14CA46A6A49FB125BD4D2EB /* SwiftyUserDefaults-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3687F197138700649E557D5F9EF6FD8 /* NeonFrameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E47FDEE1B637362E48BE1E62C73BC8 /* NeonFrameable.swift */; };
+		F3E5BE61AE39E55D18290E435B417F22 /* ChameleonShorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A504FC27ECB76D9B99DA5E093F6F7D4 /* ChameleonShorthand.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F497D1CFC5804A3299EE3F5CCF4EA56C /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FD12D16147EC4D1EACF8CD7A447511 /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F638AF80D634244F9C2E9314C7354A83 /* FA+ImageRep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605FF6673444496124BD11A4363C0AC /* FA+ImageRep.swift */; };
-		F724DD2E4B720D5EE82317DB10208F76 /* SwiftyUserDefaults-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F74F81B1F911E6FD2B426EAD7E205 /* SwiftyUserDefaults-dummy.m */; };
 		FED73668AC7DCE22C74924256D771408 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F1759D29E6D8BB8E7EEDA0FC4944BA /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF388042D97F88B23EFC0507D5719130 /* Font Awesome 5 Pro-Light-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1D4A734E5D1DB4F73670F2BFBEEDFE7 /* Font Awesome 5 Pro-Light-300.otf */; };
 /* End PBXBuildFile section */
@@ -831,7 +831,7 @@
 			buildConfigurationList = F486DDF22D53870E3E99C7B0BA3853E0 /* Build configuration list for PBXNativeTarget "SwiftyUserDefaults" */;
 			buildPhases = (
 				E55C1AFD106D5F13323262E0CFB281B8 /* Headers */,
-				16042B21722A9915D198659698DC577E /* Sources */,
+				A20A757114AC4B140EFEB80C25025B17 /* Sources */,
 				FC0EEA8B509914D5BEB2E3121402E470 /* Frameworks */,
 				44EC662D8E973EFF9F28860EEA90B494 /* Resources */,
 			);
@@ -849,7 +849,7 @@
 			buildConfigurationList = A4EF71FAEB8FBE24DD603B06669D8DC5 /* Build configuration list for PBXNativeTarget "ChameleonFramework" */;
 			buildPhases = (
 				9477E1C247F389CAD234C8ACC63588D0 /* Headers */,
-				34D2C682C5D6C040E2550F15F8430A2B /* Sources */,
+				CC3CA2893FBC1C3D914225F66CE3AE1F /* Sources */,
 				B6E0266A1CDD0DFB1A50CCAAE1E2F10B /* Frameworks */,
 				868287D51D90630C4191525BC65F2635 /* Resources */,
 			);
@@ -867,7 +867,7 @@
 			buildConfigurationList = 55B96BEC0C80E735CA0A8F6A7FE3A43B /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
 			buildPhases = (
 				B2C07967BFB8F304D797C0B14FC629E2 /* Headers */,
-				82297D442A8A176D7916D8E8BFA1E2F7 /* Sources */,
+				E2E38C12C3807853EBB72117257BD903 /* Sources */,
 				E3A33707D190495C8C9AF7C2A005EA67 /* Frameworks */,
 				075FB1D14D1BCCF36B2085C3BD791978 /* Resources */,
 			);
@@ -885,7 +885,7 @@
 			buildConfigurationList = AE6C2622DAA1AF717AC6699471345632 /* Build configuration list for PBXNativeTarget "Neon" */;
 			buildPhases = (
 				3C3A8E4BE345CB382A63DFB87F28E23A /* Headers */,
-				0D19B5389EB001D083DD72AC50BCF405 /* Sources */,
+				90CE05CC897D1EA1E2F16717522E0AA0 /* Sources */,
 				C62864E9B7872E16E2520B2F7312EA0C /* Frameworks */,
 				170920F24397C1A3C16E28314BE1D49E /* Resources */,
 			);
@@ -903,7 +903,7 @@
 			buildConfigurationList = B174FB4840FE2C423980CAB607EF75C6 /* Build configuration list for PBXNativeTarget "LibFA" */;
 			buildPhases = (
 				1310849390269D875F7A395A8163E1D0 /* Headers */,
-				A03D9E9C2B8E466B25CFD9F4E45C1C97 /* Sources */,
+				7E19DA639ED7D404C0C032E0BA90ED2F /* Sources */,
 				D8796D11EA2CB3D1E754E64D424D8685 /* Frameworks */,
 				7C4EEE0ADB30CAD1EF08DD74999F03C1 /* Resources */,
 			);
@@ -922,7 +922,7 @@
 			buildConfigurationList = F2522F982FC0BA25F672E03BD85CE31A /* Build configuration list for PBXNativeTarget "LibToken" */;
 			buildPhases = (
 				4A6665C541BD2BDA178E5A1042A6B249 /* Headers */,
-				60EACB09F75341CE33D459AB5FECE867 /* Sources */,
+				6EF885BB35EC72312B3CC9C48D10D27A /* Sources */,
 				C06CCE2E3270F1A62B6BD069A0C1741F /* Frameworks */,
 				58D3E147BFA32DD8EEF92C0C4FF99C96 /* Resources */,
 			);
@@ -1034,34 +1034,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0D19B5389EB001D083DD72AC50BCF405 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E99F447129D4A8EB143B542BFB3A4BEF /* Neon-dummy.m in Sources */,
-				1E3396FD5013697E0DB6D7913907ADEE /* Neon.swift in Sources */,
-				551320C65A604DC354E5E9772A486249 /* NeonAlignable.swift in Sources */,
-				5C3CB45C56AB979C6D0764051942DECC /* NeonAnchorable.swift in Sources */,
-				A286B93362FD651FC2BA650E3CFD1094 /* NeonExtensions.swift in Sources */,
-				F3687F197138700649E557D5F9EF6FD8 /* NeonFrameable.swift in Sources */,
-				26AFBD1E074D6BEAE5C268893ABA6352 /* NeonGroupable.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16042B21722A9915D198659698DC577E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				510DBB5859C9F94E8ACB5B2B048F212F /* Defaults+Subscripts.swift in Sources */,
-				6CE2CECEF361FB4F7E077E0371021936 /* Defaults.swift in Sources */,
-				38363C1761189CC08BC80B29E214B751 /* DefaultsKeys.swift in Sources */,
-				2A58AD66ED28E496566FD26A2C491999 /* DefaultsSerializable+BuiltIns.swift in Sources */,
-				35DAB4A6E1DDC1D68FCE669FB307B8EC /* DefaultsSerializable.swift in Sources */,
-				F04FB0B4B6B96C6343CAD03F1BF57E52 /* OptionalType.swift in Sources */,
-				F724DD2E4B720D5EE82317DB10208F76 /* SwiftyUserDefaults-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2CB6C14C54F635B13BB83A1998D041AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1069,63 +1041,79 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34D2C682C5D6C040E2550F15F8430A2B /* Sources */ = {
+		6EF885BB35EC72312B3CC9C48D10D27A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BE8E49FF96D45C33ABF40360A08F83C /* Chameleon_.m in Sources */,
-				25FB0E8A4A63BDB5F7C6181B13936240 /* ChameleonConstants.m in Sources */,
-				10570F50E7A022E58345B2E87379FC47 /* ChameleonFramework-dummy.m in Sources */,
-				E4465F0C05B4A08F3913D5C9497D0572 /* ChameleonShorthand.swift in Sources */,
-				B02260FB437A7E63B5BAEE54D97E35A9 /* NSArray+Chameleon.m in Sources */,
-				5C07A8E1608D2C5193D9059911B68094 /* UIAppearance+Swift.m in Sources */,
-				95DE1CE06439FEE759501298C0436E4D /* UIButton+Chameleon.m in Sources */,
-				74ED9FC65A400648D16C1FD9247FB27E /* UIColor+Chameleon.m in Sources */,
-				CF0C1E295B8DC00BCB39851171B6BD50 /* UIColor+ChameleonPrivate.m in Sources */,
-				9E9DB644D0AAC35A33C068400E84ECBF /* UIImage+ChameleonPrivate.m in Sources */,
-				5354A57F40250C5923036E9213767267 /* UILabel+Chameleon.m in Sources */,
-				AA23FF822AC1CFC7FC07F8D9C882813B /* UINavigationController+Chameleon.m in Sources */,
-				5DE6E17FE4E3E7D68BAD9260ADEC9593 /* UIView+ChameleonPrivate.m in Sources */,
-				D4EBFFD4220ADF1964E17F53621EEEB1 /* UIViewController+Chameleon.m in Sources */,
+				4D5A8A73A45C0D377BBA278F0D9F1B8B /* Algorithms.swift in Sources */,
+				533B17706AFC03F65CE17D6C9E4C5297 /* Base32.swift in Sources */,
+				32EFCAEA3205EA685C50022B62F0C796 /* Errors.swift in Sources */,
+				6B4C9FFE398E7611A812ACCB0D42A859 /* Extensions.swift in Sources */,
+				94EAFC016A2709FE74D9A5ADC295DCC2 /* LibToken-dummy.m in Sources */,
+				23756642CD61DE5C99E871C299458506 /* libtoken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60EACB09F75341CE33D459AB5FECE867 /* Sources */ = {
+		7E19DA639ED7D404C0C032E0BA90ED2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B02695BE7D2AF06A505589C64AED9818 /* Algorithms.swift in Sources */,
-				69DFAD76CCC827ABF37429383CADC016 /* Base32.swift in Sources */,
-				556081D0C78F1DFB9465B259F4B4BE37 /* Errors.swift in Sources */,
-				0653093E87FBDE453CCD1DCA3C8CC7F3 /* Extensions.swift in Sources */,
-				3BE6B55235983422FF64662F1A6C2E3F /* LibToken-dummy.m in Sources */,
-				729AAB9DBD8BBAC5364678DB5E327380 /* libtoken.swift in Sources */,
+				C509C77FAEA8DE78BB20CC0B2B5BD4DA /* Extensions.swift in Sources */,
+				437039B668697D5EAFF3B2A622F7842F /* FA+ImageRep.swift in Sources */,
+				5898845DC65548BDA3FA0CEBE762534C /* FA+ImageView.swift in Sources */,
+				0704FEAB0BEB5894381109E69388B296 /* FontAwesome.swift in Sources */,
+				BB3BE953F673B5912BF4026271FC8564 /* FontAwesomeIcons.swift in Sources */,
+				728A8B81DBA2DD41A0E24EBB7528C0DF /* FuzzyMatching.swift in Sources */,
+				1B8ED9F566259AF0879383CCEF97618F /* LibFA-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82297D442A8A176D7916D8E8BFA1E2F7 /* Sources */ = {
+		90CE05CC897D1EA1E2F16717522E0AA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9011CF137FE229A2FB81DB93D8264E22 /* MMDrawerBarButtonItem.m in Sources */,
-				453FB36E5FD879E21B61903632F579B9 /* MMDrawerController-dummy.m in Sources */,
-				6C66906D724CF49FF3FB4426E334D430 /* MMDrawerController.m in Sources */,
-				9FBC49AF0619AE065C725783FBC8D4DE /* MMDrawerVisualState.m in Sources */,
-				7AF948E49940BFA8766641B98505E5A5 /* UIViewController+MMDrawerController.m in Sources */,
+				7792E3F4D5B300BFFC286E699A3901E4 /* Neon-dummy.m in Sources */,
+				6E4A465D989C2BEFEBC075C85D808B1B /* Neon.swift in Sources */,
+				6D31B46EAFC7DE3E9E03978B58F248E0 /* NeonAlignable.swift in Sources */,
+				8FC64E47A51DD7D6D3C9ACFD54F31469 /* NeonAnchorable.swift in Sources */,
+				BE5C415A6E5AD3CB99BA91F9561C9DA7 /* NeonExtensions.swift in Sources */,
+				ABA7E91E616F446AE13FAC9050B55881 /* NeonFrameable.swift in Sources */,
+				091878F380A5E22FB9278771983DB9EA /* NeonGroupable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A03D9E9C2B8E466B25CFD9F4E45C1C97 /* Sources */ = {
+		A20A757114AC4B140EFEB80C25025B17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146B6B1F2B37BAE094C2EDFFBC446B42 /* Extensions.swift in Sources */,
-				F638AF80D634244F9C2E9314C7354A83 /* FA+ImageRep.swift in Sources */,
-				D570C340657D875F2AF4D7AB78257A86 /* FA+ImageView.swift in Sources */,
-				B7BFD960B8255DA214E478BC5193EB5D /* FontAwesome.swift in Sources */,
-				C6635DBAB1BBE091C30AA9C69A4E3A90 /* FontAwesomeIcons.swift in Sources */,
-				DCC572679707108622D610F9CBC1F476 /* FuzzyMatching.swift in Sources */,
-				8F14F78B1E3FCB6E51BC78702C945F0D /* LibFA-dummy.m in Sources */,
+				8F52384748656C67A4C606C92916C9DE /* Defaults+Subscripts.swift in Sources */,
+				57F9D60494E23E3D688CAAD02EEED08E /* Defaults.swift in Sources */,
+				94344C29B389FDAE83233E42BF358175 /* DefaultsKeys.swift in Sources */,
+				CD68A3C6DD01C50C394F18A86878923E /* DefaultsSerializable+BuiltIns.swift in Sources */,
+				DE87CA98323D5EA8CD9002AD269BE1C1 /* DefaultsSerializable.swift in Sources */,
+				9070275F5C4B983608C3BD54FCB645D1 /* OptionalType.swift in Sources */,
+				9C7743E720AEC53B21AE79DCAF701746 /* SwiftyUserDefaults-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3CA2893FBC1C3D914225F66CE3AE1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C147E45702CEE480754DAE097BE96C5C /* Chameleon_.m in Sources */,
+				A64C4819C07DFB5ECA4DF3BA2D430947 /* ChameleonConstants.m in Sources */,
+				74C177523FBA8C776B073CE09ADE5BEA /* ChameleonFramework-dummy.m in Sources */,
+				F3E5BE61AE39E55D18290E435B417F22 /* ChameleonShorthand.swift in Sources */,
+				2503B9FF3786F6826D32DEB1A8C9595F /* NSArray+Chameleon.m in Sources */,
+				A161FF06B36B49A0946CA944F0E779C4 /* UIAppearance+Swift.m in Sources */,
+				CDFCB8B49F6E38C2342F93FFF2FB9513 /* UIButton+Chameleon.m in Sources */,
+				2B8EA51CBB336BAF2559245831CB9C3A /* UIColor+Chameleon.m in Sources */,
+				EAACB7A08F37B764AD40584358C58004 /* UIColor+ChameleonPrivate.m in Sources */,
+				3CDB39E5E65D41BC943E38BF0F0F3BA0 /* UIImage+ChameleonPrivate.m in Sources */,
+				DAA6DD8FF6E8D5C8B4941C255FB5DD59 /* UILabel+Chameleon.m in Sources */,
+				B2BFF7C95754FF19D51BB3CDF48C0200 /* UINavigationController+Chameleon.m in Sources */,
+				4996EF842C742C275B4BD72DF11FD10A /* UIView+ChameleonPrivate.m in Sources */,
+				643328EF3B3F87258A1AFDA7137EB1C7 /* UIViewController+Chameleon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1134,6 +1122,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7321E577BD90CFB610EE277B21D5EB44 /* Pods-otpio-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E38C12C3807853EBB72117257BD903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4A11734EE2B1DE834DDCF13780F15EE /* MMDrawerBarButtonItem.m in Sources */,
+				75F229C1D78FE0962CB487D3472CD288 /* MMDrawerController-dummy.m in Sources */,
+				120BBD2599F92BFF3DC91B80E0D1C9E0 /* MMDrawerController.m in Sources */,
+				2F25861A4319F42DFE69F4C06A211C45 /* MMDrawerVisualState.m in Sources */,
+				8D1E8868296040AECE688334BC3CA8D4 /* UIViewController+MMDrawerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

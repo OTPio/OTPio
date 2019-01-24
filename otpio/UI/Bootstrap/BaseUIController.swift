@@ -15,11 +15,21 @@ class BaseUIC: UIViewController {
         return MMDrawerBarButtonItem(target: self, action: #selector(BaseUIC.openMenu))
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         NotificationCenter.default.addObserver(self, selector: #selector(BaseUIC.theme(with:)), name: .themeDidChange, object: ThemeEngine.self)
         theme(with: ThemeEngine.sharedInstance.currentTheme)
         
+        setNeedsStatusBarAppearanceUpdate()
         navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
 
     @objc func theme(with t: Any) {

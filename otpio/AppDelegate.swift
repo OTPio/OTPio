@@ -12,15 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let router: Router = Router.sharedInstance
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let controller = UserTokensVC()
-        let nav = UINavigationController(rootViewController: controller)
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = nav
+        window?.rootViewController = router.menuController
         
         window?.makeKeyAndVisible()
         

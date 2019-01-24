@@ -9,10 +9,16 @@
 import Foundation
 import SwiftyUserDefaults
 
+struct Constants {
+    enum CellIdentifiers: String {
+        case menu = "menuCell"
+    }
+}
+
 extension Notification.Name {
     static var themeDidChange = Notification.Name("themeDidChange")
 }
 
 extension DefaultsKeys {
-//    static var currentTheme: 
+    static var theme: DefaultsKey = DefaultsKey<Theme>("theme", defaultValue: .nightLightDark)
 }

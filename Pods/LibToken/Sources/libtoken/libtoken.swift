@@ -54,7 +54,7 @@ public class Token: CustomStringConvertible, Equatable {
         do {
             let components = URLComponents(url: u, resolvingAgainstBaseURL: false)
             
-//            guard components?.path == "otpauth" else { throw Deserialization.pathInvalid }
+            //            guard components?.path == "otpauth" else { throw Deserialization.pathInvalid }
             
             guard let query = components?.queryItems else { throw Deserialization.queryItemsNotFound }
             
@@ -62,7 +62,7 @@ public class Token: CustomStringConvertible, Equatable {
             guard let first = secretString.first else { throw Deserialization.secretNotFound }
             guard let secret = first.value else { throw Deserialization.secretNotFound }
             let secretData = try secret.decodeBase32()
-
+            
             
             let issuerString = query.filter { $0.name == "issuer" }
             guard let issuer = issuerString.first?.value else { throw Deserialization.issuerNotFound }
@@ -117,7 +117,7 @@ public class Token: CustomStringConvertible, Equatable {
         let items: Array<URLQueryItem> = [
             URLQueryItem(name: "secret", value: self.secret.base32String()),
             URLQueryItem(name: "issuer", value: self.issuer),
-            URLQueryItem(name: "algorithm", value: self.algorithm.algorithmName()),
+            URLQueryItem(name: "algorithm", value: self.algorithm.machineName),
             URLQueryItem(name: "digits", value: "\(Int(self.digits))"),
             URLQueryItem(name: "period", value: "\(self.interval)"),
             URLQueryItem(name: "fa", value: fastring.key)

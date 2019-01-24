@@ -8,21 +8,28 @@
 import Foundation
 import CommonCrypto
 
-public enum TokenAlgorithm {
+public enum TokenAlgorithm: CaseIterable, CustomStringConvertible {
     case md5, sha1, sha224, sha256, sha384, sha512
     
-    public func algorithmName(dash: Bool = false) -> String {
-        let v: String
+    public static var `default`: TokenAlgorithm = .sha256
+    public var description: String {
+        return self.humanName
+    }
+    
+    public var humanName: String {
         switch self {
-        case .md5   : v = "MD5"
-        case .sha1  : v = "SHA-1"
-        case .sha224: v = "SHA-224"
-        case .sha256: v = "SHA-256"
-        case .sha384: v = "SHA-384"
-        case .sha512: v = "SHA-512"
+        case .md5   : return "MD5"
+        case .sha1  : return "SHA-1"
+        case .sha224: return "SHA-224"
+        case .sha256: return "SHA-256"
+        case .sha384: return "SHA-384"
+        case .sha512: return "SHA-512"
         }
-        
-        return (dash) ? v : v.replacingOccurrences(of: "-", with: "")
+    }
+    
+    public var machineName: String {
+        let v = self.humanName
+        return v.replacingOccurrences(of: "-", with: "")
     }
     
     internal func algorithmDetails() -> (CCHmacAlgorithm, Int32) {

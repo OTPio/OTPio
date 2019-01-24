@@ -17,5 +17,8 @@ target 'otpio' do
   pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
   pod 'EFQRCode'
   pod 'arek/Camera'
+  pod 'Eureka'
+  pod 'FuzzyMatchingSwift'
+  pod 'FontBlaster'
 
 end

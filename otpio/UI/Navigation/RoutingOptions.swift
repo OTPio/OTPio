@@ -24,7 +24,7 @@ enum RouterOption: CaseIterable {
         }
     }
     
-    func controllerForOption() -> BaseUIC {
+    func controllerForOption() -> UIViewController {
         switch self {
         case .tokens  : return UserTokensVC()
         case .add     : return AddTokenVC()

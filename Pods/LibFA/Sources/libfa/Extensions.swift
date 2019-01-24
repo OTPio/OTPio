@@ -8,10 +8,23 @@
 import Foundation
 
 extension FontAwesome {
-    public func iconName() -> String? {
+    public var iconName: String {
         let v = self.rawValue
         let rtr = FontAwesomeIcons.filter { $0.value == v }
-        return rtr.first?.key
+        return rtr.first!.key
+    }
+    
+    public var humanName: String {
+        var s = self.iconName
+        s = String(s.dropFirst(3))
+        s = s.replacingOccurrences(of: "-", with: " ")
+        return s.capitalized
+    }
+    
+    public static var mappedBrands: Array<(k: String, v: FontAwesome)> {
+        return FontAwesomeBrands.map { (key: String, value: String) in
+            return (k: key, v: FontAwesome(rawValue: value)!)
+            }.sorted { $0.k < $1.k }
     }
 }
 

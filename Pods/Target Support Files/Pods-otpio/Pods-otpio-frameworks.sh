@@ -155,6 +155,9 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FuzzyMatchingSwift/FuzzyMatchingSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibFA/LibFA.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibToken/LibToken.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework"
@@ -167,6 +170,9 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FuzzyMatchingSwift/FuzzyMatchingSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibFA/LibFA.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibToken/LibToken.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework"

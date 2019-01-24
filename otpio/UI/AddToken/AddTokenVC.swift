@@ -9,8 +9,11 @@
 import UIKit
 import arek
 import PMAlertController
+import Eureka
+import MMDrawerController
+import LibToken
 
-class AddTokenVC: BaseUIC {
+class AddTokenVC: FormViewController {
     
     var canUseCamera: Bool = false {
         didSet {
@@ -29,6 +32,8 @@ class AddTokenVC: BaseUIC {
         return b
     }
     
+    var tokenDetailView: BaseTokenDetails = BaseTokenDetails.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +44,15 @@ class AddTokenVC: BaseUIC {
             default: self.canUseCamera = false
             }
         }
+        
+        tokenDetailView.clearForm()
+        tokenDetailView.listener = self
+        self.form = tokenDetailView.form
+        
+        navigationItem.leftBarButtonItem = MMDrawerBarButtonItem(target: self, action: #selector(AddTokenVC.showMenu))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(AddTokenVC.theme(with:)), name: .themeDidChange, object: ThemeEngine.self)
+        theme(with: ThemeEngine.sharedInstance.currentTheme)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,10 +67,32 @@ class AddTokenVC: BaseUIC {
         self.present(cameraView, animated: true, completion: nil)
     }
     
-    func doneScanning(with: URL) {
+    func doneScanning(with url: URL) {
         if cameraView.isBeingPresented {
             cameraView.dismiss(animated: true, completion: nil)
         }
+        
+        guard let token = Token(from: url) else {
+            return
+        }
+        
+        tokenDetailView.configure(with: token)
+    }
+    
+    @objc func showMenu() {
+        if mm_drawerController.openSide == .left {
+            mm_drawerController.closeDrawer(animated: true, completion: nil)
+        } else {
+            mm_drawerController.open(.left, animated: true, completion: nil)
+        }
+    }
+    @objc func theme(with t: Any) {
+        guard let theme = t as? Theme else { return }
+        
+        let colors = theme.colorsForTheme()
+        
+        view.backgroundColor = colors.backgroundColor
+        tableView.backgroundColor = colors.backgroundColor
     }
 }
 
@@ -82,5 +118,15 @@ extension AddTokenVC {
                 }
             }
         }
+    }
+}
+
+extension AddTokenVC: TokenEditReciever {
+    func tokenDidChange() {
+        
+    }
+    
+    func supportsSecretEdit() -> Bool {
+        return true
     }
 }

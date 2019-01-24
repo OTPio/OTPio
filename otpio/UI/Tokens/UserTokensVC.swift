@@ -11,12 +11,12 @@ import Neon
 
 class UserTokensVC: BaseUIC {
     
-    let testLabel: BaseUIL = BaseUIL(frame: .zero)
+    let testLabel: BaseUIL = BaseUIL(faStyle: .brands)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testLabel.text = "Hello there"
+        testLabel.text = "\u{f1d1} Hello there"
         view.addSubview(testLabel)
         
         navigationItem.title = "My Tokens"

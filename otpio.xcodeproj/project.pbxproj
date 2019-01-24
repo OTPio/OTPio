@@ -14,15 +14,20 @@
 		665EDDDC21E9BAA600641CF6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDDB21E9BAA600641CF6 /* Constants.swift */; };
 		665EDDDE21E9BB0800641CF6 /* ThemeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDDD21E9BB0800641CF6 /* ThemeEngine.swift */; };
 		665EDDE121E9BB4000641CF6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EDDE021E9BB4000641CF6 /* Theme.swift */; };
+		66AFABA921FA56CF00A77580 /* BaseTokenDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFABA821FA56CF00A77580 /* BaseTokenDetails.swift */; };
+		66AFABBB21FA702B00A77580 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFABB521FA702B00A77580 /* IconRow.swift */; };
+		66AFABBC21FA702B00A77580 /* IconSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFABB621FA702B00A77580 /* IconSelectorVC.swift */; };
+		66AFABBD21FA702B00A77580 /* IconDisplayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFABB721FA702B00A77580 /* IconDisplayTVC.swift */; };
+		66AFABC521FA74E700A77580 /* Fuzzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFABC421FA74E700A77580 /* Fuzzy.swift */; };
+		66AFABC821FA7E1F00A77580 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3105721F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		66AFABC921FA7E3300A77580 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3104D21F99E120046F495 /* Font Awesome 5 Pro-Regular-400.otf */; };
 		66D3103D21F98BA00046F495 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3103C21F98BA00046F495 /* Fonts.swift */; };
 		66D3103F21F9936B0046F495 /* BaseUINC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3103E21F9936B0046F495 /* BaseUINC.swift */; };
 		66D3104121F994DB0046F495 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3104021F994DB0046F495 /* Router.swift */; };
 		66D3104421F995030046F495 /* RoutingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3104321F995030046F495 /* RoutingOptions.swift */; };
 		66D3104621F996670046F495 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3104521F996670046F495 /* MenuController.swift */; };
 		66D3105021F99E380046F495 /* Font Awesome 5 Pro-Light-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3104B21F99E120046F495 /* Font Awesome 5 Pro-Light-300.otf */; };
-		66D3105121F99E3B0046F495 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3104D21F99E120046F495 /* Font Awesome 5 Pro-Regular-400.otf */; };
 		66D3105221F99E3E0046F495 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3104C21F99E120046F495 /* Font Awesome 5 Pro-Solid-900.otf */; };
-		66D3105821F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66D3105721F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf */; };
 		66D3105B21F9A5F70046F495 /* AddTokenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3105A21F9A5F70046F495 /* AddTokenVC.swift */; };
 		66D3105F21F9B0510046F495 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66D3105E21F9B0510046F495 /* Settings.bundle */; };
 		66D3106821F9B4300046F495 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66D3106721F9B4300046F495 /* Localizable.strings */; };
@@ -45,6 +50,14 @@
 		665EDDDB21E9BAA600641CF6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		665EDDDD21E9BB0800641CF6 /* ThemeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEngine.swift; sourceTree = "<group>"; };
 		665EDDE021E9BB4000641CF6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		66AFABA821FA56CF00A77580 /* BaseTokenDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTokenDetails.swift; sourceTree = "<group>"; };
+		66AFABB121FA702B00A77580 /* ThemeRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeRow.swift; sourceTree = "<group>"; };
+		66AFABB221FA702B00A77580 /* ThemeDisplayFSPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeDisplayFSPVC.swift; sourceTree = "<group>"; };
+		66AFABB321FA702B00A77580 /* ThemeSelectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeSelectorVC.swift; sourceTree = "<group>"; };
+		66AFABB521FA702B00A77580 /* IconRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
+		66AFABB621FA702B00A77580 /* IconSelectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconSelectorVC.swift; sourceTree = "<group>"; };
+		66AFABB721FA702B00A77580 /* IconDisplayTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconDisplayTVC.swift; sourceTree = "<group>"; };
+		66AFABC421FA74E700A77580 /* Fuzzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzzy.swift; sourceTree = "<group>"; };
 		66D3103C21F98BA00046F495 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		66D3103E21F9936B0046F495 /* BaseUINC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUINC.swift; sourceTree = "<group>"; };
 		66D3104021F994DB0046F495 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -138,6 +151,7 @@
 				66D3103E21F9936B0046F495 /* BaseUINC.swift */,
 				665EDDD821E9B95D00641CF6 /* BaseUIController.swift */,
 				66F18F8021F6EBFE00E88473 /* BaseUILabel.swift */,
+				66AFABA821FA56CF00A77580 /* BaseTokenDetails.swift */,
 			);
 			path = Bootstrap;
 			sourceTree = "<group>";
@@ -145,10 +159,12 @@
 		665EDDDA21E9BA9700641CF6 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				66AFABAF21FA702B00A77580 /* Custom Eureka Cells */,
 				66D3103C21F98BA00046F495 /* Fonts.swift */,
 				665EDDDB21E9BAA600641CF6 /* Constants.swift */,
 				66F18F8321F6EE6700E88473 /* Colors.swift */,
 				66D3106B21F9C5470046F495 /* Extensions.swift */,
+				66AFABC421FA74E700A77580 /* Fuzzy.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -160,6 +176,36 @@
 				665EDDE021E9BB4000641CF6 /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		66AFABAF21FA702B00A77580 /* Custom Eureka Cells */ = {
+			isa = PBXGroup;
+			children = (
+				66AFABB021FA702B00A77580 /* ThemeSelection */,
+				66AFABB421FA702B00A77580 /* IconSelection */,
+			);
+			name = "Custom Eureka Cells";
+			path = "../../../otpio-current/otpio/Views/Custom Eureka Cells";
+			sourceTree = "<group>";
+		};
+		66AFABB021FA702B00A77580 /* ThemeSelection */ = {
+			isa = PBXGroup;
+			children = (
+				66AFABB121FA702B00A77580 /* ThemeRow.swift */,
+				66AFABB221FA702B00A77580 /* ThemeDisplayFSPVC.swift */,
+				66AFABB321FA702B00A77580 /* ThemeSelectorVC.swift */,
+			);
+			path = ThemeSelection;
+			sourceTree = "<group>";
+		};
+		66AFABB421FA702B00A77580 /* IconSelection */ = {
+			isa = PBXGroup;
+			children = (
+				66AFABB521FA702B00A77580 /* IconRow.swift */,
+				66AFABB621FA702B00A77580 /* IconSelectorVC.swift */,
+				66AFABB721FA702B00A77580 /* IconDisplayTVC.swift */,
+			);
+			path = IconSelection;
 			sourceTree = "<group>";
 		};
 		66D3104221F994E00046F495 /* Navigation */ = {
@@ -280,11 +326,11 @@
 			files = (
 				66D3105F21F9B0510046F495 /* Settings.bundle in Resources */,
 				665EDDCC21E9B81700641CF6 /* LaunchScreen.storyboard in Resources */,
-				66D3105821F99E850046F495 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				665EDDC921E9B81700641CF6 /* Assets.xcassets in Resources */,
-				66D3105021F99E380046F495 /* Font Awesome 5 Pro-Light-300.otf in Resources */,
 				66D3106821F9B4300046F495 /* Localizable.strings in Resources */,
-				66D3105121F99E3B0046F495 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
+				66AFABC821FA7E1F00A77580 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				66D3105021F99E380046F495 /* Font Awesome 5 Pro-Light-300.otf in Resources */,
+				66AFABC921FA7E3300A77580 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
 				66D3105221F99E3E0046F495 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +392,9 @@
 				"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework",
+				"${BUILT_PRODUCTS_DIR}/FuzzyMatchingSwift/FuzzyMatchingSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LibFA/LibFA.framework",
 				"${BUILT_PRODUCTS_DIR}/LibToken/LibToken.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
@@ -361,6 +410,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFQRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontBlaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FuzzyMatchingSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibFA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibToken.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
@@ -382,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AFABBB21FA702B00A77580 /* IconRow.swift in Sources */,
 				66D3104121F994DB0046F495 /* Router.swift in Sources */,
 				665EDDD921E9B95D00641CF6 /* BaseUIController.swift in Sources */,
 				66F18FC921F700C100E88473 /* UserTokensVC.swift in Sources */,
@@ -389,11 +442,15 @@
 				66D3106A21F9B6120046F495 /* CaptureQRCodeVC.swift in Sources */,
 				665EDDDE21E9BB0800641CF6 /* ThemeEngine.swift in Sources */,
 				665EDDE121E9BB4000641CF6 /* Theme.swift in Sources */,
+				66AFABA921FA56CF00A77580 /* BaseTokenDetails.swift in Sources */,
 				66D3105B21F9A5F70046F495 /* AddTokenVC.swift in Sources */,
+				66AFABC521FA74E700A77580 /* Fuzzy.swift in Sources */,
 				66F18F8421F6EE6700E88473 /* Colors.swift in Sources */,
+				66AFABBD21FA702B00A77580 /* IconDisplayTVC.swift in Sources */,
 				665EDDC221E9B81700641CF6 /* AppDelegate.swift in Sources */,
 				665EDDDC21E9BAA600641CF6 /* Constants.swift in Sources */,
 				66D3106C21F9C5470046F495 /* Extensions.swift in Sources */,
+				66AFABBC21FA702B00A77580 /* IconSelectorVC.swift in Sources */,
 				66D3103D21F98BA00046F495 /* Fonts.swift in Sources */,
 				66F18F8121F6EBFE00E88473 /* BaseUILabel.swift in Sources */,
 				66D3104621F996670046F495 /* MenuController.swift in Sources */,

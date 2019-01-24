@@ -16,13 +16,17 @@
 
 // swiftlint:disable identifier_name line_length type_body_length
 internal enum FontFamily {
+  internal enum FontAwesome5Brands {
+    internal static let regular = FontConvertible(name: "FontAwesome5BrandsRegular", family: "Font Awesome 5 Brands", path: "FontAwesome5Brands-Regular-400.otf")
+    internal static let all: [FontConvertible] = [regular]
+  }
   internal enum FontAwesome5Pro {
     internal static let light = FontConvertible(name: "FontAwesome5ProLight", family: "Font Awesome 5 Pro", path: "FontAwesome5Pro-Light-300.otf")
     internal static let regular = FontConvertible(name: "FontAwesome5ProRegular", family: "Font Awesome 5 Pro", path: "FontAwesome5Pro-Regular-400.otf")
     internal static let solid = FontConvertible(name: "FontAwesome5ProSolid", family: "Font Awesome 5 Pro", path: "FontAwesome5Pro-Solid-900.otf")
     internal static let all: [FontConvertible] = [light, regular, solid]
   }
-  internal static let allCustomFonts: [FontConvertible] = [FontAwesome5Pro.all].flatMap { $0 }
+  internal static let allCustomFonts: [FontConvertible] = [FontAwesome5Brands.all, FontAwesome5Pro.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }

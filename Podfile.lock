@@ -9,8 +9,11 @@ PODS:
     - ChameleonFramework/Default
   - EFQRCode (4.5.0):
     - swift_qrcodejs (~> 1.0.1)
-  - LibFA (1.1.0)
-  - LibToken (1.2.0):
+  - Eureka (4.3.1)
+  - FontBlaster (4.1.0)
+  - FuzzyMatchingSwift (0.7.0)
+  - LibFA (1.1.1)
+  - LibToken (1.2.1):
     - LibFA
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
@@ -33,6 +36,9 @@ DEPENDENCIES:
   - arek/Camera
   - ChameleonFramework/Swift (from `https://github.com/viccalexander/Chameleon`, branch `wip/swift4`)
   - EFQRCode
+  - Eureka
+  - FontBlaster
+  - FuzzyMatchingSwift
   - LibFA
   - LibToken
   - MMDrawerController
@@ -43,12 +49,15 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - arek
     - EFQRCode
+    - Eureka
+    - FontBlaster
+    - FuzzyMatchingSwift
     - MMDrawerController
     - Neon
     - PMAlertController
     - swift_qrcodejs
     - SwiftyUserDefaults
-  https://github.com/otpio/cocoapods.git:
+  https://github.com/otpio/cocoapods:
     - LibFA
     - LibToken
 
@@ -66,14 +75,17 @@ SPEC CHECKSUMS:
   arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   EFQRCode: 842f431e660da841f518993af8f4cbd275601d84
-  LibFA: ec429996225f68aab4b3d8bac88b43a262d78827
-  LibToken: 5fb42750e09cc6f2fb44ab55641c4ac93cca6632
+  Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
+  FuzzyMatchingSwift: bcbeda92c3d16dc338b4bfa655d5848d66b884dd
+  LibFA: be5ea9b1dab9775f0ebebe7d67d806c59f4f46d3
+  LibToken: 2b80f3dd26ddb01391be7217cbbe9ec6b61ed5d2
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
   PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
   swift_qrcodejs: c181fe5c849d30c699546a23762d7e3dd143ab37
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
 
-PODFILE CHECKSUM: 2ee763eeea2b129b2c0175db22755a4ceafbc90d
+PODFILE CHECKSUM: d09f1f2e7a7410521d7ba245958d8a875f0e06e9
 
 COCOAPODS: 1.6.0.beta.2

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "20B10B4F05FC5CA796041FFB21770529"
+               BlueprintIdentifier = "1813897F6356A21BE530D90E675235AB"
                BuildableName = "LibFA.bundle"
                BlueprintName = "LibFA-LibFA"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "20B10B4F05FC5CA796041FFB21770529"
+            BlueprintIdentifier = "1813897F6356A21BE530D90E675235AB"
             BuildableName = "LibFA.bundle"
             BlueprintName = "LibFA-LibFA"
             ReferencedContainer = "container:Pods.xcodeproj">

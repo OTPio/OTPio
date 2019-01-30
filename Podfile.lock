@@ -13,7 +13,7 @@ PODS:
   - FontBlaster (4.1.0)
   - FuzzyMatchingSwift (0.7.0)
   - LibFA (1.1.1)
-  - LibToken (1.2.1):
+  - LibToken (2.0.5):
     - LibFA
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
@@ -79,7 +79,7 @@ SPEC CHECKSUMS:
   FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
   FuzzyMatchingSwift: bcbeda92c3d16dc338b4bfa655d5848d66b884dd
   LibFA: be5ea9b1dab9775f0ebebe7d67d806c59f4f46d3
-  LibToken: 2b80f3dd26ddb01391be7217cbbe9ec6b61ed5d2
+  LibToken: 70d609f1e47c6d9407af8426faa1e9c1a626b217
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
   PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
@@ -88,4 +88,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d09f1f2e7a7410521d7ba245958d8a875f0e06e9
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.0.rc.1

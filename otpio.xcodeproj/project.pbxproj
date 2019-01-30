@@ -72,6 +72,7 @@
 		66D3106721F9B4300046F495 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		66D3106921F9B6120046F495 /* CaptureQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureQRCodeVC.swift; sourceTree = "<group>"; };
 		66D3106B21F9C5470046F495 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		66ED79F221FFCCEE0051EFBD /* otpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otpio.entitlements; sourceTree = "<group>"; };
 		66F18F8021F6EBFE00E88473 /* BaseUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUILabel.swift; sourceTree = "<group>"; };
 		66F18F8321F6EE6700E88473 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		66F18FC821F700C100E88473 /* UserTokensVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTokensVC.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		665EDDC021E9B81700641CF6 /* otpio */ = {
 			isa = PBXGroup;
 			children = (
+				66ED79F221FFCCEE0051EFBD /* otpio.entitlements */,
 				665EDDC121E9B81700641CF6 /* AppDelegate.swift */,
 				665EDDD421E9B91100641CF6 /* UI */,
 				665EDDDA21E9BA9700641CF6 /* Misc */,
@@ -298,6 +300,11 @@
 				TargetAttributes = {
 					665EDDBD21E9B81700641CF6 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -595,6 +602,7 @@
 			baseConfigurationReference = 37F31EBD498713211F1D5661 /* Pods-otpio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = "$(SRCROOT)/otpio/Resources/Info.plist";
@@ -615,6 +623,7 @@
 			baseConfigurationReference = F238C6B9F9C31030B6395C9B /* Pods-otpio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = otpio/otpio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
 				INFOPLIST_FILE = "$(SRCROOT)/otpio/Resources/Info.plist";

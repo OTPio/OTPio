@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82088DF78A1C1ABE04F335B54551024B"
+               BlueprintIdentifier = "F43BCC204503CB8C77F0DDDD9C30ED8C"
                BlueprintName = "LibToken"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "LibToken.framework">

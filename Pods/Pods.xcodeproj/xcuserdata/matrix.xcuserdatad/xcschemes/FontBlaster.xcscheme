@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "76F32C6044C491C3A5DC769F3DF34ED1"
+               BlueprintIdentifier = "6FA35690ED07C4898525CDCDE4284645"
                BlueprintName = "FontBlaster"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "FontBlaster.framework">

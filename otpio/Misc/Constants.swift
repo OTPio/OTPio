@@ -16,6 +16,8 @@ struct Constants {
     }
     
     enum TokenCellTags: String {
+        case camera   = "showCamera"
+        
         case secret   = "secret"
         case user     = "user"
         case issuer   = "issuer"
@@ -45,14 +47,17 @@ struct Constants {
                 return "Available in iCloud"
             case .today:
                 return "Available in Today View"
+            case .camera:
+                return "Tap to scan QR Code"
             }
         }
     }
     
     enum TokenSectionTags: String {
-        case general   = "general"
-        case advanced  = "advanced"
-        case available = "available"
+        case general      = "general"
+        case advanced     = "advanced"
+        case available    = "available"
+        case initialToken = "initial"
     }
     
     enum RowItemIcon {

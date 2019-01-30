@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "74C1B9B73006A9E1B7555F24A769A714"
+               BlueprintIdentifier = "8DDF0CAE5E3F25E34377F7DF918DD43A"
                BlueprintName = "LibFA"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "LibFA.framework">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1CAE2646391CBEDF1770E85DFF4DEFD4"
+               BlueprintIdentifier = "2F0B888461C0160128A4059238CA9CA9"
                BuildableName = "Pods_otpio.framework"
                BlueprintName = "Pods-otpio"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1CAE2646391CBEDF1770E85DFF4DEFD4"
+            BlueprintIdentifier = "2F0B888461C0160128A4059238CA9CA9"
             BuildableName = "Pods_otpio.framework"
             BlueprintName = "Pods-otpio"
             ReferencedContainer = "container:Pods.xcodeproj">

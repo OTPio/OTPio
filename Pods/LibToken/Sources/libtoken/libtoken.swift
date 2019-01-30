@@ -4,141 +4,126 @@
 //
 //  Created by Mason Phillips on 11/11/18.
 //
+// All code conforms to RFC 4226 (https://tools.ietf.org/html/rfc4226)
 
 import Foundation
-import CommonCrypto
 import LibFA
 
-public class Token: CustomStringConvertible, Equatable {
-    public let secret: Data
-    public var issuer: String
-    public var label : String
+public final class Token: NSObject {
+    public var issuer     : String
+    public var user       : String
+    public var fontAwesome: FontAwesome
+    public var generator  : Generator
     
-    public var digits: Int
-    public var interval: TimeInterval
+    public var currentPassword: String? {
+        return generator.password(at: Date(), format: true)
+    }
     
-    public var algorithm: TokenAlgorithm
-    
-    public var faIcon: FontAwesome
-    
-    public var description: String {
+    override public var description: String {
         let ctr = ByteCountFormatter()
         ctr.allowedUnits = .useBytes
-        let brtr = ctr.string(fromByteCount: Int64(secret.count))
-        let srtr = secret.hexEncodedString()
-        
-        let fakey = FontAwesomeIcons.filter { $0.value == faIcon.rawValue }
+        let brtr = ctr.string(fromByteCount: Int64(generator.secret.count))
+        let srtr = generator.secret.hexEncodedString()
         
         var rtr = ""
-        rtr += "Token - \(self.issuer) (\(self.label))\n"
-        rtr += "Secret: 0x\(srtr) (\(brtr))\n"
-        rtr += "FontAwesomeIcon: \(fakey.keys.first!)"
+        rtr += "Token - \(self.issuer) (\(self.user))\n"
+        rtr += "Secret: 0x\(srtr) (\(brtr))"
         
         return rtr
     }
     
-    public init(secret s: Data, issuer i: String, label l: String, digits d: Int = 6, interval n: TimeInterval = 30, algorithm a: TokenAlgorithm = .sha1, faIcon f: FontAwesome? = nil) {
-        secret = s
-        issuer = i
-        label  = l
-        
-        digits = d
-        interval = n
-        
-        algorithm = a
-        
-        faIcon = f ?? i.closestBrand()
+    public init(generator g: Generator, tokenIssuer t: String, user u: String, fontAwesome f: FontAwesome? = nil) {
+        generator = g
+        issuer = t
+        user = u
+        fontAwesome = f ?? t.closestBrand()
     }
     
-    public convenience init?(from u: URL) {
+    public convenience init?(_ keychainItem: [String: Any]) {
+        guard let data = keychainItem["value"] as? String else {
+            return nil
+        }
+        guard let url = URL(string: data) else { return nil }
+        self.init(with: url)
+    }
+    
+    public convenience init?(with url: URL) {
         do {
-            let components = URLComponents(url: u, resolvingAgainstBaseURL: false)
+            guard
+                let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+                let queryItems = components.queryItems,
+                let type       = components.host
+            else { throw TokenError.componentsNotDeserializable }
             
-            //            guard components?.path == "otpauth" else { throw Deserialization.pathInvalid }
+            guard components.scheme == "otpauth" else {
+                throw TokenError.urlNotConformingToRFC
+            }
             
-            guard let query = components?.queryItems else { throw Deserialization.queryItemsNotFound }
+            let issuer = try Token.parseTokenIssuer(with: queryItems, andLabel: components.path)
+            let label  = Token.parseUser(with: components.path)
             
-            let secretString = query.filter { $0.name == "secret" }
-            guard let first = secretString.first else { throw Deserialization.secretNotFound }
-            guard let secret = first.value else { throw Deserialization.secretNotFound }
-            let secretData = try secret.decodeBase32()
+            let secret    = try Token.parseSecret(with: queryItems)
+            let factor    = try Token.parseFactor(with: type, andItems: queryItems)
+            let algorithm = try Token.parseAlgorithm(with: queryItems)
+            let digits    = try Token.parseDigits(with: queryItems)
             
+            let generator = Generator(secret: secret, moveFactor: factor, tokenAlgoritm: algorithm, digits: digits)
             
-            let issuerString = query.filter { $0.name == "issuer" }
-            guard let issuer = issuerString.first?.value else { throw Deserialization.issuerNotFound }
+            let fontAwesome = try Token.parseFontAwesome(with: queryItems, issuer: issuer)
             
-            let labelString = String(u.path.dropFirst())
-            
-            let faFilter = query.filter { $0.name == "fa" }
-            let faString = faFilter.first?.value ?? ""
-            let icon = faString.closestBrand()
-            
-            let digitsFilter = query.filter { $0.name == "digits" }
-            let digitsString = digitsFilter.first?.value ?? "6"
-            let digits = Int(digitsString) ?? 6
-            guard 6...8 ~= digits else { throw Deserialization.digitsLengthInvalid }
-            
-            let intervalFilter = query.filter { $0.name == "period" || $0.name == "interval" }
-            let intervalString = intervalFilter.first?.value ?? "30"
-            let interDou = Double(intervalString) ?? 30
-            let interval = TimeInterval(interDou)
-            
-            let algoFilter = query.filter {$0.name == "algorithm" }
-            let algoString = algoFilter.first?.value ?? "sha1"
-            let algorithm = TokenAlgorithm(rawValue: algoString)
-            
-            self.init(secret: secretData, issuer: issuer, label: labelString, digits: digits, interval: interval, algorithm: algorithm, faIcon: icon)
-        } catch {
+            self.init(generator: generator, tokenIssuer: issuer, user: label, fontAwesome: fontAwesome)
+        } catch let error {
+            print("LibToken token creation: \(error.localizedDescription)")
             return nil
         }
     }
     
     public func password(at time: Date = Date(), format: Bool = false) -> String {
-        let interval = processDate(at: time)
-        let hash = hmac(stepper: interval)
-        
-        let truncated = truncate(with: hash)
-        
-        var rtr = String(truncated).padded(with: "0", toLength: self.digits)
-        let offset = (self.digits == 8) ? 4 : 3
-        if format { rtr.insert(" ", at: rtr.index(rtr.startIndex, offsetBy: offset))}
-        
-        return rtr
-    }
-    
-    public func serialize() -> String {
-        var components: URLComponents = URLComponents()
-        components.scheme = "otpauth"
-        components.path = "/\(self.label)"
-        components.host = "totp"
-        
-        let fastring = FontAwesomeBrands.filter { $0.value == self.faIcon.rawValue }.first!
-        
-        let items: Array<URLQueryItem> = [
-            URLQueryItem(name: "secret", value: self.secret.base32String()),
-            URLQueryItem(name: "issuer", value: self.issuer),
-            URLQueryItem(name: "algorithm", value: self.algorithm.machineName),
-            URLQueryItem(name: "digits", value: "\(Int(self.digits))"),
-            URLQueryItem(name: "period", value: "\(self.interval)"),
-            URLQueryItem(name: "fa", value: fastring.key)
-        ]
-        
-        components.queryItems = items
-        
-        let url = components.url!
-        
-        return url.absoluteString
+        return generator.password(at: time, format: format)
     }
     
     public func timeRemaining(_ reversed: Bool = false) -> Float {
-        let epoch = Date().timeIntervalSince1970
-        let d = Float(self.interval - epoch.truncatingRemainder(dividingBy: self.interval))
-        let r = Float(self.interval) - d
-        return (reversed) ? d : r
+        let time = generator.moveFactor.timeRemaining(at: Date(), reversed)
+        return time
     }
     
-    public static func ==(_ l: Token, _ r: Token) -> Bool {
-        return l.secret.hashValue == r.secret.hashValue
+    public static func ==(l: Token, r: Token) -> Bool {
+        return (l.issuer == r.issuer) &&
+               (l.user == r.user) &&
+               (l.generator == r.generator)
+    }
+    
+    public func serialize() throws -> URL {
+        var components: URLComponents = URLComponents()
+        
+        components.scheme = "otpauth"
+        components.path = "/\(issuer):\(user)"
+        
+        let fastring = FontAwesomeBrands.filter { $0.value == self.fontAwesome.rawValue }.first!
+        
+        var items: [URLQueryItem] = [
+            URLQueryItem(name: "secret", value: generator.secret.base32String()),
+            URLQueryItem(name: "issuer", value: issuer),
+            URLQueryItem(name: "algorithm", value: generator.algorithm.machineName),
+            URLQueryItem(name: "digits", value: "\(generator.digits)"),
+            URLQueryItem(name: "fa", value: fastring.key)
+        ]
+        
+        switch generator.moveFactor {
+        case .hotp(let interval):
+            components.host = "hotp"
+            items.append(URLQueryItem(name: "period", value: "\(Int(interval))"))
+        case .totp(let interval):
+            components.host = "totp"
+            items.append(URLQueryItem(name: "period", value: "\(Int(interval))"))
+        }
+        
+        components.queryItems = items
+        
+        guard let url = components.url else {
+            throw TokenError.componentsNotSerializable
+        }
+        
+        return url
     }
 }
-

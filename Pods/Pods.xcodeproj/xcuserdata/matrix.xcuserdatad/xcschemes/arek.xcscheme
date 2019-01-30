@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A4C6B68270F19A1684C6613FC82C13BB"
+               BlueprintIdentifier = "0427EC7CD2E494669AF9353FE17E8165"
                BlueprintName = "arek"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "arek.framework">

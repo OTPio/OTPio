@@ -28,7 +28,8 @@ class AddTokenVC: FormViewController {
     var button: UIBarButtonItem {
         let b = UIBarButtonItem(title: "\u{f030}", style: .plain, target: self, action: #selector(AddTokenVC.showCaptureWindow))
         b.setTitleTextAttributes([.font: Font(font: FontFamily.FontAwesome5Pro.regular, size: 20)], for: .normal)
-        b.setTitleTextAttributes([.font: Font(font: FontFamily.FontAwesome5Pro.regular, size: 20)], for: .selected)
+        b.setTitleTextAttributes([.font: Font(font: FontFamily.FontAwesome5Pro.regular, size: 20)], for: .highlighted)
+        b.setTitleTextAttributes([.font: Font(font: FontFamily.FontAwesome5Pro.regular, size: 20)], for: .disabled)
         return b
     }
     
@@ -49,6 +50,9 @@ class AddTokenVC: FormViewController {
         tokenDetailView.listener = self
         self.form = tokenDetailView.form
         
+        cameraView.controller = self
+        
+        navigationItem.title = "Add a Token"
         navigationItem.leftBarButtonItem = MMDrawerBarButtonItem(target: self, action: #selector(AddTokenVC.showMenu))
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddTokenVC.theme(with:)), name: .themeDidChange, object: ThemeEngine.self)
@@ -61,22 +65,29 @@ class AddTokenVC: FormViewController {
     }
     
     @objc func showCaptureWindow() {
-        if cameraView.controller == nil {
-            cameraView.controller = self
-        }
         self.present(cameraView, animated: true, completion: nil)
     }
     
     func doneScanning(with url: URL) {
-        if cameraView.isBeingPresented {
-            cameraView.dismiss(animated: true, completion: nil)
+        do {
+            guard let token = try url.tokenFromURL() else {
+                throw TokenError.urlNotConformingToRFC
+            }
+            tokenDetailView.token = token
+        } catch let e {
+            let alert = PMAlertController(title: "Bad Code", description: "Looks like that QR Code is formatted incorrectly. \(e.localizedDescription)", image: nil, style: .alert)
+            alert.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: {
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            alert.addAction(PMAlertAction(title: "Try Again", style: .default, action: {
+                self.showCaptureWindow()
+            }))
+            
+            present(alert, animated: true, completion: nil)
+            
+            print(e.localizedDescription)
         }
         
-        guard let token = Token(from: url) else {
-            return
-        }
-        
-        tokenDetailView.configure(with: token)
     }
     
     @objc func showMenu() {
@@ -122,11 +133,17 @@ extension AddTokenVC {
 }
 
 extension AddTokenVC: TokenEditReciever {
-    func tokenDidChange() {
+    func done(finalToken t: Token) {
         
     }
     
-    func supportsSecretEdit() -> Bool {
+    func showCamera() {
+        present(cameraView, animated: true) {
+            self.tokenDetailView.clearForm()
+        }
+    }
+    
+    func isAddingToken() -> Bool {
         return true
     }
 }

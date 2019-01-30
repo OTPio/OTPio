@@ -112,7 +112,9 @@ extension CaptureQRCodeVC: AVCaptureMetadataOutputObjectsDelegate {
             else { return }
             
             if tokenUrl.scheme == "otpauth" {
-                controller?.doneScanning(with: tokenUrl.url!)
+                self.dismiss(animated: true) {
+                    self.controller?.doneScanning(with: tokenUrl.url!)
+                }
             }
         }
     }

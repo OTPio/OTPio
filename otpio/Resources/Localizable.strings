@@ -14,4 +14,10 @@
 "ArekCamera_deny_button_title"  = "Nope";
 
 /* General Strings */
-"found_url" = "Looks like you have copied a URL matching a OTP token. Would you like to import it?";
+"found_url"      = "Looks like you have copied a URL matching a OTP token. Would you like to import it?";
+"advanced-token" = "You should not change these details unless you are directed to by your provider. They have been automatically set, and changing them could result in invalid codes.";
+"details-token"  = "The details of your token. Your secret cannot be modified. If you need to change it, delete this token and scan a new one";
+"add-token"      = "Use the \"Add from QR Code\" button to scan in a new token with the camera! Or, enter your details manually";
+
+/* Test */
+"test-token" = "otpauth://totp/MatrixSenpai?secret=PFXXKYLCNF2GG2DB&issuer=Matrix%20Studios&algorithm=MD5&digits=6&period=30&fa=fa-empire";

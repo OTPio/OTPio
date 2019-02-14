@@ -22,5 +22,9 @@ class AppAssembly: Assembly {
         container.register(HomeModelType.self) { _ in
             return HomeModel(AppDelegate.appDelegate.assembler)
         }.inObjectScope(ObjectScope.container)
+    
+        container.register(AddTokenModelType.self) { _ in
+            return AddTokenModel(AppDelegate.appDelegate.assembler)
+        }.inObjectScope(ObjectScope.container)
     }
 }

@@ -12,6 +12,10 @@ import Eureka
 
 class AddTokenController: ParentBaseViewController {
     let formView: UIView = UIView(frame: .zero)
+    let camera  : CameraController = CameraController()
+    var model   : AddTokenModelType {
+        return assembler.resolver.resolve(AddTokenModelType.self)!
+    }
     var qrButton: UIBarButtonItem {
         let b = UIBarButtonItem(title: String.fontAwesomeIcon(name: .cameraRetro), style: .plain, target: self, action: #selector(AddTokenController.showCamera))
         let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.fontAwesome(ofSize: 18, style: .regular)]
@@ -45,6 +49,6 @@ class AddTokenController: ParentBaseViewController {
     }
     
     @objc func showCamera() {
-        
+        self.present(camera, animated: true, completion: nil)
     }
 }

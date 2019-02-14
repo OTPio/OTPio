@@ -25,6 +25,8 @@
 		669D23A222153CA000E89D97 /* FetchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D23A122153CA000E89D97 /* FetchKey.swift */; };
 		669D23A422153F8400E89D97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 669D23A322153F8400E89D97 /* Localizable.strings */; };
 		669D23AA2215420900E89D97 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 669D23A92215420900E89D97 /* .travis.yml */; };
+		669D23AD221550B800E89D97 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D23AC221550B800E89D97 /* CameraController.swift */; };
+		669D23AF221550DF00E89D97 /* AddTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D23AE221550DF00E89D97 /* AddTokenModel.swift */; };
 		66B4508822103F85009A19E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4508722103F85009A19E2 /* AppDelegate.swift */; };
 		66B4508F22103F86009A19E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B4508E22103F86009A19E2 /* Assets.xcassets */; };
 		66B4509222103F86009A19E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B4509022103F86009A19E2 /* LaunchScreen.storyboard */; };
@@ -70,6 +72,8 @@
 		669D23A7221541DA00E89D97 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		669D23A8221541E900E89D97 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		669D23A92215420900E89D97 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		669D23AC221550B800E89D97 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		669D23AE221550DF00E89D97 /* AddTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenModel.swift; sourceTree = "<group>"; };
 		66B4508422103F85009A19E2 /* otpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B4508722103F85009A19E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B4508E22103F86009A19E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,15 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				669D239F221539AA00E89D97 /* AddTokenController.swift */,
+				669D23AC221550B800E89D97 /* CameraController.swift */,
+				669D23AE221550DF00E89D97 /* AddTokenModel.swift */,
 			);
 			path = AddToken;
-			sourceTree = "<group>";
-		};
-		665A16122214C148009765A7 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		665A16132214C14F009765A7 /* Code Detail */ = {
@@ -198,6 +197,13 @@
 				669D23A92215420900E89D97 /* .travis.yml */,
 			);
 			name = Meta;
+			sourceTree = "<group>";
+		};
+		669D23AB221550A000E89D97 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		66B4507B22103F85009A19E2 = {
@@ -263,7 +269,7 @@
 				665A16102214C130009765A7 /* Home */,
 				665A16132214C14F009765A7 /* Code Detail */,
 				665A16112214C13E009765A7 /* AddToken */,
-				665A16122214C148009765A7 /* Settings */,
+				669D23AB221550A000E89D97 /* Settings */,
 			);
 			path = "Views & Models";
 			sourceTree = "<group>";
@@ -530,9 +536,11 @@
 				665A16152214C1D2009765A7 /* HomeController.swift in Sources */,
 				665A16242214DA47009765A7 /* HomeModel.swift in Sources */,
 				660CA4BD2212234400FE0635 /* Colors.swift in Sources */,
+				669D23AF221550DF00E89D97 /* AddTokenModel.swift in Sources */,
 				669D239E221538EF00E89D97 /* CodeDetailController.swift in Sources */,
 				669D23A222153CA000E89D97 /* FetchKey.swift in Sources */,
 				66E89EE222135C810088B51B /* Constants.swift in Sources */,
+				669D23AD221550B800E89D97 /* CameraController.swift in Sources */,
 				66E89EE022135AF60088B51B /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/arek</string>
 			<key>Title</key>
-			<string>arek (4.0.2)</string>
+			<string>arek</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -16,7 +16,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Eureka</string>
 			<key>Title</key>
-			<string>Eureka (4.3.1)</string>
+			<string>Eureka</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -24,7 +24,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/FontBlaster</string>
 			<key>Title</key>
-			<string>FontBlaster (4.1.0)</string>
+			<string>FontBlaster</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -32,7 +32,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/LibFA</string>
 			<key>Title</key>
-			<string>LibFA (1.1.1)</string>
+			<string>LibFA</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -40,7 +40,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/LibToken</string>
 			<key>Title</key>
-			<string>LibToken (2.0.5)</string>
+			<string>LibToken</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -56,7 +56,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Neon</string>
 			<key>Title</key>
-			<string>Neon (0.4.0)</string>
+			<string>Neon</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -64,7 +64,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/PMAlertController</string>
 			<key>Title</key>
-			<string>PMAlertController (3.5.0)</string>
+			<string>PMAlertController</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -72,7 +72,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/RxAtomic</string>
 			<key>Title</key>
-			<string>RxAtomic (4.4.1)</string>
+			<string>RxAtomic</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -80,7 +80,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/RxCocoa</string>
 			<key>Title</key>
-			<string>RxCocoa (4.4.1)</string>
+			<string>RxCocoa</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -88,7 +88,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/RxSwift</string>
 			<key>Title</key>
-			<string>RxSwift (4.4.1)</string>
+			<string>RxSwift</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -104,7 +104,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/Swinject</string>
 			<key>Title</key>
-			<string>Swinject (2.5.0)</string>
+			<string>Swinject</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>

@@ -1,26 +1,26 @@
 name: arek, nameSpecified: 
 body: Copyright (c) 2016 E…
-version: 4.0.2
+version: 
 
 name: Eureka, nameSpecified: 
 body: The MIT License (MIT…
-version: 4.3.1
+version: 
 
 name: FontBlaster, nameSpecified: 
 body: The MIT License (MIT…
-version: 4.1.0
+version: 
 
 name: LibFA, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 1.1.1
+version: 
 
 name: LibToken, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 2.0.5
+version: 
 
 name: MMDrawerController, nameSpecified: 
 body: Copyright (c) 2013 M…
@@ -28,27 +28,27 @@ version:
 
 name: Neon, nameSpecified: 
 body: Copyright (c) 2015 M…
-version: 0.4.0
+version: 
 
 name: PMAlertController, nameSpecified: 
 body: MIT License
 --------…
-version: 3.5.0
+version: 
 
 name: RxAtomic, nameSpecified: 
 body: **The MIT License**
 …
-version: 4.4.1
+version: 
 
 name: RxCocoa, nameSpecified: 
 body: **The MIT License**
 …
-version: 4.4.1
+version: 
 
 name: RxSwift, nameSpecified: 
 body: **The MIT License**
 …
-version: 4.4.1
+version: 
 
 name: SwiftyUserDefaults, nameSpecified: 
 body: The MIT License (MIT…
@@ -56,7 +56,7 @@ version:
 
 name: Swinject, nameSpecified: 
 body: The MIT License (MIT…
-version: 2.5.0
+version: 
 
 add-version-numbers: true
 

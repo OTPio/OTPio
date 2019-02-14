@@ -4,8 +4,6 @@ setup_travis
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    sync_code_signing
-
     increment_build_number(build_number: latest_testflight_build_number + 1, xcodeproj: "otpio.xcodeproj")
 
     build_app(workspace: "otpio.xcworkspace", scheme: "otpio")

@@ -1,0 +1,8 @@
+app_identifier("com.otpio.otpio") # The bundle identifier of your app
+apple_id("math.matrix@icloud.com") # Your Apple email address
+
+itc_team_id("11444807") # App Store Connect Team ID
+team_id("6S4L29QT59") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

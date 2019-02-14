@@ -7,12 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D122A3A75B66C8B4BAECA40 /* Pods_otpioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4EC36D9F889E51CE66711C /* Pods_otpioTests.framework */; };
+		660CA4BD2212234400FE0635 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660CA4BC2212234400FE0635 /* Colors.swift */; };
+		660CA4C0221224AF00FE0635 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660CA4BF221224AF00FE0635 /* BaseViewController.swift */; };
+		660CA4C2221224D500FE0635 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660CA4C1221224D500FE0635 /* BaseViewModel.swift */; };
+		660CA4C5221225C400FE0635 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660CA4C4221225C400FE0635 /* AppAssembly.swift */; };
+		665A16152214C1D2009765A7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A16142214C1D2009765A7 /* HomeController.swift */; };
+		665A16182214C96D009765A7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A16172214C96D009765A7 /* Router.swift */; };
+		665A161A2214CBF4009765A7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A16192214CBF4009765A7 /* MenuController.swift */; };
+		665A161F2214D43A009765A7 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 665A161B2214D43A009765A7 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		665A16202214D43A009765A7 /* Font Awesome 5 Pro-Light-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 665A161C2214D43A009765A7 /* Font Awesome 5 Pro-Light-300.otf */; };
+		665A16212214D43A009765A7 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 665A161D2214D43A009765A7 /* Font Awesome 5 Pro-Regular-400.otf */; };
+		665A16222214D43A009765A7 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 665A161E2214D43A009765A7 /* Font Awesome 5 Pro-Solid-900.otf */; };
+		665A16242214DA47009765A7 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A16232214DA47009765A7 /* HomeModel.swift */; };
+		669D239E221538EF00E89D97 /* CodeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D239D221538EF00E89D97 /* CodeDetailController.swift */; };
+		669D23A0221539AA00E89D97 /* AddTokenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D239F221539AA00E89D97 /* AddTokenController.swift */; };
+		669D23A222153CA000E89D97 /* FetchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D23A122153CA000E89D97 /* FetchKey.swift */; };
+		669D23A422153F8400E89D97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 669D23A322153F8400E89D97 /* Localizable.strings */; };
+		669D23AA2215420900E89D97 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 669D23A92215420900E89D97 /* .travis.yml */; };
 		66B4508822103F85009A19E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4508722103F85009A19E2 /* AppDelegate.swift */; };
-		66B4508A22103F85009A19E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4508922103F85009A19E2 /* ViewController.swift */; };
-		66B4508D22103F85009A19E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B4508B22103F85009A19E2 /* Main.storyboard */; };
 		66B4508F22103F86009A19E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B4508E22103F86009A19E2 /* Assets.xcassets */; };
 		66B4509222103F86009A19E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B4509022103F86009A19E2 /* LaunchScreen.storyboard */; };
 		66B4509D22103F86009A19E2 /* otpioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4509C22103F86009A19E2 /* otpioTests.swift */; };
+		66E89EE022135AF60088B51B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E89EDF22135AF60088B51B /* ThemeManager.swift */; };
+		66E89EE222135C810088B51B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E89EE122135C810088B51B /* Constants.swift */; };
+		66E89EE422135D010088B51B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E89EE322135D010088B51B /* Theme.swift */; };
+		66E89EE722135F150088B51B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66E89EE622135F150088B51B /* Settings.bundle */; };
+		6E339EE6EBDFEC41EB242870 /* Pods_otpio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E95CD51CC3F5E082D64B3 /* Pods_otpio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +47,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4EC36D9F889E51CE66711C /* Pods_otpioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		380E8BEE4E0ECA5E64512944 /* Pods-otpioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioTests.release.xcconfig"; path = "Target Support Files/Pods-otpioTests/Pods-otpioTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FA183EB77FAA47A8F2E0358 /* Pods-otpio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.debug.xcconfig"; path = "Target Support Files/Pods-otpio/Pods-otpio.debug.xcconfig"; sourceTree = "<group>"; };
+		660CA4BC2212234400FE0635 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		660CA4BF221224AF00FE0635 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		660CA4C1221224D500FE0635 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		660CA4C4221225C400FE0635 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		665A16142214C1D2009765A7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		665A16172214C96D009765A7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		665A16192214CBF4009765A7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		665A161B2214D43A009765A7 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		665A161C2214D43A009765A7 /* Font Awesome 5 Pro-Light-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Light-300.otf"; sourceTree = "<group>"; };
+		665A161D2214D43A009765A7 /* Font Awesome 5 Pro-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Regular-400.otf"; sourceTree = "<group>"; };
+		665A161E2214D43A009765A7 /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Solid-900.otf"; sourceTree = "<group>"; };
+		665A16232214DA47009765A7 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		669D239D221538EF00E89D97 /* CodeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailController.swift; sourceTree = "<group>"; };
+		669D239F221539AA00E89D97 /* AddTokenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenController.swift; sourceTree = "<group>"; };
+		669D23A122153CA000E89D97 /* FetchKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchKey.swift; sourceTree = "<group>"; };
+		669D23A322153F8400E89D97 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		669D23A6221541CF00E89D97 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		669D23A7221541DA00E89D97 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		669D23A8221541E900E89D97 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		669D23A92215420900E89D97 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		66B4508422103F85009A19E2 /* otpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B4508722103F85009A19E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66B4508922103F85009A19E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		66B4508C22103F85009A19E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66B4508E22103F86009A19E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66B4509122103F86009A19E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66B4509322103F86009A19E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66B4509822103F86009A19E2 /* otpioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otpioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B4509C22103F86009A19E2 /* otpioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpioTests.swift; sourceTree = "<group>"; };
 		66B4509E22103F86009A19E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66E89EDF22135AF60088B51B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		66E89EE122135C810088B51B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		66E89EE322135D010088B51B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		66E89EE622135F150088B51B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		7A46A7FDFFB00FA4459D4721 /* Pods-otpioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpioTests.debug.xcconfig"; path = "Target Support Files/Pods-otpioTests/Pods-otpioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7ADB092B0CF880B8A71D1618 /* Pods-otpio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otpio.release.xcconfig"; path = "Target Support Files/Pods-otpio/Pods-otpio.release.xcconfig"; sourceTree = "<group>"; };
+		B59E95CD51CC3F5E082D64B3 /* Pods_otpio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otpio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E339EE6EBDFEC41EB242870 /* Pods_otpio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +100,115 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D122A3A75B66C8B4BAECA40 /* Pods_otpioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22BD087D7769C9550CC8E8F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FA183EB77FAA47A8F2E0358 /* Pods-otpio.debug.xcconfig */,
+				7ADB092B0CF880B8A71D1618 /* Pods-otpio.release.xcconfig */,
+				7A46A7FDFFB00FA4459D4721 /* Pods-otpioTests.debug.xcconfig */,
+				380E8BEE4E0ECA5E64512944 /* Pods-otpioTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		660CA4BA221220DC00FE0635 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				665A161B2214D43A009765A7 /* Font Awesome 5 Brands-Regular-400.otf */,
+				665A161C2214D43A009765A7 /* Font Awesome 5 Pro-Light-300.otf */,
+				665A161D2214D43A009765A7 /* Font Awesome 5 Pro-Regular-400.otf */,
+				665A161E2214D43A009765A7 /* Font Awesome 5 Pro-Solid-900.otf */,
+				660CA4BC2212234400FE0635 /* Colors.swift */,
+				669D23A122153CA000E89D97 /* FetchKey.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		660CA4BE2212249F00FE0635 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				660CA4BF221224AF00FE0635 /* BaseViewController.swift */,
+				660CA4C1221224D500FE0635 /* BaseViewModel.swift */,
+				665A16172214C96D009765A7 /* Router.swift */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		660CA4C3221225B300FE0635 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				660CA4C4221225C400FE0635 /* AppAssembly.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		665A16102214C130009765A7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				665A16142214C1D2009765A7 /* HomeController.swift */,
+				665A16232214DA47009765A7 /* HomeModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		665A16112214C13E009765A7 /* AddToken */ = {
+			isa = PBXGroup;
+			children = (
+				669D239F221539AA00E89D97 /* AddTokenController.swift */,
+			);
+			path = AddToken;
+			sourceTree = "<group>";
+		};
+		665A16122214C148009765A7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		665A16132214C14F009765A7 /* Code Detail */ = {
+			isa = PBXGroup;
+			children = (
+				669D239D221538EF00E89D97 /* CodeDetailController.swift */,
+			);
+			path = "Code Detail";
+			sourceTree = "<group>";
+		};
+		665A16162214C1FC009765A7 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				665A16192214CBF4009765A7 /* MenuController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		669D23A5221541BC00E89D97 /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				669D23A6221541CF00E89D97 /* Podfile */,
+				669D23A7221541DA00E89D97 /* README.md */,
+				669D23A8221541E900E89D97 /* LICENSE.md */,
+				669D23A92215420900E89D97 /* .travis.yml */,
+			);
+			name = Meta;
+			sourceTree = "<group>";
+		};
 		66B4507B22103F85009A19E2 = {
 			isa = PBXGroup;
 			children = (
+				669D23A5221541BC00E89D97 /* Meta */,
 				66B4508622103F85009A19E2 /* otpio */,
 				66B4509B22103F86009A19E2 /* otpioTests */,
 				66B4508522103F85009A19E2 /* Products */,
+				22BD087D7769C9550CC8E8F2 /* Pods */,
+				D2BE772A7329361F6006A9D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +225,11 @@
 			isa = PBXGroup;
 			children = (
 				66B4508722103F85009A19E2 /* AppDelegate.swift */,
-				66B4508922103F85009A19E2 /* ViewController.swift */,
-				66B4508B22103F85009A19E2 /* Main.storyboard */,
-				66B4508E22103F86009A19E2 /* Assets.xcassets */,
-				66B4509022103F86009A19E2 /* LaunchScreen.storyboard */,
-				66B4509322103F86009A19E2 /* Info.plist */,
+				66E89ED6221355AE0088B51B /* Core */,
+				660CA4C3221225B300FE0635 /* DI */,
+				66B450A8221041C1009A19E2 /* Views & Models */,
+				66B450A7221041AA009A19E2 /* Resources */,
+				660CA4BA221220DC00FE0635 /* Misc */,
 			);
 			path = otpio;
 			sourceTree = "<group>";
@@ -96,6 +243,58 @@
 			path = otpioTests;
 			sourceTree = "<group>";
 		};
+		66B450A7221041AA009A19E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66B4508E22103F86009A19E2 /* Assets.xcassets */,
+				66B4509022103F86009A19E2 /* LaunchScreen.storyboard */,
+				66B4509322103F86009A19E2 /* Info.plist */,
+				66E89EE622135F150088B51B /* Settings.bundle */,
+				669D23A322153F8400E89D97 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66B450A8221041C1009A19E2 /* Views & Models */ = {
+			isa = PBXGroup;
+			children = (
+				660CA4BE2212249F00FE0635 /* Bootstrap */,
+				665A16162214C1FC009765A7 /* Menu */,
+				665A16102214C130009765A7 /* Home */,
+				665A16132214C14F009765A7 /* Code Detail */,
+				665A16112214C13E009765A7 /* AddToken */,
+				665A16122214C148009765A7 /* Settings */,
+			);
+			path = "Views & Models";
+			sourceTree = "<group>";
+		};
+		66E89ED6221355AE0088B51B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				66E89EE522135DD90088B51B /* Theme */,
+				66E89EE122135C810088B51B /* Constants.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		66E89EE522135DD90088B51B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				66E89EE322135D010088B51B /* Theme.swift */,
+				66E89EDF22135AF60088B51B /* ThemeManager.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		D2BE772A7329361F6006A9D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B59E95CD51CC3F5E082D64B3 /* Pods_otpio.framework */,
+				0F4EC36D9F889E51CE66711C /* Pods_otpioTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B450A122103F86009A19E2 /* Build configuration list for PBXNativeTarget "otpio" */;
 			buildPhases = (
+				F82575C1795C10C58C6F0AD6 /* [CP] Check Pods Manifest.lock */,
 				66B4508022103F85009A19E2 /* Sources */,
 				66B4508122103F85009A19E2 /* Frameworks */,
 				66B4508222103F85009A19E2 /* Resources */,
+				68BE9D97B0AF148BE8E3E1E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,9 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B450A422103F86009A19E2 /* Build configuration list for PBXNativeTarget "otpioTests" */;
 			buildPhases = (
+				D413922B1D1415A065BC6217 /* [CP] Check Pods Manifest.lock */,
 				66B4509422103F86009A19E2 /* Sources */,
 				66B4509522103F86009A19E2 /* Frameworks */,
 				66B4509622103F86009A19E2 /* Resources */,
+				D0A2E43773E14F62EC534391 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,9 +380,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E89EE722135F150088B51B /* Settings.bundle in Resources */,
+				665A16222214D43A009765A7 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
 				66B4509222103F86009A19E2 /* LaunchScreen.storyboard in Resources */,
+				669D23AA2215420900E89D97 /* .travis.yml in Resources */,
 				66B4508F22103F86009A19E2 /* Assets.xcassets in Resources */,
-				66B4508D22103F85009A19E2 /* Main.storyboard in Resources */,
+				665A161F2214D43A009765A7 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				669D23A422153F8400E89D97 /* Localizable.strings in Resources */,
+				665A16202214D43A009765A7 /* Font Awesome 5 Pro-Light-300.otf in Resources */,
+				665A16212214D43A009765A7 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +401,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68BE9D97B0AF148BE8E3E1E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/LibFA/LibFA.framework",
+				"${BUILT_PRODUCTS_DIR}/LibToken/LibToken.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
+				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/arek/arek.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibFA.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibToken.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/arek.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otpio/Pods-otpio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0A2E43773E14F62EC534391 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otpioTests/Pods-otpioTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontBlaster.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otpioTests/Pods-otpioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D413922B1D1415A065BC6217 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otpioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F82575C1795C10C58C6F0AD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otpio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		66B4508022103F85009A19E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B4508A22103F85009A19E2 /* ViewController.swift in Sources */,
+				669D23A0221539AA00E89D97 /* AddTokenController.swift in Sources */,
 				66B4508822103F85009A19E2 /* AppDelegate.swift in Sources */,
+				660CA4C2221224D500FE0635 /* BaseViewModel.swift in Sources */,
+				665A16182214C96D009765A7 /* Router.swift in Sources */,
+				66E89EE422135D010088B51B /* Theme.swift in Sources */,
+				660CA4C0221224AF00FE0635 /* BaseViewController.swift in Sources */,
+				665A161A2214CBF4009765A7 /* MenuController.swift in Sources */,
+				660CA4C5221225C400FE0635 /* AppAssembly.swift in Sources */,
+				665A16152214C1D2009765A7 /* HomeController.swift in Sources */,
+				665A16242214DA47009765A7 /* HomeModel.swift in Sources */,
+				660CA4BD2212234400FE0635 /* Colors.swift in Sources */,
+				669D239E221538EF00E89D97 /* CodeDetailController.swift in Sources */,
+				669D23A222153CA000E89D97 /* FetchKey.swift in Sources */,
+				66E89EE222135C810088B51B /* Constants.swift in Sources */,
+				66E89EE022135AF60088B51B /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +556,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		66B4508B22103F85009A19E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				66B4508C22103F85009A19E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		66B4509022103F86009A19E2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -358,42 +685,47 @@
 		};
 		66B450A222103F86009A19E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FA183EB77FAA47A8F2E0358 /* Pods-otpio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = otpio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/otpio/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.otpio.otpio;
+				PRODUCT_BUNDLE_IDENTIFIER = io.otpio.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		66B450A322103F86009A19E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADB092B0CF880B8A71D1618 /* Pods-otpio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6S4L29QT59;
-				INFOPLIST_FILE = otpio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/otpio/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.otpio.otpio;
+				PRODUCT_BUNDLE_IDENTIFIER = io.otpio.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		66B450A522103F86009A19E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A46A7FDFFB00FA4459D4721 /* Pods-otpioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +747,7 @@
 		};
 		66B450A622103F86009A19E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380E8BEE4E0ECA5E64512944 /* Pods-otpioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

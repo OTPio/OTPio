@@ -1,0 +1,24 @@
+default_platform(:ios)
+setup_travis
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    sync_code_signing
+
+    increment_build_number(build_number: latest_testflight_build_number + 1, xcodeproj: "otpio.xcodeproj")
+
+    build_app(workspace: "otpio.xcworkspace", scheme: "otpio")
+
+    changelog_from_git_commits
+
+    upload_to_testflight
+
+    slack(
+      message: "Testflight deployment successful",
+      channel: "#deployments",
+      success: true,
+      slack_url: "https://hooks.slack.com/services/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"
+    )
+  end
+end

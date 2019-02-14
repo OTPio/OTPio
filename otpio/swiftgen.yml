@@ -1,0 +1,12 @@
+input_dir : .
+output_dir: Misc/
+ib:
+  inputs: .
+  outputs:
+    templateName: scenes-swift4
+    output: Storyboards.swift
+colors:
+  inputs : Resouces/colors/colors.txt
+  outputs:
+    templateName: swift4
+    output: Colors.swift

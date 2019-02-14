@@ -1,0 +1,81 @@
+PODS:
+  - arek/Camera (4.0.2):
+    - arek/Core
+    - PMAlertController (= 3.5.0)
+  - arek/Core (4.0.2):
+    - PMAlertController (= 3.5.0)
+  - Eureka (4.3.1)
+  - FontBlaster (4.1.0)
+  - LibFA (1.1.1)
+  - LibToken (2.0.5):
+    - LibFA
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
+  - Neon (0.4.0)
+  - PMAlertController (3.5.0)
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - SwiftyUserDefaults (4.0.0-alpha.1)
+  - Swinject (2.5.0)
+
+DEPENDENCIES:
+  - arek/Camera
+  - Eureka
+  - FontBlaster
+  - LibFA
+  - LibToken
+  - MMDrawerController
+  - Neon
+  - RxCocoa
+  - RxSwift
+  - SwiftyUserDefaults (= 4.0.0-alpha.1)
+  - Swinject
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - arek
+    - Eureka
+    - FontBlaster
+    - MMDrawerController
+    - Neon
+    - PMAlertController
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SwiftyUserDefaults
+    - Swinject
+  https://github.com/otpio/cocoapods:
+    - LibFA
+    - LibToken
+
+SPEC CHECKSUMS:
+  arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
+  Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
+  LibFA: be5ea9b1dab9775f0ebebe7d67d806c59f4f46d3
+  LibToken: 70d609f1e47c6d9407af8426faa1e9c1a626b217
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
+  PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
+  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+
+PODFILE CHECKSUM: 38d0eeb37ed941fe31652210d357646bd0b08733
+
+COCOAPODS: 1.6.0.rc.1

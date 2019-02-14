@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  otpio
+
+  Created by Mason Phillips on 2/13/19.
+  Copyright © 2019 Matrix Studios. All rights reserved.
+*/
+
+// Arek Titles
+"ArekCamera_initial_title"      = "Camera Access";
+"ArekCamera_initial_message"    = "OTP.io needs access to the camera to scan QR Codes. You can still enter details manually";
+"ArekCamera_reenable_title"     = "Camera Access";
+"ArekCamera_reenable_message"   = "You can enter these details manually, but it is much easier to scan a QR Code. Please re-enable!";
+"ArekCamera_allow_button_title" = "Do It";
+"ArekCamera_deny_button_title"  = "No Thanks";
+
+// AddTokenController strings
+"req-camera" = "OTP.io needs access to the camera to scan QR Codes. You can still enter the details manually";
